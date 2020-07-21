@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GE_SS_Two_Bold.otf">
+            <string>GESSTwoBold-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RateViewController" customModule="PartyBooking" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="eR0-0b-Zwp" customClass="RateViewController" customModule="PartyBooking" customModuleProvider="target">
+            <view key="view" contentMode="scaleToFill" id="DUO-2K-L9v">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Zu-d3-jhb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="74"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user Experienc" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UX8-Al-2dO">
+                                <rect key="frame" x="157" y="47" width="100" height="15"/>
+                                <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EvV-DM-Fwa">
+                                <rect key="frame" x="12" y="35" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="DrA-le-IG3"/>
+                                    <constraint firstAttribute="height" constant="25" id="sE5-Es-GuG"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="back"/>
+                                <connections>
+                                    <action selector="backButtonWithSender:" destination="eR0-0b-Zwp" eventType="touchUpInside" id="doL-b1-WyP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.16862745100000001" green="0.74117647060000003" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="UX8-Al-2dO" secondAttribute="bottom" constant="12" id="2WV-dk-60M"/>
+                            <constraint firstAttribute="height" constant="74" id="7ve-Y1-pRq"/>
+                            <constraint firstItem="EvV-DM-Fwa" firstAttribute="leading" secondItem="3Zu-d3-jhb" secondAttribute="leading" constant="12" id="AyZ-Mk-WSK"/>
+                            <constraint firstItem="UX8-Al-2dO" firstAttribute="centerX" secondItem="3Zu-d3-jhb" secondAttribute="centerX" id="Xsb-KZ-NLI"/>
+                            <constraint firstAttribute="bottom" secondItem="EvV-DM-Fwa" secondAttribute="bottom" constant="14" id="qrs-G8-Evh"/>
+                        </constraints>
+                    </view>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jfu-iD-iA4">
+                        <rect key="frame" x="0.0" y="82" width="414" height="780"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <connections>
+                            <outlet property="dataSource" destination="eR0-0b-Zwp" id="TDm-Tc-ssG"/>
+                            <outlet property="delegate" destination="eR0-0b-Zwp" id="aie-xg-iRD"/>
+                        </connections>
+                    </tableView>
+                </subviews>
+                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                <constraints>
+                    <constraint firstItem="3Zu-d3-jhb" firstAttribute="centerX" secondItem="DUO-2K-L9v" secondAttribute="centerX" id="4a9-53-ePD"/>
+                    <constraint firstItem="Jfu-iD-iA4" firstAttribute="trailing" secondItem="MaI-s1-6XI" secondAttribute="trailing" id="CaQ-gf-Hjh"/>
+                    <constraint firstItem="MaI-s1-6XI" firstAttribute="trailing" secondItem="3Zu-d3-jhb" secondAttribute="trailing" id="Fbd-fN-BfF"/>
+                    <constraint firstItem="Jfu-iD-iA4" firstAttribute="top" secondItem="3Zu-d3-jhb" secondAttribute="bottom" constant="8" symbolic="YES" id="J4t-Sr-HdC"/>
+                    <constraint firstItem="MaI-s1-6XI" firstAttribute="bottom" secondItem="Jfu-iD-iA4" secondAttribute="bottom" id="KkQ-ZA-TeS"/>
+                    <constraint firstItem="3Zu-d3-jhb" firstAttribute="leading" secondItem="DUO-2K-L9v" secondAttribute="leading" id="LKk-bL-773"/>
+                    <constraint firstItem="Jfu-iD-iA4" firstAttribute="leading" secondItem="MaI-s1-6XI" secondAttribute="leading" id="OE0-9U-Uy0"/>
+                    <constraint firstItem="3Zu-d3-jhb" firstAttribute="top" secondItem="DUO-2K-L9v" secondAttribute="top" id="y0s-BU-b6d"/>
+                </constraints>
+                <viewLayoutGuide key="safeArea" id="MaI-s1-6XI"/>
+            </view>
+            <connections>
+                <outlet property="backButton" destination="EvV-DM-Fwa" id="6Vh-Gh-FIE"/>
+                <outlet property="rateTableView" destination="Jfu-iD-iA4" id="zHf-bK-588"/>
+                <outlet property="titleLabel" destination="UX8-Al-2dO" id="0eI-R1-N97"/>
+            </connections>
+            <point key="canvasLocation" x="474" y="-54"/>
+        </viewController>
+    </objects>
+    <resources>
+        <image name="back" width="37.5" height="37.5"/>
+    </resources>
+</document>

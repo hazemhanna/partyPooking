@@ -1,0 +1,45 @@
+
+/* Class = "UILabel"; text = "OR"; ObjectID = "3Va-57-RoF"; */
+"3Va-57-RoF.text" = "OR";
+
+/* Class = "UIButton"; normalTitle = "Register on Google"; ObjectID = "6G9-3q-j01"; */
+"6G9-3q-j01.normalTitle" = "Register on Google";
+
+/* Class = "UIButton"; normalTitle = "have account"; ObjectID = "6tb-iD-Tyh"; */
+"6tb-iD-Tyh.normalTitle" = "have account";
+
+/* Class = "UIButton"; normalTitle = "Register as artist"; ObjectID = "8Zw-BM-6B2"; */
+"8Zw-BM-6B2.normalTitle" = "Register as artist";
+
+/* Class = "UITextField"; placeholder = "password"; ObjectID = "MJW-eO-dHV"; */
+"MJW-eO-dHV.placeholder" = "password";
+
+/* Class = "UIButton"; normalTitle = "skip"; ObjectID = "N51-0f-LLa"; */
+"N51-0f-LLa.normalTitle" = "skip";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "Nhq-se-K9l"; */
+"Nhq-se-K9l.normalTitle" = "Login";
+
+/* Class = "UILabel"; text = "Login"; ObjectID = "RU7-zo-t9v"; */
+"RU7-zo-t9v.text" = "Login";
+
+/* Class = "UITextField"; placeholder = "e-mail or phone number"; ObjectID = "XHn-YX-wAL"; */
+"XHn-YX-wAL.placeholder" = "e-mail or phone number";
+
+/* Class = "UIButton"; normalTitle = "Register first Time"; ObjectID = "eyV-VV-suc"; */
+"eyV-VV-suc.normalTitle" = "Register first Time";
+
+/* Class = "UIButton"; normalTitle = "Register as artist"; ObjectID = "fYH-mv-ywA"; */
+"fYH-mv-ywA.normalTitle" = "Register as artist";
+
+/* Class = "UILabel"; text = "welcome.let's start"; ObjectID = "lLO-DU-l26"; */
+"lLO-DU-l26.text" = "welcome.let's start";
+
+/* Class = "UIButton"; normalTitle = "Register as user"; ObjectID = "mj7-I6-SW8"; */
+"mj7-I6-SW8.normalTitle" = "Register as user";
+
+/* Class = "UIButton"; normalTitle = "Register on Google"; ObjectID = "o7j-I7-dcM"; */
+"o7j-I7-dcM.normalTitle" = "Register on Google";
+
+/* Class = "UIButton"; normalTitle = "Register as user"; ObjectID = "uEm-Tc-BUK"; */
+"uEm-Tc-BUK.normalTitle" = "Register as user";

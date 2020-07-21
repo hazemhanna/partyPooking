@@ -54,8 +54,6 @@ class LocationViewController: UIViewController{
             chooseBtn.titleLabel!.font = UIFont(name: "Georgia-Bold", size: 17)
         }
     }
-    
-    
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
         self.tabBarController?.tabBar.isHidden = true

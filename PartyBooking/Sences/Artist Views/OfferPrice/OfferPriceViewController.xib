@@ -202,7 +202,17 @@
                 <viewLayoutGuide key="safeArea" id="WL3-qU-Gme"/>
             </view>
             <connections>
+                <outlet property="backButton" destination="PlW-bP-cwG" id="hiA-wR-jcX"/>
+                <outlet property="callCenterLabel" destination="Xdv-dE-cWj" id="9Ux-6a-zmR"/>
+                <outlet property="clientPriceLabel" destination="V0d-rq-dAD" id="HPI-BI-Vqd"/>
+                <outlet property="commetionLabel" destination="ByK-X2-BKv" id="AXb-Rc-kB9"/>
+                <outlet property="currancyLabel" destination="7hf-RF-sFE" id="2GH-hf-scD"/>
                 <outlet property="nextBtn" destination="Irc-2V-RZr" id="y0n-aq-pTm"/>
+                <outlet property="offerLabel" destination="f5S-4m-KkR" id="6Wy-ao-hSm"/>
+                <outlet property="priceValueLabel" destination="LU7-ae-EzG" id="GME-b4-Kdr"/>
+                <outlet property="saveTimeLabel" destination="QxK-0O-4SS" id="BBJ-z9-FQd"/>
+                <outlet property="shoppingLabel" destination="ziY-S9-qI5" id="fBm-7C-hz6"/>
+                <outlet property="titleLabel" destination="fQz-K3-oe8" id="cZr-O1-HQi"/>
             </connections>
             <point key="canvasLocation" x="53.623188405797109" y="20.758928571428569"/>
         </viewController>

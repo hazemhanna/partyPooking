@@ -40,7 +40,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.16862745100000001" green="0.74117647060000003" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.16862745098039217" green="0.70588235294117641" blue="0.69411764705882351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Sm1-Hy-8Ak" firstAttribute="centerX" secondItem="xsy-qW-biP" secondAttribute="centerX" id="2Ax-GE-eDP"/>
                             <constraint firstAttribute="height" constant="74" id="XQj-Da-tzd"/>
@@ -101,9 +101,13 @@
                 <viewLayoutGuide key="safeArea" id="TwQ-Gs-r1n"/>
             </view>
             <connections>
+                <outlet property="addImagLabel" destination="xW6-ea-krz" id="tu4-dE-H49"/>
+                <outlet property="backButton" destination="SCD-6f-9Lk" id="mvf-Ve-n6j"/>
+                <outlet property="galleryLabel" destination="pyA-Ab-k4f" id="UBd-2d-6db"/>
                 <outlet property="nextBtn" destination="Jex-uM-nbZ" id="Cqm-SY-kU1"/>
+                <outlet property="titleLabel" destination="Sm1-Hy-8Ak" id="LLS-cV-BFz"/>
             </connections>
-            <point key="canvasLocation" x="55" y="21"/>
+            <point key="canvasLocation" x="53.623188405797109" y="20.758928571428569"/>
         </viewController>
     </objects>
     <resources>

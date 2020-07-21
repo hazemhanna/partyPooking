@@ -10,15 +10,37 @@ import UIKit
 
 class ReservationTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var loadBtn: UIButton!
+    @IBOutlet weak var contractLabel: UILabel!
+    @IBOutlet weak var confirmNumbertLabel: UILabel!
+
+    var delegete = ReservationViewController()
+
+
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
-
+        mainView.layer.cornerRadius = 15
+        loadBtn.layer.cornerRadius = 7
+        setUPLocalize()
+     }
+     
+     func setUPLocalize(){
+        loadBtn.setTitle("laod".localized, for: .normal)
+        contractLabel.text = "contract".localized
+        confirmNumbertLabel.text = "confirmNumber".localized
+        }
+       
+        
+    @IBAction func loadButton(sender: UIButton) {
+        delegete.blackView.isHidden = false
+        delegete.rateView.isHidden = false
+      }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
 }

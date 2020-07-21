@@ -28,24 +28,11 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewS-TQ-HMn">
-                                <rect key="frame" x="12" y="35" width="25" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="25" id="9ye-Et-o8Y"/>
-                                    <constraint firstAttribute="height" constant="25" id="nzA-V8-WQ1"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="back"/>
-                                <connections>
-                                    <action selector="backButtonWithSender:" destination="Hsa-eK-vf7" eventType="touchUpInside" id="aHD-Xl-f5d"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.16862745100000001" green="0.74117647060000003" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="ewS-TQ-HMn" secondAttribute="bottom" constant="14" id="6SB-7I-f8p"/>
                             <constraint firstAttribute="height" constant="74" id="A9C-Dt-9dy"/>
                             <constraint firstItem="1ee-Pn-Cwp" firstAttribute="centerX" secondItem="uE0-zv-1is" secondAttribute="centerX" id="lAg-51-gZw"/>
-                            <constraint firstItem="ewS-TQ-HMn" firstAttribute="leading" secondItem="uE0-zv-1is" secondAttribute="leading" constant="12" id="uH8-9k-Osc"/>
                             <constraint firstAttribute="bottom" secondItem="1ee-Pn-Cwp" secondAttribute="bottom" constant="12" id="ynV-jZ-yga"/>
                         </constraints>
                     </view>
@@ -206,6 +193,12 @@
                                 <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="active" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tiG-ub-mZi">
+                                <rect key="frame" x="338" y="18.5" width="40" height="15"/>
+                                <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="14"/>
+                                <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="6" translatesAutoresizingMaskIntoConstraints="NO" id="w8f-wO-ule">
                                 <rect key="frame" x="386" y="12" width="20" height="28"/>
                                 <constraints>
@@ -219,8 +212,10 @@
                             <constraint firstItem="pBP-rg-Uxm" firstAttribute="centerY" secondItem="NuS-W7-f0O" secondAttribute="centerY" id="FrM-wg-q0F"/>
                             <constraint firstAttribute="trailing" secondItem="w8f-wO-ule" secondAttribute="trailing" constant="8" id="KfC-Fq-t0E"/>
                             <constraint firstItem="X1X-pI-z82" firstAttribute="centerY" secondItem="NuS-W7-f0O" secondAttribute="centerY" id="NRB-pO-F8l"/>
+                            <constraint firstItem="tiG-ub-mZi" firstAttribute="centerY" secondItem="NuS-W7-f0O" secondAttribute="centerY" id="TjI-xq-BjQ"/>
                             <constraint firstItem="X1X-pI-z82" firstAttribute="leading" secondItem="NuS-W7-f0O" secondAttribute="leading" constant="16" id="Utd-Cg-ysg"/>
                             <constraint firstAttribute="height" constant="52" id="WH6-Mb-rJL"/>
+                            <constraint firstItem="w8f-wO-ule" firstAttribute="leading" secondItem="tiG-ub-mZi" secondAttribute="trailing" constant="8" id="a5b-ba-k2L"/>
                             <constraint firstItem="w8f-wO-ule" firstAttribute="centerY" secondItem="NuS-W7-f0O" secondAttribute="centerY" id="hEy-Qv-jM0"/>
                             <constraint firstItem="pBP-rg-Uxm" firstAttribute="leading" secondItem="X1X-pI-z82" secondAttribute="trailing" constant="8" id="hsB-wO-iqG"/>
                         </constraints>
@@ -324,6 +319,25 @@
                 </constraints>
                 <viewLayoutGuide key="safeArea" id="4CD-Sq-Rpu"/>
             </view>
+            <connections>
+                <outlet property="activeLabel" destination="tiG-ub-mZi" id="TM8-q0-AFY"/>
+                <outlet property="billLabel" destination="xSB-3Z-E2F" id="O8e-Op-QSd"/>
+                <outlet property="billView" destination="vTx-d8-O5a" id="IM8-Ng-2ey"/>
+                <outlet property="callCenterLabel" destination="REA-nq-TeP" id="dbV-Wn-TuU"/>
+                <outlet property="callcenterView" destination="Gk7-Nl-DjN" id="03k-Re-M9c"/>
+                <outlet property="commentLabel" destination="CZy-1T-IAi" id="7iW-pa-0t2"/>
+                <outlet property="commentView" destination="SAF-BP-i1e" id="PPZ-WK-hPN"/>
+                <outlet property="exprienceLabel" destination="2ht-dp-hYV" id="EAi-LJ-bu9"/>
+                <outlet property="exprienceView" destination="aFn-CU-9Ds" id="Qeu-9O-IaZ"/>
+                <outlet property="logOutLabel" destination="YLN-V8-GNj" id="WQB-f1-AWn"/>
+                <outlet property="logOutView" destination="jdf-Wf-5LR" id="BSa-8E-Unj"/>
+                <outlet property="settingLabel" destination="e3r-am-kGU" id="AE1-Tg-bQa"/>
+                <outlet property="settingView" destination="g7Z-St-SWH" id="VTY-RE-hfl"/>
+                <outlet property="silentModeLabel" destination="pBP-rg-Uxm" id="rW6-kw-ChQ"/>
+                <outlet property="silentModeView" destination="NuS-W7-f0O" id="WHf-V4-9bm"/>
+                <outlet property="titleLabel" destination="1ee-Pn-Cwp" id="2YI-fe-xmw"/>
+                <outlet property="version" destination="Df5-3c-3dA" id="0r7-Vt-7Fa"/>
+            </connections>
             <point key="canvasLocation" x="123.18840579710145" y="-4.0178571428571423"/>
         </viewController>
     </objects>
@@ -334,7 +348,6 @@
         <image name="4" width="54" height="46.5"/>
         <image name="5" width="55.5" height="48.5"/>
         <image name="6" width="30" height="42.5"/>
-        <image name="back" width="37.5" height="37.5"/>
         <image name="settings (1)" width="45" height="45"/>
         <image name="support" width="45" height="45"/>
     </resources>

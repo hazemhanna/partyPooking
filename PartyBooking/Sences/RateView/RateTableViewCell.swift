@@ -7,18 +7,23 @@
 //
 
 import UIKit
+import Cosmos
 
-class RateTableViewCell: UITableViewCell {
+class RateTableViewCell: UITableViewCell,FloatRatingViewDelegate {
+    
+    @IBOutlet weak var rateView : CosmosView!
+    @IBOutlet weak var profileView : UIView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
+        profileView.layer.cornerRadius = profileView.frame.width / 2
+        
+        rateView.rating = 4
 
+        
+     }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-    
 }

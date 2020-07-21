@@ -1,0 +1,6 @@
+framework module Pods_PartyBookingTests {
+  umbrella header "Pods-PartyBookingTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

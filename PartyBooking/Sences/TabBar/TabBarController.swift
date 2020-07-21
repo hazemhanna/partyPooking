@@ -6,11 +6,18 @@
 //  Copyright © 2020 MAC. All rights reserved.
 //
 
+
+enum HomeType {
+    case user
+    case artist
+}
+
 import Foundation
 import UIKit
 
 class TabBarController: UITabBarController {
-    // MARK: - Inner Types
+
+    var type: HomeType = .user
     private struct Constants {
         static let actionButtonSize = CGSize(width: 35, height: 35)
     }
@@ -18,15 +25,22 @@ class TabBarController: UITabBarController {
         super.viewDidLoad()
         createTabbarControllers()
         setupApperence()
-        selectedIndex = 1
+        selectedIndex = 0
     }
+    
     private func setupApperence() {
         tabBar.barTintColor = #colorLiteral(red: 0.0431372549, green: 0.4039215686, blue: 0.5725490196, alpha: 1)
         tabBar.unselectedItemTintColor = UIColor.white
         UITabBar.appearance().tintColor = UIColor.white
     }
     private func createTabbarControllers() {
-        let systemTags = [RoundedTabBarItem.more, RoundedTabBarItem.search, RoundedTabBarItem.reservations, RoundedTabBarItem.account]
+        var systemTags : [RoundedTabBarItem] = []
+        if type == .user {
+         systemTags = [RoundedTabBarItem.search, RoundedTabBarItem.reservations, RoundedTabBarItem.account ,RoundedTabBarItem.more]
+        }else{
+            systemTags = [RoundedTabBarItem.artistaccount, RoundedTabBarItem.artistreservations, RoundedTabBarItem.artistAvailable ,RoundedTabBarItem.artistMore]
+        }
+        
         let viewControllers = systemTags.compactMap { self.createController(for: $0, with: $0.tag) }
         self.viewControllers = viewControllers
     }
@@ -45,6 +59,14 @@ class TabBarController: UITabBarController {
             viewController = ReservationViewController.instantiateFromNib()!
         case .account:
             viewController = AccountViewController.instantiateFromNib()!
+        case .artistMore:
+                viewController = ArtistMoreViewController.instantiateFromNib()!
+        case .artistreservations:
+                viewController = ArtistReservationViewController.instantiateFromNib()!
+       case .artistaccount:
+                viewController = ArtistAccountViewController.instantiateFromNib()!
+        case .artistAvailable:
+                viewController = AvailableReservationViewController.instantiateFromNib()!
         }
         viewController.title = customTabBarItem.title
         viewController.tabBarItem = customTabBarItem.tabBarItem
@@ -52,3 +74,4 @@ class TabBarController: UITabBarController {
         return nav
     }
 }
+

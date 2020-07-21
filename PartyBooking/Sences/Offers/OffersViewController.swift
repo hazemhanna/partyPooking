@@ -9,22 +9,100 @@
 import UIKit
 
 class OffersViewController: UIViewController {
+    @IBOutlet weak var locationImage : UIImageView!
+    @IBOutlet weak var calendeImage : UIImageView!
+    @IBOutlet weak var partyImage : UIImageView!
+    @IBOutlet weak var locationView : UIView!
+    @IBOutlet weak var calendeview : UIView!
+    @IBOutlet weak var partyView : UIView!
+    @IBOutlet weak var offerTableView : UITableView!
+    @IBOutlet weak var locatioLabel: UILabel!
+    @IBOutlet weak var partytypeLabel: UILabel!
+    @IBOutlet weak var searchBtn : UIButton!
+    @IBOutlet weak var backButton: UIButton! {
+             didSet {
+                 backButton.setImage(backButton.currentImage?.flipIfNeeded(), for: .normal)
+             }
+         }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        style()
+        offerTableView.register(UINib(nibName: "OffersTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
+        setUPLocalize()
+        
     }
+    
+    func setUPLocalize(){
+           searchBtn.setTitle("searchtitle".localized, for: .normal)
+           locatioLabel.text = "location".localized
+           partytypeLabel.text = "partyType".localized
+        
+        if MOLHLanguage.currentAppleLanguage() == "en" {
+            let font = UIFont(name: "Georgia-Bold", size: 14)
+            searchBtn.titleLabel!.font = font
+            locatioLabel.font = font
+            partytypeLabel.font = font
 
+              }
+        
+            
+        }
+    
+    func style(){
+        searchBtn.layer.cornerRadius = 7
+        locationImage.image = UIImage(named: "place")?.withRenderingMode(.alwaysTemplate)
+        locationImage.tintColor =  UIColor.navigationColor
+        locationView.layer.borderColor =  UIColor.navigationColor.cgColor
+        locationView.layer.borderWidth = 2
+        locationView.layer.cornerRadius = 7
+        
+        calendeImage.image = UIImage(named: "calendar (1)")?.withRenderingMode(.alwaysTemplate)
+        calendeImage.tintColor =  UIColor.navigationColor
+        calendeview.layer.borderColor =  UIColor.navigationColor.cgColor
+        calendeview.layer.borderWidth = 2
+        calendeview.layer.cornerRadius = 7
+       
+        partyImage.image = UIImage(named: "party")?.withRenderingMode(.alwaysTemplate)
+        partyImage.tintColor =  UIColor.navigationColor
+        partyView.layer.borderColor =  UIColor.navigationColor.cgColor
+        partyView.layer.borderWidth = 2
+        partyView.layer.cornerRadius = 7
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
     }
-    */
+    override func viewWillAppear(_ animated: Bool) {
+          self.navigationController?.navigationBar.isHidden = true
+        self.tabBarController?.tabBar.isHidden = true
 
+
+        }
+        override func viewWillDisappear(_ animated: Bool) {
+            self.navigationController?.navigationBar.isHidden = false
+            self.tabBarController?.tabBar.isHidden = false
+
+        }
+
+    
+       @IBAction func backButton(sender: UIButton) {
+             self.navigationController?.popViewController(animated: true)
+         }
+    
+}
+
+
+extension OffersViewController : UITableViewDelegate , UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return 2
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! OffersTableViewCell
+            return cell
+        }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+            return CGFloat(170)
+        
+    }
 }

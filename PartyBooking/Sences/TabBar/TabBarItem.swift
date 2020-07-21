@@ -10,45 +10,74 @@ import Foundation
 import Foundation
 import UIKit
 enum RoundedTabBarItem {
-    case  more, search,reservations, account
+    case search,reservations, account,more,artistMore,artistreservations, artistaccount,artistAvailable
 }
+
 extension RoundedTabBarItem {
     var title: String {
         switch self {
-        case .more:
-            return "more"
-        case .search:
-            return "search"
+         case .search:
+            return "search".localized
         case .reservations:
-            return "reservations"
-        case .account:
-            return "account"
+            return "reservation".localized
+       case .account:
+        return "account".localized
+        case .more:
+            return "more".localized
+        case .artistMore:
+            return "more".localized
+        case .artistaccount:
+            return "account".localized
+        case .artistAvailable:
+            return "availabel".localized
+        case .artistreservations:
+            return "reservation".localized
         default:
             return ""
         }
     }
+    
+    
     var tag: Int {
         switch self {
-        case .more:
-            return 1
         case .search:
-            return 2
+            return 1
         case .reservations:
-            return 3
+            return 2
         case .account:
+            return 3
+        case .more:
             return 4
+        case .artistMore:
+            return 5
+        case .artistaccount:
+            return 6
+        case .artistAvailable:
+            return 7
+        case .artistreservations:
+            return 8
         }
     }
+    
     var image: UIImage? {
         switch self {
-        case .more:
-            return UIImage(named: "more")
         case .search:
-            return UIImage(named: "search")
+              return UIImage(named: "search")
         case .reservations:
             return UIImage(named: "calendar")
-        case .account:
+       case .account:
+               return UIImage(named: "user")
+         case .more:
+              return UIImage(named: "more")
+        case .artistMore:
+            return UIImage(named: "more")
+        case .artistaccount:
             return UIImage(named: "user")
+        case .artistAvailable:
+            return UIImage(named: "list")
+        case .artistreservations:
+            return UIImage(named: "calendar")
+            
         }
     }
     var tabBarItem: UITabBarItem {

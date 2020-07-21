@@ -9,22 +9,56 @@
 import UIKit
 
 class AccountViewController: UIViewController {
+    
+        @IBOutlet weak var editBtn : UIButton!
+        @IBOutlet weak var profilehImage : UIImageView!
+        @IBOutlet weak var titleLabel : UILabel!
+
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+         style()
+         editBtn.setTitle("chnge".localized, for: .normal)
+         titleLabel.text = "myAccount".localized
+        
+        if MOLHLanguage.currentAppleLanguage() == "en" {
+            let font = UIFont(name: "Georgia-Bold", size: 14)
+            editBtn.titleLabel!.font = UIFont(name: "Georgia-Bold", size: 17)
+            titleLabel.font = font
+           
+        }
 
-        // Do any additional setup after loading the view.
+        
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func style(){
+        profilehImage.layer.cornerRadius = profilehImage.frame.width / 2
+        editBtn.layer.cornerRadius = 7
+        editBtn.layer.borderColor = UIColor.tabBarColor.cgColor
+        editBtn.layer.borderWidth = 3
+        
     }
-    */
+    
+    
+    
+   
+    override func viewWillAppear(_ animated: Bool) {
+         self.navigationController?.navigationBar.isHidden = true
+       }
+       override func viewWillDisappear(_ animated: Bool) {
+           self.navigationController?.navigationBar.isHidden = false
+       }
+    
+    @IBAction func editProfileButton(sender: UIButton) {
+          let destinationVC = EditProfileViewController.instantiateFromNib()
+          self.navigationController?.pushViewController(destinationVC!, animated: true)
+          
+      }
+    
+    @IBAction func backButton(sender: UIButton) {
+          self.navigationController?.popViewController(animated: true)
+      }
+    
 
+    
 }

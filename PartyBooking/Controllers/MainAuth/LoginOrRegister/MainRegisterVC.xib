@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GE_SS_Two_Bold.otf">
+            <string>GESSTwoBold-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainRegisterVC" customModule="PartyBooking" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="A5x-IH-ebM" customClass="MainRegisterVC" customModule="PartyBooking" customModuleProvider="target">
+            <view key="view" contentMode="scaleToFill" id="wNo-Ay-gbM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="86cf8e28-357a-44e8-9038-273466afd91a" translatesAutoresizingMaskIntoConstraints="NO" id="o0r-DP-Bkt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Anp-nJ-8sv">
+                        <rect key="frame" x="20" y="53" width="20" height="20"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P9h-V3-XvE">
+                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="99x-Ib-WHU"/>
+                                    <constraint firstAttribute="height" constant="20" id="oHB-9f-oTV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="16"/>
+                                <state key="normal" image="back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="backWithSender:" destination="A5x-IH-ebM" eventType="touchUpInside" id="BWi-Hg-Gr1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </stackView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PartyBooking" translatesAutoresizingMaskIntoConstraints="NO" id="kuh-Sx-c9V">
+                        <rect key="frame" x="32" y="104" width="350" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="grk-u9-6Y4"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="welcome.let's start" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8G-EH-JM6">
+                        <rect key="frame" x="137.5" y="166" width="139" height="17.5"/>
+                        <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="16"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="rYL-gJ-bwE">
+                        <rect key="frame" x="8" y="728" width="398" height="126"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Gc-rh-toG">
+                                <rect key="frame" x="0.0" y="0.0" width="398" height="55"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zzv-AC-lDk">
+                                        <rect key="frame" x="134.5" y="12.5" width="129" height="30"/>
+                                        <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="16"/>
+                                        <state key="normal" title="You Have Acount">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="haveAcountActionWithSender:" destination="A5x-IH-ebM" eventType="touchUpInside" id="Fc8-32-LhI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.043137254899999998" green="0.4039215686" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Zzv-AC-lDk" firstAttribute="centerX" secondItem="8Gc-rh-toG" secondAttribute="centerX" id="8Pf-P6-jbn"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="ONq-nC-GBx"/>
+                                    <constraint firstAttribute="height" constant="55" id="XR5-xA-8e1"/>
+                                    <constraint firstItem="Zzv-AC-lDk" firstAttribute="centerY" secondItem="8Gc-rh-toG" secondAttribute="centerY" id="dMh-jp-kEy"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="edo-wK-DLS">
+                                <rect key="frame" x="0.0" y="71" width="398" height="55"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIg-Jc-49L">
+                                        <rect key="frame" x="127.5" y="12.5" width="143" height="30"/>
+                                        <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="16"/>
+                                        <state key="normal" title="First Time Register">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="registerFirstTimeActionWithSender:" destination="A5x-IH-ebM" eventType="touchUpInside" id="S5G-cs-OpC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.16862745100000001" green="0.70588235290000001" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="aIg-Jc-49L" firstAttribute="centerY" secondItem="edo-wK-DLS" secondAttribute="centerY" id="8Mr-QG-Rnd"/>
+                                    <constraint firstAttribute="height" constant="55" id="99c-0l-26g"/>
+                                    <constraint firstItem="aIg-Jc-49L" firstAttribute="centerX" secondItem="edo-wK-DLS" secondAttribute="centerX" id="SZ0-Z1-CN5"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <viewLayoutGuide key="safeArea" id="UGf-wT-vyr"/>
+                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <constraints>
+                    <constraint firstItem="UGf-wT-vyr" firstAttribute="bottom" secondItem="rYL-gJ-bwE" secondAttribute="bottom" constant="8" id="9Nf-Qa-mje"/>
+                    <constraint firstItem="kuh-Sx-c9V" firstAttribute="top" secondItem="UGf-wT-vyr" secondAttribute="top" constant="60" id="GaQ-xA-NFV"/>
+                    <constraint firstItem="P8G-EH-JM6" firstAttribute="centerX" secondItem="wNo-Ay-gbM" secondAttribute="centerX" id="STr-sX-I5L"/>
+                    <constraint firstItem="UGf-wT-vyr" firstAttribute="trailing" secondItem="kuh-Sx-c9V" secondAttribute="trailing" constant="32" id="Tbd-IP-0oK"/>
+                    <constraint firstItem="o0r-DP-Bkt" firstAttribute="centerY" secondItem="wNo-Ay-gbM" secondAttribute="centerY" id="bpc-u5-2mS"/>
+                    <constraint firstItem="o0r-DP-Bkt" firstAttribute="centerX" secondItem="wNo-Ay-gbM" secondAttribute="centerX" id="dZ6-0g-j9F"/>
+                    <constraint firstItem="o0r-DP-Bkt" firstAttribute="width" secondItem="wNo-Ay-gbM" secondAttribute="width" id="fhH-co-mSf"/>
+                    <constraint firstItem="UGf-wT-vyr" firstAttribute="trailing" secondItem="rYL-gJ-bwE" secondAttribute="trailing" constant="8" id="i2J-E8-7VX"/>
+                    <constraint firstItem="P8G-EH-JM6" firstAttribute="top" secondItem="kuh-Sx-c9V" secondAttribute="bottom" constant="32" id="iDt-tY-Osv"/>
+                    <constraint firstItem="kuh-Sx-c9V" firstAttribute="leading" secondItem="UGf-wT-vyr" secondAttribute="leading" constant="32" id="joU-nK-2xh"/>
+                    <constraint firstItem="kuh-Sx-c9V" firstAttribute="top" secondItem="Anp-nJ-8sv" secondAttribute="bottom" constant="31" id="pPL-lD-RsL"/>
+                    <constraint firstItem="Anp-nJ-8sv" firstAttribute="leading" secondItem="UGf-wT-vyr" secondAttribute="leading" constant="20" id="pon-SH-VzF"/>
+                    <constraint firstItem="o0r-DP-Bkt" firstAttribute="height" secondItem="wNo-Ay-gbM" secondAttribute="height" id="u06-mt-ujr"/>
+                    <constraint firstItem="rYL-gJ-bwE" firstAttribute="leading" secondItem="UGf-wT-vyr" secondAttribute="leading" constant="8" id="ymZ-1t-Z23"/>
+                </constraints>
+            </view>
+            <navigationItem key="navigationItem" id="5JU-Ln-6ES"/>
+            <point key="canvasLocation" x="2505.7971014492755" y="-60.267857142857139"/>
+        </viewController>
+    </objects>
+    <resources>
+        <image name="86cf8e28-357a-44e8-9038-273466afd91a" width="720" height="1280"/>
+        <image name="PartyBooking" width="462" height="62"/>
+        <image name="back" width="37.5" height="37.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

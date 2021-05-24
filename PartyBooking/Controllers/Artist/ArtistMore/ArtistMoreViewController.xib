@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GE_SS_Two_Bold.otf">
+            <string>GESSTwoBold-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ArtistMoreViewController" customModule="PartyBooking" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="Hsa-eK-vf7" customClass="ArtistMoreViewController" customModule="PartyBooking" customModuleProvider="target">
+            <view key="view" contentMode="scaleToFill" id="wRg-hn-j3U">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uE0-zv-1is">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="74"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="more" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ee-Pn-Cwp">
+                                <rect key="frame" x="190" y="47" width="34.5" height="15"/>
+                                <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.16862745100000001" green="0.74117647060000003" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="74" id="A9C-Dt-9dy"/>
+                            <constraint firstItem="1ee-Pn-Cwp" firstAttribute="centerX" secondItem="uE0-zv-1is" secondAttribute="centerX" id="lAg-51-gZw"/>
+                            <constraint firstAttribute="bottom" secondItem="1ee-Pn-Cwp" secondAttribute="bottom" constant="12" id="ynV-jZ-yga"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="version 1-2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Df5-3c-3dA">
+                        <rect key="frame" x="161.5" y="647" width="91.5" height="15"/>
+                        <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="14"/>
+                        <color key="textColor" red="0.18039215689999999" green="0.18039215689999999" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NuG-7f-2Jh">
+                        <rect key="frame" x="0.0" y="74" width="414" height="541"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tableView>
+                </subviews>
+                <viewLayoutGuide key="safeArea" id="4CD-Sq-Rpu"/>
+                <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="uE0-zv-1is" firstAttribute="top" secondItem="wRg-hn-j3U" secondAttribute="top" id="1d8-fS-ah1"/>
+                    <constraint firstItem="NuG-7f-2Jh" firstAttribute="leading" secondItem="4CD-Sq-Rpu" secondAttribute="leading" id="4FP-bF-dWt"/>
+                    <constraint firstItem="4CD-Sq-Rpu" firstAttribute="bottom" secondItem="Df5-3c-3dA" secondAttribute="bottom" constant="200" id="8dX-ip-AtP"/>
+                    <constraint firstItem="4CD-Sq-Rpu" firstAttribute="trailing" secondItem="NuG-7f-2Jh" secondAttribute="trailing" id="NZp-yu-J1x"/>
+                    <constraint firstItem="uE0-zv-1is" firstAttribute="leading" secondItem="wRg-hn-j3U" secondAttribute="leading" id="bNc-Sg-7Dd"/>
+                    <constraint firstItem="NuG-7f-2Jh" firstAttribute="top" secondItem="uE0-zv-1is" secondAttribute="bottom" id="ml5-pS-Ane"/>
+                    <constraint firstAttribute="trailing" secondItem="uE0-zv-1is" secondAttribute="trailing" id="q8v-iR-wbG"/>
+                    <constraint firstItem="Df5-3c-3dA" firstAttribute="centerX" secondItem="wRg-hn-j3U" secondAttribute="centerX" id="rkt-IF-Tjc"/>
+                    <constraint firstItem="Df5-3c-3dA" firstAttribute="top" secondItem="NuG-7f-2Jh" secondAttribute="bottom" constant="32" id="yjj-Fb-aqw"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="tableView" destination="NuG-7f-2Jh" id="cxg-mx-Y3e"/>
+                <outlet property="titleLabel" destination="1ee-Pn-Cwp" id="2YI-fe-xmw"/>
+                <outlet property="version" destination="Df5-3c-3dA" id="0r7-Vt-7Fa"/>
+            </connections>
+            <point key="canvasLocation" x="123.18840579710145" y="-4.0178571428571423"/>
+        </viewController>
+    </objects>
+</document>

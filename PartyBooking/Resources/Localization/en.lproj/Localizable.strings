@@ -1,0 +1,166 @@
+/* 
+  Localizable.strings
+  PartyBooking
+
+  Created by MAC on 7/11/20.
+  Copyright © 2020 MAC. All rights reserved.
+*/
+
+
+"lang" = "en";
+//tab Bar
+"more" = "More";
+"account" = "Account";
+"reservation" = "Reservation";
+"search" = "search";
+"availabel"="Availabel";
+//// home
+"makeSearch" = "search";
+"location" = "location";
+"partyType" = "party Type";
+"Show" = "Show";
+"Most" = "Most Famous";
+"artist" = "artist";
+"searchtitle" = "search";
+"home" = "home";
+"live" = "live";
+//// map
+"choose" = "choose";
+/// search result
+"amount" = "estimeated amount";
+"taxes" = "taxis and fees";
+// artist profile
+"profile" = "profile";
+"comments" = "Comments";
+"reserve" = "Reserve Now";
+/// user register
+"register" = "Personal Information";
+"information" = "register New account";
+"first" = "first name";
+"last" = "last name";
+"email" = "Email";
+"phone" = "phone number";
+"country" = "country";
+"password" = "password";
+"payment" = "payment way";
+"done" = "done reservation";
+///// user reservation
+"myReservation" = "My Reservation";
+"current" = "Current Reservation";
+"ended" = "Ended Reservation";
+"confirmNumber" = "confirmation Number";
+"laod" = "laod";
+"contract" = "contract";
+///
+"myAccount" = "My Account";
+//// more user
+"offer" = "Offer";
+"favourite" = "Favourite";
+"callCenter" = "Call Center";
+"setting" = "Setting";
+"logOut" = "logOut";
+/// call center
+"name" = "Name";
+"message" = "message Title";
+"send" = "Send";
+/// setting
+"language" = "Language";
+"arabic" = "arabic Language";
+"english" = "english Language";
+"terms" = "terms and conditions";
+/// user accoutn
+"chnge" = "chnge profile";
+/// edit accoutn
+"edit" = "Edit Profile";
+"save" = "Save Changes";
+/// login
+"login" = "logIn";
+"logintitle" = "LOGIN";
+"emailOrPhone" = "Email Or Phone number";
+"haveAccount" = "have account";
+"or" = "OR";
+"firstTime" = "register first Time";
+"skip" = "skip";
+"welcome"="welcome. let's start";
+"google" = "Register by Google";
+"facebook" = "Register by facebook";
+"artistRegister" = "Artist Register";
+"userRegister" = "User Register";
+/// artist Register
+"area " = "supported area";
+"service" = "service type";
+"bank" = "your bank account";
+"next" = "next";
+/// upload image
+"add" = "add Image";
+"pick" = "pick Image or choose from gallary";
+/// offer price
+"howMuch" = "how much your offer";
+"clientPrice" = "Price client will pay";
+"commetion" = "PartyBooking commetion is ";
+"saveTime" = "save your time in manage reservation";
+"shoping" = "shoping by your name";
+/// information
+"ImportantInf" = "Important information about PartyBooking ";
+"fast" = "is the reservation confirmed fast ?";
+"yes" = "yes . after pay is done ";
+"choosePepole" = "can i choose the pepole that can reserve ?";
+"no" = "no . all pepole can reserve";
+"timeRecieveing" = "can i choose the time for recieveing reservation ?";
+"yes2" = "yes . and the best way is to keep you rate update . and close the date that you do not want reservation in it";
+"agree" = "i agree that all information are real and legal and it belong to the name that i mention";
+"read" = "i read and accept  ";
+"Ready" = "Ready to get reservation";
+"notReady" = "not ready yet ";
+///// artist acount
+"profilePic" = "profile Picture";
+"aboutMe" = "about Me";
+"myWork" = "my Work";
+"live" = "make live video";
+/// artist Moer
+"Bills" = "Bills";
+"UserComments" = "User Comments";
+"UserExpeience" = "User Expeience";
+"SelintMode" = "Selint Mode";
+"Active" = "Active";
+"unActive" = "unActive";
+"version" = "version";
+/// Selint
+"Selint" = "Selint";
+"whenActive" = "when active slient mode ,notifications that you recieve during selint hours will be selint ";
+//// notification
+"notification"="Notification";
+"noNotification"="No Notification";
+"confirmReservation"="reservation confirmed";
+"look"="look to your confirmed reservation message about";
+//// confirm Reservation
+"congratulation"="congratulation reservation confirmed";
+"reservationDone" = "Reservation Done";
+////
+"rateArtist" = "Rate Artist";
+//// offer
+"offer" = "offer";
+"team" = "show team";
+//// offer
+"favourite"="Favourite";
+//// exprience
+"exprience"="User Exprience";
+//// available reservation
+"Avialable"="Avialable Reservation ";
+"chooseDate"="choose multible date to chand it once ";
+"SelectDate"="* Select whate you want to change";
+"availableBtn"="available reservation in this date ";
+"closeBtn"="close reservation in this date ";
+"changePrice"="change price in this date ";
+//// artist reservation
+"reservation"="reservation";
+"searchIn"="search in reservation";
+"confirmeRservation"="confirme Rservation";
+"cancelRservation"="cancel Rservation";
+"clientNmae"="client Nmae:";
+"city"="City :";
+
+
+
+
+

@@ -1,36 +1,58 @@
 PODS:
+  - Alamofire (4.8.2)
   - CollapseTableView (1.0.2)
   - Cosmos (20.0.1)
+  - DropDown (2.3.13)
+  - FlagPhoneNumber (0.8.0):
+    - FlagPhoneNumber/libPhoneNumberiOS (= 0.8.0)
+  - FlagPhoneNumber/libPhoneNumberiOS (0.8.0)
   - FSCalendar (2.8.1)
   - GoogleMaps (3.9.0):
     - GoogleMaps/Maps (= 3.9.0)
   - GoogleMaps/Base (3.9.0)
   - GoogleMaps/Maps (3.9.0):
     - GoogleMaps/Base
+  - Kingfisher (5.4.0)
   - RNActivityView (0.0.7)
+  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.8.2)
   - CollapseTableView
   - Cosmos
+  - DropDown (~> 2.3.13)
+  - FlagPhoneNumber
   - FSCalendar
   - GoogleMaps
+  - Kingfisher (~> 5.4.0)
   - RNActivityView (= 0.0.7)
+  - SwiftyJSON (~> 5.0.0)
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - CollapseTableView
     - Cosmos
+    - DropDown
+    - FlagPhoneNumber
     - FSCalendar
     - GoogleMaps
+    - Kingfisher
     - RNActivityView
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   CollapseTableView: 70069c71f90030757e0027d790e286a9a634d93c
   Cosmos: b47fddf2102bb48580cd3025d9ce0a5c658a65da
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  FlagPhoneNumber: 3712455b95f66cb0f2016fef7d9e34cddf8c7f9a
   FSCalendar: 5245140456fcbcac5824c203b98bd8068bdfee1a
   GoogleMaps: 4b5346bddfe6911bb89155d43c903020170523ac
+  Kingfisher: 9c8f2cc6710334e06f32ba2b45e77707d5e2f0c9
   RNActivityView: d1bde2ec4956ad8f69da9650afe7898311221a8e
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: f661a37c8a38e0a846b08692a1c47d3de4c9a575
+PODFILE CHECKSUM: fafe359dd38bd2a300575bf3f87352a438b1ee32
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.10.1

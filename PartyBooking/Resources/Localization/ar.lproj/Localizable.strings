@@ -1,0 +1,159 @@
+/* 
+  Localizable.strings
+  PartyBooking
+
+  Created by MAC on 7/11/20.
+  Copyright © 2020 MAC. All rights reserved.
+*/
+
+"lang" = "ar";
+//tab Bar
+"more" = "المزيد";
+"account" = "حسابي";
+"reservation" = "الحجوزات";
+"search" = "البحث";
+"availabel"="التوفر";
+// home
+"makeSearch" = "ابحث";
+"location" = "الموقع";
+"partyType" = "نوع الحفل";
+"Show" = "العروض";
+"Most" = "الاكثر رواجا";
+"artist" = "الفنان";
+"searchtitle" = "بحث";
+"home" = "الرئيسية";
+"live" = "البث";
+// map
+"choose" = "اختار";
+/// search result
+"amount" = "المبلغ المقدر";
+"taxes" = "ضرائب ورسوم";
+// artist profile
+"profile" = "الملف الشخصي";
+"comments" = "التعليقات";
+"reserve" = "حجز الان";
+// user register
+"information" = "تسجيل حساب جديد";
+"first" = "الاسم الاول";
+"last" = "اسم العائلة";
+"email" = "عنوان البريد الالكتروني";
+"phone" = "رقم هاتف المحمول";
+"country" = "الدولة";
+"password" = "الرقم السري";
+"payment" = "طريقة الدفع";
+"done" = "اتمام الحجز";
+// user reservation
+"myReservation" = "حجوزاتي";
+"current" = "الحجوازات الحالية";
+"ended" = "الحجوزات المنتهية";
+"confirmNumber" = "رقم تاكيد الحجز";
+"laod" = "تحميل";
+"contract" = "العقد";
+// more user
+"offer" = "العروض";
+"favourite" = "المفضلة";
+"callCenter" = "خدمة عملاء";
+"setting" = "الاعدادات";
+"logOut" = "تسجيل خروج";
+/// call center
+"name" = "الاسم";
+"message" = "عنوان الرسالة";
+"send" = "ارسال";
+"language" = "اللغة";
+"arabic" = "اللغة العربية";
+"english" = "اللغة الانجليزية";
+"terms" = "الشروط والاحكام";
+/// user accoutn
+"chnge" = "تعديل الملف الشخصي";
+/// edit accoutn
+"edit" = "تعديل الملف الشخصي";
+"save" = "حفظ التعديلات";
+/// login
+"logintitle" = "سجل دخولك";
+"login" = "دخول";
+"emailOrPhone" = "البريد الالكتروني او رقم الجوال";
+"haveAccount" = "لديك حساب بالفعل";
+"or" = "ام";
+"firstTime" = "تسجل اول مرة";
+"skip" = "تخطي";
+"welcome"="مرحبا بك هيا بنا نبدا";
+"google" = "سجل عن طريق Google";
+"facebook" = "سجل عن طريق facebook";
+"artistRegister" = "تسجيل مزود خدمة";
+"userRegister" = "تسجيل كمستخدم";
+/// artist Register
+"register" = "تسجيل حساب جديد";
+"area " = "المناطق التي تدعمها";
+"service" = "نوع الخدمة التي تدعمها";
+"bank" = "الحساب البنكي الخاص بك";
+"next" = "التالي";
+/// upload image
+"add" = "اضف صورة";
+"pick" = "التقط صورة او اختر من المعرض";
+/// offer price
+"howMuch" = "ما المبلغ الذي ترغب بتقديمة";
+"clientPrice" = "المبلغ الذي يدفعة العميل";
+"commetion" = "عمولة PartyBooking هي ";
+"saveTime" = "وفر وقتك في ادارة حجوزاتك";
+"shoping" = "التسوق باسمك";
+/// information
+"ImportantInf" = "معلومات مهمة قبل العرض علي PartyBooking";
+"fast" = "هل يتم تاكيد الحجز فورا ؟";
+"yes" = "نعم. يتم تاكيد الحجز بمجرد اجراء الحجز والدفع";
+"choosePepole" = "هل يمكنني اختيار الاشخاص الذين يقومون بالحجز";
+"no" = "لا . يمكن للجميع الحجز وتاكيد الحجز في الوقت المتاح";
+"timeRecieveing" = "هل يمكنني ان احدد الوقت الذي اتلقي فية الحجوزات";
+"yes2" = "نعم.وافضل طريقة هي الحفاظ علي تقويمك محدثاواغلق التواريخ التي لا تريد استقبال الحجوزات خلالها ";
+"agree" = "اقر بان هذة المعلومات حقيقيةوقانونية وهي للاسم الذي تم ذكرةوحاصل علي التصاريح والموافقات الازمةوالتي يمكن تقديمها عند الطلب وتحتفظ PartyBooking بالحق في التاكدوالتحقق ن اي معلومات يتم تزويدها في عملية التسجيل هذة";
+"read" = "قرات و اوفق علي ";
+"Ready" = "جاهز لاستقبال الحجوزات";
+"notReady" = "لست جاهز بعد";
+///// artist acount
+"profilePic" = "الصورة الشخصية";
+"aboutMe" = "نبذة ْعني :";
+"myWork" = "الاعمال :";
+"live" = "إجراء بث مباشر";
+/// artist Moer
+"Bills" = "الفواتير";
+"UserComments" = "تعليقات المستخدمين";
+"UserExpeience" = "تجربة المستخدمين";
+"SelintMode" = "وضع عدم الازعاج";
+"Active" = "مفعل";
+"unActive" = "غير مفعل";
+"version" = "الاصدار";
+/// Selint
+"Selint" = "الهدوء";
+"whenActive" = "عند تفعيل خاصية عدم الازعاج فان التنبيهات التي تصلك خلال ساعات الهدود تكون صامتة";
+//// notification
+"notification"="الاشعارات";
+"noNotification"="لا يوجد اشعارات";
+"confirmReservation"="تم تاكيد الحجز";
+"look"="اطلع علي رسالة تاكيد الحجز الخاصة بك ل";
+//// confirm Reservation
+"congratulation"="تهانيا تم تاكيد الحجز";
+"reservationDone" = "تم الحجز";
+////
+"rateArtist" = "قم بتقييم الفنان";
+////
+"offer" = "خصم";
+"team" = "فرقة العرض";
+////
+"favourite"="المفضلة";
+"exprience"="تجربة المستخدم";
+//// available reservation
+"myAccount" = "حسابي";
+//
+"Avialable"="توفر الحجوزات";
+"chooseDate"="اضغط علي عدة تواريخ لتعديلها دفعة واحدة";
+"SelectDate"="* حدد ما ترغب بتعديلة";
+"availableBtn"="اتاحة الحجز في هذا التاريخ";
+"closeBtn"="اغلاق الحجز في هذا التاريخ";
+"changePrice"="تغيير السعر في هذا التاريخ";
+//// artist reservation
+"reservation"="الحجوزات";
+"searchIn"="ابحث في الحجوزات";
+"confirmeRservation"="حجز موكد";
+"cancelRservation"="حجز ملغي";
+"clientNmae"="اسم العميل:";
+"city"="المدينة:";
+

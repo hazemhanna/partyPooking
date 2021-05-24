@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GE_SS_Two_Bold.otf">
+            <string>GESSTwoBold-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginVC" customModule="PartyBooking" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="PDj-M5-Htw" customClass="LoginVC" customModule="PartyBooking" customModuleProvider="target">
+            <view key="view" contentMode="scaleToFill" id="qIK-6s-iWL">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="86cf8e28-357a-44e8-9038-273466afd91a" translatesAutoresizingMaskIntoConstraints="NO" id="eyB-Zg-hiU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z1s-18-AyN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="welcome.let's start" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2US-pM-eNz">
+                        <rect key="frame" x="137.5" y="244" width="139" height="17.5"/>
+                        <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="16"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3a4-EE-sI7">
+                        <rect key="frame" x="20" y="76" width="20" height="20"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7DO-Hk-k5K">
+                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="PCO-uT-fqs"/>
+                                    <constraint firstAttribute="width" constant="20" id="epk-sD-xc9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="16"/>
+                                <state key="normal" image="back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="backWithSender:" destination="PDj-M5-Htw" eventType="touchUpInside" id="phC-mv-EVS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </stackView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PartyBooking" translatesAutoresizingMaskIntoConstraints="NO" id="hr6-wb-Pc4">
+                        <rect key="frame" x="32" y="182" width="350" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="xWg-5h-GcC"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="nIc-Za-5Q0">
+                        <rect key="frame" x="8" y="351.5" width="398" height="152"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Emial or phone number " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eaH-jH-cGB" customClass="CustomTextField" customModule="PartyBooking" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="398" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="b9i-dm-NX9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JQz-r3-z18" customClass="CustomTextField" customModule="PartyBooking" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="398" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="3ZO-Js-lIm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                        </subviews>
+                    </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDO-qb-wRi" customClass="CustomButtons" customModule="PartyBooking" customModuleProvider="target">
+                        <rect key="frame" x="147" y="535.5" width="120" height="40"/>
+                        <color key="backgroundColor" red="0.043137254899999998" green="0.4039215686" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="EQe-1r-qpH"/>
+                            <constraint firstAttribute="width" constant="120" id="uj5-Vs-f4m"/>
+                        </constraints>
+                        <state key="normal" title="login">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="logInButtonWithSender:" destination="PDj-M5-Htw" eventType="touchUpInside" id="xaD-t0-lST"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <viewLayoutGuide key="safeArea" id="iQA-EJ-NtS"/>
+                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <constraints>
+                    <constraint firstItem="3a4-EE-sI7" firstAttribute="top" secondItem="iQA-EJ-NtS" secondAttribute="top" constant="32" id="1nR-Sd-ldW"/>
+                    <constraint firstItem="nIc-Za-5Q0" firstAttribute="leading" secondItem="iQA-EJ-NtS" secondAttribute="leading" constant="8" id="2h4-fH-EWj"/>
+                    <constraint firstItem="z1s-18-AyN" firstAttribute="top" secondItem="qIK-6s-iWL" secondAttribute="top" id="9C4-jf-ENo"/>
+                    <constraint firstAttribute="bottom" secondItem="z1s-18-AyN" secondAttribute="bottom" id="CFg-js-9w9"/>
+                    <constraint firstItem="eyB-Zg-hiU" firstAttribute="height" secondItem="qIK-6s-iWL" secondAttribute="height" id="GOg-I7-gwD"/>
+                    <constraint firstItem="iQA-EJ-NtS" firstAttribute="trailing" secondItem="nIc-Za-5Q0" secondAttribute="trailing" constant="8" id="PfJ-Ll-CEz"/>
+                    <constraint firstItem="3a4-EE-sI7" firstAttribute="leading" secondItem="iQA-EJ-NtS" secondAttribute="leading" constant="20" id="QfB-VE-l7m"/>
+                    <constraint firstItem="aDO-qb-wRi" firstAttribute="centerX" secondItem="qIK-6s-iWL" secondAttribute="centerX" id="V7S-DF-e5g"/>
+                    <constraint firstItem="hr6-wb-Pc4" firstAttribute="leading" secondItem="iQA-EJ-NtS" secondAttribute="leading" constant="32" id="Wag-Jf-z89"/>
+                    <constraint firstItem="2US-pM-eNz" firstAttribute="centerX" secondItem="qIK-6s-iWL" secondAttribute="centerX" id="g6G-Es-5Vd"/>
+                    <constraint firstItem="eyB-Zg-hiU" firstAttribute="centerX" secondItem="qIK-6s-iWL" secondAttribute="centerX" id="gT1-uJ-lqD"/>
+                    <constraint firstItem="hr6-wb-Pc4" firstAttribute="top" secondItem="iQA-EJ-NtS" secondAttribute="top" constant="138" id="iNJ-Br-6g2"/>
+                    <constraint firstItem="nIc-Za-5Q0" firstAttribute="top" secondItem="2US-pM-eNz" secondAttribute="bottom" constant="90" id="tC1-d0-Z2z"/>
+                    <constraint firstItem="2US-pM-eNz" firstAttribute="top" secondItem="hr6-wb-Pc4" secondAttribute="bottom" constant="32" id="tfw-qJ-gOq"/>
+                    <constraint firstItem="eyB-Zg-hiU" firstAttribute="width" secondItem="qIK-6s-iWL" secondAttribute="width" id="uPP-eF-LBh"/>
+                    <constraint firstItem="aDO-qb-wRi" firstAttribute="top" secondItem="nIc-Za-5Q0" secondAttribute="bottom" constant="32" id="viT-vs-kbf"/>
+                    <constraint firstItem="iQA-EJ-NtS" firstAttribute="trailing" secondItem="z1s-18-AyN" secondAttribute="trailing" id="vpZ-v6-2b5"/>
+                    <constraint firstItem="iQA-EJ-NtS" firstAttribute="trailing" secondItem="hr6-wb-Pc4" secondAttribute="trailing" constant="32" id="yTZ-pm-BW6"/>
+                    <constraint firstItem="z1s-18-AyN" firstAttribute="leading" secondItem="iQA-EJ-NtS" secondAttribute="leading" id="zch-S9-pHz"/>
+                    <constraint firstItem="eyB-Zg-hiU" firstAttribute="centerY" secondItem="qIK-6s-iWL" secondAttribute="centerY" id="zdA-AV-8JK"/>
+                </constraints>
+            </view>
+            <navigationItem key="navigationItem" id="bRY-UV-qxB"/>
+            <point key="canvasLocation" x="2505.7971014492755" y="-60.267857142857139"/>
+        </viewController>
+    </objects>
+    <designables>
+        <designable name="JQz-r3-z18">
+            <size key="intrinsicContentSize" width="96" height="42.5"/>
+        </designable>
+        <designable name="aDO-qb-wRi">
+            <size key="intrinsicContentSize" width="34" height="30"/>
+        </designable>
+        <designable name="eaH-jH-cGB">
+            <size key="intrinsicContentSize" width="187" height="42.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="86cf8e28-357a-44e8-9038-273466afd91a" width="720" height="1280"/>
+        <image name="PartyBooking" width="462" height="62"/>
+        <image name="back" width="37.5" height="37.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

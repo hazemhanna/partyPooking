@@ -176,9 +176,12 @@ class UserRegisterViewController: UIViewController {
     }
            
     @IBAction func nextButton(sender: UIButton) {
-           let destinationVC = ConfirmReservationViewController.instantiateFromNib()
-           self.navigationController?.pushViewController(destinationVC!, animated: true)
-       }
+        let destinationVC = TabBarController.instantiate(fromAppStoryboard: .Main)
+        destinationVC.type = .user
+        if let appDelegate = UIApplication.shared.delegate {
+            appDelegate.window??.rootViewController = destinationVC
+        }
+    }
     
     
     @IBAction func PassWordInstructionsAction(_ sender: UIButton) {

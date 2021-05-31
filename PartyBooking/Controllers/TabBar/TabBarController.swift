@@ -38,6 +38,7 @@ class TabBarController: UITabBarController {
         if type == .user {
          systemTags = [RoundedTabBarItem.search,
                        RoundedTabBarItem.reservations,
+                       RoundedTabBarItem.userLive,
                        RoundedTabBarItem.account,
                        RoundedTabBarItem.more]
         }else{
@@ -76,7 +77,10 @@ class TabBarController: UITabBarController {
         case .home:
             viewController = ArtistHomeVc.instantiateFromNib()!
         case .live:
-            viewController = LiveVideoViewController.instantiateFromNib()!
+            viewController = AllLiveVideoVC.instantiateFromNib()!
+        case .userLive:
+            viewController = AllLiveVideoVC.instantiateFromNib()!
+
         }
         viewController.title = customTabBarItem.title
         viewController.tabBarItem = customTabBarItem.tabBarItem

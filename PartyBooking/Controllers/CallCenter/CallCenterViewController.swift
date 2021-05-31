@@ -13,14 +13,15 @@ class CallCenterViewController: UIViewController {
     @IBOutlet weak var sendBtn : UIButton!
     @IBOutlet weak var titleLabel : UILabel!
     
-    @IBOutlet weak var NameLabel : UILabel!
-    @IBOutlet weak var emailLabel : UILabel!
-    @IBOutlet weak var phoneLabel : UILabel!
+
+    @IBOutlet weak var messageTitleLabel : UILabel!
+    @IBOutlet weak var messageTitleTextField: TextFieldDropDown!
+
+    var titles = ["compline".localized,"suggestion".localized]
+
     @IBOutlet weak var messageLabel : UILabel!
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var NameTextField: UITextField!
     @IBOutlet weak var messageTextField: UITextField!
-    @IBOutlet weak var phoneTextField: UITextField!
+  
     @IBOutlet weak var backButton: UIButton! {
           didSet {
               backButton.setImage(backButton.currentImage?.flipIfNeeded(), for: .normal)
@@ -29,25 +30,28 @@ class CallCenterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        sendBtn.layer.cornerRadius = 7
+        sendBtn.layer.cornerRadius = 8
         setUPLocalize()
+        titleDropDown()
     }
+    
+    
+    func titleDropDown() {
+        messageTitleTextField.optionArray = self.titles
+        messageTitleTextField.didSelect { (selectedText, index, id) in
+            self.messageTitleTextField.text = selectedText
+        }
+    }
+    
+    
     
     func setUPLocalize(){
         titleLabel.text = "callCenter".localized
         sendBtn.setTitle("send".localized, for: .normal)
-        NameLabel.text = "name".localized
-        emailLabel.text = "email".localized
-        phoneLabel.text = "phone".localized
-        messageLabel.text = "message".localized
-            emailTextField.textAlignment = .center
-            messageTextField.textAlignment = .center
-            NameTextField.textAlignment = .center
-            phoneTextField.textAlignment = .center
-        
-        
-        
-        
+        messageTitleLabel.text = "message".localized
+        messageLabel.text = "message2".localized
+        messageTextField.textAlignment = .center
+        messageTitleTextField.textAlignment = .center
     }
     
     override func viewWillAppear(_ animated: Bool) {

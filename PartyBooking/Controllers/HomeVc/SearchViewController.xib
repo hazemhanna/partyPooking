@@ -116,14 +116,17 @@
                                                             <constraint firstAttribute="width" constant="28" id="cdD-Hc-jwY"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="monday,6aprl" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQ0-ag-Sjk">
-                                                        <rect key="frame" x="44" y="20.5" width="90.5" height="15"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="monday,6april" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQ0-ag-Sjk">
+                                                        <rect key="frame" x="44" y="20.5" width="94.5" height="15"/>
                                                         <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="14"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EhI-CG-07Z">
                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="56"/>
+                                                        <connections>
+                                                            <action selector="calenderTappedWithSender:" destination="8bJ-Rj-NcN" eventType="touchUpInside" id="HQF-6I-CX2"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.043137254901960784" green="0.40392156862745099" blue="0.5725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -285,6 +288,7 @@
                 </constraints>
             </view>
             <connections>
+                <outlet property="dateLbl" destination="UQ0-ag-Sjk" id="wMI-66-PQd"/>
                 <outlet property="dateView" destination="Utz-ZJ-PFf" id="qkU-TX-bUI"/>
                 <outlet property="locatioLabel" destination="Egj-Nc-Ebt" id="DNa-0O-0vW"/>
                 <outlet property="locationView" destination="cQp-WG-eEL" id="LyR-9D-4OY"/>

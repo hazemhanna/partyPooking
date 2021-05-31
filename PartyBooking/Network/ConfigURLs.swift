@@ -7,13 +7,27 @@
 //
 
 import Foundation
+import Alamofire
+import RxSwift
+import SwiftyJSON
 
 
-var BASE_URL = "https://partybooking.dtagdev.com/"
+var BASE_URL = "https://partybooking.dtagdev.com/en/"
 
 struct ConfigURLs {
-    
-    //MARK:- POST Artist Login
-    static var postLogin = BASE_URL + "artist/login"
 
+    //MARK:- user
+    //MARK:- POST user Login
+    static var userLogin = BASE_URL + "artist/login"
+    //MARK:- POST Register
+    static var postRegister = BASE_URL  + "/register"
+    //MARK:- POST validateRegister
+    static var validateRegister = BASE_URL  + "/validate-register"
+
+    
+    
+    //MARK:- artist
+    //MARK:- POST Artist Login
+    static var artistLogin = BASE_URL + "artist/login"
+    
 }

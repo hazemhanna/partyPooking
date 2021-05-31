@@ -63,6 +63,9 @@
 "name" = "Name";
 "message" = "message Title";
 "send" = "Send";
+"message2"="message";
+"compline"="compline";
+"suggestion"="suggestion";
 /// setting
 "language" = "Language";
 "arabic" = "arabic Language";

@@ -14,6 +14,13 @@ PODS:
     - GoogleMaps/Base
   - Kingfisher (5.4.0)
   - RNActivityView (0.0.7)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
+  - SVProgressHUD (2.2.5)
   - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
@@ -26,6 +33,9 @@ DEPENDENCIES:
   - GoogleMaps
   - Kingfisher (~> 5.4.0)
   - RNActivityView (= 0.0.7)
+  - RxCocoa (~> 5)
+  - RxSwift (~> 5)
+  - SVProgressHUD (~> 2.2.5)
   - SwiftyJSON (~> 5.0.0)
 
 SPEC REPOS:
@@ -39,6 +49,10 @@ SPEC REPOS:
     - GoogleMaps
     - Kingfisher
     - RNActivityView
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - SVProgressHUD
     - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -51,8 +65,12 @@ SPEC CHECKSUMS:
   GoogleMaps: 4b5346bddfe6911bb89155d43c903020170523ac
   Kingfisher: 9c8f2cc6710334e06f32ba2b45e77707d5e2f0c9
   RNActivityView: d1bde2ec4956ad8f69da9650afe7898311221a8e
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: fafe359dd38bd2a300575bf3f87352a438b1ee32
+PODFILE CHECKSUM: 0baa041a7ddda2f0a44b08d9d19923821ef03416
 
 COCOAPODS: 1.10.1

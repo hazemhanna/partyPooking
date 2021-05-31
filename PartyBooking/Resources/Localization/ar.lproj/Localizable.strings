@@ -58,6 +58,9 @@
 /// call center
 "name" = "الاسم";
 "message" = "عنوان الرسالة";
+"message2"="الرسالة";
+"compline"="شكوي";
+"suggestion"="اقتراح";
 "send" = "ارسال";
 "language" = "اللغة";
 "arabic" = "اللغة العربية";

@@ -13,10 +13,11 @@ class ReservationTableViewCell: UITableViewCell {
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var loadBtn: UIButton!
     @IBOutlet weak var contractLabel: UILabel!
-    @IBOutlet weak var confirmNumbertLabel: UILabel!
+    @IBOutlet weak var confirmNumberLabel: UILabel!
+    @IBOutlet weak var NumberLabel: UILabel!
+    @IBOutlet weak var cancelBtn: UIButton!
 
-    var delegete = ReservationViewController()
-
+    var cancel: (() -> Void)? = nil
 
 
     override func awakeFromNib() {
@@ -29,18 +30,18 @@ class ReservationTableViewCell: UITableViewCell {
      func setUPLocalize(){
         loadBtn.setTitle("laod".localized, for: .normal)
         contractLabel.text = "contract".localized
-        confirmNumbertLabel.text = "confirmNumber".localized
+        confirmNumberLabel.text = "confirmNumber".localized
         }
        
-        
-    @IBAction func loadButton(sender: UIButton) {
-        delegete.blackView.isHidden = false
-        delegete.rateView.isHidden = false
-      }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
     }
+    
+    
+    @IBAction func cancelAction(_ sender: UIButton) {
+        self.cancel?()
+    }
+    
     
 }

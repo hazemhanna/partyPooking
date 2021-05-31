@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GE_SS_Two_Bold.otf">
+            <string>GESSTwoBold-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PartyDateVc" customModule="PartyBooking" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="lK4-AJ-oHV" customClass="PartyDateVc" customModule="PartyBooking" customModuleProvider="target">
+            <view key="view" contentMode="scaleToFill" id="hSg-hV-R6o">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abb-c0-lMI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="74"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reservation " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GuO-ax-ZrZ">
+                                <rect key="frame" x="165.5" y="47" width="83.5" height="15"/>
+                                <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JkE-xI-g04">
+                                <rect key="frame" x="16" y="37" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="9RL-f0-xE1"/>
+                                    <constraint firstAttribute="height" constant="25" id="kjK-H4-E0e"/>
+                                </constraints>
+                                <state key="normal" image="back"/>
+                                <connections>
+                                    <action selector="backButtonWithSender:" destination="lK4-AJ-oHV" eventType="touchUpInside" id="4Jd-3V-GX7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.16862745100000001" green="0.74117647060000003" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="GuO-ax-ZrZ" secondAttribute="bottom" constant="12" id="4fF-sx-Kc5"/>
+                            <constraint firstItem="JkE-xI-g04" firstAttribute="leading" secondItem="abb-c0-lMI" secondAttribute="leading" constant="16" id="I91-Re-fBU"/>
+                            <constraint firstAttribute="height" constant="74" id="gph-PY-WuV"/>
+                            <constraint firstItem="GuO-ax-ZrZ" firstAttribute="centerX" secondItem="abb-c0-lMI" secondAttribute="centerX" id="j4D-jc-e9E"/>
+                            <constraint firstAttribute="bottom" secondItem="JkE-xI-g04" secondAttribute="bottom" constant="12" id="mS1-Az-Z6C"/>
+                        </constraints>
+                    </view>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="tMU-Dq-TB1">
+                        <rect key="frame" x="16" y="402" width="390" height="149"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jN5-i1-SKl">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="58.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Party Time :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YT0-Qi-jze">
+                                        <rect key="frame" x="0.0" y="19" width="103" height="20.5"/>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="18"/>
+                                        <color key="textColor" red="0.043137254899999998" green="0.4039215686" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="IXg-ap-BkB">
+                                        <rect key="frame" x="111" y="0.0" width="279" height="58.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="FhT-64-PVq">
+                                                <rect key="frame" x="0.0" y="0.0" width="131.5" height="58.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="coM-bO-HUq">
+                                                        <rect key="frame" x="0.0" y="19" width="45" height="20.5"/>
+                                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="18"/>
+                                                        <color key="textColor" red="0.043137254899999998" green="0.4039215686" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Elg-FE-MBL" customClass="CustomView" customModule="PartyBooking" customModuleProvider="target">
+                                                        <rect key="frame" x="61" y="0.0" width="70.5" height="58.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xlt-Oe-Q4o">
+                                                                <rect key="frame" x="17" y="19" width="36.5" height="20.5"/>
+                                                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="18"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.73333333329999995" green="0.73333333329999995" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstItem="xlt-Oe-Q4o" firstAttribute="centerY" secondItem="Elg-FE-MBL" secondAttribute="centerY" id="Dla-QQ-fjY"/>
+                                                            <constraint firstItem="xlt-Oe-Q4o" firstAttribute="centerX" secondItem="Elg-FE-MBL" secondAttribute="centerX" id="HMK-1u-qkS"/>
+                                                            <constraint firstAttribute="height" constant="58.5" id="bdI-lQ-ZaF"/>
+                                                            <constraint firstAttribute="width" constant="70.5" id="pOJ-7u-JBl"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="2nC-KR-ZoU">
+                                                <rect key="frame" x="147.5" y="0.0" width="131.5" height="58.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXi-39-UQj">
+                                                        <rect key="frame" x="0.0" y="19" width="21" height="20.5"/>
+                                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="18"/>
+                                                        <color key="textColor" red="0.043137254899999998" green="0.4039215686" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sRK-lL-Zc0" customClass="CustomView" customModule="PartyBooking" customModuleProvider="target">
+                                                        <rect key="frame" x="37" y="0.0" width="94.5" height="58.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhQ-hr-ueo">
+                                                                <rect key="frame" x="29" y="19" width="36.5" height="20.5"/>
+                                                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="18"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.73333333333333328" green="0.73333333333333328" blue="0.73333333333333328" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstItem="mhQ-hr-ueo" firstAttribute="centerX" secondItem="sRK-lL-Zc0" secondAttribute="centerX" id="0Qc-15-2lB"/>
+                                                            <constraint firstItem="mhQ-hr-ueo" firstAttribute="centerY" secondItem="sRK-lL-Zc0" secondAttribute="centerY" id="ov4-AK-tvH"/>
+                                                            <constraint firstAttribute="height" constant="58.5" id="x1A-ma-BLK"/>
+                                                            <constraint firstAttribute="width" constant="94.5" id="zbj-t4-sbL"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TDb-du-j3x">
+                                <rect key="frame" x="0.0" y="90.5" width="390" height="58.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Party Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JV1-Ya-1Ni">
+                                        <rect key="frame" x="0.0" y="19" width="89.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="18"/>
+                                        <color key="textColor" red="0.043137254899999998" green="0.4039215686" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Kr3-jI-G9J">
+                                        <rect key="frame" x="97.5" y="0.0" width="292.5" height="58.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CFa-ca-FqT" customClass="CustomView" customModule="PartyBooking" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="138.5" height="58.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPY-w0-nfx">
+                                                        <rect key="frame" x="35" y="19" width="68.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="18"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.73333333329999995" green="0.73333333329999995" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="DPY-w0-nfx" firstAttribute="centerX" secondItem="CFa-ca-FqT" secondAttribute="centerX" id="k25-jE-9yT"/>
+                                                    <constraint firstItem="DPY-w0-nfx" firstAttribute="centerY" secondItem="CFa-ca-FqT" secondAttribute="centerY" id="osx-de-TPn"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bnm-DD-Ras" customClass="CustomView" customModule="PartyBooking" customModuleProvider="target">
+                                                <rect key="frame" x="154.5" y="0.0" width="138" height="58.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15/10/2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="osd-PL-6EW">
+                                                        <rect key="frame" x="23.5" y="19" width="90.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="18"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.73333333329999995" green="0.73333333329999995" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="osd-PL-6EW" firstAttribute="centerX" secondItem="bnm-DD-Ras" secondAttribute="centerX" id="V1f-5c-6nZ"/>
+                                                    <constraint firstItem="osd-PL-6EW" firstAttribute="centerY" secondItem="bnm-DD-Ras" secondAttribute="centerY" id="cvf-qw-GzD"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="58.5" id="SJf-Re-gIV"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r5W-rX-FpB" customClass="FSCalendar">
+                        <rect key="frame" x="8" y="90" width="398" height="300"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="300" id="M9v-3h-lWv"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="dataSource" destination="lK4-AJ-oHV" id="9re-NM-uPb"/>
+                            <outlet property="delegate" destination="lK4-AJ-oHV" id="ILa-A0-9Q8"/>
+                        </connections>
+                    </view>
+                </subviews>
+                <viewLayoutGuide key="safeArea" id="C5b-gR-8hc"/>
+                <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="tMU-Dq-TB1" firstAttribute="leading" secondItem="C5b-gR-8hc" secondAttribute="leading" constant="16" id="0UP-ef-NLQ"/>
+                    <constraint firstItem="abb-c0-lMI" firstAttribute="leading" secondItem="hSg-hV-R6o" secondAttribute="leading" id="BQY-Vd-6Bg"/>
+                    <constraint firstItem="abb-c0-lMI" firstAttribute="top" secondItem="hSg-hV-R6o" secondAttribute="top" id="IEa-O3-Ez7"/>
+                    <constraint firstItem="abb-c0-lMI" firstAttribute="centerX" secondItem="hSg-hV-R6o" secondAttribute="centerX" id="dRu-LN-IAg"/>
+                    <constraint firstItem="r5W-rX-FpB" firstAttribute="leading" secondItem="C5b-gR-8hc" secondAttribute="leading" constant="8" id="eR7-kq-IgI"/>
+                    <constraint firstItem="r5W-rX-FpB" firstAttribute="top" secondItem="abb-c0-lMI" secondAttribute="bottom" constant="16" id="evf-vH-ajh"/>
+                    <constraint firstItem="C5b-gR-8hc" firstAttribute="trailing" secondItem="tMU-Dq-TB1" secondAttribute="trailing" constant="8" id="gHf-9R-78N"/>
+                    <constraint firstItem="tMU-Dq-TB1" firstAttribute="top" secondItem="r5W-rX-FpB" secondAttribute="bottom" constant="12" id="sUv-xG-fAJ"/>
+                    <constraint firstItem="C5b-gR-8hc" firstAttribute="trailing" secondItem="abb-c0-lMI" secondAttribute="trailing" id="zfA-4p-Khg"/>
+                    <constraint firstItem="C5b-gR-8hc" firstAttribute="trailing" secondItem="r5W-rX-FpB" secondAttribute="trailing" constant="8" id="zuj-cG-hTL"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="calendar" destination="r5W-rX-FpB" id="eX3-Ut-iU6"/>
+                <outlet property="titleLabel" destination="GuO-ax-ZrZ" id="96k-ff-doS"/>
+            </connections>
+            <point key="canvasLocation" x="415.94202898550731" y="-162.05357142857142"/>
+        </viewController>
+    </objects>
+    <resources>
+        <image name="back" width="37.5" height="37.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -34,32 +34,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIu-j2-Jjc">
+                        <rect key="frame" x="134.5" y="459.5" width="145" height="30"/>
+                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
+                        <state key="normal" title="Forget Password ?">
+                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="forgetButtonWithSender:" destination="PT9-5T-22V" eventType="touchUpInside" id="Dvf-oj-hHI"/>
+                        </connections>
+                    </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uay-kQ-7Zk">
-                        <rect key="frame" x="240" y="503" width="174" height="2"/>
+                        <rect key="frame" x="240" y="515" width="174" height="2"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="2" id="Wiy-nK-THx"/>
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kg9-DN-H7l">
-                        <rect key="frame" x="195.5" y="493.5" width="23.5" height="20.5"/>
+                        <rect key="frame" x="195.5" y="505.5" width="23.5" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hE0-Cw-qlC">
-                        <rect key="frame" x="0.0" y="503" width="174" height="2"/>
+                        <rect key="frame" x="0.0" y="515" width="174" height="2"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="2" id="C66-hs-7vC"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forget Password ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Bw-zK-J1A">
-                        <rect key="frame" x="135" y="459.5" width="144.5" height="18"/>
-                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
-                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PartyBooking" translatesAutoresizingMaskIntoConstraints="NO" id="vMi-9o-QAt">
                         <rect key="frame" x="32" y="108" width="350" height="30"/>
                         <constraints>
@@ -152,9 +156,12 @@
                                 <real key="value" value="8"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="loginButtonWithSender:" destination="PT9-5T-22V" eventType="touchUpInside" id="cPy-BF-mjw"/>
+                        </connections>
                     </button>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Nt3-yg-rCG">
-                        <rect key="frame" x="8" y="530" width="398" height="197"/>
+                        <rect key="frame" x="8" y="542" width="398" height="197"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d6d-f3-8Uu" customClass="CustomView" customModule="PartyBooking" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="398" height="55"/>
@@ -258,11 +265,10 @@
                 <viewLayoutGuide key="safeArea" id="9FY-TJ-vsL"/>
                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 <constraints>
-                    <constraint firstItem="Kg9-DN-H7l" firstAttribute="top" secondItem="5Bw-zK-J1A" secondAttribute="bottom" constant="16" id="1xI-V9-VLx"/>
                     <constraint firstItem="PvW-7l-0T9" firstAttribute="top" secondItem="vMi-9o-QAt" secondAttribute="bottom" constant="32" id="1xY-Ys-jfZ"/>
-                    <constraint firstItem="5Bw-zK-J1A" firstAttribute="centerX" secondItem="Oea-eg-ili" secondAttribute="centerX" id="2tj-O7-PBR"/>
                     <constraint firstItem="9FY-TJ-vsL" firstAttribute="trailing" secondItem="zHY-41-vny" secondAttribute="trailing" constant="8" id="4Pt-Jc-A3o"/>
                     <constraint firstItem="Nt3-yg-rCG" firstAttribute="leading" secondItem="9FY-TJ-vsL" secondAttribute="leading" constant="8" id="4bW-bA-QkU"/>
+                    <constraint firstItem="jIu-j2-Jjc" firstAttribute="top" secondItem="r7z-uF-ERj" secondAttribute="bottom" constant="16" id="7et-jv-vpF"/>
                     <constraint firstItem="PvW-7l-0T9" firstAttribute="centerX" secondItem="Oea-eg-ili" secondAttribute="centerX" id="7y8-J6-2L1"/>
                     <constraint firstAttribute="bottom" secondItem="zA1-NS-f2t" secondAttribute="bottom" id="Aa0-cE-gGJ"/>
                     <constraint firstItem="Kg9-DN-H7l" firstAttribute="centerX" secondItem="Oea-eg-ili" secondAttribute="centerX" id="Bwp-cn-Njx"/>
@@ -271,8 +277,9 @@
                     <constraint firstItem="qyO-JE-bhO" firstAttribute="centerX" secondItem="Oea-eg-ili" secondAttribute="centerX" id="LlT-hG-DG3"/>
                     <constraint firstItem="zA1-NS-f2t" firstAttribute="leading" secondItem="9FY-TJ-vsL" secondAttribute="leading" id="NM6-Qa-dhB"/>
                     <constraint firstItem="qyO-JE-bhO" firstAttribute="height" secondItem="Oea-eg-ili" secondAttribute="height" id="Nyq-pI-gna"/>
+                    <constraint firstItem="jIu-j2-Jjc" firstAttribute="centerX" secondItem="Oea-eg-ili" secondAttribute="centerX" id="OFl-Ql-DFV"/>
+                    <constraint firstItem="Kg9-DN-H7l" firstAttribute="top" secondItem="jIu-j2-Jjc" secondAttribute="bottom" constant="16" id="R3x-aq-FTF"/>
                     <constraint firstItem="hE0-Cw-qlC" firstAttribute="centerY" secondItem="Kg9-DN-H7l" secondAttribute="centerY" id="SQw-aX-Fc1"/>
-                    <constraint firstItem="5Bw-zK-J1A" firstAttribute="top" secondItem="r7z-uF-ERj" secondAttribute="bottom" constant="16" id="Ty1-Va-oEC"/>
                     <constraint firstItem="zHY-41-vny" firstAttribute="top" secondItem="PvW-7l-0T9" secondAttribute="bottom" constant="32" id="U7T-xv-nCn"/>
                     <constraint firstItem="qyO-JE-bhO" firstAttribute="width" secondItem="Oea-eg-ili" secondAttribute="width" id="YfB-90-mtG"/>
                     <constraint firstItem="Nt3-yg-rCG" firstAttribute="top" secondItem="Kg9-DN-H7l" secondAttribute="bottom" constant="16" id="bed-v6-X9F"/>
@@ -299,13 +306,13 @@
     </objects>
     <designables>
         <designable name="KZs-D4-j8Q">
-            <size key="intrinsicContentSize" width="181" height="34"/>
+            <size key="intrinsicContentSize" width="187" height="42.5"/>
         </designable>
         <designable name="r7z-uF-ERj">
             <size key="intrinsicContentSize" width="34" height="30"/>
         </designable>
         <designable name="sUf-YC-5Jb">
-            <size key="intrinsicContentSize" width="90" height="34"/>
+            <size key="intrinsicContentSize" width="96" height="42.5"/>
         </designable>
     </designables>
     <resources>

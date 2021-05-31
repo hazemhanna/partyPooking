@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -56,7 +57,7 @@
                                                         <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ReT-OC-zbb">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ReT-OC-zbb">
                                                         <rect key="frame" x="4.5" y="19" width="60" height="23"/>
                                                         <color key="backgroundColor" red="0.1803921568627451" green="0.1803921568627451" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
@@ -66,21 +67,40 @@
                                                         <state key="normal" title="load">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
-                                                        <connections>
-                                                            <action selector="loadButtonWithSender:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="OP9-9B-wmI"/>
-                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
                                     </stackView>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hN8-fx-rDn" customClass="CustomButtons" customModule="PartyBooking" customModuleProvider="target">
+                                        <rect key="frame" x="126" y="72" width="100" height="30"/>
+                                        <color key="backgroundColor" red="0.73333333333333328" green="0.73333333333333328" blue="0.73333333333333328" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="fb4-IM-lTk"/>
+                                            <constraint firstAttribute="height" constant="30" id="hn1-Gy-l4i"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="10"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="cancelAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="VUW-jY-gEp"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="hN8-fx-rDn" secondAttribute="bottom" constant="8" id="0BI-Xe-pst"/>
                                     <constraint firstItem="gUL-u4-r1f" firstAttribute="leading" secondItem="bP4-Cg-RfT" secondAttribute="leading" constant="16" id="VWZ-Wf-rxr"/>
                                     <constraint firstItem="gUL-u4-r1f" firstAttribute="top" secondItem="bP4-Cg-RfT" secondAttribute="top" id="cP5-he-qGf"/>
                                     <constraint firstAttribute="bottom" secondItem="gUL-u4-r1f" secondAttribute="bottom" id="jAz-8e-EY7"/>
                                     <constraint firstAttribute="trailing" secondItem="gUL-u4-r1f" secondAttribute="trailing" constant="16" id="k6j-YS-4j6"/>
+                                    <constraint firstItem="hN8-fx-rDn" firstAttribute="centerX" secondItem="bP4-Cg-RfT" secondAttribute="centerX" id="uCJ-Mp-NXT"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -100,10 +120,12 @@
                     <constraint firstAttribute="bottom" secondItem="3FK-Wm-xFw" secondAttribute="bottom" id="YZs-zN-aAn"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
-                <outlet property="confirmNumbertLabel" destination="hRC-88-OoU" id="EeX-fq-nbY"/>
+                <outlet property="NumberLabel" destination="5kw-QH-VaR" id="HDP-nG-lna"/>
+                <outlet property="cancelBtn" destination="hN8-fx-rDn" id="psf-Zs-zXx"/>
+                <outlet property="confirmNumberLabel" destination="hRC-88-OoU" id="UAp-MN-9c9"/>
                 <outlet property="contractLabel" destination="VME-nJ-V8m" id="VOT-MD-rmC"/>
                 <outlet property="loadBtn" destination="ReT-OC-zbb" id="PSt-1q-32N"/>
                 <outlet property="mainView" destination="bP4-Cg-RfT" id="oTq-I7-eNJ"/>
@@ -111,4 +133,9 @@
             <point key="canvasLocation" x="104" y="88"/>
         </tableViewCell>
     </objects>
+    <designables>
+        <designable name="hN8-fx-rDn">
+            <size key="intrinsicContentSize" width="33" height="24"/>
+        </designable>
+    </designables>
 </document>

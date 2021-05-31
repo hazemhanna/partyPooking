@@ -13,26 +13,33 @@ class LoginUserVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
-
-    override func viewWillAppear(_ animated: Bool) {
-         self.navigationController?.navigationBar.isHidden = true
-        
-    }
-    override func viewWillDisappear(_ animated: Bool) {
     
-        self.navigationController?.navigationBar.isHidden = false
-        
+    override func viewWillAppear(_ animated: Bool) {
+      self.navigationController?.navigationBar.isHidden = true
     }
-
-        
+    
+    override func viewWillDisappear(_ animated: Bool) {
+      self.navigationController?.navigationBar.isHidden = false
+    }
+    
     @IBAction func backButton(sender: UIButton) {
-
-        self.navigationController?.popViewController(animated: true)
-        
+      self.navigationController?.popViewController(animated: true)
     }
-        
+    
+    @IBAction func forgetButton(sender: UIButton) {
+        let destinationVC = ForgetPasswordVC1.instantiateFromNib()
+        self.navigationController?.pushViewController(destinationVC!, animated: true)
+    }
+    
+    @IBAction func loginButton(sender: UIButton) {
+        let destinationVC = TabBarController.instantiate(fromAppStoryboard: .Main)
+        destinationVC.type = .user
+        if let appDelegate = UIApplication.shared.delegate {
+            appDelegate.window??.rootViewController = destinationVC
+        }
+    }
 
+    
 }

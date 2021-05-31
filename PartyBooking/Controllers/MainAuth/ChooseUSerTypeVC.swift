@@ -36,6 +36,9 @@ class ChooseUSerTypeVC : UIViewController {
         if let appDelegate = UIApplication.shared.delegate {
             appDelegate.window??.rootViewController = destinationVC
         }
+        
+        
+        
     }
     
     @IBAction func registerUserButton(sender: UIButton) {

@@ -10,7 +10,7 @@ import Foundation
 import Foundation
 import UIKit
 enum RoundedTabBarItem {
-    case search,reservations, account,more,artistMore,artistreservations, artistaccount,artistAvailable,home,live
+    case search,reservations, account,more,artistMore,artistreservations, artistaccount,artistAvailable,home,live,userLive
 }
 
 extension RoundedTabBarItem {
@@ -36,6 +36,9 @@ extension RoundedTabBarItem {
             return "home".localized
         case .live:
             return "live".localized
+        case .userLive:
+            return "live".localized
+            
         default:
             return ""
         }
@@ -64,13 +67,15 @@ extension RoundedTabBarItem {
             return 0
         case .live:
             return 9
+        case .userLive:
+            return 10
         }
     }
     
     var image: UIImage? {
         switch self {
         case .search:
-              return UIImage(named: "search")
+            return UIImage(named: "user-1")
         case .reservations:
             return UIImage(named: "calendar")
        case .account:
@@ -88,6 +93,8 @@ extension RoundedTabBarItem {
         case .home:
             return UIImage(named: "user-1")
         case .live:
+            return UIImage(named: "calendar-1")
+        case .userLive:
             return UIImage(named: "calendar-1")
         }
     }

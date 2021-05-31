@@ -16,7 +16,11 @@ target 'PartyBooking' do
   pod 'Kingfisher', '~> 5.4.0'
   pod 'FlagPhoneNumber'
   pod 'DropDown', '~> 2.3.13'
+  pod 'RxSwift', '~> 5'
+  pod 'RxCocoa', '~> 5'
+  pod 'SVProgressHUD', '~> 2.2.5'
 
+  
   target 'PartyBookingTests' do
     inherit! :search_paths
     # Pods for testing

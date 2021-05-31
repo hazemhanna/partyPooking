@@ -20,6 +20,7 @@ class SearchViewController: UIViewController ,UICollectionViewDataSource, UIColl
     @IBOutlet weak var offerCollection: UICollectionView!
     @IBOutlet weak var searchTitleLabel: UILabel!
     @IBOutlet weak var locatioLabel: UILabel!
+    @IBOutlet weak var dateLbl: UILabel!
 
     
     var notification = false
@@ -96,6 +97,13 @@ class SearchViewController: UIViewController ,UICollectionViewDataSource, UIColl
     
     @IBAction func locationTapped(sender: UIButton) {
         let destinationVC = LocationViewController.instantiateFromNib()
+        self.navigationController?.pushViewController(destinationVC!, animated: true)
+      }
+    
+    
+    
+    @IBAction func calenderTapped(sender: UIButton) {
+        let destinationVC = PartyDateVc.instantiateFromNib()
         self.navigationController?.pushViewController(destinationVC!, animated: true)
       }
     

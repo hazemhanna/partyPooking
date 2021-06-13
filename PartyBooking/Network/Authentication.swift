@@ -17,13 +17,13 @@ class Authentication {
     static let shared = Authentication()
     
     //MARK:- POST Register
-    func postRegister(image: UIImage?,params: [String : Any]) -> Observable<AfaqModelsJSON> {
+    func postRegister(image: UIImage?,params: [String : Any]) -> Observable<AuthMdelsJSON> {
         return Observable.create { (observer) -> Disposable in
-            let url = ConfigURLS.postRegister
+            let url = ConfigURLs.postRegister
             
             Alamofire.upload(multipartFormData: { (form: MultipartFormData) in
                 if let data = image?.jpegData(compressionQuality: 0.8) {
-                    form.append(data, withName: "avatar", fileName: "image.jpeg", mimeType: "image/jpeg")
+                    form.append(data, withName: "image", fileName: "image.jpeg", mimeType: "image/jpeg")
                 }
                 for (key, value) in params {
                     form.append("\(value)".data(using: String.Encoding.utf8)!, withName: key)
@@ -39,12 +39,12 @@ class Authentication {
                       print("Image Uploading Progress: \(progress.fractionCompleted)")
                   }.responseJSON { (response: DataResponse<Any>) in
              do {
-                    let registerData = try JSONDecoder().decode(AfaqModelsJSON.self, from: response.data!)
+                    let registerData = try JSONDecoder().decode(AuthMdelsJSON.self, from: response.data!)
                     print(registerData)
-                    if let data = registerData.data {
-                        //Helper.saveAPIToken(user_id: data.id ?? 0, email: data.email ?? "", role: data.role ?? 0, name: data.firstName ?? "", token: data.token ?? "",isVarified : data.isVerified ?? 0)
-                        Helper.saveUserPhone(phone: data.phone ?? "")
-                        Helper.saveUserEmail(Email : data.email ?? "")
+                 if let data = registerData.result {
+                    Helper.saveAPIToken(token: data.accessToken ?? "")
+
+                   // Helper.saveAPI(token: data.accessToken ?? "", user_id: data.user?.id ?? 0, email: data.user?.email ?? "", name: data.user?.firstName ?? "")
                         }
                         observer.onNext(registerData)
                      } catch {
@@ -58,83 +58,22 @@ class Authentication {
         }
     }//END of POST Register
     
-    func validateRegister(params: [String: Any]) -> Observable<AfaqModelsJSON> {
-        return Observable.create { (observer) -> Disposable in
-            let url = ConfigURLS.validateRegister
-            
-            Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers: nil)
-                .validate(statusCode: 200..<300)
-                .responseJSON { (response: DataResponse<Any>) in
-                    do {
-                        let loginData = try JSONDecoder().decode(AfaqModelsJSON.self, from: response.data!)
-                        observer.onNext(loginData)
-                    } catch {
-                        print(error.localizedDescription)
-                        observer.onError(error)
-                    }
-            }
-            
-            
-            return Disposables.create()
-        }
-    }//END of POST Login
-    
-    //MARK:- POST Register Unstructor
-      func postRegisterInstracutor(image: UIImage?,params: [String : Any]) -> Observable<AfaqModelsJSON> {
-          return Observable.create { (observer) -> Disposable in
-              let url = ConfigURLS.postRegister
-              
-              Alamofire.upload(multipartFormData: { (form: MultipartFormData) in
-                if let data = image?.jpegData(compressionQuality: 0.8) {
-                      form.append(data, withName: "avatar", fileName: "image.jpeg", mimeType: "image/jpeg")
-                  }
-                  for (key, value) in params {
-                      form.append("\(value)".data(using: String.Encoding.utf8)!, withName: key)
-                  }
-                          
-                  }, usingThreshold: SessionManager.multipartFormDataEncodingMemoryThreshold, to: url, method: .post, headers: nil) { (result: SessionManager.MultipartFormDataEncodingResult) in
-                      switch result {
-                  case .failure(let error):
-                      print(error.localizedDescription)
-                      observer.onError(error)
-                  case .success(request: let upload, streamingFromDisk: _, streamFileURL: _):
-                      upload.uploadProgress { (progress) in
-                        print("Image Uploading Progress: \(progress.fractionCompleted)")
-                    }.responseJSON { (response: DataResponse<Any>) in
-               do {
-                      let registerData = try JSONDecoder().decode(AfaqModelsJSON.self, from: response.data!)
-                      print(registerData)
-                     // if let data = registerData.data {
-                       // Helper.saveAPIToken(user_id: data.id ?? 0, email: data.email ?? "", role: data.role ?? 0, name: data.firstName ?? "", token: data.token ?? "",isVarified : data.isVerified ?? 0)
-                         // }
-                       Helper.saveUserEmail(Email : registerData.data?.email ?? "")
-                          observer.onNext(registerData)
-                       } catch {
-                           print(error.localizedDescription)
-                          observer.onError(error)
-                      }
-                    }
-                  }
-               }
-              return Disposables.create()
-          }
-      }//END of POST Register
-    
+        
     //MARK:- POST Login
-    func postLogin(params: [String: Any]) -> Observable<LoginModelJSON> {
+    func postLogin(params: [String: Any]) -> Observable<AuthMdelsJSON> {
         return Observable.create { (observer) -> Disposable in
-            let url = ConfigURLS.postLogin
+            let url = ConfigURLs.userLogin
             
             Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers: nil)
                 .validate(statusCode: 200..<300)
                 .responseJSON { (response: DataResponse<Any>) in
                     do {
-                        let loginData = try JSONDecoder().decode(LoginModelJSON.self, from: response.data!)
-                        if let data = loginData.data {
-                            Helper.saveAPIToken(user_id: data.id ?? 0, email: data.email ?? "", role: data.role ?? 0, name: "\(data.firstName ?? "") \(data.lastName ?? "")", token: data.token ?? "",isVarified : data.isVerified ?? 0)
-                            Helper.saveUserPhone(phone: data.phone ?? "")
-                            Helper.saveUserEmail(Email : data.email ?? "")
-                        }
+                        let loginData = try JSONDecoder().decode(AuthMdelsJSON.self, from: response.data!)
+                        if let data = loginData.result {
+                           Helper.saveAPIToken(token: data.accessToken ?? "")
+
+                          // Helper.saveAPI(token: data.accessToken ?? "", user_id: data.user?.id ?? 0, email: data.user?.email ?? "", name: data.user?.firstName ?? "")
+                               }
                         observer.onNext(loginData)
                     } catch {
                         print(error.localizedDescription)

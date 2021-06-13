@@ -8,6 +8,8 @@
 
 import UIKit
 import FlagPhoneNumber
+import RxSwift
+import RxCocoa
 
 class UserRegisterViewController: UIViewController {
 
@@ -27,10 +29,11 @@ class UserRegisterViewController: UIViewController {
     @IBOutlet weak var amountLabel : UILabel!
     @IBOutlet weak var amountValueLabel : UILabel!
     @IBOutlet weak var taxesLabel : UILabel!
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passTextField: UITextField!
     @IBOutlet weak var lNameTextField: UITextField!
-    @IBOutlet weak var countryTextField: UITextField!
+    @IBOutlet weak var countryTextField: TextFieldDropDown!
     @IBOutlet weak var fNameTextField: UITextField!
     @IBOutlet weak var phoneTextField: FPNTextField!
     @IBOutlet weak var doneBtn : UIButton!
@@ -38,9 +41,15 @@ class UserRegisterViewController: UIViewController {
     @IBOutlet weak var termsConditionsButton: CustomButtons!
 
     let listController: FPNCountryListViewController = FPNCountryListViewController(style: .grouped)
+    private let AuthViewModel = AuthenticationViewModel()
+    var disposeBag = DisposeBag()
+    
     var dialCode = String()
-    var profliePic : UIImage?
-
+    var profliePic = UIImage()
+    
+    var country = [Country]()
+    var filterCountry = [String]()
+    var countryId = Int()
     
     @IBOutlet weak var backButton: UIButton! {
         didSet {
@@ -63,7 +72,9 @@ class UserRegisterViewController: UIViewController {
         let gestureRecognizer2 = UITapGestureRecognizer(target: self, action: #selector(self.PrivecyTapAction(_:)))
         privcyLabel.isUserInteractionEnabled = true
         privcyLabel.addGestureRecognizer(gestureRecognizer2)
-        
+        DataBinding()
+        AuthViewModel.showIndicator()
+        getAllCountry()
     }
 
     func setUPLocalize(){
@@ -124,6 +135,17 @@ class UserRegisterViewController: UIViewController {
              }
          }
     
+    
+    
+    func setupCountryDropDown() {
+        countryTextField.optionArray = self.filterCountry
+        countryTextField.didSelect { (selectedText, index, id) in
+            self.countryTextField.text = selectedText
+            self.countryId = self.country[index].id ?? 0
+
+        }
+    }
+    
     @objc func PrivecyTapAction(_ sender: UITapGestureRecognizer) {
           let main = TermsAndConditionVc.instantiateFromNib()
           self.navigationController?.pushViewController(main!, animated: true)
@@ -138,14 +160,14 @@ class UserRegisterViewController: UIViewController {
           privcyLabel.attributedText = attribute2
       }
     
-      var flag = true
+      var flag = false
      @IBAction func termsConditions(_ sender: UIButton) {
-        if flag == true {
+        if flag == false {
             self.termsConditionsButton.setImage(#imageLiteral(resourceName: "Group 37"), for: .normal)
-            flag = false
+            flag = true
         } else {
             self.termsConditionsButton.setImage(#imageLiteral(resourceName: "Rectangle 11"), for: .normal)
-            flag = true
+            flag = false
         }
     }
     
@@ -176,11 +198,17 @@ class UserRegisterViewController: UIViewController {
     }
            
     @IBAction func nextButton(sender: UIButton) {
-        let destinationVC = TabBarController.instantiate(fromAppStoryboard: .Main)
-        destinationVC.type = .user
-        if let appDelegate = UIApplication.shared.delegate {
-            appDelegate.window??.rootViewController = destinationVC
+        AuthViewModel.showIndicator()
+        guard self.validateInput() else { return }
+        if flag == false{
+            if "lang".localized == "ar" {
+            displayMessage(title: "", message: "من فضلك وافق علي الشروط والاحكام", status: .error, forController: self)
+            }else{
+                displayMessage(title: "", message: "please accept terms and condition", status: .error, forController: self)
+            }
+            return
         }
+        postRegister()
     }
     
     
@@ -191,6 +219,78 @@ class UserRegisterViewController: UIViewController {
         }
         self.present(vc!, animated: true, completion: nil)
     }
+}
+
+
+extension UserRegisterViewController {
+    //MARK:- DataBinding
+    func DataBinding() {
+        _ = self.emailTextField.rx.text.map({$0 ?? ""}).bind(to: AuthViewModel.email).disposed(by: disposeBag)
+        _ = self.fNameTextField.rx.text.map({$0 ?? ""}).bind(to: AuthViewModel.first_name).disposed(by: disposeBag)
+        _ = self.lNameTextField.rx.text.map({$0 ?? ""}).bind(to: AuthViewModel.last_name).disposed(by: disposeBag)
+        _ = self.passTextField.rx.text.map({$0 ?? ""}).bind(to: AuthViewModel.password).disposed(by: disposeBag)
+        _ = self.countryTextField.rx.text.map({$0 ?? ""}).bind(to: AuthViewModel.country).disposed(by: disposeBag)
+        _ = self.phoneTextField.rx.text.map({$0 ?? ""}).bind(to: AuthViewModel.phone).disposed(by: disposeBag)
+    }
+}
+
+extension UserRegisterViewController {
+    func validateInput() -> Bool {
+        var valid = false
+        AuthViewModel.validate(country: countryTextField.text ?? "").subscribe(onNext: { (result) in
+            if result.isEmpty {
+                valid = true
+            } else {
+                self.AuthViewModel.dismissIndicator()
+                displayMessage(title: "", message: result, status: .error, forController: self)
+                valid = false
+            }
+        }).disposed(by: disposeBag)
+        return valid
+    }
+    
+    
+    func getAllCountry() {
+        AuthViewModel.getCountry().subscribe(onNext: { (data) in
+            self.AuthViewModel.dismissIndicator()
+            if data.status ?? false {
+                self.country = data.result?.countries ?? []
+                for index in self.country{
+                    if "lang".localized == "ar" {
+                        self.filterCountry.append(index.arName ?? "")
+                    }else{
+                        self.filterCountry.append(index.enName ?? "")
+                    }
+                }
+                self.setupCountryDropDown()
+            }
+        }, onError: { (error) in
+            self.AuthViewModel.dismissIndicator()
+            displayMessage(title: "", message: "Something went wrong in getting Country", status: .error, forController: self)
+        }).disposed(by: disposeBag)
+    }
+    
+    
+    func postRegister(){
+        AuthViewModel.attemptToRegister(image: self.profliePic, countryId: self.countryId).subscribe(onNext: { (registerData) in
+           if registerData.status ?? false {
+            self.AuthViewModel.dismissIndicator()
+            let destinationVC = TabBarController.instantiate(fromAppStoryboard: .Main)
+            destinationVC.type = .user
+               if let appDelegate = UIApplication.shared.delegate {
+                appDelegate.window??.rootViewController = destinationVC
+            }
+           }else {
+            displayMessage(title: "", message: registerData.message ?? "", status: .error, forController: self)
+           }
+
+        }, onError: { (error) in
+            self.AuthViewModel.dismissIndicator()
+            displayMessage(title: "", message: error.localizedDescription, status: .error, forController: self)
+        }).disposed(by: disposeBag)
+    }
+    
+    
 }
 
 

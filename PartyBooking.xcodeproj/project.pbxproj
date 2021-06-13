@@ -48,6 +48,8 @@
 		044EDE1E24BDAC8B00EC8E61 /* ConfirmReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EDE1C24BDAC8B00EC8E61 /* ConfirmReservationViewController.swift */; };
 		044EDE1F24BDAC8B00EC8E61 /* ConfirmReservationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044EDE1D24BDAC8B00EC8E61 /* ConfirmReservationViewController.xib */; };
 		044EDE2024BF011F00EC8E61 /* RateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044EDE2224BF011F00EC8E61 /* RateViewController.xib */; };
+		04643AD8267538EE00510426 /* HelperMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04643AD7267538EE00510426 /* HelperMethods.swift */; };
+		04643AF4267569AA00510426 /* GeneralModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04643AF3267569AA00510426 /* GeneralModel.swift */; };
 		046506E324B5D22600694741 /* OfferPriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046506E124B5D22600694741 /* OfferPriceViewController.swift */; };
 		046506E424B5D22600694741 /* OfferPriceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046506E224B5D22600694741 /* OfferPriceViewController.xib */; };
 		046506E824B5E51500694741 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046506E624B5E51500694741 /* InformationViewController.swift */; };
@@ -110,6 +112,7 @@
 		048569BF2665405700B2670D /* AddServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048569BE2665405700B2670D /* AddServices.swift */; };
 		048569C42665407800B2670D /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048569C32665407800B2670D /* Authentication.swift */; };
 		048569DE2665464F00B2670D /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048569DD2665464F00B2670D /* Errors.swift */; };
+		048569E32665501300B2670D /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048569E22665501300B2670D /* AuthModel.swift */; };
 		048DCB592656B38200319F9F /* LoginUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048DCB572656B38200319F9F /* LoginUserVC.swift */; };
 		048DCB5A2656B38200319F9F /* LoginUserVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048DCB582656B38200319F9F /* LoginUserVC.xib */; };
 		048DCB742656B4C800319F9F /* UserRegisterTypeVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048DCB722656B4C800319F9F /* UserRegisterTypeVc.swift */; };
@@ -125,6 +128,8 @@
 		0491AD482637733000398125 /* MainRegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0491AD462637733000398125 /* MainRegisterVC.swift */; };
 		0491AD492637733000398125 /* MainRegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0491AD472637733000398125 /* MainRegisterVC.xib */; };
 		0491AD5C2637830F00398125 /* TextField+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0491AD5B2637830F00398125 /* TextField+Extention.swift */; };
+		04BF70C9267514F600080730 /* AuthenticationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF70C8267514F600080730 /* AuthenticationVM.swift */; };
+		04BF70CF2675167B00080730 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF70CE2675167B00080730 /* String+Extension.swift */; };
 		04CA045024B7FD5200660E7B /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA044E24B7FD5200660E7B /* LocationViewController.swift */; };
 		04CA045124B7FD5200660E7B /* LocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CA044F24B7FD5200660E7B /* LocationViewController.xib */; };
 		04CA045424B9FFD000660E7B /* MOLH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA045324B9FFD000660E7B /* MOLH.swift */; };
@@ -216,6 +221,8 @@
 		044EDE1C24BDAC8B00EC8E61 /* ConfirmReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmReservationViewController.swift; sourceTree = "<group>"; };
 		044EDE1D24BDAC8B00EC8E61 /* ConfirmReservationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfirmReservationViewController.xib; sourceTree = "<group>"; };
 		044EDE2124BF011F00EC8E61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/RateViewController.xib; sourceTree = "<group>"; };
+		04643AD7267538EE00510426 /* HelperMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperMethods.swift; sourceTree = "<group>"; };
+		04643AF3267569AA00510426 /* GeneralModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralModel.swift; sourceTree = "<group>"; };
 		046506E124B5D22600694741 /* OfferPriceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferPriceViewController.swift; sourceTree = "<group>"; };
 		046506E224B5D22600694741 /* OfferPriceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfferPriceViewController.xib; sourceTree = "<group>"; };
 		046506E624B5E51500694741 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
@@ -286,6 +293,7 @@
 		048569BE2665405700B2670D /* AddServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServices.swift; sourceTree = "<group>"; };
 		048569C32665407800B2670D /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		048569DD2665464F00B2670D /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		048569E22665501300B2670D /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
 		048DCB572656B38200319F9F /* LoginUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserVC.swift; sourceTree = "<group>"; };
 		048DCB582656B38200319F9F /* LoginUserVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginUserVC.xib; sourceTree = "<group>"; };
 		048DCB722656B4C800319F9F /* UserRegisterTypeVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegisterTypeVc.swift; sourceTree = "<group>"; };
@@ -301,6 +309,8 @@
 		0491AD462637733000398125 /* MainRegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRegisterVC.swift; sourceTree = "<group>"; };
 		0491AD472637733000398125 /* MainRegisterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainRegisterVC.xib; sourceTree = "<group>"; };
 		0491AD5B2637830F00398125 /* TextField+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extention.swift"; sourceTree = "<group>"; };
+		04BF70C8267514F600080730 /* AuthenticationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationVM.swift; sourceTree = "<group>"; };
+		04BF70CE2675167B00080730 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		04CA044E24B7FD5200660E7B /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		04CA044F24B7FD5200660E7B /* LocationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationViewController.xib; sourceTree = "<group>"; };
 		04CA045324B9FFD000660E7B /* MOLH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOLH.swift; sourceTree = "<group>"; };
@@ -676,6 +686,7 @@
 				0419715926347F15002C345C /* ApppFile */,
 				046E3B8E24AE1126006D1385 /* Network */,
 				046E3B8D24AE1121006D1385 /* Extentions */,
+				04BF70C72675148000080730 /* ViewModel */,
 				046E3B9324AE11CC006D1385 /* Controllers */,
 				04F2BA64265B056E007F4E53 /* Model */,
 				0419715A26348430002C345C /* Resources */,
@@ -704,6 +715,7 @@
 		046E3B8D24AE1121006D1385 /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
+				04BF70CD2675163600080730 /* Supporting Files */,
 				046E3B9424AE1295006D1385 /* StoryBoardExtension.swift */,
 				047F8C2724B3AC8D00A86E86 /* FloatRatingView.swift */,
 				0411F08B24B0A11500F95A72 /* Color.swift */,
@@ -943,6 +955,23 @@
 			path = LoginOrRegister;
 			sourceTree = "<group>";
 		};
+		04BF70C72675148000080730 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				04BF70C8267514F600080730 /* AuthenticationVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		04BF70CD2675163600080730 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				04BF70CE2675167B00080730 /* String+Extension.swift */,
+				04643AD7267538EE00510426 /* HelperMethods.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		04CA044D24B7FD2000660E7B /* Location */ = {
 			isa = PBXGroup;
 			children = (
@@ -1062,6 +1091,8 @@
 			children = (
 				04F2BA65265B0586007F4E53 /* SideMenuModel.swift */,
 				048569DD2665464F00B2670D /* Errors.swift */,
+				048569E22665501300B2670D /* AuthModel.swift */,
+				04643AF3267569AA00510426 /* GeneralModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1512,6 +1543,7 @@
 				0491AD3126376D2D00398125 /* UIView+Extention.swift in Sources */,
 				0465070C24B7A31D00694741 /* SilentViewController.swift in Sources */,
 				0422501A265E715000723400 /* ForgetPasswordVC3.swift in Sources */,
+				04BF70CF2675167B00080730 /* String+Extension.swift in Sources */,
 				048569C42665407800B2670D /* Authentication.swift in Sources */,
 				0411F08C24B0A11600F95A72 /* Color.swift in Sources */,
 				043067AC26620F5100BDFE32 /* AllLiveCell.swift in Sources */,
@@ -1525,6 +1557,7 @@
 				0465070724B79B7900694741 /* ArtistReservationTableViewCell.swift in Sources */,
 				04225013265E714100723400 /* ForgetPasswordVC2.swift in Sources */,
 				046E3BA824AE1A9E006D1385 /* ReservationViewController.swift in Sources */,
+				04643AD8267538EE00510426 /* HelperMethods.swift in Sources */,
 				046E3B9724AE12F6006D1385 /* TabBarController.swift in Sources */,
 				04CA045A24B9FFFA00660E7B /* MOLHLanguage.swift in Sources */,
 				0465071124B7A6EC00694741 /* ArtistMoreViewController.swift in Sources */,
@@ -1532,6 +1565,7 @@
 				04CA048324BB07A700660E7B /* String.swift in Sources */,
 				047F8C2C24B3AE0800A86E86 /* RateViewController.swift in Sources */,
 				046E3BB024AE1ADB006D1385 /* MoreViewController.swift in Sources */,
+				04643AF4267569AA00510426 /* GeneralModel.swift in Sources */,
 				046E3B5E24ADD861006D1385 /* AppDelegate.swift in Sources */,
 				04323C1524B2426F000F6395 /* NotificationsViewController.swift in Sources */,
 				04F2BA58265B02AF007F4E53 /* ArtistMoreCell.swift in Sources */,
@@ -1554,7 +1588,9 @@
 				048DCB742656B4C800319F9F /* UserRegisterTypeVc.swift in Sources */,
 				0430679626620A2A00BDFE32 /* NoArtistAvailableVc.swift in Sources */,
 				04CA045624B9FFE000660E7B /* MOLHFont.swift in Sources */,
+				048569E32665501300B2670D /* AuthModel.swift in Sources */,
 				047F8C3C24B4FC4C00A86E86 /* ArtistRegisterViewController.swift in Sources */,
+				04BF70C9267514F600080730 /* AuthenticationVM.swift in Sources */,
 				043067A126620DD100BDFE32 /* AllLiveVideoVC.swift in Sources */,
 				04F2BA4D265ACE39007F4E53 /* ArtistHomeVc.swift in Sources */,
 				04FAF37924DAED2D00F73189 /* GetServices.swift in Sources */,

@@ -24,15 +24,12 @@ class Helper {
    }
     
     //Save API Function to userDefaults
-    class func saveAPI(user_id: Int,email: String, role: Int, name: String, token: String,isVarified : Int) {
+    class func saveAPI( token: String,user_id: Int,email: String, name: String) {
         let def = UserDefaults.standard
         def.set(token, forKey: "token")
-        //def.set(token_type, forKey: "token_type")
         def.set(user_id, forKey: "user_id")
         def.set(email, forKey: "email")
-        def.set(role, forKey: "role")
         def.set(name, forKey: "name")
-        def.set(isVarified, forKey: "isVarified")
         def.synchronize()
     }
     

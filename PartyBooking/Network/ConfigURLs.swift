@@ -16,11 +16,18 @@ var BASE_URL = "https://partybooking.dtagdev.com/en/"
 
 struct ConfigURLs {
 
+    //MARK:- General
+    static var getCountry = BASE_URL + "api/getCountries"
+    static var getArea = BASE_URL + "api/getAreas"
+    static var getTerms = BASE_URL + "api/terms"
+    static var getService = BASE_URL + "api/getServices"
+    static var getPartyType = BASE_URL + "api/getPartyTypes"
+    
     //MARK:- user
     //MARK:- POST user Login
-    static var userLogin = BASE_URL + "artist/login"
+    static var userLogin = BASE_URL + "user/auth/login"
     //MARK:- POST Register
-    static var postRegister = BASE_URL  + "/register"
+    static var postRegister = BASE_URL  + "user/auth/register"
     //MARK:- POST validateRegister
     static var validateRegister = BASE_URL  + "/validate-register"
 

@@ -21,6 +21,9 @@ PODS:
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
   - SVProgressHUD (2.2.5)
+  - SwiftMessages (6.0.2):
+    - SwiftMessages/App (= 6.0.2)
+  - SwiftMessages/App (6.0.2)
   - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
@@ -36,6 +39,7 @@ DEPENDENCIES:
   - RxCocoa (~> 5)
   - RxSwift (~> 5)
   - SVProgressHUD (~> 2.2.5)
+  - SwiftMessages (~> 6.0.2)
   - SwiftyJSON (~> 5.0.0)
 
 SPEC REPOS:
@@ -53,6 +57,7 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - SVProgressHUD
+    - SwiftMessages
     - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -69,8 +74,9 @@ SPEC CHECKSUMS:
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftMessages: 8b3cc68dba2f1c91aac1a74c90b10287aac35371
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 0baa041a7ddda2f0a44b08d9d19923821ef03416
+PODFILE CHECKSUM: 02f738f496331737e0136e262a00face2cfd67cb
 
 COCOAPODS: 1.10.1

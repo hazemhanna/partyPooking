@@ -19,8 +19,8 @@ target 'PartyBooking' do
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
   pod 'SVProgressHUD', '~> 2.2.5'
+  pod 'SwiftMessages', '~> 6.0.2'
 
-  
   target 'PartyBookingTests' do
     inherit! :search_paths
     # Pods for testing

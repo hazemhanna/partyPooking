@@ -123,7 +123,7 @@
                                     <constraint firstAttribute="height" constant="60" id="40T-zU-viC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="1"/>
@@ -301,6 +301,10 @@
                 </constraints>
             </view>
             <navigationItem key="navigationItem" id="xQB-d5-5wa"/>
+            <connections>
+                <outlet property="emailTextField" destination="KZs-D4-j8Q" id="TF7-jm-I3f"/>
+                <outlet property="passTextField" destination="sUf-YC-5Jb" id="ObX-34-Yfb"/>
+            </connections>
             <point key="canvasLocation" x="2505.7971014492755" y="-60.267857142857139"/>
         </viewController>
     </objects>
@@ -312,7 +316,7 @@
             <size key="intrinsicContentSize" width="34" height="30"/>
         </designable>
         <designable name="sUf-YC-5Jb">
-            <size key="intrinsicContentSize" width="96" height="42.5"/>
+            <size key="intrinsicContentSize" width="96" height="41"/>
         </designable>
     </designables>
     <resources>

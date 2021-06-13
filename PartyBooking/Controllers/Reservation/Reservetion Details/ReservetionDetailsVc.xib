@@ -508,7 +508,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bQV-HB-4Ys" customClass="CosmosView" customModule="Cosmos">
+                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bQV-HB-4Ys" customClass="CosmosView" customModule="Cosmos">
                                                         <rect key="frame" x="187" y="15" width="120" height="20"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </view>
@@ -590,9 +590,6 @@
     <designables>
         <designable name="6QJ-RS-PPF">
             <size key="intrinsicContentSize" width="97" height="32"/>
-        </designable>
-        <designable name="bQV-HB-4Ys">
-            <size key="intrinsicContentSize" width="120" height="20"/>
         </designable>
     </designables>
     <resources>

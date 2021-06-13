@@ -7,12 +7,20 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class LoginUserVC: UIViewController {
 
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passTextField: UITextField!
+    
+    private let AuthViewModel = AuthenticationViewModel()
+    var disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        DataBinding()
     }
 
     
@@ -34,12 +42,57 @@ class LoginUserVC: UIViewController {
     }
     
     @IBAction func loginButton(sender: UIButton) {
-        let destinationVC = TabBarController.instantiate(fromAppStoryboard: .Main)
-        destinationVC.type = .user
-        if let appDelegate = UIApplication.shared.delegate {
-            appDelegate.window??.rootViewController = destinationVC
-        }
+        AuthViewModel.showIndicator()
+        guard self.validateInput() else { return }
+        postlogin()
     }
 
     
 }
+
+extension LoginUserVC {
+    //MARK:- DataBinding
+    func DataBinding() {
+        _ = self.emailTextField.rx.text.map({$0 ?? ""}).bind(to: AuthViewModel.email).disposed(by: disposeBag)
+        _ = self.passTextField.rx.text.map({$0 ?? ""}).bind(to: AuthViewModel.password).disposed(by: disposeBag)
+    }
+}
+
+
+extension LoginUserVC {
+    func validateInput() -> Bool {
+        var valid = false
+        AuthViewModel.validateLogin().subscribe(onNext: { (result) in
+            if result.isEmpty {
+                valid = true
+            } else {
+                self.AuthViewModel.dismissIndicator()
+                displayMessage(title: "", message: result, status: .error, forController: self)
+                valid = false
+            }
+        }).disposed(by: disposeBag)
+        return valid
+    }
+    func postlogin(){
+        AuthViewModel.attemptToLogin().subscribe(onNext: { (registerData) in
+           if registerData.status ?? false {
+            self.AuthViewModel.dismissIndicator()
+            let destinationVC = TabBarController.instantiate(fromAppStoryboard: .Main)
+            destinationVC.type = .user
+            if let appDelegate = UIApplication.shared.delegate {
+                appDelegate.window??.rootViewController = destinationVC
+            }
+           }else {
+            displayMessage(title: "", message: registerData.message ?? "", status: .error, forController: self)
+           }
+        }, onError: { (error) in
+            self.AuthViewModel.dismissIndicator()
+            displayMessage(title: "", message: error.localizedDescription, status: .error, forController: self)
+        }).disposed(by: disposeBag)
+    }
+    
+    
+}
+
+
+

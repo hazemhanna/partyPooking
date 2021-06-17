@@ -60,5 +60,99 @@ struct GetServices {
 
     
     
+    func getHome() -> Observable<HomeModelJSON> {
+        return Observable.create { (observer) -> Disposable in
+            let url = ConfigURLs.getHome
+            
+            Alamofire.request(url, method: .post, parameters: nil, encoding: JSONEncoding.default, headers: nil)
+                .validate(statusCode: 200..<300)
+                .responseJSON { (response: DataResponse<Any>) in
+                    do {
+                        let data = try JSONDecoder().decode(HomeModelJSON.self, from: response.data!)
+                        observer.onNext(data)
+                    } catch {
+                        print(error.localizedDescription)
+                        observer.onError(error)
+                    }
+            }
+            
+            return Disposables.create()
+        }
+    }//END of GET All Jobs
+    
+    
+  
+    func getPartyType() -> Observable<PartyTypeModelJSON> {
+        return Observable.create { (observer) -> Disposable in
+            let url = ConfigURLs.getPartType
+            
+            Alamofire.request(url, method: .post, parameters: nil, encoding: JSONEncoding.default, headers: nil)
+                .validate(statusCode: 200..<300)
+                .responseJSON { (response: DataResponse<Any>) in
+                    do {
+                        let data = try JSONDecoder().decode(PartyTypeModelJSON.self, from: response.data!)
+                        observer.onNext(data)
+                    } catch {
+                        print(error.localizedDescription)
+                        observer.onError(error)
+                    }
+            }
+            
+            return Disposables.create()
+        }
+    }//END of GET All Jobs
+    
+    
+    func getBestArtist() -> Observable<BestArtistModelJSON> {
+        return Observable.create { (observer) -> Disposable in
+            let url = ConfigURLs.getBestArtist
+            
+            Alamofire.request(url, method: .post, parameters: nil, encoding: JSONEncoding.default, headers: nil)
+                .validate(statusCode: 200..<300)
+                .responseJSON { (response: DataResponse<Any>) in
+                    do {
+                        let data = try JSONDecoder().decode(BestArtistModelJSON.self, from: response.data!)
+                        observer.onNext(data)
+                    } catch {
+                        print(error.localizedDescription)
+                        observer.onError(error)
+                    }
+            }
+            
+            return Disposables.create()
+        }
+    }//END
+    
+    
+    
+    
+    func getFavourite() -> Observable<FavouriteModelJSON> {
+        return Observable.create { (observer) -> Disposable in
+            let url = ConfigURLs.getFavourite
+            
+            let token = Helper.getAPIToken() ?? ""
+            let headers = [
+                "Authorization": "Bearer \(token)"
+            ]
+            
+            Alamofire.request(url, method: .post, parameters: nil, encoding: JSONEncoding.default, headers: headers)
+                .validate(statusCode: 200..<300)
+                .responseJSON { (response: DataResponse<Any>) in
+                    do {
+                        let data = try JSONDecoder().decode(FavouriteModelJSON.self, from: response.data!)
+                        observer.onNext(data)
+                    } catch {
+                        print(error.localizedDescription)
+                        observer.onError(error)
+                    }
+            }
+            
+            return Disposables.create()
+        }
+    }//END
+    
+    
+    
+    
     
 }

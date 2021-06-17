@@ -43,4 +43,19 @@ class Helper {
         def.removeObject(forKey: "name")
         def.synchronize()
     }
+
+
+
+    class func saveDate(date: String) {
+        let def = UserDefaults.standard
+        def.set(date, forKey: "date")
+        def.synchronize()
+    }
+
+    
+    class func getdate() -> String? {
+       let def = UserDefaults.standard
+       return def.object(forKey: "date") as? String
+    }
+     
 }

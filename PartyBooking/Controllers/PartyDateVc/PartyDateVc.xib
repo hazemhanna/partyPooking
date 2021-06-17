@@ -51,7 +51,7 @@
                             <constraint firstAttribute="bottom" secondItem="JkE-xI-g04" secondAttribute="bottom" constant="12" id="mS1-Az-Z6C"/>
                         </constraints>
                     </view>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="tMU-Dq-TB1">
+                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="tMU-Dq-TB1">
                         <rect key="frame" x="16" y="402" width="390" height="149"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jN5-i1-SKl">

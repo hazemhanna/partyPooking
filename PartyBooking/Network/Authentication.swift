@@ -58,7 +58,6 @@ class Authentication {
         }
     }//END of POST Register
     
-        
     //MARK:- POST Login
     func postLogin(params: [String: Any]) -> Observable<AuthMdelsJSON> {
         return Observable.create { (observer) -> Disposable in

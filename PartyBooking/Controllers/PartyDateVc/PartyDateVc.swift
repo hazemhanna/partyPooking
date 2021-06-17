@@ -16,10 +16,6 @@ class PartyDateVc: UIViewController ,FSCalendarDataSource, FSCalendarDelegate{
     @IBOutlet weak var calendar: FSCalendar!
     @IBOutlet weak var titleLabel: UILabel!
     
-    @IBOutlet weak var partyTimeLabel: UILabel!
-    @IBOutlet weak var partyDateLabel: UILabel!
-
-    
     @IBOutlet weak var backButton: UIButton! {
            didSet {
                backButton.setImage(backButton.currentImage?.flipIfNeeded(), for: .normal)
@@ -29,8 +25,9 @@ class PartyDateVc: UIViewController ,FSCalendarDataSource, FSCalendarDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         setUPLocalize()
+        calendar.delegate = self
+        calendar.dataSource = self
     }
-    
     
     func setUPLocalize(){
            titleLabel.text = "reservation".localized
@@ -44,18 +41,19 @@ class PartyDateVc: UIViewController ,FSCalendarDataSource, FSCalendarDelegate{
         }
         
         let dateFormatter: DateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM/dd/yyyy"
+        dateFormatter.dateFormat = "yyyy-MM-dd"
         dateFormatter.locale = Locale(identifier: "en_EN")
         let selectedDate: String = dateFormatter.string(from: date)
         print(selectedDate)
-        
-            let vc = NoArtistAvailableVc.instantiateFromNib()
-            vc?.onClickDone = {
-            self.presentingViewController?.dismiss(animated: true)
-            }
-           self.present(vc!, animated: true, completion: nil)
-    
-        
+        Helper.saveDate(date: selectedDate)
+        self.navigationController?.popViewController(animated: true)
+//        let vc = NoArtistAvailableVc.instantiateFromNib()
+//            vc?.onClickDone = {
+//            self.presentingViewController?.dismiss(animated: true)
+//        }
+//        self.present(vc!, animated: true, completion: nil)
+//
+//
     }
     
     func calendar(_ calendar: FSCalendar, didDeselect date: Date, at monthPosition: FSCalendarMonthPosition) {
@@ -64,7 +62,6 @@ class PartyDateVc: UIViewController ,FSCalendarDataSource, FSCalendarDelegate{
         dateFormatter.locale = Locale(identifier: "en_EN")
         let selectedDate: String = dateFormatter.string(from: date)
         print(selectedDate)
-        
     }
     
     

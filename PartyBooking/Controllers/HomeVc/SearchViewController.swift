@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class SearchViewController: UIViewController ,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
@@ -18,19 +20,157 @@ class SearchViewController: UIViewController ,UICollectionViewDataSource, UIColl
     @IBOutlet weak var offerLabel: UILabel!
     @IBOutlet weak var mostFamousCollection: UICollectionView!
     @IBOutlet weak var offerCollection: UICollectionView!
-    @IBOutlet weak var searchTitleLabel: UILabel!
-    @IBOutlet weak var locatioLabel: UILabel!
     @IBOutlet weak var dateLbl: UILabel!
+    @IBOutlet weak var partyTypeTextField: TextFieldDropDown!
+    @IBOutlet weak var countryTextField: TextFieldDropDown!
+
+    var offers = [Offers]()
+    var best = [Artists]()
+    var partyType = [PartyType]()
+    var filterPartyType = [String]()
+    var country = [Country]()
+    var filterCountry = [String]()
+    var countryId :Int?
+    var typeId :Int?
+    var dateTapped = false
+    var selectedDate:String?
+    var notification = false
+    private let homeVM = HomeViewModel()
+    var disposeBag = DisposeBag()
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+     
+        mostFamousCollection.delegate = self
+        mostFamousCollection.dataSource = self
+        mostFamousCollection.register(UINib(nibName: "MostFamousCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
+        offerCollection.delegate = self
+        offerCollection.dataSource = self
+        offerCollection.register(UINib(nibName: "MostFamousCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
+   
+        style ()
+        setUPLocalize()
+        getHome()
+        getPartyType()
+        getAllCountry()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if dateTapped {
+         dateLbl.text = Helper.getdate() ?? ""
+        }else {
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEEE,dd,MMM"
+        let result = formatter.string(from: date)
+        dateLbl.text = result
+        }
+        
+      selectedDate = Helper.getdate() ?? ""
+      self.navigationController?.navigationBar.isHidden = true
+        
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
+    }
+    
+    func setUPLocalize(){
+        searchBtn.setTitle("searchtitle".localized, for: .normal)
+        mostFamousLabel.text = "Most".localized
+        offerLabel.text = "Show".localized
+        countryTextField.placeholder = "location".localized
+        if MOLHLanguage.currentAppleLanguage() == "en" {
+        let font = UIFont(name: "Georgia-Bold", size: 14)
+            searchBtn.titleLabel!.font = UIFont(name: "Georgia-Bold", size: 17)
+            offerLabel.font = font
+            mostFamousLabel.font = font
+        }
+     }
+    
+    
+    func setupCountryDropDown() {
+        countryTextField.optionArray = self.filterCountry
+        countryTextField.didSelect { (selectedText, index, id) in
+            self.countryTextField.text = selectedText
+            self.countryId = self.country[index].id ?? 0
+
+        }
+    }
+    
+    
+    
+    func setupTypeDropDown() {
+        partyTypeTextField.optionArray = self.filterPartyType
+        partyTypeTextField.didSelect { (selectedText, index, id) in
+            self.partyTypeTextField.text = selectedText
+            self.typeId = self.partyType[index].id ?? 0
+        }
+    }
+    
+     func style (){
+        locationView.layer.cornerRadius = 7
+        dateView.layer.cornerRadius = 7
+        partyView.layer.cornerRadius = 7
+        searchBtn.layer.cornerRadius = 7
+      }
+    
 
     
-    var notification = false
+    
+    @IBAction func viewAllTapped(sender: UIButton) {
+        let destinationVC = MostFamousVc.instantiateFromNib()
+        self.navigationController?.pushViewController(destinationVC!, animated: true)
+    }
+    
+    @IBAction func calenderTapped(sender: UIButton) {
+        self.dateTapped = true
+        let destinationVC = PartyDateVc.instantiateFromNib()
+        self.navigationController?.pushViewController(destinationVC!, animated: true)
+      }
+    
+    
+    @IBAction func notificationButton(sender: UIButton) {
+          let destinationVC = NotificationsViewController.instantiateFromNib()
+          self.navigationController?.pushViewController(destinationVC!, animated: true)
+      }
+    
+     @IBAction func searchButton(sender: UIButton) {
+        if typeId == nil || countryId == nil || selectedDate == "" {
+            displayMessage(title: "", message: "please complete all required data", status: .error, forController: self)
+        }else{
+            
+        let destinationVC = SearchResultViewController.instantiateFromNib()
+        destinationVC!.areaId = countryId ?? 0
+        destinationVC!.typeId = typeId ?? 0
+        destinationVC!.date = dateLbl.text ?? ""
+        self.navigationController?.pushViewController(destinationVC!, animated: true)
+        }
+        
+     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        if collectionView == offerCollection{
+            return offers.count
+        }else{
+            return best.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! MostFamousCollectionViewCell
+        if collectionView == offerCollection {
+            cell.locationImage.isHidden = true
+            cell.titleLbl.isHidden = true
+            cell.locationLbl.isHidden = true
+            cell.confic(imageUrl: self.offers[indexPath.row].attachmentType ?? "",name: "" ,locaction: "")
+        }else{
+            cell.locationImage.isHidden = false
+            cell.titleLbl.isHidden = false
+            cell.locationLbl.isHidden = false
+            cell.confic(imageUrl: self.best[indexPath.row].image ?? "", name: ((self.best[indexPath.row].firstName ?? "") + " " + (self.best[indexPath.row].lastName ?? "")), locaction: (self.best[indexPath.row].address ?? ""))
+
+        }
         cell.layer.cornerRadius = 7
         return cell
     }
@@ -44,81 +184,65 @@ class SearchViewController: UIViewController ,UICollectionViewDataSource, UIColl
     }
     
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        style ()
-        // collection view deleget
-        mostFamousCollection.delegate = self
-        mostFamousCollection.dataSource = self
-        mostFamousCollection.register(UINib(nibName: "MostFamousCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
-        offerCollection.delegate = self
-        offerCollection.dataSource = self
-        offerCollection.register(UINib(nibName: "MostFamousCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
- 
-       setUPLocalize()
-        if notification{
-           print("hazem")
-        }else{
-           print("lavy")
-        }
-    }
-    
-    func setUPLocalize(){
-        searchBtn.setTitle("searchtitle".localized, for: .normal)
-        mostFamousLabel.text = "Most".localized
-        offerLabel.text = "Show".localized
-        searchTitleLabel.text = "makeSearch".localized
-        locatioLabel.text = "location".localized
-        
-        if MOLHLanguage.currentAppleLanguage() == "en" {
-        let font = UIFont(name: "Georgia-Bold", size: 14)
-            searchBtn.titleLabel!.font = UIFont(name: "Georgia-Bold", size: 17)
-            offerLabel.font = font
-            mostFamousLabel.font = font
-            searchTitleLabel.font = UIFont(name: "Georgia-Bold", size: 17)
-            locatioLabel.font = font
-        }
-
-     }
-    
-     func style (){
-        locationView.layer.cornerRadius = 7
-        dateView.layer.cornerRadius = 7
-        partyView.layer.cornerRadius = 7
-        searchBtn.layer.cornerRadius = 7
-      }
-    
-    override func viewWillAppear(_ animated: Bool) {
-      self.navigationController?.navigationBar.isHidden = true
-    }
-    override func viewWillDisappear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = false
-    }
-    
-    @IBAction func locationTapped(sender: UIButton) {
-        let destinationVC = LocationViewController.instantiateFromNib()
-        self.navigationController?.pushViewController(destinationVC!, animated: true)
-      }
-    
-    
-    
-    @IBAction func calenderTapped(sender: UIButton) {
-        let destinationVC = PartyDateVc.instantiateFromNib()
-        self.navigationController?.pushViewController(destinationVC!, animated: true)
-      }
-    
-    
-    @IBAction func notificationButton(sender: UIButton) {
-          let destinationVC = NotificationsViewController.instantiateFromNib()
-          self.navigationController?.pushViewController(destinationVC!, animated: true)
-      }
-    
-     @IBAction func searchButton(sender: UIButton) {
-        let destinationVC = SearchResultViewController.instantiateFromNib()
-        self.navigationController?.pushViewController(destinationVC!, animated: true)
-    }
     
 }
 
+extension SearchViewController {
 
+func getHome() {
+    homeVM.getHome().subscribe(onNext: { (data) in
+        self.homeVM.dismissIndicator()
+        if data.status ?? false {
+            self.offers = data.result?.offers?.data ?? []
+            self.best = data.result?.bestArtists?.data ?? []
+            self.offerCollection.reloadData()
+            self.mostFamousCollection.reloadData()
+        }
+    }, onError: { (error) in
+        self.homeVM.dismissIndicator()
+        displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
+    }).disposed(by: disposeBag)
+ }
+    func getPartyType() {
+        homeVM.getPartyType().subscribe(onNext: { (data) in
+            if data.status ?? false {
+                self.homeVM.dismissIndicator()
+                self.partyType = data.result?.partyTypes ?? []
+                for index in self.partyType {
+                    if "lang".localized == "ar" {
+                    self.filterPartyType.append(index.arName ?? "")
+                    }else{
+                        self.filterPartyType.append(index.enName ?? "")
 
+                    }
+                }
+                self.setupTypeDropDown()
+            }
+        }, onError: { (error) in
+            self.homeVM.dismissIndicator()
+            displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
+        }).disposed(by: disposeBag)
+     }
+    
+    func getAllCountry() {
+        homeVM.getCountry().subscribe(onNext: { (data) in
+            self.homeVM.dismissIndicator()
+            if data.status ?? false {
+                self.country = data.result?.countries ?? []
+                for index in self.country{
+                    if "lang".localized == "ar" {
+                        self.filterCountry.append(index.arName ?? "")
+                    }else{
+                        self.filterCountry.append(index.enName ?? "")
+                    }
+                }
+                self.setupCountryDropDown()
+            }
+        }, onError: { (error) in
+            self.homeVM.dismissIndicator()
+            displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
+        }).disposed(by: disposeBag)
+    }
+    
+    
+}

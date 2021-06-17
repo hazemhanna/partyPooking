@@ -28,9 +28,26 @@ struct ConfigURLs {
     static var userLogin = BASE_URL + "user/auth/login"
     //MARK:- POST Register
     static var postRegister = BASE_URL  + "user/auth/register"
-    //MARK:- POST validateRegister
-    static var validateRegister = BASE_URL  + "/validate-register"
-
+    //MARK:- get home
+    static var getHome = BASE_URL  + "user/home/main"
+    
+    //MARK:- get PartType
+    static var getPartType = BASE_URL  + "api/getPartyTypes"
+    //MARK:- get best Artist
+    static var getBestArtist = BASE_URL  + "user/home/best-artists"
+    //MARK:- get search
+    static var getSearch = BASE_URL  + "user/home/search"
+    //MARK:- get search
+    static var addFavourite = BASE_URL  + "user/favourite/add"
+    
+    //MARK:- get search
+    static var getFavourite = BASE_URL  + "user/favourite/get"
+    
+    
+    
+    
+    
+    
     
     
     //MARK:- artist

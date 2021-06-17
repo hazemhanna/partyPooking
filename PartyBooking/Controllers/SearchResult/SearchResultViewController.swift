@@ -8,54 +8,67 @@
 
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class SearchResultViewController: UIViewController {
     
+    var filterdArtist = [Artists]()
+    private let searchVM = SearchResultViewModel()
+    
+    var disposeBag = DisposeBag()
+    
     @IBOutlet weak var SearchTableView: UITableView!
-    @IBOutlet weak var dateImage: UIView!
     @IBOutlet weak var backButton: UIButton! {
            didSet {
                backButton.setImage(backButton.currentImage?.flipIfNeeded(), for: .normal)
            }
        }
       
+    var areaId =  Int()
+    var typeId = Int()
+    var date = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         SearchTableView.register(UINib(nibName: "SearchResultTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
-        dateImage.layer.cornerRadius=7
-        dateImage.layer.borderColor=UIColor.white.cgColor
-        dateImage.layer.borderWidth=1
     }
     
-    
-    override func viewWillAppear(_ animated: Bool) {
-          self.navigationController?.navigationBar.isHidden = true
+   override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
         self.tabBarController?.tabBar.isHidden = true
-
+         searchVM.showIndicator()
      }
-        override func viewWillDisappear(_ animated: Bool) {
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.getsearchResult(area: areaId, date: date, type:typeId )
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
             self.navigationController?.navigationBar.isHidden = false
             self.tabBarController?.tabBar.isHidden = false
-
         }
-    
-       @IBAction func backButton(sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
-         }
-       
-    
- 
+  
+    @IBAction func backButton(sender: UIButton) {
+         self.navigationController?.popViewController(animated: true)
+        }
 
+    
 }
 
 extension SearchResultViewController : UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return 5
+        return filterdArtist.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SearchResultTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SearchResultTableViewCell
+        cell.confic(imageUrl:  self.filterdArtist[indexPath.row].image ?? "", name: ((self.filterdArtist[indexPath.row].firstName ?? "") + " " + (self.filterdArtist[indexPath.row].lastName ?? "")), locaction: (self.filterdArtist[indexPath.row].address ?? ""), rate: (self.filterdArtist[indexPath.row].rate ?? 0),price : 89,isFavourite :self.filterdArtist[indexPath.row].favourite ?? 0)
+        cell.addFavourite = {
+            self.searchVM.showIndicator()
+            self.addFavourite(artistId: (self.filterdArtist[indexPath.row].id ?? 0))
+        }
+        
             return cell
         }
     
@@ -70,4 +83,38 @@ extension SearchResultViewController : UITableViewDelegate , UITableViewDataSour
             return CGFloat(150)
         
     }
+}
+
+
+extension SearchResultViewController {
+    
+func getsearchResult(area : Int , date : String , type : Int) {
+    searchVM.getSearchResult(area: area, date: date, type: type).subscribe(onNext: { (data) in
+        self.searchVM.dismissIndicator()
+        if data.status ?? false {
+            self.filterdArtist = data.result ?? []
+            self.SearchTableView.reloadData()
+        }
+    }, onError: { (error) in
+        self.searchVM.dismissIndicator()
+        displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
+    }).disposed(by: disposeBag)
+ }
+    
+   
+    func addFavourite(artistId : Int ) {
+        searchVM.addFavourite(artistId: artistId).subscribe(onNext: { (data) in
+            self.searchVM.dismissIndicator()
+            if data.status ?? false {
+                displayMessage(title: "", message: data.message ?? "", status: .success, forController: self)
+                self.getsearchResult(area: self.areaId, date: self.date, type:self.typeId )
+            }
+        }, onError: { (error) in
+            self.searchVM.dismissIndicator()
+            displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
+        }).disposed(by: disposeBag)
+     }
+      
+    
+    
 }

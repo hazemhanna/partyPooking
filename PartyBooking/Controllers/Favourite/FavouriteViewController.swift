@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class FavouriteViewController: UIViewController {
     
@@ -18,10 +20,17 @@ class FavouriteViewController: UIViewController {
         }
     }
     
+    
+    var favourite = [Favourite]()
+    private let favouriteVM = FavouriteViewModel()
+    var disposeBag = DisposeBag()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         favouriteTableView.register(UINib(nibName: "FavouriteTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
         setUPLocalize()
+        getFavourite()
     }
     
     func setUPLocalize(){
@@ -45,16 +54,62 @@ class FavouriteViewController: UIViewController {
 
 extension FavouriteViewController : UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return favourite.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! FavouriteTableViewCell
+        
+        cell.confic(imageUrl:  self.favourite[indexPath.row].artist?.image ?? "", name: ((self.favourite[indexPath.row].artist?.firstName ?? "") + " " + (self.favourite[indexPath.row].artist?.lastName ?? "")), locaction: (self.favourite[indexPath.row].artist?.address ?? ""), rate: (self.favourite[indexPath.row].artist?.rate ?? 0))
+        cell.Favourite = {
+            self.favouriteVM.showIndicator()
+            self.addFavourite(artistId: (self.favourite[indexPath.row].id ?? 0))
+        }
+        
+        cell.viewProfile = {
+            let destinationVC = ArtistProfileViewController.instantiateFromNib()
+            self.navigationController?.pushViewController(destinationVC!, animated: true)
+        }
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(160)
-        
+        return CGFloat(150)
     }
+    
+}
+
+
+extension FavouriteViewController {
+    
+func getFavourite() {
+    favouriteVM.getFavourite().subscribe(onNext: { (data) in
+        self.favouriteVM.dismissIndicator()
+        if data.status ?? false {
+            self.favourite = data.result?.data ?? []
+            self.favouriteTableView.reloadData()
+        }
+    }, onError: { (error) in
+        self.favouriteVM.dismissIndicator()
+        displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
+    }).disposed(by: disposeBag)
+ }
+    
+   
+    func addFavourite(artistId : Int ) {
+        favouriteVM.addFavourite(artistId: artistId).subscribe(onNext: { (data) in
+            self.favouriteVM.dismissIndicator()
+            if data.status ?? false {
+                self.getFavourite()
+                displayMessage(title: "", message: data.message ?? "", status: .success, forController: self)
+            }
+        }, onError: { (error) in
+            self.favouriteVM.dismissIndicator()
+            displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
+        }).disposed(by: disposeBag)
+     }
+      
+    
+    
 }

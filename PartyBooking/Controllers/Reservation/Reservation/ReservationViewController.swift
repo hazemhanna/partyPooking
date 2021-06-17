@@ -9,6 +9,9 @@
 
 
 import UIKit
+import RxSwift
+import RxCocoa
+
 let CellHeight = 80
 
 class ReservationViewController: UIViewController {
@@ -24,7 +27,12 @@ class ReservationViewController: UIViewController {
     @IBOutlet weak var canceledLabel : UILabel!
     @IBOutlet weak var titleLabel : UILabel!
 
-    var currentReservation: [Int]=[]{
+    private let reservationVM = ReservationViewModel()
+    var disposeBag = DisposeBag()
+    
+    
+    
+    var currentReservation: [Reservation]=[]{
         didSet {
             if currentReservation.count > 0{
                 let dynamicTableHeight = currentReservation.count * CellHeight
@@ -36,7 +44,7 @@ class ReservationViewController: UIViewController {
     }
     
     
-    var endedReservation: [Int]=[]{
+    var endedReservation: [Reservation]=[]{
         didSet {
             if endedReservation.count > 0{
                 let dynamicTableHeight = endedReservation.count * CellHeight
@@ -47,7 +55,7 @@ class ReservationViewController: UIViewController {
         }
     }
     
-    var cancelReservation: [Int]=[]{
+    var cancelReservation: [Reservation]=[]{
         didSet {
             if cancelReservation.count > 0{
                 let dynamicTableHeight = currentReservation.count * CellHeight
@@ -66,11 +74,9 @@ class ReservationViewController: UIViewController {
         canceledReservationTableView.register(UINib(nibName: "ReservationTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
 
         setUPLocalize()
-
-        currentReservation.append(1)
-        endedReservation.append(1)
-        endedReservation.append(1)
-        cancelReservation.append(1)
+        reservationVM.showIndicator()
+        getReservation()
+        
     }
     
     
@@ -157,4 +163,27 @@ extension ReservationViewController : UITableViewDelegate , UITableViewDataSourc
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(CellHeight)
     }
+}
+
+
+
+extension ReservationViewController {
+func getReservation() {
+    reservationVM.getReservation().subscribe(onNext: { (data) in
+    self.reservationVM.dismissIndicator()
+    if data.status ?? false {
+        self.currentReservation = data.result?.currentBookings?.data ?? []
+        self.endedReservation = data.result?.completedBookings?.data ?? []
+        self.cancelReservation = data.result?.cancelledBookings?.data ?? []
+        self.currentReservationTableView.reloadData()
+        self.endedReservationTableView.reloadData()
+        self.canceledReservationTableView.reloadData()
+        
+    }
+}, onError: { (error) in
+    self.reservationVM.dismissIndicator()
+    displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
+}).disposed(by: disposeBag)
+}
+
 }

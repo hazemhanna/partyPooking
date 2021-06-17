@@ -50,4 +50,12 @@ struct HomeViewModel {
         return observer
     }
     
+    func getArtistDetails(artistId  : Int) -> Observable<ArtistProfileModelJSON> {
+        let params: [String: Any] = [
+            "artist_id": artistId,
+            ]
+        let observer = GetServices.shared.getArtistDetails(params: params)
+        return observer
+    }
+    
 }

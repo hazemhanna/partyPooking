@@ -39,11 +39,10 @@ struct ConfigURLs {
     static var getSearch = BASE_URL  + "user/home/search"
     //MARK:- get search
     static var addFavourite = BASE_URL  + "user/favourite/add"
-    
-    //MARK:- get search
     static var getFavourite = BASE_URL  + "user/favourite/get"
-    
-    
+    static var getReservation = BASE_URL  + "user/booking/getBookings"
+    static var getArtistDetails = BASE_URL  + "user/home/artistDetails"
+
     
     
     

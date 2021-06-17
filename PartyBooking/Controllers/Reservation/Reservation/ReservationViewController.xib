@@ -30,32 +30,19 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0e-U7-iFq">
-                                <rect key="frame" x="12" y="35" width="25" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="9o2-vY-UhN"/>
-                                    <constraint firstAttribute="width" constant="25" id="Ti7-Rw-H9j"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="back"/>
-                                <connections>
-                                    <action selector="backButtonWithSender:" destination="7Q2-KJ-SLb" eventType="touchUpInside" id="SXH-nW-QZF"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.16862745100000001" green="0.74117647060000003" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="I0e-U7-iFq" firstAttribute="leading" secondItem="PQI-oo-aCt" secondAttribute="leading" constant="12" id="5U7-fi-Tqu"/>
                             <constraint firstItem="PqS-1t-Vx5" firstAttribute="centerX" secondItem="PQI-oo-aCt" secondAttribute="centerX" id="RWn-80-Q6Q"/>
                             <constraint firstAttribute="bottom" secondItem="PqS-1t-Vx5" secondAttribute="bottom" constant="12" id="dzp-Yu-Bap"/>
                             <constraint firstAttribute="height" constant="74" id="lo5-ke-LcK"/>
-                            <constraint firstAttribute="bottom" secondItem="I0e-U7-iFq" secondAttribute="bottom" constant="14" id="tne-G3-rs7"/>
                         </constraints>
                     </view>
                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="98P-bK-a1x">
                         <rect key="frame" x="0.0" y="74" width="414" height="788"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zH9-2g-2hi">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="2000"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="current reservation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMp-hq-Qex">
                                         <rect key="frame" x="162" y="16" width="90.5" height="11"/>
@@ -125,7 +112,7 @@
                                     <constraint firstItem="0hV-4j-9YE" firstAttribute="top" secondItem="oJK-MP-3Tr" secondAttribute="bottom" constant="16" id="oQ7-wY-8eQ"/>
                                     <constraint firstAttribute="trailing" secondItem="0hV-4j-9YE" secondAttribute="trailing" id="pDr-ZC-6Ir"/>
                                     <constraint firstItem="gWd-ph-7yk" firstAttribute="top" secondItem="55c-0x-bUm" secondAttribute="bottom" constant="16" id="syL-8i-zWD"/>
-                                    <constraint firstAttribute="height" constant="800" id="uHE-cD-1dx"/>
+                                    <constraint firstAttribute="height" constant="2000" id="uHE-cD-1dx"/>
                                     <constraint firstItem="cMp-hq-Qex" firstAttribute="top" secondItem="zH9-2g-2hi" secondAttribute="top" constant="16" id="wOp-gt-cjW"/>
                                     <constraint firstAttribute="trailing" secondItem="55c-0x-bUm" secondAttribute="trailing" id="yHZ-eZ-qmK"/>
                                 </constraints>
@@ -168,7 +155,6 @@
         </viewController>
     </objects>
     <resources>
-        <image name="back" width="37.5" height="37.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

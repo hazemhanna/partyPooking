@@ -74,6 +74,7 @@ extension SearchResultViewController : UITableViewDelegate , UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let destinationVC = ArtistProfileViewController.instantiateFromNib()
+        destinationVC!.artistId = filterdArtist[indexPath.row].id ?? 0
         self.navigationController?.pushViewController(destinationVC!, animated: true)
         
         

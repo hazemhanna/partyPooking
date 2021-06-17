@@ -151,7 +151,56 @@ struct GetServices {
         }
     }//END
     
+    func getReservation() -> Observable<ReservationModelJSON> {
+        return Observable.create { (observer) -> Disposable in
+            let url = ConfigURLs.getReservation
+            
+            let token = Helper.getAPIToken() ?? ""
+            let headers = [
+                "Authorization": "Bearer \(token)"
+            ]
+            
+            Alamofire.request(url, method: .post, parameters: nil, encoding: JSONEncoding.default, headers: headers)
+                .validate(statusCode: 200..<300)
+                .responseJSON { (response: DataResponse<Any>) in
+                    do {
+                        let data = try JSONDecoder().decode(ReservationModelJSON.self, from: response.data!)
+                        observer.onNext(data)
+                    } catch {
+                        print(error.localizedDescription)
+                        observer.onError(error)
+                    }
+            }
+            
+            return Disposables.create()
+        }
+    }//END
     
+    
+    
+    
+    func getArtistDetails(params: [String : Any]) -> Observable<ArtistProfileModelJSON> {
+        return Observable.create { (observer) -> Disposable in
+            let url = ConfigURLs.getArtistDetails
+            let token = Helper.getAPIToken() ?? ""
+            let headers = [
+                "Authorization": "Bearer \(token)"
+            ]
+            Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers)
+                .validate(statusCode: 200..<300)
+                .responseJSON { (response: DataResponse<Any>) in
+                    do {
+                        let data = try JSONDecoder().decode(ArtistProfileModelJSON.self, from: response.data!)
+                        observer.onNext(data)
+                    } catch {
+                        print(error.localizedDescription)
+                        observer.onError(error)
+                    }
+            }
+            
+            return Disposables.create()
+        }
+    }//END
     
     
     

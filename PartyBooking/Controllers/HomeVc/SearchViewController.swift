@@ -175,6 +175,13 @@ class SearchViewController: UIViewController ,UICollectionViewDataSource, UIColl
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView ==  mostFamousCollection {
+        let destinationVC = ArtistProfileViewController.instantiateFromNib()
+        destinationVC!.artistId = best[indexPath.row].id ?? 0
+        self.navigationController?.pushViewController(destinationVC!, animated: true)
+        }
+    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let spacing: CGFloat = 30

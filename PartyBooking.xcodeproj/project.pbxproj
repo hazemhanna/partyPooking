@@ -126,6 +126,8 @@
 		048DCBA9265742C400319F9F /* PassWordInstructions.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048DCBA7265742C400319F9F /* PassWordInstructions.xib */; };
 		048EDAD1267ACB57009CB854 /* FavouritModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048EDAD0267ACB57009CB854 /* FavouritModel.swift */; };
 		048EDAD6267ACCCA009CB854 /* FavouriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048EDAD5267ACCCA009CB854 /* FavouriteViewModel.swift */; };
+		048EDADB267ADC28009CB854 /* ReservationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048EDADA267ADC28009CB854 /* ReservationModel.swift */; };
+		048EDAE0267ADE3B009CB854 /* ReservationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048EDADF267ADE3B009CB854 /* ReservationViewModel.swift */; };
 		0491AD3126376D2D00398125 /* UIView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0491AD3026376D2D00398125 /* UIView+Extention.swift */; };
 		0491AD3626376D3E00398125 /* Button+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0491AD3526376D3E00398125 /* Button+Extention.swift */; };
 		0491AD3B26376D5500398125 /* CustomDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0491AD3A26376D5500398125 /* CustomDropdown.swift */; };
@@ -315,6 +317,8 @@
 		048DCBA7265742C400319F9F /* PassWordInstructions.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PassWordInstructions.xib; sourceTree = "<group>"; };
 		048EDAD0267ACB57009CB854 /* FavouritModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritModel.swift; sourceTree = "<group>"; };
 		048EDAD5267ACCCA009CB854 /* FavouriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewModel.swift; sourceTree = "<group>"; };
+		048EDADA267ADC28009CB854 /* ReservationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationModel.swift; sourceTree = "<group>"; };
+		048EDADF267ADE3B009CB854 /* ReservationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationViewModel.swift; sourceTree = "<group>"; };
 		0491AD3026376D2D00398125 /* UIView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extention.swift"; sourceTree = "<group>"; };
 		0491AD3526376D3E00398125 /* Button+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Extention.swift"; sourceTree = "<group>"; };
 		0491AD3A26376D5500398125 /* CustomDropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDropdown.swift; sourceTree = "<group>"; };
@@ -988,6 +992,7 @@
 				0411EB8826764E7D0023FA5B /* HomeViewModel.swift */,
 				049EA68F2678777B00EFB676 /* SearchResultViewModel.swift */,
 				048EDAD5267ACCCA009CB854 /* FavouriteViewModel.swift */,
+				048EDADF267ADE3B009CB854 /* ReservationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1125,6 +1130,7 @@
 				0411EB8326764C700023FA5B /* HomeModel.swift */,
 				049EA68A2678768600EFB676 /* SearchResultModel.swift */,
 				048EDAD0267ACB57009CB854 /* FavouritModel.swift */,
+				048EDADA267ADC28009CB854 /* ReservationModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1619,6 +1625,7 @@
 				04F2BA66265B0586007F4E53 /* SideMenuModel.swift in Sources */,
 				0411F09424B0F20A00F95A72 /* FavouriteViewController.swift in Sources */,
 				047F8C1C24B3895F00A86E86 /* PhotoCollectionViewCell.swift in Sources */,
+				048EDAE0267ADE3B009CB854 /* ReservationViewModel.swift in Sources */,
 				048DCB8E2657324000319F9F /* AlertService.swift in Sources */,
 				0411F09024B0A5A400F95A72 /* EditProfileViewController.swift in Sources */,
 				0491AD3B26376D5500398125 /* CustomDropdown.swift in Sources */,
@@ -1649,6 +1656,7 @@
 				046506ED24B60B8900694741 /* ArtistAccountViewController.swift in Sources */,
 				047F8C2124B3A9B900A86E86 /* CommentsViewController.swift in Sources */,
 				04CA045424B9FFD000660E7B /* MOLH.swift in Sources */,
+				048EDADB267ADC28009CB854 /* ReservationModel.swift in Sources */,
 				047F8C3024B3AE5800A86E86 /* RateTableViewCell.swift in Sources */,
 				0430678E2661F36E00BDFE32 /* PartyDateVc.swift in Sources */,
 				046E3B9524AE1295006D1385 /* StoryBoardExtension.swift in Sources */,

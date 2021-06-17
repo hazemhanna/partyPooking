@@ -134,3 +134,9 @@ struct BestArtistModelJSON: Codable {
 }
 
 
+// MARK: - ArtistProfileModelJSON
+struct ArtistProfileModelJSON: Codable {
+    let status: Bool?
+    let message: String?
+    let result: Artists?
+}

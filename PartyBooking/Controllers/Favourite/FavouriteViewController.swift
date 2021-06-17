@@ -20,12 +20,11 @@ class FavouriteViewController: UIViewController {
         }
     }
     
-    
-    var favourite = [Favourite]()
     private let favouriteVM = FavouriteViewModel()
     var disposeBag = DisposeBag()
     
-    
+    var favourite = [Favourite]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         favouriteTableView.register(UINib(nibName: "FavouriteTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")

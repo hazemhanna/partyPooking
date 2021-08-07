@@ -198,7 +198,6 @@ class UserRegisterViewController: UIViewController {
     }
            
     @IBAction func nextButton(sender: UIButton) {
-        AuthViewModel.showIndicator()
         guard self.validateInput() else { return }
         if flag == false{
             if "lang".localized == "ar" {
@@ -208,6 +207,7 @@ class UserRegisterViewController: UIViewController {
             }
             return
         }
+        AuthViewModel.showIndicator()
         postRegister()
     }
     
@@ -281,9 +281,9 @@ extension UserRegisterViewController {
                 appDelegate.window??.rootViewController = destinationVC
             }
            }else {
+            self.AuthViewModel.dismissIndicator()
             displayMessage(title: "", message: registerData.message ?? "", status: .error, forController: self)
            }
-
         }, onError: { (error) in
             self.AuthViewModel.dismissIndicator()
             displayMessage(title: "", message: error.localizedDescription, status: .error, forController: self)

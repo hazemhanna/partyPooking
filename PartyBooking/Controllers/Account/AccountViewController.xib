@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -43,13 +45,19 @@
                             <constraint firstAttribute="width" constant="177" id="puF-Dl-zWw"/>
                         </constraints>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGN-3N-1It">
+                        <rect key="frame" x="118.5" y="90" width="177" height="177"/>
+                        <connections>
+                            <action selector="choosePicGallery:" destination="UkJ-zF-o5j" eventType="touchUpInside" id="ezN-xy-AEi"/>
+                        </connections>
+                    </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alla youssef" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S1j-m7-pdC">
                         <rect key="frame" x="142.5" y="283" width="129" height="24"/>
                         <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="22"/>
                         <color key="textColor" red="0.1803921568627451" green="0.1803921568627451" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gfn-8F-T8D">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gfn-8F-T8D">
                         <rect key="frame" x="94.5" y="339" width="225" height="59"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="225" id="6fa-Z4-HKH"/>
@@ -64,22 +72,27 @@
                         </connections>
                     </button>
                 </subviews>
-                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                <viewLayoutGuide key="safeArea" id="O3c-3T-MtC"/>
+                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 <constraints>
                     <constraint firstItem="xTH-n9-swk" firstAttribute="top" secondItem="6Sd-LS-Lkg" secondAttribute="bottom" constant="16" id="1cD-RI-5fq"/>
                     <constraint firstItem="S1j-m7-pdC" firstAttribute="centerX" secondItem="0bB-47-x7q" secondAttribute="centerX" id="71C-pc-ngv"/>
                     <constraint firstItem="Gfn-8F-T8D" firstAttribute="centerX" secondItem="0bB-47-x7q" secondAttribute="centerX" id="75Q-kJ-471"/>
+                    <constraint firstItem="XGN-3N-1It" firstAttribute="centerY" secondItem="xTH-n9-swk" secondAttribute="centerY" id="G7G-s0-Gs3"/>
+                    <constraint firstItem="XGN-3N-1It" firstAttribute="width" secondItem="xTH-n9-swk" secondAttribute="width" id="JHH-vw-mjC"/>
                     <constraint firstItem="xTH-n9-swk" firstAttribute="centerX" secondItem="0bB-47-x7q" secondAttribute="centerX" id="VBp-El-deo"/>
                     <constraint firstItem="6Sd-LS-Lkg" firstAttribute="leading" secondItem="0bB-47-x7q" secondAttribute="leading" id="Vui-AH-Hx5"/>
                     <constraint firstItem="6Sd-LS-Lkg" firstAttribute="top" secondItem="0bB-47-x7q" secondAttribute="top" id="YMH-fg-gUb"/>
                     <constraint firstItem="O3c-3T-MtC" firstAttribute="trailing" secondItem="6Sd-LS-Lkg" secondAttribute="trailing" id="dcM-yv-aza"/>
                     <constraint firstItem="S1j-m7-pdC" firstAttribute="top" secondItem="xTH-n9-swk" secondAttribute="bottom" constant="16" id="lgm-LB-xVP"/>
                     <constraint firstItem="Gfn-8F-T8D" firstAttribute="top" secondItem="S1j-m7-pdC" secondAttribute="bottom" constant="32" id="qZ5-VK-fuk"/>
+                    <constraint firstItem="XGN-3N-1It" firstAttribute="height" secondItem="xTH-n9-swk" secondAttribute="height" id="tVe-lq-pDE"/>
+                    <constraint firstItem="XGN-3N-1It" firstAttribute="centerX" secondItem="xTH-n9-swk" secondAttribute="centerX" id="wUR-cG-JUr"/>
                 </constraints>
-                <viewLayoutGuide key="safeArea" id="O3c-3T-MtC"/>
             </view>
             <connections>
                 <outlet property="editBtn" destination="Gfn-8F-T8D" id="Oc2-KJ-sIS"/>
+                <outlet property="nameLabel" destination="S1j-m7-pdC" id="Adj-hz-Jsp"/>
                 <outlet property="profilehImage" destination="xTH-n9-swk" id="Lvy-9a-gp8"/>
                 <outlet property="titleLabel" destination="YPg-wY-Nc1" id="CfE-NP-xIR"/>
             </connections>
@@ -88,5 +101,8 @@
     </objects>
     <resources>
         <image name="aasx" width="1088" height="504"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

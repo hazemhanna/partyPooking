@@ -83,6 +83,7 @@ extension LoginUserVC {
                 appDelegate.window??.rootViewController = destinationVC
             }
            }else {
+            self.AuthViewModel.dismissIndicator()
             displayMessage(title: "", message: registerData.message ?? "", status: .error, forController: self)
            }
         }, onError: { (error) in

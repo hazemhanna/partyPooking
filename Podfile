@@ -20,6 +20,7 @@ target 'PartyBooking' do
   pod 'RxCocoa', '~> 5'
   pod 'SVProgressHUD', '~> 2.2.5'
   pod 'SwiftMessages', '~> 6.0.2'
+  pod 'FBSDKLoginKit'
 
   target 'PartyBookingTests' do
     inherit! :search_paths

@@ -37,7 +37,8 @@ class SearchViewController: UIViewController ,UICollectionViewDataSource, UIColl
     var notification = false
     private let homeVM = HomeViewModel()
     var disposeBag = DisposeBag()
-    
+    var token = Helper.getAPIToken() ?? ""
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -136,6 +137,8 @@ class SearchViewController: UIViewController ,UICollectionViewDataSource, UIColl
       }
     
      @IBAction func searchButton(sender: UIButton) {
+        
+       if token != ""{
         if typeId == nil || countryId == nil || selectedDate == "" {
             displayMessage(title: "", message: "please complete all required data", status: .error, forController: self)
         }else{
@@ -146,7 +149,9 @@ class SearchViewController: UIViewController ,UICollectionViewDataSource, UIColl
         destinationVC!.date = dateLbl.text ?? ""
         self.navigationController?.pushViewController(destinationVC!, animated: true)
         }
-        
+        }else{
+            
+        }
      }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

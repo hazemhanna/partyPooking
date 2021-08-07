@@ -16,6 +16,8 @@
 		0411F09524B0F20A00F95A72 /* FavouriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0411F09324B0F20A00F95A72 /* FavouriteViewController.xib */; };
 		0411F09924B1034F00F95A72 /* FavouriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411F09724B1034F00F95A72 /* FavouriteTableViewCell.swift */; };
 		0411F09A24B1034F00F95A72 /* FavouriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0411F09824B1034F00F95A72 /* FavouriteTableViewCell.xib */; };
+		0420A83326B8C2C000643213 /* LiveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0420A83226B8C2C000643213 /* LiveModel.swift */; };
+		0420A84C26B8C43B00643213 /* LiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0420A84B26B8C43B00643213 /* LiveViewModel.swift */; };
 		0422500C265E713200723400 /* ForgetPasswordVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422500A265E713200723400 /* ForgetPasswordVC1.swift */; };
 		0422500D265E713200723400 /* ForgetPasswordVC1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0422500B265E713200723400 /* ForgetPasswordVC1.xib */; };
 		04225013265E714100723400 /* ForgetPasswordVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04225011265E714100723400 /* ForgetPasswordVC2.swift */; };
@@ -151,6 +153,9 @@
 		04CA048324BB07A700660E7B /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA048224BB07A700660E7B /* String.swift */; };
 		04CF96F52651712D00184441 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF96F32651712D00184441 /* LoginVC.swift */; };
 		04CF96F62651712D00184441 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CF96F42651712D00184441 /* LoginVC.xib */; };
+		04D6221326B8CDEC000A1B24 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6221226B8CDEC000A1B24 /* ProfileModel.swift */; };
+		04D6221826B8D1F4000A1B24 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6221726B8D1F4000A1B24 /* ProfileViewModel.swift */; };
+		04D6221D26B8DB44000A1B24 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6221C26B8DB44000A1B24 /* MessageModel.swift */; };
 		04E02901265D6E7200F5E373 /* PartyPriceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E028FF265D6E7200F5E373 /* PartyPriceCell.swift */; };
 		04E02902265D6E7300F5E373 /* PartyPriceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E02900265D6E7200F5E373 /* PartyPriceCell.xib */; };
 		04E0290F265D77D600F5E373 /* SettingVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0290D265D77D600F5E373 /* SettingVc.swift */; };
@@ -199,6 +204,8 @@
 		0411F09324B0F20A00F95A72 /* FavouriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouriteViewController.xib; sourceTree = "<group>"; };
 		0411F09724B1034F00F95A72 /* FavouriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteTableViewCell.swift; sourceTree = "<group>"; };
 		0411F09824B1034F00F95A72 /* FavouriteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouriteTableViewCell.xib; sourceTree = "<group>"; };
+		0420A83226B8C2C000643213 /* LiveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveModel.swift; sourceTree = "<group>"; };
+		0420A84B26B8C43B00643213 /* LiveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewModel.swift; sourceTree = "<group>"; };
 		0422500A265E713200723400 /* ForgetPasswordVC1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordVC1.swift; sourceTree = "<group>"; };
 		0422500B265E713200723400 /* ForgetPasswordVC1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgetPasswordVC1.xib; sourceTree = "<group>"; };
 		04225011265E714100723400 /* ForgetPasswordVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordVC2.swift; sourceTree = "<group>"; };
@@ -345,6 +352,9 @@
 		04CA048224BB07A700660E7B /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		04CF96F32651712D00184441 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		04CF96F42651712D00184441 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
+		04D6221226B8CDEC000A1B24 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		04D6221726B8D1F4000A1B24 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		04D6221C26B8DB44000A1B24 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		04E028FF265D6E7200F5E373 /* PartyPriceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyPriceCell.swift; sourceTree = "<group>"; };
 		04E02900265D6E7200F5E373 /* PartyPriceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PartyPriceCell.xib; sourceTree = "<group>"; };
 		04E0290D265D77D600F5E373 /* SettingVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVc.swift; sourceTree = "<group>"; };
@@ -993,6 +1003,8 @@
 				049EA68F2678777B00EFB676 /* SearchResultViewModel.swift */,
 				048EDAD5267ACCCA009CB854 /* FavouriteViewModel.swift */,
 				048EDADF267ADE3B009CB854 /* ReservationViewModel.swift */,
+				0420A84B26B8C43B00643213 /* LiveViewModel.swift */,
+				04D6221726B8D1F4000A1B24 /* ProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1131,6 +1143,9 @@
 				049EA68A2678768600EFB676 /* SearchResultModel.swift */,
 				048EDAD0267ACB57009CB854 /* FavouritModel.swift */,
 				048EDADA267ADC28009CB854 /* ReservationModel.swift */,
+				0420A83226B8C2C000643213 /* LiveModel.swift */,
+				04D6221226B8CDEC000A1B24 /* ProfileModel.swift */,
+				04D6221C26B8DB44000A1B24 /* MessageModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1581,6 +1596,7 @@
 				047F8C0B24B3790400A86E86 /* SearchResultViewController.swift in Sources */,
 				0491AD5C2637830F00398125 /* TextField+Extention.swift in Sources */,
 				0491AD3126376D2D00398125 /* UIView+Extention.swift in Sources */,
+				04D6221D26B8DB44000A1B24 /* MessageModel.swift in Sources */,
 				0465070C24B7A31D00694741 /* SilentViewController.swift in Sources */,
 				0422501A265E715000723400 /* ForgetPasswordVC3.swift in Sources */,
 				04BF70CF2675167B00080730 /* String+Extension.swift in Sources */,
@@ -1588,6 +1604,7 @@
 				0411F08C24B0A11600F95A72 /* Color.swift in Sources */,
 				043067AC26620F5100BDFE32 /* AllLiveCell.swift in Sources */,
 				04225029265E835B00723400 /* RateArtistVc.swift in Sources */,
+				04D6221826B8D1F4000A1B24 /* ProfileViewModel.swift in Sources */,
 				04FAF37724DAA46700F73189 /* ConfigURLs.swift in Sources */,
 				046E3BAC24AE1ABB006D1385 /* AccountViewController.swift in Sources */,
 				046506F324B6157B00694741 /* LiveVideoViewController.swift in Sources */,
@@ -1608,13 +1625,16 @@
 				046E3BB024AE1ADB006D1385 /* MoreViewController.swift in Sources */,
 				04643AF4267569AA00510426 /* GeneralModel.swift in Sources */,
 				046E3B5E24ADD861006D1385 /* AppDelegate.swift in Sources */,
+				0420A84C26B8C43B00643213 /* LiveViewModel.swift in Sources */,
 				04323C1524B2426F000F6395 /* NotificationsViewController.swift in Sources */,
+				04D6221326B8CDEC000A1B24 /* ProfileModel.swift in Sources */,
 				049EA6902678777B00EFB676 /* SearchResultViewModel.swift in Sources */,
 				04F2BA58265B02AF007F4E53 /* ArtistMoreCell.swift in Sources */,
 				0465070324B7983800694741 /* ArtistReservationViewController.swift in Sources */,
 				0422500C265E713200723400 /* ForgetPasswordVC1.swift in Sources */,
 				04323C1024B225B1000F6395 /* OffersTableViewCell.swift in Sources */,
 				047F8C1424B37E9800A86E86 /* ArtistProfileViewController.swift in Sources */,
+				0420A83326B8C2C000643213 /* LiveModel.swift in Sources */,
 				048EDAD1267ACB57009CB854 /* FavouritModel.swift in Sources */,
 				04CA045024B7FD5200660E7B /* LocationViewController.swift in Sources */,
 				046506FD24B780ED00694741 /* AvailableReservationViewController.swift in Sources */,

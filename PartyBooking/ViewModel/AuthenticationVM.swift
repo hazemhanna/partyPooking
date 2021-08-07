@@ -93,7 +93,7 @@ struct AuthenticationViewModel {
                     if "lang".localized == "ar" {
                         observer.onNext("الرجاء إدخال كلمة مرور صالحة")
                     } else {
-                        observer.onNext("Please enter your correct password")
+                        observer.onNext("Please enter correct password")
                     }
                 }else if country.isEmpty {
                     if "lang".localized == "ar" {

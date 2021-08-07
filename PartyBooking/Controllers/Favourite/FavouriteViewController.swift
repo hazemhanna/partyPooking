@@ -29,7 +29,7 @@ class FavouriteViewController: UIViewController {
         super.viewDidLoad()
         favouriteTableView.register(UINib(nibName: "FavouriteTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
         setUPLocalize()
-        getFavourite()
+      
     }
     
     func setUPLocalize(){
@@ -37,6 +37,8 @@ class FavouriteViewController: UIViewController {
      }
     
     override func viewWillAppear(_ animated: Bool) {
+        favouriteVM.showIndicator()
+        getFavourite()
         self.navigationController?.navigationBar.isHidden = true
         self.tabBarController?.tabBar.isHidden = true
     }

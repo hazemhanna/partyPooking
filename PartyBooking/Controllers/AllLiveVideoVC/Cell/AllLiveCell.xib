@@ -105,6 +105,10 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="artistImage" destination="wen-XO-kCw" id="Kko-Tq-cCe"/>
+                <outlet property="nameLabel" destination="fcu-ZV-djg" id="onb-2r-NPb"/>
+            </connections>
             <point key="canvasLocation" x="40.579710144927539" y="89.0625"/>
         </tableViewCell>
     </objects>

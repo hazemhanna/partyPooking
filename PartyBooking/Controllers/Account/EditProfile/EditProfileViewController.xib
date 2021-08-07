@@ -61,7 +61,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="c8p-Dl-ncV">
-                                                <rect key="frame" x="16" y="1.5" width="354" height="57.5"/>
+                                                <rect key="frame" x="16" y="2" width="354" height="56"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="first name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6P-iO-ZYz">
                                                         <rect key="frame" x="0.0" y="0.0" width="56.5" height="13"/>
@@ -70,7 +70,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="alla " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OKF-Z7-OzW" customClass="CustomTextField" customModule="PartyBooking" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="19" width="334" height="38.5"/>
+                                                        <rect key="frame" x="0.0" y="19" width="334" height="37"/>
                                                         <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -126,7 +126,7 @@
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="RsF-fr-jes">
-                                                <rect key="frame" x="16" y="1.5" width="354" height="57.5"/>
+                                                <rect key="frame" x="16" y="2" width="354" height="56"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="last name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92t-0T-B9g">
                                                         <rect key="frame" x="0.0" y="0.0" width="54.5" height="13"/>
@@ -135,7 +135,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Youssef" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0iA-eG-Hdh" customClass="CustomTextField" customModule="PartyBooking" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="19" width="334" height="38.5"/>
+                                                        <rect key="frame" x="0.0" y="19" width="334" height="37"/>
                                                         <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -177,7 +177,7 @@
                                         <rect key="frame" x="0.0" y="136" width="414" height="60"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="dGa-RP-3cF">
-                                                <rect key="frame" x="16" y="1.5" width="354" height="57.5"/>
+                                                <rect key="frame" x="16" y="2" width="354" height="56"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="e-mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lL1-WT-K7b">
                                                         <rect key="frame" x="0.0" y="0.0" width="37.5" height="13"/>
@@ -186,7 +186,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="allayouseef.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cPb-f7-GfY" customClass="CustomTextField" customModule="PartyBooking" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="19" width="346" height="38.5"/>
+                                                        <rect key="frame" x="0.0" y="19" width="346" height="37"/>
                                                         <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -289,7 +289,7 @@
                                         <rect key="frame" x="0.0" y="272" width="414" height="60"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="AgK-kM-biu">
-                                                <rect key="frame" x="16" y="1.5" width="354" height="57.5"/>
+                                                <rect key="frame" x="16" y="11.5" width="354" height="37.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJ3-uD-aV3">
                                                         <rect key="frame" x="0.0" y="0.0" width="44.5" height="13"/>
@@ -297,8 +297,8 @@
                                                         <color key="textColor" red="0.73333333329999995" green="0.73333333329999995" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ssudi arab " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Pj-Zr-N1l" customClass="CustomTextField" customModule="PartyBooking" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="19" width="346" height="38.5"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ssudi arab " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Pj-Zr-N1l" customClass="TextFieldDropDown" customModule="PartyBooking" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="19" width="346" height="18.5"/>
                                                         <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -341,11 +341,11 @@
                                             <constraint firstItem="bxE-fx-It2" firstAttribute="centerY" secondItem="9II-A8-P6g" secondAttribute="centerY" id="zku-O9-mbi"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2r8-UT-XY6">
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2r8-UT-XY6">
                                         <rect key="frame" x="0.0" y="340" width="414" height="60"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="iPh-mC-Jxr">
-                                                <rect key="frame" x="16" y="1.5" width="354" height="57.5"/>
+                                                <rect key="frame" x="16" y="2" width="354" height="56"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ygt-2Z-qt3">
                                                         <rect key="frame" x="0.0" y="0.0" width="56.5" height="13"/>
@@ -354,7 +354,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="******" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pce-0z-mRO" customClass="CustomTextField" customModule="PartyBooking" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="19" width="346" height="38.5"/>
+                                                        <rect key="frame" x="0.0" y="19" width="346" height="37"/>
                                                         <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -409,6 +409,9 @@
                                         <state key="normal" title="save">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="saveButtonWithSender:" destination="Sqb-BS-sE1" eventType="touchUpInside" id="Yf8-It-pnd"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -477,9 +480,6 @@
         </viewController>
     </objects>
     <designables>
-        <designable name="0Pj-Zr-N1l">
-            <size key="intrinsicContentSize" width="92.5" height="38.5"/>
-        </designable>
         <designable name="0iA-eG-Hdh">
             <size key="intrinsicContentSize" width="71" height="38.5"/>
         </designable>

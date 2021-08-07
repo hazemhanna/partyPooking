@@ -42,13 +42,11 @@ struct ConfigURLs {
     static var getFavourite = BASE_URL  + "user/favourite/get"
     static var getReservation = BASE_URL  + "user/booking/getBookings"
     static var getArtistDetails = BASE_URL  + "user/home/artistDetails"
-
-    
-    
-    
-    
-    
-    
+    //MARK:- get Live
+    static var getLive = BASE_URL  + "user/setting/getLives"
+    static var getProfile = BASE_URL  + "user/auth/profile"
+    static var chageProfilePhoto = BASE_URL  + "user/auth/changePhoto"
+    static var editProfile = BASE_URL  + "user/auth/updateProfile"
     //MARK:- artist
     //MARK:- POST Artist Login
     static var artistLogin = BASE_URL + "artist/login"

@@ -202,6 +202,52 @@ struct GetServices {
         }
     }//END
     
+    func getLive() -> Observable<LiveModelJSON> {
+        return Observable.create { (observer) -> Disposable in
+            let url = ConfigURLs.getLive
+            let token = Helper.getAPIToken() ?? ""
+            let headers = [
+                "Authorization": "Bearer \(token)"
+            ]
+            Alamofire.request(url, method: .post, parameters: nil, encoding: JSONEncoding.default, headers: headers)
+                .validate(statusCode: 200..<300)
+                .responseJSON { (response: DataResponse<Any>) in
+                    do {
+                        let data = try JSONDecoder().decode(LiveModelJSON.self, from: response.data!)
+                        observer.onNext(data)
+                    } catch {
+                        print(error.localizedDescription)
+                        observer.onError(error)
+                    }
+            }
+            return Disposables.create()
+        }
+    }//END
+    
+    
+    
+    func getProfile() -> Observable<ProfileModelJSON> {
+        return Observable.create { (observer) -> Disposable in
+            let url = ConfigURLs.getProfile
+            let token = Helper.getAPIToken() ?? ""
+            let headers = [
+                "Authorization": "Bearer \(token)"
+            ]
+            Alamofire.request(url, method: .post, parameters: nil, encoding: JSONEncoding.default, headers: headers)
+                .validate(statusCode: 200..<300)
+                .responseJSON { (response: DataResponse<Any>) in
+                    do {
+                        let data = try JSONDecoder().decode(ProfileModelJSON.self, from: response.data!)
+                        observer.onNext(data)
+                    } catch {
+                        print(error.localizedDescription)
+                        observer.onError(error)
+                    }
+            }
+            return Disposables.create()
+        }
+    }//END
+    
     
     
 }

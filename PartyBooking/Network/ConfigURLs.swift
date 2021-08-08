@@ -18,11 +18,10 @@ struct ConfigURLs {
 
     //MARK:- General
     static var getCountry = BASE_URL + "api/getCountries"
-    static var getArea = BASE_URL + "api/getAreas"
+    static var getArea = BASE_URL + "api/get-all-areas"
     static var getTerms = BASE_URL + "api/terms"
     static var getService = BASE_URL + "api/getServices"
     static var getPartyType = BASE_URL + "api/getPartyTypes"
-    
     //MARK:- user
     //MARK:- POST user Login
     static var userLogin = BASE_URL + "user/auth/login"
@@ -30,7 +29,6 @@ struct ConfigURLs {
     static var postRegister = BASE_URL  + "user/auth/register"
     //MARK:- get home
     static var getHome = BASE_URL  + "user/home/main"
-    
     //MARK:- get PartType
     static var getPartType = BASE_URL  + "api/getPartyTypes"
     //MARK:- get best Artist
@@ -42,11 +40,16 @@ struct ConfigURLs {
     static var getFavourite = BASE_URL  + "user/favourite/get"
     static var getReservation = BASE_URL  + "user/booking/getBookings"
     static var getArtistDetails = BASE_URL  + "user/home/artistDetails"
+    static var getArtistWork = BASE_URL  + "user/home/artist-works"
+
+    
     //MARK:- get Live
     static var getLive = BASE_URL  + "user/setting/getLives"
     static var getProfile = BASE_URL  + "user/auth/profile"
     static var chageProfilePhoto = BASE_URL  + "user/auth/changePhoto"
     static var editProfile = BASE_URL  + "user/auth/updateProfile"
+  
+    
     //MARK:- artist
     //MARK:- POST Artist Login
     static var artistLogin = BASE_URL + "artist/login"

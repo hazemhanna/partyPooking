@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import FBSDKLoginKit
+import GoogleSignIn
+
 
 class UserRegisterTypeVc: UIViewController {
 
@@ -37,4 +40,25 @@ class UserRegisterTypeVc: UIViewController {
       
     }
         
+    
+    @IBAction func fblogin(_ sender: Any) {
+        
+        let loginManager = LoginManager()
+        loginManager.logIn(permissions: [ .publicProfile,.email ], viewController: self) { loginResult in
+            print(loginResult)
+            let tokent = AccessToken.current?.tokenString
+            let request = FBSDKLoginKit.GraphRequest(graphPath: "me", parameters: ["fields":"email, name,picture"], tokenString: tokent, version: nil, httpMethod: .get )
+            request.start(completionHandler: {connection ,result,error in
+                if error != nil{
+                    return
+                }
+            })
+        }
+    }
+    
+    @IBAction func googlelogin(_ sender: Any) {
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+        GIDSignIn.sharedInstance()?.signIn()
+    }
+    
 }

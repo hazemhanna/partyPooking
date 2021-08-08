@@ -45,6 +45,12 @@ struct HomeViewModel {
     }
     
     
+    func getArea() -> Observable<AreaModelJson> {
+        let observer = GetServices.shared.getArea()
+        return observer
+    }
+    
+    
     func getBestArtist() -> Observable<BestArtistModelJSON> {
         let observer = GetServices.shared.getBestArtist()
         return observer
@@ -57,5 +63,16 @@ struct HomeViewModel {
         let observer = GetServices.shared.getArtistDetails(params: params)
         return observer
     }
+    
+    
+    func getArtistWork(artistId  : Int) -> Observable<ArtistWorkModelJSON> {
+        let params: [String: Any] = [
+            "artist_id": artistId,
+            ]
+        let observer = GetServices.shared.getArtistWork(params: params)
+        return observer
+    }
+    
+    
     
 }

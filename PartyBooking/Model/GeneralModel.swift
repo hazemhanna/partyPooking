@@ -32,3 +32,27 @@ struct Country: Codable {
         case enName = "en_name"
     }
 }
+
+
+struct AreaModelJson: Codable {
+    let status: Bool?
+    let message: String?
+    let result: areaModel?
+}
+
+// MARK: - Result
+struct areaModel: Codable {
+    let areas: [Areas]?
+}
+
+// MARK: - Country
+struct Areas: Codable {
+    let id: Int?
+    let arName, enName: String?
+
+    enum CodingKeys: String, CodingKey {
+        case id
+        case arName = "ar_name"
+        case enName = "en_name"
+    }
+}

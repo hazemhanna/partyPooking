@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -24,19 +26,23 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Zb-V4-obS">
                         <rect key="frame" x="8" y="14" width="30" height="30"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSv-of-1v3">
-                                <rect key="frame" x="9" y="6" width="12.5" height="18.5"/>
-                                <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1KM-8I-Mh2" customClass="CustomImageView" customModule="PartyBooking" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
-                            <constraint firstItem="aSv-of-1v3" firstAttribute="centerY" secondItem="2Zb-V4-obS" secondAttribute="centerY" id="Roa-fD-QhB"/>
+                            <constraint firstAttribute="bottom" secondItem="1KM-8I-Mh2" secondAttribute="bottom" id="BzA-cG-P8i"/>
+                            <constraint firstItem="1KM-8I-Mh2" firstAttribute="top" secondItem="2Zb-V4-obS" secondAttribute="top" id="R4N-BS-2SG"/>
                             <constraint firstAttribute="width" constant="30" id="ZKC-fm-Z7h"/>
+                            <constraint firstItem="1KM-8I-Mh2" firstAttribute="leading" secondItem="2Zb-V4-obS" secondAttribute="leading" id="cvW-FO-Qnc"/>
+                            <constraint firstAttribute="trailing" secondItem="1KM-8I-Mh2" secondAttribute="trailing" id="m04-Tx-hYh"/>
                             <constraint firstAttribute="height" constant="30" id="qv6-Q8-nKz"/>
-                            <constraint firstItem="aSv-of-1v3" firstAttribute="centerX" secondItem="2Zb-V4-obS" secondAttribute="centerX" id="uux-AU-Gbx"/>
                         </constraints>
                     </view>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="gRk-iH-pXX">
@@ -66,9 +72,17 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="commentLbl" destination="tMi-Em-2ws" id="0HV-Dr-wo8"/>
+                <outlet property="nameLbl" destination="0Bd-wF-1fk" id="POJ-Wl-3A3"/>
+                <outlet property="profileImage" destination="1KM-8I-Mh2" id="191-2r-s0U"/>
                 <outlet property="profileView" destination="2Zb-V4-obS" id="tWZ-w8-D0W"/>
             </connections>
             <point key="canvasLocation" x="133.33333333333334" y="114.50892857142857"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

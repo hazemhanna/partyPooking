@@ -28,7 +28,7 @@ class SearchViewController: UIViewController ,UICollectionViewDataSource, UIColl
     var best = [Artists]()
     var partyType = [PartyType]()
     var filterPartyType = [String]()
-    var country = [Country]()
+    var country = [Areas]()
     var filterCountry = [String]()
     var countryId :Int?
     var typeId :Int?
@@ -168,7 +168,7 @@ class SearchViewController: UIViewController ,UICollectionViewDataSource, UIColl
             cell.locationImage.isHidden = true
             cell.titleLbl.isHidden = true
             cell.locationLbl.isHidden = true
-            cell.confic(imageUrl: self.offers[indexPath.row].attachmentType ?? "",name: "" ,locaction: "")
+            cell.confic(imageUrl: self.offers[indexPath.row].url ?? "",name: "" ,locaction: "")
         }else{
             cell.locationImage.isHidden = false
             cell.titleLbl.isHidden = false
@@ -237,10 +237,10 @@ func getHome() {
      }
     
     func getAllCountry() {
-        homeVM.getCountry().subscribe(onNext: { (data) in
+        homeVM.getArea().subscribe(onNext: { (data) in
             self.homeVM.dismissIndicator()
             if data.status ?? false {
-                self.country = data.result?.countries ?? []
+                self.country = data.result?.areas ?? []
                 for index in self.country{
                     if "lang".localized == "ar" {
                         self.filterCountry.append(index.arName ?? "")

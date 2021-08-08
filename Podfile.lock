@@ -1,8 +1,23 @@
 PODS:
   - Alamofire (4.8.2)
+  - AppAuth (1.4.0):
+    - AppAuth/Core (= 1.4.0)
+    - AppAuth/ExternalUserAgent (= 1.4.0)
+  - AppAuth/Core (1.4.0)
+  - AppAuth/ExternalUserAgent (1.4.0)
   - CollapseTableView (1.0.2)
   - Cosmos (20.0.1)
   - DropDown (2.3.13)
+  - FBSDKCoreKit (9.0.1):
+    - FBSDKCoreKit/Basics (= 9.0.1)
+    - FBSDKCoreKit/Core (= 9.0.1)
+  - FBSDKCoreKit/Basics (9.0.1)
+  - FBSDKCoreKit/Core (9.0.1):
+    - FBSDKCoreKit/Basics
+  - FBSDKLoginKit (9.0.1):
+    - FBSDKLoginKit/Login (= 9.0.1)
+  - FBSDKLoginKit/Login (9.0.1):
+    - FBSDKCoreKit (~> 9.0.1)
   - FlagPhoneNumber (0.8.0):
     - FlagPhoneNumber/libPhoneNumberiOS (= 0.8.0)
   - FlagPhoneNumber/libPhoneNumberiOS (0.8.0)
@@ -12,6 +27,18 @@ PODS:
   - GoogleMaps/Base (3.9.0)
   - GoogleMaps/Maps (3.9.0):
     - GoogleMaps/Base
+  - GoogleSignIn (5.0.2):
+    - AppAuth (~> 1.2)
+    - GTMAppAuth (~> 1.0)
+    - GTMSessionFetcher/Core (~> 1.1)
+  - GTMAppAuth (1.1.0):
+    - AppAuth/Core (~> 1.4)
+    - GTMSessionFetcher (~> 1.4)
+  - GTMSessionFetcher (1.5.0):
+    - GTMSessionFetcher/Full (= 1.5.0)
+  - GTMSessionFetcher/Core (1.5.0)
+  - GTMSessionFetcher/Full (1.5.0):
+    - GTMSessionFetcher/Core (= 1.5.0)
   - Kingfisher (5.4.0)
   - RNActivityView (0.0.7)
   - RxCocoa (5.1.1):
@@ -31,9 +58,11 @@ DEPENDENCIES:
   - CollapseTableView
   - Cosmos
   - DropDown (~> 2.3.13)
+  - FBSDKLoginKit
   - FlagPhoneNumber
   - FSCalendar
   - GoogleMaps
+  - GoogleSignIn
   - Kingfisher (~> 5.4.0)
   - RNActivityView (= 0.0.7)
   - RxCocoa (~> 5)
@@ -45,12 +74,18 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - AppAuth
     - CollapseTableView
     - Cosmos
     - DropDown
+    - FBSDKCoreKit
+    - FBSDKLoginKit
     - FlagPhoneNumber
     - FSCalendar
     - GoogleMaps
+    - GoogleSignIn
+    - GTMAppAuth
+    - GTMSessionFetcher
     - Kingfisher
     - RNActivityView
     - RxCocoa
@@ -62,12 +97,18 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
   CollapseTableView: 70069c71f90030757e0027d790e286a9a634d93c
   Cosmos: b47fddf2102bb48580cd3025d9ce0a5c658a65da
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  FBSDKCoreKit: fada1a6a0076724678993ff05a633848765ff18c
+  FBSDKLoginKit: d5ffe6d808897019ccf16feb6f0a7ab260bc5cd6
   FlagPhoneNumber: 3712455b95f66cb0f2016fef7d9e34cddf8c7f9a
   FSCalendar: 5245140456fcbcac5824c203b98bd8068bdfee1a
   GoogleMaps: 4b5346bddfe6911bb89155d43c903020170523ac
+  GoogleSignIn: 7137d297ddc022a7e0aa4619c86d72c909fa7213
+  GTMAppAuth: 197a8dabfea5d665224aa00d17f164fc2248dab9
+  GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
   Kingfisher: 9c8f2cc6710334e06f32ba2b45e77707d5e2f0c9
   RNActivityView: d1bde2ec4956ad8f69da9650afe7898311221a8e
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
@@ -77,6 +118,6 @@ SPEC CHECKSUMS:
   SwiftMessages: 8b3cc68dba2f1c91aac1a74c90b10287aac35371
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 02f738f496331737e0136e262a00face2cfd67cb
+PODFILE CHECKSUM: 74913802656128d30cb889b3320df9ae2ce4f3f5
 
 COCOAPODS: 1.10.1

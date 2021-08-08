@@ -37,6 +37,28 @@ struct GetServices {
         }
     }//END of GET All Jobs
     
+    func getArea() -> Observable<AreaModelJson> {
+        return Observable.create { (observer) -> Disposable in
+            let url = ConfigURLs.getArea
+            
+            Alamofire.request(url, method: .post, parameters: nil, encoding: JSONEncoding.default, headers: nil)
+                .validate(statusCode: 200..<300)
+                .responseJSON { (response: DataResponse<Any>) in
+                    do {
+                        let data = try JSONDecoder().decode(AreaModelJson.self, from: response.data!)
+                        observer.onNext(data)
+                    } catch {
+                        print(error.localizedDescription)
+                        observer.onError(error)
+                    }
+            }
+            
+            return Disposables.create()
+        }
+    }
+    
+    
+    
     func getTerms() -> Observable<TermsModelJSON> {
         return Observable.create { (observer) -> Disposable in
             let url = ConfigURLs.getTerms
@@ -201,6 +223,36 @@ struct GetServices {
             return Disposables.create()
         }
     }//END
+    
+    
+    
+    func getArtistWork(params: [String : Any]) -> Observable<ArtistWorkModelJSON> {
+        return Observable.create { (observer) -> Disposable in
+            let url = ConfigURLs.getArtistWork
+            let token = Helper.getAPIToken() ?? ""
+            let headers = [
+                "Authorization": "Bearer \(token)"
+            ]
+            Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers)
+                .validate(statusCode: 200..<300)
+                .responseJSON { (response: DataResponse<Any>) in
+                    do {
+                        let data = try JSONDecoder().decode(ArtistWorkModelJSON.self, from: response.data!)
+                        observer.onNext(data)
+                    } catch {
+                        print(error.localizedDescription)
+                        observer.onError(error)
+                    }
+            }
+            
+            return Disposables.create()
+        }
+    }//END
+    
+    
+    
+    
+    
     
     func getLive() -> Observable<LiveModelJSON> {
         return Observable.create { (observer) -> Disposable in

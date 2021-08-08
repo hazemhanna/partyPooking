@@ -48,7 +48,7 @@
                             <constraint firstAttribute="bottom" secondItem="Plc-zS-d4m" secondAttribute="bottom" constant="14" id="v6U-JX-EPU"/>
                         </constraints>
                     </view>
-                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uUK-c9-bNk">
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uUK-c9-bNk">
                         <rect key="frame" x="0.0" y="82" width="414" height="780"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <connections>

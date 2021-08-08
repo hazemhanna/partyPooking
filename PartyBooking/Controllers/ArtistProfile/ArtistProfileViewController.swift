@@ -38,6 +38,8 @@ class ArtistProfileViewController: UIViewController{
     private let homeVM = HomeViewModel()
     var disposeBag = DisposeBag()
     var comments = [Comment]()
+    var work = [ArtistWork]()
+
     var artistId = Int()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,6 +91,7 @@ class ArtistProfileViewController: UIViewController{
     override func viewDidAppear(_ animated: Bool) {
         homeVM.showIndicator()
         getProfile(artistId: artistId)
+        getWork(artistId : artistId)
     }
 
     @IBAction func backButton(sender: UIButton) {
@@ -102,11 +105,12 @@ extension ArtistProfileViewController : UICollectionViewDataSource, UICollection
  
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-       return 3
+        return work.count
    }
    
  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! PhotoCollectionViewCell
+      cell.confic(image : work[indexPath.row].artistImage ?? "")
        return cell
    }
    
@@ -129,6 +133,7 @@ extension ArtistProfileViewController : UITableViewDelegate , UITableViewDataSou
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CommentsTableViewCell
+        cell.confic(name: (comments[indexPath.row].user?.firstName ?? "") +  (comments[indexPath.row].user?.lastName ?? "") , image: (comments[indexPath.row].user?.image ?? ""), comment: (comments[indexPath.row].comment ?? ""))
          return cell
 }
     
@@ -161,4 +166,19 @@ extension ArtistProfileViewController {
         displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
     }).disposed(by: disposeBag)
  }
+
+
+    func getWork(artistId : Int) {
+    homeVM.getArtistWork(artistId: artistId).subscribe(onNext: { (data) in
+        self.homeVM.dismissIndicator()
+        if data.status ?? false {
+            self.work = data.result?.data ?? []
+            self.photoCollection.reloadData()
+        }
+    }, onError: { (error) in
+        self.homeVM.dismissIndicator()
+        displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
+    }).disposed(by: disposeBag)
+ }
+    
 }

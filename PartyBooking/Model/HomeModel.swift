@@ -140,3 +140,40 @@ struct ArtistProfileModelJSON: Codable {
     let message: String?
     let result: Artists?
 }
+
+
+// MARK: - ArtistWorkModelJSON
+struct ArtistWorkModelJSON: Codable {
+    let status: Bool?
+    let message: String?
+    let result: ArtistWorkModel?
+}
+
+// MARK: - Result
+struct ArtistWorkModel: Codable {
+    let data: [ArtistWork]?
+    let total, count, perPage, currentPage: Int?
+    let totalPages: Int?
+    let prev, next: Int?
+
+    enum CodingKeys: String, CodingKey {
+        case data, total, count
+        case perPage = "per_page"
+        case currentPage = "current_page"
+        case totalPages = "total_pages"
+        case prev, next
+    }
+}
+
+// MARK: - Datum
+struct ArtistWork: Codable {
+    let id: Int?
+    let url: String?
+    let type, artistName, artistImage: String?
+
+    enum CodingKeys: String, CodingKey {
+        case id, url, type
+        case artistName = "artist_name"
+        case artistImage = "artist_image"
+    }
+}

@@ -21,6 +21,7 @@ target 'PartyBooking' do
   pod 'SVProgressHUD', '~> 2.2.5'
   pod 'SwiftMessages', '~> 6.0.2'
   pod 'FBSDKLoginKit'
+  pod 'GoogleSignIn'
 
   target 'PartyBookingTests' do
     inherit! :search_paths

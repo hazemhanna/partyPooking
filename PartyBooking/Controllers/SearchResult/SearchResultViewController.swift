@@ -13,7 +13,7 @@ import RxCocoa
 
 class SearchResultViewController: UIViewController {
     
-    var filterdArtist = [Artists]()
+    var filterdArtist = [SearchResult]()
     private let searchVM = SearchResultViewModel()
     
     var disposeBag = DisposeBag()
@@ -63,7 +63,12 @@ extension SearchResultViewController : UITableViewDelegate , UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SearchResultTableViewCell
-        cell.confic(imageUrl:  self.filterdArtist[indexPath.row].image ?? "", name: ((self.filterdArtist[indexPath.row].firstName ?? "") + " " + (self.filterdArtist[indexPath.row].lastName ?? "")), locaction: (self.filterdArtist[indexPath.row].address ?? ""), rate: (self.filterdArtist[indexPath.row].rate ?? 0),price : 89,isFavourite :self.filterdArtist[indexPath.row].favourite ?? 0)
+        cell.confic(imageUrl:  self.filterdArtist[indexPath.row].image ?? "",
+                    name: ((self.filterdArtist[indexPath.row].firstName ?? "") + " " + (self.filterdArtist[indexPath.row].lastName ?? "")),
+                    locaction: (self.filterdArtist[indexPath.row].address ?? ""),
+                    rate: (self.filterdArtist[indexPath.row].rate ?? 0),
+                    price : self.filterdArtist[indexPath.row].partyPrice ?? 0 ,
+                    isFavourite :self.filterdArtist[indexPath.row].favourite ?? 0)
         cell.addFavourite = {
             self.searchVM.showIndicator()
             self.addFavourite(artistId: (self.filterdArtist[indexPath.row].id ?? 0))

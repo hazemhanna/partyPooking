@@ -254,6 +254,7 @@ struct GetServices {
     
     
     
+    
     func getLive() -> Observable<LiveModelJSON> {
         return Observable.create { (observer) -> Disposable in
             let url = ConfigURLs.getLive
@@ -276,6 +277,29 @@ struct GetServices {
         }
     }//END
     
+    
+    
+    func getOffers() -> Observable<OffersModelJSON> {
+        return Observable.create { (observer) -> Disposable in
+            let url = ConfigURLs.getOffers
+            let token = Helper.getAPIToken() ?? ""
+            let headers = [
+                "Authorization": "Bearer \(token)"
+            ]
+            Alamofire.request(url, method: .post, parameters: nil, encoding: JSONEncoding.default, headers: headers)
+                .validate(statusCode: 200..<300)
+                .responseJSON { (response: DataResponse<Any>) in
+                    do {
+                        let data = try JSONDecoder().decode(OffersModelJSON.self, from: response.data!)
+                        observer.onNext(data)
+                    } catch {
+                        print(error.localizedDescription)
+                        observer.onError(error)
+                    }
+            }
+            return Disposables.create()
+        }
+    }
     
     
     func getProfile() -> Observable<ProfileModelJSON> {

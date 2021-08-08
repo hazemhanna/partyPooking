@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -33,8 +35,8 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="83" translatesAutoresizingMaskIntoConstraints="NO" id="cKQ-og-5Mf">
                                         <rect key="frame" x="32" y="111" width="275" height="40"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="YwO-TS-ndS">
-                                                <rect key="frame" x="0.0" y="0.0" width="117.5" height="40"/>
+                                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="YwO-TS-ndS">
+                                                <rect key="frame" x="-51" y="0.0" width="51" height="40"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coupon" translatesAutoresizingMaskIntoConstraints="NO" id="NGe-el-osl">
                                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -44,17 +46,17 @@
                                                         </constraints>
                                                     </imageView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Syw-jQ-k12">
-                                                        <rect key="frame" x="51" y="5" width="66.5" height="30"/>
+                                                        <rect key="frame" x="51" y="4" width="0.0" height="32"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="offer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VnO-p1-khV">
-                                                                <rect key="frame" x="0.0" y="0.0" width="31.5" height="15"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="15"/>
                                                                 <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="14"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="70 %" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDM-Wj-7wB">
-                                                                <rect key="frame" x="0.0" y="15" width="29.5" height="15"/>
-                                                                <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="14"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60 %" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDM-Wj-7wB">
+                                                                <rect key="frame" x="0.0" y="15" width="0.0" height="17"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -63,7 +65,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Jed-vc-ZFB">
-                                                <rect key="frame" x="200.5" y="0.0" width="74.5" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="275" height="40"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="show team " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ijm-xw-7Jn">
                                                         <rect key="frame" x="0.0" y="0.0" width="74.5" height="25"/>
@@ -80,12 +82,9 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="Jed-vc-ZFB" firstAttribute="leading" secondItem="cKQ-og-5Mf" secondAttribute="leading" constant="200.5" id="MDu-Hz-uwQ"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="xT6-Vd-yV1" secondAttribute="trailing" id="8r1-YN-xqX"/>
                                     <constraint firstItem="cKQ-og-5Mf" firstAttribute="leading" secondItem="ORk-Co-GGT" secondAttribute="leading" constant="32" id="IG5-Dc-FVd"/>
@@ -115,9 +114,11 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="artistImage" destination="xT6-Vd-yV1" id="xXW-Fc-AVV"/>
+                <outlet property="desLbl" destination="P8K-Hz-lUD" id="VXO-1c-2uq"/>
                 <outlet property="offerImage" destination="NGe-el-osl" id="iDY-g7-qUz"/>
                 <outlet property="offerLabel" destination="VnO-p1-khV" id="60G-ga-u3v"/>
-                <outlet property="teamLabel" destination="ijm-xw-7Jn" id="SzV-Ll-loJ"/>
+                <outlet property="titleLbl" destination="ijm-xw-7Jn" id="vqd-nG-PsI"/>
             </connections>
             <point key="canvasLocation" x="123.91304347826087" y="141.29464285714286"/>
         </tableViewCell>
@@ -125,5 +126,8 @@
     <resources>
         <image name="aasx" width="1088" height="504"/>
         <image name="coupon" width="45" height="45"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

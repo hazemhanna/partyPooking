@@ -22,7 +22,7 @@ class ArtistProfileViewController: UIViewController{
     @IBOutlet weak var taxesLabel : UILabel!
     @IBOutlet weak var titleLabel : UILabel!
     @IBOutlet weak var commentLabel : UILabel!
-
+    @IBOutlet weak var likeBtn : UIButton!
     @IBOutlet weak var rateLabel : UILabel!
     @IBOutlet weak var addressLabel : UILabel!
     @IBOutlet weak var descreptionTV : UITextView!
@@ -39,7 +39,7 @@ class ArtistProfileViewController: UIViewController{
     var disposeBag = DisposeBag()
     var comments = [Comment]()
     var work = [ArtistWork]()
-
+    var isFavourite = Int()
     var artistId = Int()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,16 +94,46 @@ class ArtistProfileViewController: UIViewController{
         getWork(artistId : artistId)
     }
 
+    @IBAction func shareButton(sender: UIButton) {
+        // text to share
+        let text = "https://partybooking.dtagdev.com/"
+        // set up activity view controller
+        let textToShare = [ text ]
+        let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+        // exclude some activity types from the list (optional)
+      activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook ]
+        // present the view controller
+        self.present(activityViewController, animated: true, completion: nil)
+    }
+   
+   
+    
+    
+    @IBAction func likeButton(sender: UIButton) {
+        homeVM.showIndicator()
+        if isFavourite == 0 {
+            self.isFavourite = 1
+            self.likeBtn.setImage(UIImage(named:"heart (2).png"), for: .normal)
+        }else{
+            self.isFavourite = 0
+            self.likeBtn.setImage( UIImage(named:"heart"), for: .normal)
+        }
+        
+        addFavourite(artistId: self.artistId)
+    }
+    
+    
     @IBAction func backButton(sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
+    
     
 }
 
 
 extension ArtistProfileViewController : UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
- 
-
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return work.count
    }
@@ -113,9 +143,14 @@ extension ArtistProfileViewController : UICollectionViewDataSource, UICollection
       cell.confic(image : work[indexPath.row].artistImage ?? "")
        return cell
    }
-   
-   
-   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+       
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let schemeUrl = NSURL(string: work[indexPath.row].url ?? "")!
+        if UIApplication.shared.canOpenURL(schemeUrl as URL) {
+            UIApplication.shared.open(schemeUrl as URL, options: [:], completionHandler: nil)
+        }
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
        let spacing: CGFloat = 20
        let width = (collectionView.bounds.size.width - spacing) / 3
        let height = (collectionView.bounds.size.height)
@@ -133,7 +168,7 @@ extension ArtistProfileViewController : UITableViewDelegate , UITableViewDataSou
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CommentsTableViewCell
-        cell.confic(name: (comments[indexPath.row].user?.firstName ?? "") +  (comments[indexPath.row].user?.lastName ?? "") , image: (comments[indexPath.row].user?.image ?? ""), comment: (comments[indexPath.row].comment ?? ""))
+        cell.confic(name: (comments[indexPath.row].user?.firstName ?? "") + "" + (comments[indexPath.row].user?.lastName ?? "") , image: (comments[indexPath.row].user?.image ?? ""), comment: (comments[indexPath.row].comment ?? ""))
          return cell
 }
     
@@ -146,7 +181,19 @@ func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) ->
 }
 
 extension ArtistProfileViewController {
-
+    
+    func addFavourite(artistId : Int ) {
+        homeVM.addFavourite(artistId: artistId).subscribe(onNext: { (data) in
+            self.homeVM.dismissIndicator()
+            if data.status ?? false {
+                displayMessage(title: "", message: data.message ?? "", status: .success, forController: self)
+            }
+        }, onError: { (error) in
+            self.homeVM.dismissIndicator()
+            displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
+        }).disposed(by: disposeBag)
+     }
+    
     func getProfile(artistId : Int) {
     homeVM.getArtistDetails(artistId: artistId).subscribe(onNext: { (data) in
         self.homeVM.dismissIndicator()
@@ -156,7 +203,16 @@ extension ArtistProfileViewController {
             self.rateLabel.text = "\(data.result?.rate ?? 0)"
             self.addressLabel.text = data.result?.address ?? ""
             self.descreptionTV.text = data.result?.resultDescription ?? ""
-            self.amountValueLabel.text = "89.000 SR"
+            self.amountValueLabel.text = String(data.result?.partyPrice ?? 0 ) + "" + "SR"
+            self.isFavourite = data.result?.favourite ?? 0
+
+            if data.result?.favourite == 0 {
+                self.isFavourite = 0
+                self.likeBtn.setImage( UIImage(named:"heart"), for: .normal)
+            }else{
+                self.isFavourite = 1
+                self.likeBtn.setImage(UIImage(named:"heart (2).png"), for: .normal)
+            }
             if let iamg = URL(string: "https://partybooking.dtagdev.com/" + (data.result?.image ?? "")){
             self.profileImage.kf.setImage(with: iamg, placeholder: #imageLiteral(resourceName: "يريءؤر سيرلايسب-1"))
             }

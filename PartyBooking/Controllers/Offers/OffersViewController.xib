@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -20,13 +22,13 @@
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="30D-tU-7KI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="131"/>
+                        <rect key="frame" x="0.0" y="32" width="414" height="131"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="يريءؤر سيرلايسب" translatesAutoresizingMaskIntoConstraints="NO" id="V7K-XF-6Uc">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="يريءؤر سيرلايسب" translatesAutoresizingMaskIntoConstraints="NO" id="V7K-XF-6Uc">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="131"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="svE-tm-Abp">
-                                <rect key="frame" x="12" y="39" width="25" height="25"/>
+                                <rect key="frame" x="12" y="16" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="2ej-DN-BkL"/>
                                     <constraint firstAttribute="width" constant="25" id="RbL-m8-IPk"/>
@@ -43,13 +45,13 @@
                             <constraint firstItem="V7K-XF-6Uc" firstAttribute="top" secondItem="30D-tU-7KI" secondAttribute="top" id="PGV-Hz-XbI"/>
                             <constraint firstItem="svE-tm-Abp" firstAttribute="leading" secondItem="30D-tU-7KI" secondAttribute="leading" constant="12" id="PNW-jJ-4QS"/>
                             <constraint firstAttribute="trailing" secondItem="V7K-XF-6Uc" secondAttribute="trailing" id="PRT-Ue-tQa"/>
-                            <constraint firstAttribute="bottom" secondItem="svE-tm-Abp" secondAttribute="bottom" constant="67" id="WjB-ez-zew"/>
+                            <constraint firstItem="svE-tm-Abp" firstAttribute="top" secondItem="30D-tU-7KI" secondAttribute="top" constant="16" id="QaQ-NC-TsB"/>
                             <constraint firstAttribute="height" constant="131" id="aHa-Gt-53M"/>
                             <constraint firstItem="V7K-XF-6Uc" firstAttribute="leading" secondItem="30D-tU-7KI" secondAttribute="leading" id="xkU-Ds-SGt"/>
                         </constraints>
                     </view>
                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rXT-9z-bPG">
-                        <rect key="frame" x="0.0" y="139" width="414" height="723"/>
+                        <rect key="frame" x="0.0" y="171" width="414" height="691"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="md8-yW-teh">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="700"/>
@@ -68,7 +70,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الموقع" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vlD-rw-Iwb">
-                                                        <rect key="frame" x="48" y="22" width="18.5" height="12"/>
+                                                        <rect key="frame" x="48" y="22.5" width="32.5" height="11"/>
                                                         <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="10"/>
                                                         <color key="textColor" red="0.16862745100000001" green="0.70588235290000001" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -95,7 +97,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الاثنين،٦ابريل" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgc-25-Eza">
-                                                        <rect key="frame" x="48" y="22" width="47.5" height="12"/>
+                                                        <rect key="frame" x="48" y="22.5" width="58" height="11"/>
                                                         <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="10"/>
                                                         <color key="textColor" red="0.16862745100000001" green="0.70588235290000001" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -122,7 +124,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نوع الحفلة" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9H-GZ-tIl">
-                                                        <rect key="frame" x="48" y="22" width="35.5" height="12"/>
+                                                        <rect key="frame" x="48" y="22.5" width="48.5" height="11"/>
                                                         <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="10"/>
                                                         <color key="textColor" red="0.16862745100000001" green="0.70588235290000001" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -148,7 +150,7 @@
                                             <constraint firstItem="cbf-pK-ojU" firstAttribute="leading" secondItem="FZL-yE-lk1" secondAttribute="leading" id="rjS-w0-WYn"/>
                                         </constraints>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PbK-Ek-XLd">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PbK-Ek-XLd">
                                         <rect key="frame" x="117" y="224" width="180" height="40"/>
                                         <color key="backgroundColor" red="0.16862745100000001" green="0.70588235290000001" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -161,15 +163,15 @@
                                         </state>
                                     </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YJ9-xq-Ade">
-                                        <rect key="frame" x="0.0" y="266" width="414" height="434"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <rect key="frame" x="0.0" y="272" width="414" height="428"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <connections>
                                             <outlet property="dataSource" destination="tKA-gw-WcV" id="GjI-Bx-dTI"/>
                                             <outlet property="delegate" destination="tKA-gw-WcV" id="bV4-Xo-wFi"/>
                                         </connections>
                                     </tableView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="PbK-Ek-XLd" firstAttribute="top" secondItem="FZL-yE-lk1" secondAttribute="bottom" constant="8" id="1GB-UI-QO2"/>
                                     <constraint firstItem="FZL-yE-lk1" firstAttribute="centerX" secondItem="md8-yW-teh" secondAttribute="centerX" id="5je-MN-bUg"/>
@@ -177,7 +179,7 @@
                                     <constraint firstItem="FZL-yE-lk1" firstAttribute="leading" secondItem="md8-yW-teh" secondAttribute="leading" constant="16" id="Hlh-Tc-Lx4"/>
                                     <constraint firstAttribute="trailing" secondItem="FZL-yE-lk1" secondAttribute="trailing" constant="16" id="JlG-el-7NA"/>
                                     <constraint firstAttribute="height" priority="250" constant="700" id="SeE-bq-Mns"/>
-                                    <constraint firstItem="YJ9-xq-Ade" firstAttribute="top" secondItem="PbK-Ek-XLd" secondAttribute="bottom" constant="2" id="WMI-RT-Nqt"/>
+                                    <constraint firstItem="YJ9-xq-Ade" firstAttribute="top" secondItem="PbK-Ek-XLd" secondAttribute="bottom" constant="8" id="WMI-RT-Nqt"/>
                                     <constraint firstAttribute="bottom" secondItem="YJ9-xq-Ade" secondAttribute="bottom" id="X7d-4u-icE"/>
                                     <constraint firstItem="PbK-Ek-XLd" firstAttribute="centerX" secondItem="md8-yW-teh" secondAttribute="centerX" id="xUF-rO-Smj"/>
                                     <constraint firstAttribute="trailing" secondItem="YJ9-xq-Ade" secondAttribute="trailing" id="zpx-L4-VuM"/>
@@ -194,7 +196,8 @@
                         </constraints>
                     </scrollView>
                 </subviews>
-                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                <viewLayoutGuide key="safeArea" id="2gx-wL-mvS"/>
+                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 <constraints>
                     <constraint firstItem="rXT-9z-bPG" firstAttribute="leading" secondItem="2gx-wL-mvS" secondAttribute="leading" id="4kC-Ng-SnC"/>
                     <constraint firstAttribute="trailing" secondItem="30D-tU-7KI" secondAttribute="trailing" id="9AJ-mV-wPw"/>
@@ -202,9 +205,8 @@
                     <constraint firstItem="30D-tU-7KI" firstAttribute="leading" secondItem="e1F-Zb-fiU" secondAttribute="leading" id="O9P-kG-crR"/>
                     <constraint firstItem="2gx-wL-mvS" firstAttribute="trailing" secondItem="rXT-9z-bPG" secondAttribute="trailing" id="VKi-9A-mrI"/>
                     <constraint firstItem="2gx-wL-mvS" firstAttribute="bottom" secondItem="rXT-9z-bPG" secondAttribute="bottom" id="i9d-Mm-rKM"/>
-                    <constraint firstItem="30D-tU-7KI" firstAttribute="top" secondItem="e1F-Zb-fiU" secondAttribute="top" id="uSq-93-FM7"/>
+                    <constraint firstItem="30D-tU-7KI" firstAttribute="top" secondItem="e1F-Zb-fiU" secondAttribute="top" constant="32" id="uSq-93-FM7"/>
                 </constraints>
-                <viewLayoutGuide key="safeArea" id="2gx-wL-mvS"/>
             </view>
             <connections>
                 <outlet property="backButton" destination="svE-tm-Abp" id="3JP-Qs-iBw"/>
@@ -228,5 +230,8 @@
         <image name="party" width="42" height="42"/>
         <image name="place" width="42" height="42"/>
         <image name="يريءؤر سيرلايسب" width="484.5" height="156.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

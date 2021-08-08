@@ -41,8 +41,7 @@ struct ConfigURLs {
     static var getReservation = BASE_URL  + "user/booking/getBookings"
     static var getArtistDetails = BASE_URL  + "user/home/artistDetails"
     static var getArtistWork = BASE_URL  + "user/home/artist-works"
-
-    
+    static var getOffers = BASE_URL  + "user/offer/get"
     //MARK:- get Live
     static var getLive = BASE_URL  + "user/setting/getLives"
     static var getProfile = BASE_URL  + "user/auth/profile"

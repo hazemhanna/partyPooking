@@ -74,5 +74,17 @@ struct HomeViewModel {
     }
     
     
+    func addFavourite(artistId : Int ) -> Observable<AddFavouriteModel> {
+        let params: [String: Any] = [
+            "artist_id": artistId,
+            ]
+        let observer = AddServices.shared.addFavourite(params: params)
+        return observer
+    }
+    
+    func getOffers() -> Observable<OffersModelJSON> {
+        let observer = GetServices.shared.getOffers()
+        return observer
+    }
     
 }

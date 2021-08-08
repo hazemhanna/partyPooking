@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+
 
 class OffersViewController: UIViewController {
+    
     @IBOutlet weak var locationImage : UIImageView!
     @IBOutlet weak var calendeImage : UIImageView!
     @IBOutlet weak var partyImage : UIImageView!
@@ -25,6 +29,12 @@ class OffersViewController: UIViewController {
              }
          }
 
+    
+    
+    private let homeVM = HomeViewModel()
+    var disposeBag = DisposeBag()
+    var offers = [Offers]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         style()
@@ -72,6 +82,8 @@ class OffersViewController: UIViewController {
         
     }
     override func viewWillAppear(_ animated: Bool) {
+        self.homeVM.showIndicator()
+        getOffers()
           self.navigationController?.navigationBar.isHidden = true
         self.tabBarController?.tabBar.isHidden = true
 
@@ -93,16 +105,33 @@ class OffersViewController: UIViewController {
 
 extension OffersViewController : UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return 2
+        return offers.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! OffersTableViewCell
+        cell.confic(title: self.offers[indexPath.row].title ?? "" , image : self.offers[indexPath.row].url ?? "" , desc : self.offers[indexPath.row].datumDescription ?? "")
             return cell
         }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             return CGFloat(170)
-        
     }
+}
+
+extension OffersViewController {
+    
+    func getOffers() {
+        homeVM.getOffers().subscribe(onNext: { (data) in
+            self.homeVM.dismissIndicator()
+            if data.status ?? false {
+                self.offers = data.result?.data ?? []
+                self.offerTableView.reloadData()
+            }
+        }, onError: { (error) in
+            self.homeVM.dismissIndicator()
+            displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
+        }).disposed(by: disposeBag)
+     }
+    
 }

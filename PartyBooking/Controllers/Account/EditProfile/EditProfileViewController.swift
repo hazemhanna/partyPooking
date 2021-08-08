@@ -198,7 +198,7 @@ func getProfile() {
         profileVM.getCountry().subscribe(onNext: { (data) in
             self.profileVM.dismissIndicator()
             if data.status ?? false {
-                self.country = data.result?.countries ?? []
+                self.country = data.result ?? []
                 for index in self.country{
                     if "lang".localized == "ar" {
                         self.filterCountry.append(index.arName ?? "")

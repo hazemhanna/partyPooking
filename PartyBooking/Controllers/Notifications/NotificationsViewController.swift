@@ -23,16 +23,12 @@ class NotificationsViewController: UIViewController {
     var notification :[Int] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        notification.append(1)
         if notification.count > 0 {
             backview.isHidden = true
         }else{
             backview.isHidden = false
         }
-        notification.append(1)
-        notification.append(1)
-        notification.append(1)
-        notification.append(1)
-
         notificationsTableView.register(UINib(nibName: "NotificationsTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
         
         setUPLocalize()

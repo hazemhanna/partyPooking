@@ -140,6 +140,7 @@
 		049EA686267865D300EFB676 /* MostFamousVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049EA684267865D300EFB676 /* MostFamousVc.xib */; };
 		049EA68B2678768600EFB676 /* SearchResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049EA68A2678768600EFB676 /* SearchResultModel.swift */; };
 		049EA6902678777B00EFB676 /* SearchResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049EA68F2678777B00EFB676 /* SearchResultViewModel.swift */; };
+		04ABD7B126BFF06400CCD994 /* OffersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ABD7B026BFF06300CCD994 /* OffersModel.swift */; };
 		04BF70C9267514F600080730 /* AuthenticationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF70C8267514F600080730 /* AuthenticationVM.swift */; };
 		04BF70CF2675167B00080730 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF70CE2675167B00080730 /* String+Extension.swift */; };
 		04CA045024B7FD5200660E7B /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA044E24B7FD5200660E7B /* LocationViewController.swift */; };
@@ -336,6 +337,7 @@
 		049EA684267865D300EFB676 /* MostFamousVc.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MostFamousVc.xib; sourceTree = "<group>"; };
 		049EA68A2678768600EFB676 /* SearchResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultModel.swift; sourceTree = "<group>"; };
 		049EA68F2678777B00EFB676 /* SearchResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewModel.swift; sourceTree = "<group>"; };
+		04ABD7B026BFF06300CCD994 /* OffersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersModel.swift; sourceTree = "<group>"; };
 		04BF70C8267514F600080730 /* AuthenticationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationVM.swift; sourceTree = "<group>"; };
 		04BF70CE2675167B00080730 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		04CA044E24B7FD5200660E7B /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
@@ -1146,6 +1148,7 @@
 				0420A83226B8C2C000643213 /* LiveModel.swift */,
 				04D6221226B8CDEC000A1B24 /* ProfileModel.swift */,
 				04D6221C26B8DB44000A1B24 /* MessageModel.swift */,
+				04ABD7B026BFF06300CCD994 /* OffersModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1653,6 +1656,7 @@
 				0430679626620A2A00BDFE32 /* NoArtistAvailableVc.swift in Sources */,
 				04CA045624B9FFE000660E7B /* MOLHFont.swift in Sources */,
 				048569E32665501300B2670D /* AuthModel.swift in Sources */,
+				04ABD7B126BFF06400CCD994 /* OffersModel.swift in Sources */,
 				047F8C3C24B4FC4C00A86E86 /* ArtistRegisterViewController.swift in Sources */,
 				04BF70C9267514F600080730 /* AuthenticationVM.swift in Sources */,
 				043067A126620DD100BDFE32 /* AllLiveVideoVC.swift in Sources */,

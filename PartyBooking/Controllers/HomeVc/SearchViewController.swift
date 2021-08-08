@@ -116,13 +116,17 @@ class SearchViewController: UIViewController ,UICollectionViewDataSource, UIColl
         searchBtn.layer.cornerRadius = 7
       }
     
-
-    
-    
     @IBAction func viewAllTapped(sender: UIButton) {
         let destinationVC = MostFamousVc.instantiateFromNib()
         self.navigationController?.pushViewController(destinationVC!, animated: true)
     }
+    
+    
+    @IBAction func viewAllOffers(sender: UIButton) {
+        let destinationVC = OffersViewController.instantiateFromNib()
+        self.navigationController?.pushViewController(destinationVC!, animated: true)
+    }
+    
     
     @IBAction func calenderTapped(sender: UIButton) {
         self.dateTapped = true
@@ -219,7 +223,7 @@ func getHome() {
         homeVM.getPartyType().subscribe(onNext: { (data) in
             if data.status ?? false {
                 self.homeVM.dismissIndicator()
-                self.partyType = data.result?.partyTypes ?? []
+                self.partyType = data.result ?? []
                 for index in self.partyType {
                     if "lang".localized == "ar" {
                     self.filterPartyType.append(index.arName ?? "")
@@ -240,7 +244,7 @@ func getHome() {
         homeVM.getArea().subscribe(onNext: { (data) in
             self.homeVM.dismissIndicator()
             if data.status ?? false {
-                self.country = data.result?.areas ?? []
+                self.country = data.result ?? []
                 for index in self.country{
                     if "lang".localized == "ar" {
                         self.filterCountry.append(index.arName ?? "")

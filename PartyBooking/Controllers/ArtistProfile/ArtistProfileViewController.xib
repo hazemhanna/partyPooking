@@ -48,6 +48,9 @@
                                     <constraint firstAttribute="width" constant="25" id="mym-WE-7oN"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="arrows"/>
+                                <connections>
+                                    <action selector="shareButtonWithSender:" destination="9yo-v9-u7e" eventType="touchUpInside" id="0He-fI-hae"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCM-jc-cXs">
                                 <rect key="frame" x="373" y="37" width="25" height="25"/>
@@ -56,6 +59,9 @@
                                     <constraint firstAttribute="width" constant="25" id="lnm-9i-Gmc"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="heart"/>
+                                <connections>
+                                    <action selector="likeButtonWithSender:" destination="9yo-v9-u7e" eventType="touchUpInside" id="Fbn-yc-mtS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.16862745100000001" green="0.74117647060000003" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -257,6 +263,7 @@
                 <outlet property="commentLabel" destination="zqf-wB-Muo" id="Fi6-Bb-7ar"/>
                 <outlet property="commentTableView" destination="fDe-5x-lMp" id="R0l-Dv-LIc"/>
                 <outlet property="descreptionTV" destination="heQ-Bb-mSD" id="cBn-Zw-ehB"/>
+                <outlet property="likeBtn" destination="yCM-jc-cXs" id="Xe1-Lm-pvM"/>
                 <outlet property="photoCollection" destination="GCX-4g-ljH" id="m0j-OQ-dVP"/>
                 <outlet property="profileImage" destination="hwW-Tc-TVQ" id="qKf-Xx-ouk"/>
                 <outlet property="profileView" destination="G0I-pq-Xc5" id="u3X-Xc-9jo"/>

@@ -13,12 +13,7 @@ import Foundation
 struct CountriesModelJson: Codable {
     let status: Bool?
     let message: String?
-    let result: CountryModel?
-}
-
-// MARK: - Result
-struct CountryModel: Codable {
-    let countries: [Country]?
+    let result: [Country]?
 }
 
 // MARK: - Country
@@ -37,12 +32,7 @@ struct Country: Codable {
 struct AreaModelJson: Codable {
     let status: Bool?
     let message: String?
-    let result: areaModel?
-}
-
-// MARK: - Result
-struct areaModel: Codable {
-    let areas: [Areas]?
+    let result: [Areas]?
 }
 
 // MARK: - Country

@@ -8,8 +8,6 @@
 
 import Foundation
 
-import Foundation
-
 // MARK: - HomeModelJSON
 struct HomeModelJSON: Codable {
     let status: Bool?
@@ -54,6 +52,7 @@ struct Artists: Codable {
     let country: Country?
     let partyPrices: [PartyPrice]?
     let comments: [Comment]?
+    let partyPrice: Int?
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -65,53 +64,17 @@ struct Artists: Codable {
         case areas, country
         case partyPrices = "party_prices"
         case resultDescription = "description"
+        case partyPrice = "party_price"
     }
 }
 
-// MARK: - Offers
-struct OffersModel: Codable {
-    let data: [Offers]?
-    let total, count, perPage, currentPage: Int?
-    let totalPages: Int?
-    let prev, next: Int?
-
-    enum CodingKeys: String, CodingKey {
-        case data, total, count
-        case perPage = "per_page"
-        case currentPage = "current_page"
-        case totalPages = "total_pages"
-        case prev, next
-    }
-}
-
-// MARK: - OffersDatum
-struct Offers: Codable {
-    let id, artistID: Int?
-    let title, datumDescription, url, attachmentType: String?
-    let status, from, to: String?
-
-    enum CodingKeys: String, CodingKey {
-        case id
-        case artistID = "artist_id"
-        case title
-        case datumDescription = "description"
-        case url
-        case attachmentType = "attachment_type"
-        case status, from, to
-    }
-}
 
 
 // MARK: - PartyTypeModelJSON
 struct PartyTypeModelJSON: Codable {
     let status: Bool?
     let message: String?
-    let result: PartyTypeModel?
-}
-
-// MARK: - Result
-struct PartyTypeModel: Codable {
-    let partyTypes: [PartyType]?
+    let result: [PartyType]?
 }
 
 // MARK: - PartyType

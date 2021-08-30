@@ -27,7 +27,7 @@ class NotificationsTableViewCell: UITableViewCell {
         
         titleLabel.text = "confirmReservation".localized
         bodyLabel.text = "look".localized
-        if MOLHLanguage.currentAppleLanguage() == "en" {
+        if "lang".localized  == "en" {
             let font = UIFont(name: "Georgia-Bold", size: 14)
             titleLabel.font = font
             bodyLabel.font = font

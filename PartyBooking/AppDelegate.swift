@@ -10,21 +10,35 @@ import UIKit
 import GoogleMaps
 import FBSDKCoreKit
 import GoogleSignIn
+import MOLH
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate,MOLHResetable ,GIDSignInDelegate{
+class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate,MOLHResetable{
     
     var window: UIWindow?
     var token = Helper.getAPIToken() ?? ""
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
             GMSServices.provideAPIKey("AIzaSyD8z2lWzm896P2g8VhaBfrVam0JL1BaiW0")
+          
+        MOLH.shared.activate(true)
+        MOLH.shared.specialKeyWords = ["Cancel","Done"]
+        if ("lang".localized == "en") {
             MOLHLanguage.setDefaultLanguage("en")
-            MOLH.shared.activate(true)
-            MOLH.shared.specialKeyWords = ["Cancel", "Done"]
+            UIView.appearance().semanticContentAttribute = .forceLeftToRight
+        }else{
+            MOLHLanguage.setDefaultLanguage("ar")
+            UIView.appearance().semanticContentAttribute = .forceRightToLeft
+        }
+        
         if token != "" {
         window?.rootViewController = TabBarController.instantiate(fromAppStoryboard: .Main)
         }else{
-        window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Nav")
+          if Helper.getLang() != nil {
+            window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Nav")
+            }else {
+                let sb = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LanguageScreenNav")
+                 window?.rootViewController = sb
+            }
         }
         
         GIDSignIn.sharedInstance().clientID = "700206282803-lgu72jq9arbf9ctem5qm1vb5i1dcnl8q.apps.googleusercontent.com"

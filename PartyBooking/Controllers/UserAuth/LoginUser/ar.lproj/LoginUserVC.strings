@@ -1,0 +1,27 @@
+
+/* Class = "UITextField"; placeholder = "Emial or phone number "; ObjectID = "KZs-D4-j8Q"; */
+"KZs-D4-j8Q.placeholder" = "البريد الالكتروني";
+
+/* Class = "UILabel"; text = "OR"; ObjectID = "Kg9-DN-H7l"; */
+"Kg9-DN-H7l.text" = "او";
+
+/* Class = "UILabel"; text = "welcome.let's start"; ObjectID = "PvW-7l-0T9"; */
+"PvW-7l-0T9.text" = "مرحبا.. هيا بنا نبدا";
+
+/* Class = "UIButton"; normalTitle = "Forget Password ?"; ObjectID = "jIu-j2-Jjc"; */
+"jIu-j2-Jjc.normalTitle" = "نسيت كلمة المرور ؟";
+
+/* Class = "UIButton"; normalTitle = "login"; ObjectID = "r7z-uF-ERj"; */
+"r7z-uF-ERj.normalTitle" = "دخول";
+
+/* Class = "UIButton"; normalTitle = "Register on Fece book"; ObjectID = "rT5-5L-iVG"; */
+"rT5-5L-iVG.normalTitle" = "تسجيل عبر فيس بوك ";
+
+/* Class = "UITextField"; placeholder = "password"; ObjectID = "sUf-YC-5Jb"; */
+"sUf-YC-5Jb.placeholder" = "كلمة المرور";
+
+/* Class = "UIButton"; normalTitle = "Register on Google"; ObjectID = "sbS-XY-EST"; */
+"sbS-XY-EST.normalTitle" = "تسجيل عبر جوجل";
+
+/* Class = "UIButton"; normalTitle = "Register on Twitter"; ObjectID = "srD-k0-7r7"; */
+"srD-k0-7r7.normalTitle" = "تسجيل عبر تويتر";

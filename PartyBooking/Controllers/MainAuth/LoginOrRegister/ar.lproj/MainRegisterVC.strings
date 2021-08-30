@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = "welcome.let's start"; ObjectID = "P8G-EH-JM6"; */
+"P8G-EH-JM6.text" = "هيا بنا نبدا";
+
+/* Class = "UIButton"; normalTitle = "You Have Acount"; ObjectID = "Zzv-AC-lDk"; */
+"Zzv-AC-lDk.normalTitle" = "لدي حساب";
+
+/* Class = "UIButton"; normalTitle = "First Time Register"; ObjectID = "aIg-Jc-49L"; */
+"aIg-Jc-49L.normalTitle" = "تسجبل اول مرة";

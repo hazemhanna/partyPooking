@@ -24,7 +24,7 @@ class SettingVc: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if MOLHLanguage.currentAppleLanguage() == "ar"{
+        if "lang".localized  == "en" {
             ArabicBtn.isHidden = false
             englishBtn.isHidden = true
         }else{
@@ -61,22 +61,17 @@ class SettingVc: UIViewController {
         }
     }
     
-    
     @IBAction func arabicButton(sender: UIButton) {
-        if MOLHLanguage.currentAppleLanguage() != "ar"{
+        if "lang".localized  == "en" {
             ArabicBtn.isHidden = false
             englishBtn.isHidden = true
-           MOLH.setLanguageTo("ar")
-           MOLH.reset()
         }
     }
     
     @IBAction func EnglishButton(sender: UIButton) {
-        if MOLHLanguage.currentAppleLanguage() != "en"{
+        if "lang".localized  == "en" {
             ArabicBtn.isHidden = true
             englishBtn.isHidden = false
-             MOLH.setLanguageTo("en")
-             MOLH.reset()
          }
     }
     

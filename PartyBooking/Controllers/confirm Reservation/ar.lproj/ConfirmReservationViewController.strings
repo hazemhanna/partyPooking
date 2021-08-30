@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "contract"; ObjectID = "9CC-4p-FE3"; */
+"9CC-4p-FE3.text" = "العقد";
+
+/* Class = "UILabel"; text = "congratulation reservation confirmed"; ObjectID = "GVC-1o-A83"; */
+"GVC-1o-A83.text" = "congratulation reservation confirmed";
+
+/* Class = "UIButton"; normalTitle = "Reservation done"; ObjectID = "R2u-sf-qhW"; */
+"R2u-sf-qhW.normalTitle" = "تم الحجز";
+
+/* Class = "UILabel"; text = "1234565433"; ObjectID = "Ycx-5m-yXk"; */
+"Ycx-5m-yXk.text" = "1234565433";
+
+/* Class = "UILabel"; text = "confirmation number "; ObjectID = "gT3-Ly-9F5"; */
+"gT3-Ly-9F5.text" = "رقم التاكيد";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "t5p-fM-jVW"; */
+"t5p-fM-jVW.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "load"; ObjectID = "xKz-IB-ubZ"; */
+"xKz-IB-ubZ.normalTitle" = "تحميل";

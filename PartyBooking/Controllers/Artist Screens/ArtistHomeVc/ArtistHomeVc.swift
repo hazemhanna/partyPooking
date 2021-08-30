@@ -55,7 +55,7 @@ class ArtistHomeVc: UIViewController  ,UICollectionViewDataSource, UICollectionV
         aboutMeLabel.text = "aboutMe".localized
         myWorkLabel.text = "myWork".localized
         liveLabel.text = "live".localized
-        if MOLHLanguage.currentAppleLanguage() == "en" {
+        if "lang".localized  == "en" {
             let font = UIFont(name: "Georgia-Bold", size: 14)
             titleLabel.font = font
             profilePicLabel.font = font

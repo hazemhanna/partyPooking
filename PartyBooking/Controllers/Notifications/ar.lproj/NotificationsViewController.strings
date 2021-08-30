@@ -1,0 +1,9 @@
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "SUq-ge-WqU"; */
+"SUq-ge-WqU.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "notifications"; ObjectID = "keC-oO-2O9"; */
+"keC-oO-2O9.text" = "الاشعارات";
+
+/* Class = "UILabel"; text = "No Notifications"; ObjectID = "nLm-Ja-2cS"; */
+"nLm-Ja-2cS.text" = "No Notifications";

@@ -1,0 +1,45 @@
+
+/* Class = "UILabel"; text = "phone number "; ObjectID = "EQZ-cf-yur"; */
+"EQZ-cf-yur.text" = "رقم الهاتف";
+
+/* Class = "UILabel"; text = "total"; ObjectID = "JDt-Lx-YMQ"; */
+"JDt-Lx-YMQ.text" = "الكل";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Kwx-4N-Cso"; */
+"Kwx-4N-Cso.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Done reservation"; ObjectID = "OEn-BI-32V"; */
+"OEn-BI-32V.normalTitle" = "تم";
+
+/* Class = "UILabel"; text = "last name"; ObjectID = "RjE-aa-aRz"; */
+"RjE-aa-aRz.text" = "الاسم الاخير";
+
+/* Class = "UILabel"; text = "Personal data"; ObjectID = "UCx-cp-Aeb"; */
+"UCx-cp-Aeb.text" = "تسحيل دخول";
+
+/* Class = "UILabel"; text = "password"; ObjectID = "bJ0-Xe-Mjf"; */
+"bJ0-Xe-Mjf.text" = "كلمة المرور";
+
+/* Class = "UILabel"; text = "+ SR 450 taxis"; ObjectID = "exc-YB-2yN"; */
+"exc-YB-2yN.text" = "+ SR 450 taxis";
+
+/* Class = "UILabel"; text = "Take Picture OR choose from gallary"; ObjectID = "fS6-fW-1Dp"; */
+"fS6-fW-1Dp.text" = "التقط صورة او اختر من الصور";
+
+/* Class = "UILabel"; text = "payment way "; ObjectID = "goS-O8-5xx"; */
+"goS-O8-5xx.text" = "الدفع";
+
+/* Class = "UILabel"; text = "country"; ObjectID = "orr-rv-88U"; */
+"orr-rv-88U.text" = "الدولة";
+
+/* Class = "UILabel"; text = "first name"; ObjectID = "ozL-Tg-tzu"; */
+"ozL-Tg-tzu.text" = "الاسم الاول";
+
+/* Class = "UILabel"; text = "e-mail"; ObjectID = "rud-9u-vr8"; */
+"rud-9u-vr8.text" = "البريد الالكتروني";
+
+/* Class = "UILabel"; text = "SR 98.0000"; ObjectID = "tdq-WO-f6v"; */
+"tdq-WO-f6v.text" = "SR 98.0000";
+
+/* Class = "UILabel"; text = "Take Picture"; ObjectID = "uCD-bz-E5V"; */
+"uCD-bz-E5V.text" = "اختر صورة";

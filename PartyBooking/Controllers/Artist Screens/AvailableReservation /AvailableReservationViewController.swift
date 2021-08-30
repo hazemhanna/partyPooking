@@ -40,7 +40,7 @@ class AvailableReservationViewController: UIViewController,FSCalendarDataSource,
         changePriceBtn.setTitle("changePrice".localized, for: .normal)
         
         
-        if MOLHLanguage.currentAppleLanguage() == "en" {
+        if "lang".localized  == "en" {
             let font = UIFont(name: "Georgia-Bold", size: 14)
             let font2 = UIFont(name: "Georgia-Bold", size: 8)
             alertLabel.font = font2

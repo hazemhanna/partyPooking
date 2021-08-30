@@ -89,7 +89,7 @@ class UserRegisterViewController: UIViewController {
         paymentLabel.text = "payment".localized
         amountLabel.text = "amount".localized
         taxesLabel.text = "\("taxes".localized) + SR 450"
-            if MOLHLanguage.currentAppleLanguage() == "en" {
+        if "lang".localized  == "en" {
                 emailTextField.textAlignment = .left
                 passTextField.textAlignment = .left
                 lNameTextField.textAlignment = .left
@@ -319,7 +319,7 @@ extension UserRegisterViewController : UIImagePickerControllerDelegate, UINaviga
     }
     
     func showImageActionSheet() {
-        if MOLHLanguage.currentAppleLanguage() == "en" {
+        if "lang".localized  == "en" {
             let chooseFromLibraryAction = UIAlertAction(title: "Choose from Library", style: .default) { (action) in
                 self.showImagePicker(sourceType: .photoLibrary)
             }

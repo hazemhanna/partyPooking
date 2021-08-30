@@ -66,7 +66,7 @@ class ArtistProfileViewController: UIViewController{
         reserveBtn.setTitle("reserve".localized, for: .normal)
         amountLabel.text = "amount".localized
         taxesLabel.text = "\("taxes".localized) + SR 450"
-        if MOLHLanguage.currentAppleLanguage() == "en" {
+        if "lang".localized  == "en" {
         let font = UIFont(name: "Georgia-Bold", size: 14)
             titleLabel.font = font
             commentLabel.font = font

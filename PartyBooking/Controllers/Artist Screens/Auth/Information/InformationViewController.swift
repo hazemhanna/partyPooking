@@ -52,7 +52,7 @@ class InformationViewController: UIViewController {
         agreeLabel.text = "agree".localized
         readLabel.text = "read".localized
         termsLabel.text = "terms".localized
-        if MOLHLanguage.currentAppleLanguage() == "en" {
+        if "lang".localized  == "en" {
             let font = UIFont(name: "Georgia-Bold", size: 14)
             let font2 = UIFont(name: "Georgia-Bold", size: 11)
             titleLabel.font = font

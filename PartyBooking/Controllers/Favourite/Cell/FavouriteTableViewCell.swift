@@ -42,7 +42,7 @@ class FavouriteTableViewCell: UITableViewCell {
     }
     
     func setUPLocalize(){
-         if MOLHLanguage.currentAppleLanguage() == "en" {
+        if "lang".localized  == "en" {
                 let font = UIFont(name: "Georgia-Bold", size: 8)
               artistNameLabel.font = font
               artistNameValueLabel.font = font

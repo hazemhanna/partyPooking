@@ -13,6 +13,7 @@ class MoreViewController: UIViewController {
     @IBOutlet weak var tableView : UITableView!
     @IBOutlet weak var titleLabel : UILabel!
     @IBOutlet weak var version  : UILabel!
+    var token = Helper.getAPIToken() ?? ""
 
     var Items = [SideMenuModel]() {
         didSet {
@@ -27,27 +28,48 @@ class MoreViewController: UIViewController {
         tableView.register(UINib(nibName: "ArtistMoreCell", bundle: nil), forCellReuseIdentifier: "ArtistMoreCell")
         tableView.delegate = self
         tableView.dataSource = self
-        if "lang".localized == "ar" {
-                 self.Items = [
-                           SideMenuModel(Name: "العروض", Id: "Offers", image: #imageLiteral(resourceName: "1")),
-                           SideMenuModel(Name: "المفضلة", Id: "Favourite", image: #imageLiteral(resourceName: "heart (1)")),
-                           SideMenuModel(Name: "الدعم الفني", Id: "callCenter", image: #imageLiteral(resourceName: "support")),
-                           SideMenuModel(Name: "الاعدادات", Id: "setting", image: #imageLiteral(resourceName: "settings (1)")),
-                           SideMenuModel(Name: "حسابي", Id: "account", image: #imageLiteral(resourceName: "5")),
-                           SideMenuModel(Name: "من نحن", Id: "about", image: #imageLiteral(resourceName: "5-2")),
-                           SideMenuModel(Name: "تسجيل الخروج", Id: "logOut", image: #imageLiteral(resourceName: "5-3")),
-                       ]
-            }else {
-                   self.Items = [
-                           SideMenuModel(Name: "Offers", Id: "Offers", image: #imageLiteral(resourceName: "1")),
-                           SideMenuModel(Name: "Favourite", Id: "Favourite", image: #imageLiteral(resourceName: "heart (1)")),
-                           SideMenuModel(Name: "Call Center", Id: "callCenter", image: #imageLiteral(resourceName: "support")),
-                           SideMenuModel(Name: "Setting", Id: "setting", image: #imageLiteral(resourceName: "settings (1)")),
-                           SideMenuModel(Name: "Account", Id: "account", image: #imageLiteral(resourceName: "5")),
-                           SideMenuModel(Name: "About", Id: "about", image: #imageLiteral(resourceName: "5-2")),
-                           SideMenuModel(Name: "logOut", Id: "logOut", image: #imageLiteral(resourceName: "5-3")),
-                       ]
+        if token != "" {
+            if "lang".localized == "ar" {
+                     self.Items = [
+                               SideMenuModel(Name: "العروض", Id: "Offers", image: #imageLiteral(resourceName: "1")),
+                               SideMenuModel(Name: "المفضلة", Id: "Favourite", image: #imageLiteral(resourceName: "heart (1)")),
+                               SideMenuModel(Name: "الدعم الفني", Id: "callCenter", image: #imageLiteral(resourceName: "support")),
+                               SideMenuModel(Name: "الاعدادات", Id: "setting", image: #imageLiteral(resourceName: "settings (1)")),
+                               SideMenuModel(Name: "حسابي", Id: "account", image: #imageLiteral(resourceName: "5")),
+                               SideMenuModel(Name: "من نحن", Id: "about", image: #imageLiteral(resourceName: "5-2")),
+                               SideMenuModel(Name: "تسجيل الخروج", Id: "logOut", image: #imageLiteral(resourceName: "5-3")),
+                           ]
+                }else {
+                       self.Items = [
+                               SideMenuModel(Name: "Offers", Id: "Offers", image: #imageLiteral(resourceName: "1")),
+                               SideMenuModel(Name: "Favourite", Id: "Favourite", image: #imageLiteral(resourceName: "heart (1)")),
+                               SideMenuModel(Name: "Call Center", Id: "callCenter", image: #imageLiteral(resourceName: "support")),
+                               SideMenuModel(Name: "Setting", Id: "setting", image: #imageLiteral(resourceName: "settings (1)")),
+                               SideMenuModel(Name: "Account", Id: "account", image: #imageLiteral(resourceName: "5")),
+                               SideMenuModel(Name: "About", Id: "about", image: #imageLiteral(resourceName: "5-2")),
+                               SideMenuModel(Name: "logOut", Id: "logOut", image: #imageLiteral(resourceName: "5-3")),
+                           ]
+            }
+        }else{
+            if "lang".localized == "ar" {
+                     self.Items = [
+                               SideMenuModel(Name: "العروض", Id: "Offers", image: #imageLiteral(resourceName: "1")),
+                               SideMenuModel(Name: "الدعم الفني", Id: "callCenter", image: #imageLiteral(resourceName: "support")),
+                               SideMenuModel(Name: "الاعدادات", Id: "setting", image: #imageLiteral(resourceName: "settings (1)")),
+                               SideMenuModel(Name: "من نحن", Id: "about", image: #imageLiteral(resourceName: "5-2")),
+                               SideMenuModel(Name: "تسجيل دخول", Id: "Login", image: #imageLiteral(resourceName: "5-3")),
+                           ]
+                }else {
+                       self.Items = [
+                               SideMenuModel(Name: "Offers", Id: "Offers", image: #imageLiteral(resourceName: "1")),
+                               SideMenuModel(Name: "Call Center", Id: "callCenter", image: #imageLiteral(resourceName: "support")),
+                               SideMenuModel(Name: "Setting", Id: "setting", image: #imageLiteral(resourceName: "settings (1)")),
+                               SideMenuModel(Name: "About", Id: "about", image: #imageLiteral(resourceName: "5-2")),
+                               SideMenuModel(Name: "Login", Id: "Login", image: #imageLiteral(resourceName: "5-3")),
+                           ]
+            }
         }
+   
         
         setUPLocalize()
     }
@@ -73,7 +95,11 @@ class MoreViewController: UIViewController {
              self.navigationController?.pushViewController(destinationVC!, animated: true)
             case "about":
              print("about")
-
+            case "Login"  :
+                 let main = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Nav")
+                if let appDelegate = UIApplication.shared.delegate {
+                    appDelegate.window??.rootViewController = main
+                }
             case "logOut":
                 let alert = UIAlertController(title: "LogOut".localized, message: "Are".localized, preferredStyle: .alert)
                 let yesAction = UIAlertAction(title: "YES".localized, style: .default) { (action) in
@@ -100,7 +126,7 @@ class MoreViewController: UIViewController {
     func setUPLocalize(){
          version.text = "\("version".localized) - 2.2.1"
           titleLabel.text = "more".localized
-        if MOLHLanguage.currentAppleLanguage() == "en" {
+        if "lang".localized  == "en" {
             let font = UIFont(name: "Georgia-Bold", size: 14)
             titleLabel.font = font
             version.font = font

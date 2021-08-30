@@ -80,13 +80,8 @@ class SearchViewController: UIViewController ,UICollectionViewDataSource, UIColl
         searchBtn.setTitle("searchtitle".localized, for: .normal)
         mostFamousLabel.text = "Most".localized
         offerLabel.text = "Show".localized
-        countryTextField.placeholder = "location".localized
-        if MOLHLanguage.currentAppleLanguage() == "en" {
-        let font = UIFont(name: "Georgia-Bold", size: 14)
-            searchBtn.titleLabel!.font = UIFont(name: "Georgia-Bold", size: 17)
-            offerLabel.font = font
-            mostFamousLabel.font = font
-        }
+        countryTextField.text = "location".localized
+        partyTypeTextField.text = "partyType".localized
      }
     
     
@@ -98,8 +93,6 @@ class SearchViewController: UIViewController ,UICollectionViewDataSource, UIColl
 
         }
     }
-    
-    
     
     func setupTypeDropDown() {
         partyTypeTextField.optionArray = self.filterPartyType
@@ -144,9 +137,12 @@ class SearchViewController: UIViewController ,UICollectionViewDataSource, UIColl
         
        if token != ""{
         if typeId == nil || countryId == nil || selectedDate == "" {
-            displayMessage(title: "", message: "please complete all required data", status: .error, forController: self)
+        if "lang".localized == "ar" {
+            displayMessage(title: "", message: "اكمل البيانات", status: .error, forController: self)
         }else{
-            
+            displayMessage(title: "", message: "please complete all required data", status: .error, forController: self)
+        }
+        }else{
         let destinationVC = SearchResultViewController.instantiateFromNib()
         destinationVC!.areaId = countryId ?? 0
         destinationVC!.typeId = typeId ?? 0
@@ -154,7 +150,13 @@ class SearchViewController: UIViewController ,UICollectionViewDataSource, UIColl
         self.navigationController?.pushViewController(destinationVC!, animated: true)
         }
         }else{
-            
+            if "lang".localized == "ar" {
+                displayMessage(title: "", message: "من فضلك قم بتسجيل الدخول ", status: .error, forController: self)
+
+            }else{
+                displayMessage(title: "", message: "please login first", status: .error, forController: self)
+
+            }
         }
      }
     
@@ -216,7 +218,7 @@ func getHome() {
         }
     }, onError: { (error) in
         self.homeVM.dismissIndicator()
-        displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
+       // displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
     }).disposed(by: disposeBag)
  }
     func getPartyType() {
@@ -236,7 +238,7 @@ func getHome() {
             }
         }, onError: { (error) in
             self.homeVM.dismissIndicator()
-            displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
+           // displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
         }).disposed(by: disposeBag)
      }
     
@@ -256,7 +258,7 @@ func getHome() {
             }
         }, onError: { (error) in
             self.homeVM.dismissIndicator()
-            displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
+           // displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
         }).disposed(by: disposeBag)
     }
     

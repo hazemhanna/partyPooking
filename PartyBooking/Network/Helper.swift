@@ -57,5 +57,14 @@ class Helper {
        let def = UserDefaults.standard
        return def.object(forKey: "date") as? String
     }
+    
+    class func saveLang(Lang: String) {
+        let def = UserDefaults.standard
+        def.set(Lang, forKey: "Lang")
+    }
+    class func getLang() -> String? {
+        let def = UserDefaults.standard
+        return def.object(forKey: "Lang") as? String
+    }
      
 }

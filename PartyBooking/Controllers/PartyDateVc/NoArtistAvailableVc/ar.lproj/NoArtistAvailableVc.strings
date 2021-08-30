@@ -1,0 +1,6 @@
+
+/* Class = "UILabel"; text = "Sory ... No Artist availabile in this date please choose another date "; ObjectID = "IFp-ia-TO0"; */
+"IFp-ia-TO0.text" = "عفوا... لا يوجد فنان متاح في هذا التاريخ اختار تاريخ اخر";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "tGA-hy-Lzp"; */
+"tGA-hy-Lzp.normalTitle" = "تم";

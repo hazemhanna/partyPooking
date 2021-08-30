@@ -1,0 +1,27 @@
+
+/* Class = "UILabel"; text = "Monday"; ObjectID = "DPY-w0-nfx"; */
+"DPY-w0-nfx.text" = "Monday";
+
+/* Class = "UILabel"; text = "To"; ObjectID = "EXi-39-UQj"; */
+"EXi-39-UQj.text" = "To";
+
+/* Class = "UILabel"; text = "Reservation "; ObjectID = "GuO-ax-ZrZ"; */
+"GuO-ax-ZrZ.text" = "الحجوازات ";
+
+/* Class = "UILabel"; text = "Party Date"; ObjectID = "JV1-Ya-1Ni"; */
+"JV1-Ya-1Ni.text" = "Party Date";
+
+/* Class = "UILabel"; text = "Party Time :"; ObjectID = "YT0-Qi-jze"; */
+"YT0-Qi-jze.text" = "Party Time :";
+
+/* Class = "UILabel"; text = "From"; ObjectID = "coM-bO-HUq"; */
+"coM-bO-HUq.text" = "From";
+
+/* Class = "UILabel"; text = "8:00"; ObjectID = "mhQ-hr-ueo"; */
+"mhQ-hr-ueo.text" = "8:00";
+
+/* Class = "UILabel"; text = "15/10/2020"; ObjectID = "osd-PL-6EW"; */
+"osd-PL-6EW.text" = "15/10/2020";
+
+/* Class = "UILabel"; text = "1:00"; ObjectID = "xlt-Oe-Q4o"; */
+"xlt-Oe-Q4o.text" = "1:00";

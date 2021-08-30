@@ -1,0 +1,15 @@
+
+/* Class = "UIButton"; normalTitle = "Register on Fece book"; ObjectID = "SUE-Wk-WFT"; */
+"SUE-Wk-WFT.normalTitle" = "تسجيل عبر فيس بوك";
+
+/* Class = "UIButton"; normalTitle = "Register on Twitter"; ObjectID = "nwD-qd-Wm4"; */
+"nwD-qd-Wm4.normalTitle" = "تسجيل عبر تويتر";
+
+/* Class = "UILabel"; text = "welcome.let's start"; ObjectID = "wvs-1G-qdq"; */
+"wvs-1G-qdq.text" = "مرحبا.. هيا بنا نبدا";
+
+/* Class = "UIButton"; normalTitle = "Register New Account"; ObjectID = "yPW-pW-XFe"; */
+"yPW-pW-XFe.normalTitle" = "تسجيل حساب جدبد";
+
+/* Class = "UIButton"; normalTitle = "Register on Google"; ObjectID = "zEM-xX-1h5"; */
+"zEM-xX-1h5.normalTitle" = "تسجيل عبر جوجل";

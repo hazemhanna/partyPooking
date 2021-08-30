@@ -108,7 +108,7 @@ class ArtistMoreViewController: UIViewController {
     func setUPLocalize(){
         version.text = "\("version".localized) - 2.2.1"
         titleLabel.text = "more".localized
-        if MOLHLanguage.currentAppleLanguage() == "en" {
+        if "lang".localized  == "en" {
             let font = UIFont(name: "Georgia-Bold", size: 14)
             titleLabel.font = font
             version.font = font

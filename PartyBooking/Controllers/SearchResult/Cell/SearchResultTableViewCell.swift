@@ -56,7 +56,7 @@ class SearchResultTableViewCell: UITableViewCell {
     func setUPLocalize(){
         amountLabel.text = "amount".localized
         taxesLabel.text = "\("taxes".localized) + SR 450"
-        if MOLHLanguage.currentAppleLanguage() == "en" {
+        if "lang".localized  == "en" {
           let font = UIFont(name: "Georgia-Bold", size: 8)
         amountLabel.font = font
         taxesLabel.font = font

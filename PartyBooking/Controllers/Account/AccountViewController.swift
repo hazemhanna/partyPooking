@@ -29,7 +29,7 @@ class AccountViewController: UIViewController {
          editBtn.setTitle("chnge".localized, for: .normal)
          titleLabel.text = "myAccount".localized
         
-        if MOLHLanguage.currentAppleLanguage() == "en" {
+        if "lang".localized  == "en" {
             let font = UIFont(name: "Georgia-Bold", size: 14)
             editBtn.titleLabel!.font = UIFont(name: "Georgia-Bold", size: 17)
             titleLabel.font = font
@@ -108,7 +108,7 @@ extension AccountViewController : UIImagePickerControllerDelegate, UINavigationC
     }
     
     func showImageActionSheet() {
-        if MOLHLanguage.currentAppleLanguage() == "en" {
+        if "lang".localized  == "en" {
             let chooseFromLibraryAction = UIAlertAction(title: "Choose from Library", style: .default) { (action) in
                 self.showImagePicker(sourceType: .photoLibrary)
             }

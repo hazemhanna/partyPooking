@@ -28,7 +28,7 @@ class ArtistReservationTableViewCell: UITableViewCell {
         confirmBtn.text = "confirmeRservation".localized
         clientLabel.text = "clientNmae".localized
         cityLabel.text = "city".localized
-        if MOLHLanguage.currentAppleLanguage() == "en" {
+        if "lang".localized  == "en" {
              let font = UIFont(name: "Georgia-Bold", size: 8)
             let font2 = UIFont(name: "Georgia-Bold", size: 11)
              confirmBtn.font = font

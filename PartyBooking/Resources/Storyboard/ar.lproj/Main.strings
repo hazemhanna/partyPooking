@@ -1,45 +1,45 @@
 
 /* Class = "UILabel"; text = "OR"; ObjectID = "3Va-57-RoF"; */
-"3Va-57-RoF.text" = "OR";
+"3Va-57-RoF.text" = "او";
 
 /* Class = "UIButton"; normalTitle = "Register on Google"; ObjectID = "6G9-3q-j01"; */
-"6G9-3q-j01.normalTitle" = "Register on Google";
+"6G9-3q-j01.normalTitle" = "تسجيل عبر جوجل";
 
 /* Class = "UIButton"; normalTitle = "have account"; ObjectID = "6tb-iD-Tyh"; */
-"6tb-iD-Tyh.normalTitle" = "have account";
+"6tb-iD-Tyh.normalTitle" = "لدي حساب";
 
 /* Class = "UIButton"; normalTitle = "Register as artist"; ObjectID = "8Zw-BM-6B2"; */
-"8Zw-BM-6B2.normalTitle" = "Register as artist";
+"8Zw-BM-6B2.normalTitle" = "تسجيل كفنان";
 
 /* Class = "UITextField"; placeholder = "password"; ObjectID = "MJW-eO-dHV"; */
-"MJW-eO-dHV.placeholder" = "password";
+"MJW-eO-dHV.placeholder" = "كلمة المرور";
 
 /* Class = "UIButton"; normalTitle = "skip"; ObjectID = "N51-0f-LLa"; */
-"N51-0f-LLa.normalTitle" = "skip";
+"N51-0f-LLa.normalTitle" = "تخطي";
 
 /* Class = "UIButton"; normalTitle = "Login"; ObjectID = "Nhq-se-K9l"; */
-"Nhq-se-K9l.normalTitle" = "Login";
+"Nhq-se-K9l.normalTitle" = "دخوب";
 
 /* Class = "UILabel"; text = "Login"; ObjectID = "RU7-zo-t9v"; */
 "RU7-zo-t9v.text" = "Login";
 
 /* Class = "UITextField"; placeholder = "e-mail or phone number"; ObjectID = "XHn-YX-wAL"; */
-"XHn-YX-wAL.placeholder" = "e-mail or phone number";
+"XHn-YX-wAL.placeholder" = "البريد الالكتروني";
 
 /* Class = "UIButton"; normalTitle = "Register first Time"; ObjectID = "eyV-VV-suc"; */
-"eyV-VV-suc.normalTitle" = "Register first Time";
+"eyV-VV-suc.normalTitle" = "تسجيل اول مرة ";
 
 /* Class = "UIButton"; normalTitle = "Register as artist"; ObjectID = "fYH-mv-ywA"; */
-"fYH-mv-ywA.normalTitle" = "Register as artist";
+"fYH-mv-ywA.normalTitle" = "تسجيل كفنان";
 
 /* Class = "UILabel"; text = "welcome.let's start"; ObjectID = "lLO-DU-l26"; */
-"lLO-DU-l26.text" = "welcome.let's start";
+"lLO-DU-l26.text" = "مرحبا هيا بنا نبدا";
 
 /* Class = "UIButton"; normalTitle = "Register as user"; ObjectID = "mj7-I6-SW8"; */
-"mj7-I6-SW8.normalTitle" = "Register as user";
+"mj7-I6-SW8.normalTitle" = "تسجيل كمستخدم";
 
 /* Class = "UIButton"; normalTitle = "Register on Google"; ObjectID = "o7j-I7-dcM"; */
-"o7j-I7-dcM.normalTitle" = "Register on Google";
+"o7j-I7-dcM.normalTitle" = "سجل عبر جوجل";
 
 /* Class = "UIButton"; normalTitle = "Register as user"; ObjectID = "uEm-Tc-BUK"; */
-"uEm-Tc-BUK.normalTitle" = "Register as user";
+"uEm-Tc-BUK.normalTitle" = "تسجيل كمستخدم";

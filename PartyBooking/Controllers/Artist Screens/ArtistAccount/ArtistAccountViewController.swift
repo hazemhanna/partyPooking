@@ -59,7 +59,7 @@ class ArtistAccountViewController: UIViewController  ,UICollectionViewDataSource
         myWorkLabel.text = "myWork".localized
         clientPriceLabel.text = "clientPrice".localized
         liveLabel.text = "live".localized
-        if MOLHLanguage.currentAppleLanguage() == "en" {
+        if "lang".localized  == "en" {
             let font = UIFont(name: "Georgia-Bold", size: 14)
             titleLabel.font = font
             profilePicLabel.font = font

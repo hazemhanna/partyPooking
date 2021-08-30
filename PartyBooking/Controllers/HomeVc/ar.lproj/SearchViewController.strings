@@ -1,0 +1,33 @@
+
+/* Class = "UILabel"; text = "most common"; ObjectID = "58p-bG-seP"; */
+"58p-bG-seP.text" = "الاكتر رواجل";
+
+/* Class = "UITextField"; placeholder = "party type"; ObjectID = "9yR-09-dbF"; */
+"9yR-09-dbF.placeholder" = "نوع الحفلة";
+
+/* Class = "UITextField"; text = "party type"; ObjectID = "9yR-09-dbF"; */
+"9yR-09-dbF.text" = "نوع الحفلة";
+
+/* Class = "UILabel"; text = "offers"; ObjectID = "Dgo-Wj-un3"; */
+"Dgo-Wj-un3.text" = "العروض";
+
+/* Class = "UILabel"; text = "monday,6april"; ObjectID = "UQ0-ag-Sjk"; */
+"UQ0-ag-Sjk.text" = "monday,6april";
+
+/* Class = "UITextField"; placeholder = "party type"; ObjectID = "eNi-zx-gxE"; */
+"eNi-zx-gxE.placeholder" = "نوع الحفلة";
+
+/* Class = "UITextField"; text = "location"; ObjectID = "eNi-zx-gxE"; */
+"eNi-zx-gxE.text" = "الموقع";
+
+/* Class = "UIButton"; normalTitle = "search"; ObjectID = "eq0-F8-FYP"; */
+"eq0-F8-FYP.normalTitle" = "بحث";
+
+/* Class = "UIButton"; normalTitle = "view All "; ObjectID = "m9v-RS-pdr"; */
+"m9v-RS-pdr.normalTitle" = "الكل";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "wAA-bF-466"; */
+"wAA-bF-466.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "view All "; ObjectID = "zeS-rU-EsS"; */
+"zeS-rU-EsS.normalTitle" = "الكل";

@@ -125,8 +125,8 @@ class ArtistRegisterViewController: UIViewController {
         banckLabel.text = "bank".localized
         //banckTextField.placeholder = banckLabel.text
         
-        if MOLHLanguage.currentAppleLanguage() == "en" {
-            
+        if "lang".localized  == "en" {
+
             emailTextField.textAlignment = .left
             passTextField.textAlignment = .left
             lNameTextField.textAlignment = .left
@@ -230,7 +230,7 @@ extension ArtistRegisterViewController : UIImagePickerControllerDelegate, UINavi
     }
     
     func showImageActionSheet() {
-        if MOLHLanguage.currentAppleLanguage() == "en" {
+        if "lang".localized  == "en" {
             let chooseFromLibraryAction = UIAlertAction(title: "Choose from Library", style: .default) { (action) in
                 self.showImagePicker(sourceType: .photoLibrary)
             }

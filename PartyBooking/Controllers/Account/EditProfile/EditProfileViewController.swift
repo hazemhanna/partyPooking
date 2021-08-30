@@ -60,7 +60,7 @@ class EditProfileViewController: UIViewController {
         phoneLabel.text = "phone".localized
         countryLabel.text = "country".localized
         
-        if MOLHLanguage.currentAppleLanguage() == "en" {
+        if "lang".localized  == "en" {
             emailTextField.textAlignment = .left
             lNameTextField.textAlignment = .left
             countryTextField.textAlignment = .left

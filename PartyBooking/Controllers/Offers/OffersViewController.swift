@@ -48,7 +48,7 @@ class OffersViewController: UIViewController {
            locatioLabel.text = "location".localized
            partytypeLabel.text = "partyType".localized
         
-        if MOLHLanguage.currentAppleLanguage() == "en" {
+        if "lang".localized  == "en" {
             let font = UIFont(name: "Georgia-Bold", size: 14)
             searchBtn.titleLabel!.font = font
             locatioLabel.font = font

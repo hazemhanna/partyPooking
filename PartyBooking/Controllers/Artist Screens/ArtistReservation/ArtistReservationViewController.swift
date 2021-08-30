@@ -29,7 +29,7 @@ class ArtistReservationViewController: UIViewController ,FSCalendarDataSource, F
     func setUPLocalize(){
            titleLabel.text = "reservation".localized
            searchTf.placeholder = "searchIn".localized
-        if MOLHLanguage.currentAppleLanguage() == "en" {
+        if "lang".localized  == "en" {
              let font = UIFont(name: "Georgia-Bold", size: 14)
              titleLabel.font = font
              searchTf.font =  font

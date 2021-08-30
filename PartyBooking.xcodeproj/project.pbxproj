@@ -31,11 +31,8 @@
 		04225039265EC08100723400 /* ReservetionDetailsVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04225037265EC08000723400 /* ReservetionDetailsVc.swift */; };
 		0422503A265EC08100723400 /* ReservetionDetailsVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04225038265EC08000723400 /* ReservetionDetailsVc.xib */; };
 		0430678E2661F36E00BDFE32 /* PartyDateVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430678C2661F36E00BDFE32 /* PartyDateVc.swift */; };
-		0430678F2661F36E00BDFE32 /* PartyDateVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0430678D2661F36E00BDFE32 /* PartyDateVc.xib */; };
 		0430679626620A2A00BDFE32 /* NoArtistAvailableVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430679426620A2A00BDFE32 /* NoArtistAvailableVc.swift */; };
-		0430679726620A2A00BDFE32 /* NoArtistAvailableVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0430679526620A2A00BDFE32 /* NoArtistAvailableVc.xib */; };
 		043067A126620DD100BDFE32 /* AllLiveVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430679F26620DD100BDFE32 /* AllLiveVideoVC.swift */; };
-		043067A226620DD100BDFE32 /* AllLiveVideoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043067A026620DD100BDFE32 /* AllLiveVideoVC.xib */; };
 		043067AC26620F5100BDFE32 /* AllLiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043067AA26620F5100BDFE32 /* AllLiveCell.swift */; };
 		043067AD26620F5100BDFE32 /* AllLiveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043067AB26620F5100BDFE32 /* AllLiveCell.xib */; };
 		043067B22662102C00BDFE32 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043067B12662102C00BDFE32 /* CustomImageView.swift */; };
@@ -44,14 +41,30 @@
 		04323C1024B225B1000F6395 /* OffersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04323C0E24B225B1000F6395 /* OffersTableViewCell.swift */; };
 		04323C1124B225B1000F6395 /* OffersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04323C0F24B225B1000F6395 /* OffersTableViewCell.xib */; };
 		04323C1524B2426F000F6395 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04323C1324B2426F000F6395 /* NotificationsViewController.swift */; };
-		04323C1624B2426F000F6395 /* NotificationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04323C1424B2426F000F6395 /* NotificationsViewController.xib */; };
 		04323C1924B243B4000F6395 /* NotificationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04323C1724B243B4000F6395 /* NotificationsTableViewCell.swift */; };
 		04323C1A24B243B4000F6395 /* NotificationsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04323C1824B243B4000F6395 /* NotificationsTableViewCell.xib */; };
 		04417E1F24AF6B370022C32F /* ReservationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04417E1D24AF6B370022C32F /* ReservationTableViewCell.swift */; };
 		04417E2024AF6B370022C32F /* ReservationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04417E1E24AF6B370022C32F /* ReservationTableViewCell.xib */; };
 		044EDE1E24BDAC8B00EC8E61 /* ConfirmReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EDE1C24BDAC8B00EC8E61 /* ConfirmReservationViewController.swift */; };
-		044EDE1F24BDAC8B00EC8E61 /* ConfirmReservationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044EDE1D24BDAC8B00EC8E61 /* ConfirmReservationViewController.xib */; };
 		044EDE2024BF011F00EC8E61 /* RateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044EDE2224BF011F00EC8E61 /* RateViewController.xib */; };
+		044FEAD726DD1BF400F44413 /* LanguageScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044FEAD626DD1BF400F44413 /* LanguageScreenVC.swift */; };
+		044FEAFC26DD256D00F44413 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044FEAFE26DD256D00F44413 /* SearchViewController.xib */; };
+		044FEB0726DD408300F44413 /* AllLiveVideoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044FEB0926DD408300F44413 /* AllLiveVideoVC.xib */; };
+		044FEB0F26DD40AC00F44413 /* MostFamousVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044FEB1126DD40AC00F44413 /* MostFamousVc.xib */; };
+		044FEB1A26DD40CF00F44413 /* NoArtistAvailableVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044FEB1C26DD40CF00F44413 /* NoArtistAvailableVc.xib */; };
+		044FEB2226DD412E00F44413 /* PartyDateVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044FEB2426DD412E00F44413 /* PartyDateVc.xib */; };
+		044FEB2D26DD416200F44413 /* PassWordInstructions.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044FEB2F26DD416200F44413 /* PassWordInstructions.xib */; };
+		044FEB3526DD41E100F44413 /* TermsAndConditionVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044FEB3726DD41E100F44413 /* TermsAndConditionVc.xib */; };
+		044FEB3A26DD421B00F44413 /* ConfirmReservationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044FEB3C26DD421B00F44413 /* ConfirmReservationViewController.xib */; };
+		044FEB4226DD426C00F44413 /* SettingVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044FEB4426DD426C00F44413 /* SettingVc.xib */; };
+		044FEB4A26DD42A500F44413 /* UserRegisterTypeVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044FEB4C26DD42A500F44413 /* UserRegisterTypeVc.xib */; };
+		044FEB5526DD430D00F44413 /* LoginUserVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044FEB5726DD430D00F44413 /* LoginUserVC.xib */; };
+		044FEB6026DD439500F44413 /* UserRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044FEB6226DD439500F44413 /* UserRegisterViewController.xib */; };
+		044FEB6526DD444400F44413 /* MainRegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044FEB6726DD444400F44413 /* MainRegisterVC.xib */; };
+		044FEB7026DD44B300F44413 /* CommentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044FEB7226DD44B300F44413 /* CommentsViewController.xib */; };
+		044FEB7826DD44CE00F44413 /* ArtistProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044FEB7A26DD44CE00F44413 /* ArtistProfileViewController.xib */; };
+		044FEB8326DD456300F44413 /* SearchResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044FEB8526DD456300F44413 /* SearchResultTableViewCell.xib */; };
+		044FEB8B26DD458A00F44413 /* NotificationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044FEB8D26DD458A00F44413 /* NotificationsViewController.xib */; };
 		04643AD8267538EE00510426 /* HelperMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04643AD7267538EE00510426 /* HelperMethods.swift */; };
 		04643AF4267569AA00510426 /* GeneralModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04643AF3267569AA00510426 /* GeneralModel.swift */; };
 		046506E324B5D22600694741 /* OfferPriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046506E124B5D22600694741 /* OfferPriceViewController.swift */; };
@@ -63,7 +76,6 @@
 		046506F324B6157B00694741 /* LiveVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046506F124B6157B00694741 /* LiveVideoViewController.swift */; };
 		046506F424B6157B00694741 /* LiveVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046506F224B6157B00694741 /* LiveVideoViewController.xib */; };
 		046506F824B62ECF00694741 /* UserRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046506F624B62ECF00694741 /* UserRegisterViewController.swift */; };
-		046506F924B62ECF00694741 /* UserRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046506F724B62ECF00694741 /* UserRegisterViewController.xib */; };
 		046506FD24B780ED00694741 /* AvailableReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046506FB24B780ED00694741 /* AvailableReservationViewController.swift */; };
 		046506FE24B780ED00694741 /* AvailableReservationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046506FC24B780ED00694741 /* AvailableReservationViewController.xib */; };
 		0465070324B7983800694741 /* ArtistReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465070124B7983800694741 /* ArtistReservationViewController.swift */; };
@@ -84,7 +96,6 @@
 		046E3B9724AE12F6006D1385 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E3B9624AE12F6006D1385 /* TabBarController.swift */; };
 		046E3B9924AE131F006D1385 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E3B9824AE131F006D1385 /* TabBarItem.swift */; };
 		046E3BA424AE1A74006D1385 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E3BA224AE1A74006D1385 /* SearchViewController.swift */; };
-		046E3BA524AE1A74006D1385 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046E3BA324AE1A74006D1385 /* SearchViewController.xib */; };
 		046E3BA824AE1A9E006D1385 /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E3BA624AE1A9E006D1385 /* ReservationViewController.swift */; };
 		046E3BA924AE1A9E006D1385 /* ReservationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046E3BA724AE1A9E006D1385 /* ReservationViewController.xib */; };
 		046E3BAC24AE1ABB006D1385 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E3BAA24AE1ABB006D1385 /* AccountViewController.swift */; };
@@ -97,15 +108,12 @@
 		047F8C0B24B3790400A86E86 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F8C0924B3790400A86E86 /* SearchResultViewController.swift */; };
 		047F8C0C24B3790400A86E86 /* SearchResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047F8C0A24B3790400A86E86 /* SearchResultViewController.xib */; };
 		047F8C0F24B3792800A86E86 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F8C0D24B3792800A86E86 /* SearchResultTableViewCell.swift */; };
-		047F8C1024B3792800A86E86 /* SearchResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047F8C0E24B3792800A86E86 /* SearchResultTableViewCell.xib */; };
 		047F8C1424B37E9800A86E86 /* ArtistProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F8C1224B37E9800A86E86 /* ArtistProfileViewController.swift */; };
-		047F8C1524B37E9800A86E86 /* ArtistProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047F8C1324B37E9800A86E86 /* ArtistProfileViewController.xib */; };
 		047F8C1824B3890E00A86E86 /* CommentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F8C1624B3890E00A86E86 /* CommentsTableViewCell.swift */; };
 		047F8C1924B3890E00A86E86 /* CommentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047F8C1724B3890E00A86E86 /* CommentsTableViewCell.xib */; };
 		047F8C1C24B3895F00A86E86 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F8C1A24B3895F00A86E86 /* PhotoCollectionViewCell.swift */; };
 		047F8C1D24B3895F00A86E86 /* PhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047F8C1B24B3895F00A86E86 /* PhotoCollectionViewCell.xib */; };
 		047F8C2124B3A9B900A86E86 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F8C1F24B3A9B900A86E86 /* CommentsViewController.swift */; };
-		047F8C2224B3A9B900A86E86 /* CommentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047F8C2024B3A9B900A86E86 /* CommentsViewController.xib */; };
 		047F8C2824B3AC8D00A86E86 /* FloatRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F8C2724B3AC8D00A86E86 /* FloatRatingView.swift */; };
 		047F8C2C24B3AE0800A86E86 /* RateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F8C2A24B3AE0800A86E86 /* RateViewController.swift */; };
 		047F8C3024B3AE5800A86E86 /* RateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F8C2E24B3AE5800A86E86 /* RateTableViewCell.swift */; };
@@ -118,14 +126,10 @@
 		048569DE2665464F00B2670D /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048569DD2665464F00B2670D /* Errors.swift */; };
 		048569E32665501300B2670D /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048569E22665501300B2670D /* AuthModel.swift */; };
 		048DCB592656B38200319F9F /* LoginUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048DCB572656B38200319F9F /* LoginUserVC.swift */; };
-		048DCB5A2656B38200319F9F /* LoginUserVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048DCB582656B38200319F9F /* LoginUserVC.xib */; };
 		048DCB742656B4C800319F9F /* UserRegisterTypeVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048DCB722656B4C800319F9F /* UserRegisterTypeVc.swift */; };
-		048DCB752656B4C800319F9F /* UserRegisterTypeVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048DCB732656B4C800319F9F /* UserRegisterTypeVc.xib */; };
 		048DCB8E2657324000319F9F /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048DCB8D2657324000319F9F /* AlertService.swift */; };
 		048DCB98265735C100319F9F /* TermsAndConditionVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048DCB96265735C100319F9F /* TermsAndConditionVc.swift */; };
-		048DCB99265735C100319F9F /* TermsAndConditionVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048DCB97265735C100319F9F /* TermsAndConditionVc.xib */; };
 		048DCBA8265742C400319F9F /* PassWordInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048DCBA6265742C400319F9F /* PassWordInstructions.swift */; };
-		048DCBA9265742C400319F9F /* PassWordInstructions.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048DCBA7265742C400319F9F /* PassWordInstructions.xib */; };
 		048EDAD1267ACB57009CB854 /* FavouritModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048EDAD0267ACB57009CB854 /* FavouritModel.swift */; };
 		048EDAD6267ACCCA009CB854 /* FavouriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048EDAD5267ACCCA009CB854 /* FavouriteViewModel.swift */; };
 		048EDADB267ADC28009CB854 /* ReservationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048EDADA267ADC28009CB854 /* ReservationModel.swift */; };
@@ -134,10 +138,8 @@
 		0491AD3626376D3E00398125 /* Button+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0491AD3526376D3E00398125 /* Button+Extention.swift */; };
 		0491AD3B26376D5500398125 /* CustomDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0491AD3A26376D5500398125 /* CustomDropdown.swift */; };
 		0491AD482637733000398125 /* MainRegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0491AD462637733000398125 /* MainRegisterVC.swift */; };
-		0491AD492637733000398125 /* MainRegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0491AD472637733000398125 /* MainRegisterVC.xib */; };
 		0491AD5C2637830F00398125 /* TextField+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0491AD5B2637830F00398125 /* TextField+Extention.swift */; };
 		049EA685267865D300EFB676 /* MostFamousVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049EA683267865D300EFB676 /* MostFamousVc.swift */; };
-		049EA686267865D300EFB676 /* MostFamousVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049EA684267865D300EFB676 /* MostFamousVc.xib */; };
 		049EA68B2678768600EFB676 /* SearchResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049EA68A2678768600EFB676 /* SearchResultModel.swift */; };
 		049EA6902678777B00EFB676 /* SearchResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049EA68F2678777B00EFB676 /* SearchResultViewModel.swift */; };
 		04ABD7B126BFF06400CCD994 /* OffersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ABD7B026BFF06300CCD994 /* OffersModel.swift */; };
@@ -145,11 +147,6 @@
 		04BF70CF2675167B00080730 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF70CE2675167B00080730 /* String+Extension.swift */; };
 		04CA045024B7FD5200660E7B /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA044E24B7FD5200660E7B /* LocationViewController.swift */; };
 		04CA045124B7FD5200660E7B /* LocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CA044F24B7FD5200660E7B /* LocationViewController.xib */; };
-		04CA045424B9FFD000660E7B /* MOLH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA045324B9FFD000660E7B /* MOLH.swift */; };
-		04CA045624B9FFE000660E7B /* MOLHFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA045524B9FFE000660E7B /* MOLHFont.swift */; };
-		04CA045824B9FFED00660E7B /* MOLHFontLocalizableViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA045724B9FFED00660E7B /* MOLHFontLocalizableViews.swift */; };
-		04CA045A24B9FFFA00660E7B /* MOLHLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA045924B9FFFA00660E7B /* MOLHLanguage.swift */; };
-		04CA045C24BA000700660E7B /* MOLHSizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA045B24BA000700660E7B /* MOLHSizable.swift */; };
 		04CA046224BA03F500660E7B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04CA046424BA03F500660E7B /* Localizable.strings */; };
 		04CA048324BB07A700660E7B /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA048224BB07A700660E7B /* String.swift */; };
 		04CF96F52651712D00184441 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF96F32651712D00184441 /* LoginVC.swift */; };
@@ -160,7 +157,6 @@
 		04E02901265D6E7200F5E373 /* PartyPriceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E028FF265D6E7200F5E373 /* PartyPriceCell.swift */; };
 		04E02902265D6E7300F5E373 /* PartyPriceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E02900265D6E7200F5E373 /* PartyPriceCell.xib */; };
 		04E0290F265D77D600F5E373 /* SettingVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0290D265D77D600F5E373 /* SettingVc.swift */; };
-		04E02910265D77D600F5E373 /* SettingVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E0290E265D77D600F5E373 /* SettingVc.xib */; };
 		04F2BA39265AA462007F4E53 /* PartyPriceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2BA37265AA462007F4E53 /* PartyPriceVC.swift */; };
 		04F2BA3A265AA462007F4E53 /* PartyPriceVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F2BA38265AA462007F4E53 /* PartyPriceVC.xib */; };
 		04F2BA4D265ACE39007F4E53 /* ArtistHomeVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2BA4B265ACE39007F4E53 /* ArtistHomeVc.swift */; };
@@ -220,11 +216,8 @@
 		04225037265EC08000723400 /* ReservetionDetailsVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservetionDetailsVc.swift; sourceTree = "<group>"; };
 		04225038265EC08000723400 /* ReservetionDetailsVc.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReservetionDetailsVc.xib; sourceTree = "<group>"; };
 		0430678C2661F36E00BDFE32 /* PartyDateVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyDateVc.swift; sourceTree = "<group>"; };
-		0430678D2661F36E00BDFE32 /* PartyDateVc.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PartyDateVc.xib; sourceTree = "<group>"; };
 		0430679426620A2A00BDFE32 /* NoArtistAvailableVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoArtistAvailableVc.swift; sourceTree = "<group>"; };
-		0430679526620A2A00BDFE32 /* NoArtistAvailableVc.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoArtistAvailableVc.xib; sourceTree = "<group>"; };
 		0430679F26620DD100BDFE32 /* AllLiveVideoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllLiveVideoVC.swift; sourceTree = "<group>"; };
-		043067A026620DD100BDFE32 /* AllLiveVideoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllLiveVideoVC.xib; sourceTree = "<group>"; };
 		043067AA26620F5100BDFE32 /* AllLiveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllLiveCell.swift; sourceTree = "<group>"; };
 		043067AB26620F5100BDFE32 /* AllLiveCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllLiveCell.xib; sourceTree = "<group>"; };
 		043067B12662102C00BDFE32 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
@@ -233,14 +226,47 @@
 		04323C0E24B225B1000F6395 /* OffersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersTableViewCell.swift; sourceTree = "<group>"; };
 		04323C0F24B225B1000F6395 /* OffersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OffersTableViewCell.xib; sourceTree = "<group>"; };
 		04323C1324B2426F000F6395 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
-		04323C1424B2426F000F6395 /* NotificationsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationsViewController.xib; sourceTree = "<group>"; };
 		04323C1724B243B4000F6395 /* NotificationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewCell.swift; sourceTree = "<group>"; };
 		04323C1824B243B4000F6395 /* NotificationsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationsTableViewCell.xib; sourceTree = "<group>"; };
 		04417E1D24AF6B370022C32F /* ReservationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationTableViewCell.swift; sourceTree = "<group>"; };
 		04417E1E24AF6B370022C32F /* ReservationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReservationTableViewCell.xib; sourceTree = "<group>"; };
 		044EDE1C24BDAC8B00EC8E61 /* ConfirmReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmReservationViewController.swift; sourceTree = "<group>"; };
-		044EDE1D24BDAC8B00EC8E61 /* ConfirmReservationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfirmReservationViewController.xib; sourceTree = "<group>"; };
 		044EDE2124BF011F00EC8E61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/RateViewController.xib; sourceTree = "<group>"; };
+		044FEAD626DD1BF400F44413 /* LanguageScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageScreenVC.swift; sourceTree = "<group>"; };
+		044FEAFD26DD256D00F44413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SearchViewController.xib; sourceTree = "<group>"; };
+		044FEB0326DD257700F44413 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/SearchViewController.strings; sourceTree = "<group>"; };
+		044FEB0826DD408300F44413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AllLiveVideoVC.xib; sourceTree = "<group>"; };
+		044FEB0B26DD408A00F44413 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/AllLiveVideoVC.strings; sourceTree = "<group>"; };
+		044FEB1026DD40AC00F44413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MostFamousVc.xib; sourceTree = "<group>"; };
+		044FEB1626DD40B200F44413 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/MostFamousVc.strings; sourceTree = "<group>"; };
+		044FEB1B26DD40CF00F44413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/NoArtistAvailableVc.xib; sourceTree = "<group>"; };
+		044FEB1E26DD40D500F44413 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/NoArtistAvailableVc.strings; sourceTree = "<group>"; };
+		044FEB2326DD412E00F44413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PartyDateVc.xib; sourceTree = "<group>"; };
+		044FEB2926DD413600F44413 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/PartyDateVc.strings; sourceTree = "<group>"; };
+		044FEB2E26DD416200F44413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PassWordInstructions.xib; sourceTree = "<group>"; };
+		044FEB3126DD416600F44413 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/PassWordInstructions.strings; sourceTree = "<group>"; };
+		044FEB3626DD41E100F44413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TermsAndConditionVc.xib; sourceTree = "<group>"; };
+		044FEB3926DD41E500F44413 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/TermsAndConditionVc.strings; sourceTree = "<group>"; };
+		044FEB3B26DD421B00F44413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ConfirmReservationViewController.xib; sourceTree = "<group>"; };
+		044FEB4126DD422000F44413 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ConfirmReservationViewController.strings; sourceTree = "<group>"; };
+		044FEB4326DD426C00F44413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SettingVc.xib; sourceTree = "<group>"; };
+		044FEB4626DD426F00F44413 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/SettingVc.strings; sourceTree = "<group>"; };
+		044FEB4B26DD42A500F44413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/UserRegisterTypeVc.xib; sourceTree = "<group>"; };
+		044FEB5126DD42A800F44413 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/UserRegisterTypeVc.strings; sourceTree = "<group>"; };
+		044FEB5626DD430D00F44413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LoginUserVC.xib; sourceTree = "<group>"; };
+		044FEB5C26DD431200F44413 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LoginUserVC.strings; sourceTree = "<group>"; };
+		044FEB6126DD439500F44413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/UserRegisterViewController.xib; sourceTree = "<group>"; };
+		044FEB6426DD439900F44413 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/UserRegisterViewController.strings; sourceTree = "<group>"; };
+		044FEB6626DD444400F44413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainRegisterVC.xib; sourceTree = "<group>"; };
+		044FEB6C26DD444700F44413 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/MainRegisterVC.strings; sourceTree = "<group>"; };
+		044FEB7126DD44B300F44413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/CommentsViewController.xib; sourceTree = "<group>"; };
+		044FEB7726DD44B800F44413 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/CommentsViewController.strings; sourceTree = "<group>"; };
+		044FEB7926DD44CE00F44413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ArtistProfileViewController.xib; sourceTree = "<group>"; };
+		044FEB7F26DD44D400F44413 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ArtistProfileViewController.strings; sourceTree = "<group>"; };
+		044FEB8426DD456300F44413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SearchResultTableViewCell.xib; sourceTree = "<group>"; };
+		044FEB8A26DD456A00F44413 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/SearchResultTableViewCell.strings; sourceTree = "<group>"; };
+		044FEB8C26DD458A00F44413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/NotificationsViewController.xib; sourceTree = "<group>"; };
+		044FEB8F26DD458D00F44413 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/NotificationsViewController.strings; sourceTree = "<group>"; };
 		04643AD7267538EE00510426 /* HelperMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperMethods.swift; sourceTree = "<group>"; };
 		04643AF3267569AA00510426 /* GeneralModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralModel.swift; sourceTree = "<group>"; };
 		046506E124B5D22600694741 /* OfferPriceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferPriceViewController.swift; sourceTree = "<group>"; };
@@ -252,7 +278,6 @@
 		046506F124B6157B00694741 /* LiveVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveVideoViewController.swift; sourceTree = "<group>"; };
 		046506F224B6157B00694741 /* LiveVideoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiveVideoViewController.xib; sourceTree = "<group>"; };
 		046506F624B62ECF00694741 /* UserRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegisterViewController.swift; sourceTree = "<group>"; };
-		046506F724B62ECF00694741 /* UserRegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserRegisterViewController.xib; sourceTree = "<group>"; };
 		046506FB24B780ED00694741 /* AvailableReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableReservationViewController.swift; sourceTree = "<group>"; };
 		046506FC24B780ED00694741 /* AvailableReservationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvailableReservationViewController.xib; sourceTree = "<group>"; };
 		0465070124B7983800694741 /* ArtistReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistReservationViewController.swift; sourceTree = "<group>"; };
@@ -279,7 +304,6 @@
 		046E3B9624AE12F6006D1385 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		046E3B9824AE131F006D1385 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		046E3BA224AE1A74006D1385 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		046E3BA324AE1A74006D1385 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		046E3BA624AE1A9E006D1385 /* ReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationViewController.swift; sourceTree = "<group>"; };
 		046E3BA724AE1A9E006D1385 /* ReservationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReservationViewController.xib; sourceTree = "<group>"; };
 		046E3BAA24AE1ABB006D1385 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
@@ -294,15 +318,12 @@
 		047F8C0924B3790400A86E86 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		047F8C0A24B3790400A86E86 /* SearchResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultViewController.xib; sourceTree = "<group>"; };
 		047F8C0D24B3792800A86E86 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
-		047F8C0E24B3792800A86E86 /* SearchResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultTableViewCell.xib; sourceTree = "<group>"; };
 		047F8C1224B37E9800A86E86 /* ArtistProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistProfileViewController.swift; sourceTree = "<group>"; };
-		047F8C1324B37E9800A86E86 /* ArtistProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistProfileViewController.xib; sourceTree = "<group>"; };
 		047F8C1624B3890E00A86E86 /* CommentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCell.swift; sourceTree = "<group>"; };
 		047F8C1724B3890E00A86E86 /* CommentsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsTableViewCell.xib; sourceTree = "<group>"; };
 		047F8C1A24B3895F00A86E86 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		047F8C1B24B3895F00A86E86 /* PhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCollectionViewCell.xib; sourceTree = "<group>"; };
 		047F8C1F24B3A9B900A86E86 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
-		047F8C2024B3A9B900A86E86 /* CommentsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsViewController.xib; sourceTree = "<group>"; };
 		047F8C2724B3AC8D00A86E86 /* FloatRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatRatingView.swift; sourceTree = "<group>"; };
 		047F8C2A24B3AE0800A86E86 /* RateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewController.swift; sourceTree = "<group>"; };
 		047F8C2E24B3AE5800A86E86 /* RateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateTableViewCell.swift; sourceTree = "<group>"; };
@@ -315,14 +336,10 @@
 		048569DD2665464F00B2670D /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		048569E22665501300B2670D /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
 		048DCB572656B38200319F9F /* LoginUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserVC.swift; sourceTree = "<group>"; };
-		048DCB582656B38200319F9F /* LoginUserVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginUserVC.xib; sourceTree = "<group>"; };
 		048DCB722656B4C800319F9F /* UserRegisterTypeVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegisterTypeVc.swift; sourceTree = "<group>"; };
-		048DCB732656B4C800319F9F /* UserRegisterTypeVc.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserRegisterTypeVc.xib; sourceTree = "<group>"; };
 		048DCB8D2657324000319F9F /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 		048DCB96265735C100319F9F /* TermsAndConditionVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionVc.swift; sourceTree = "<group>"; };
-		048DCB97265735C100319F9F /* TermsAndConditionVc.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermsAndConditionVc.xib; sourceTree = "<group>"; };
 		048DCBA6265742C400319F9F /* PassWordInstructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassWordInstructions.swift; sourceTree = "<group>"; };
-		048DCBA7265742C400319F9F /* PassWordInstructions.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PassWordInstructions.xib; sourceTree = "<group>"; };
 		048EDAD0267ACB57009CB854 /* FavouritModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritModel.swift; sourceTree = "<group>"; };
 		048EDAD5267ACCCA009CB854 /* FavouriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewModel.swift; sourceTree = "<group>"; };
 		048EDADA267ADC28009CB854 /* ReservationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationModel.swift; sourceTree = "<group>"; };
@@ -331,10 +348,8 @@
 		0491AD3526376D3E00398125 /* Button+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Extention.swift"; sourceTree = "<group>"; };
 		0491AD3A26376D5500398125 /* CustomDropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDropdown.swift; sourceTree = "<group>"; };
 		0491AD462637733000398125 /* MainRegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRegisterVC.swift; sourceTree = "<group>"; };
-		0491AD472637733000398125 /* MainRegisterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainRegisterVC.xib; sourceTree = "<group>"; };
 		0491AD5B2637830F00398125 /* TextField+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extention.swift"; sourceTree = "<group>"; };
 		049EA683267865D300EFB676 /* MostFamousVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostFamousVc.swift; sourceTree = "<group>"; };
-		049EA684267865D300EFB676 /* MostFamousVc.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MostFamousVc.xib; sourceTree = "<group>"; };
 		049EA68A2678768600EFB676 /* SearchResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultModel.swift; sourceTree = "<group>"; };
 		049EA68F2678777B00EFB676 /* SearchResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewModel.swift; sourceTree = "<group>"; };
 		04ABD7B026BFF06300CCD994 /* OffersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersModel.swift; sourceTree = "<group>"; };
@@ -342,11 +357,6 @@
 		04BF70CE2675167B00080730 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		04CA044E24B7FD5200660E7B /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		04CA044F24B7FD5200660E7B /* LocationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationViewController.xib; sourceTree = "<group>"; };
-		04CA045324B9FFD000660E7B /* MOLH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOLH.swift; sourceTree = "<group>"; };
-		04CA045524B9FFE000660E7B /* MOLHFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOLHFont.swift; sourceTree = "<group>"; };
-		04CA045724B9FFED00660E7B /* MOLHFontLocalizableViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOLHFontLocalizableViews.swift; sourceTree = "<group>"; };
-		04CA045924B9FFFA00660E7B /* MOLHLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOLHLanguage.swift; sourceTree = "<group>"; };
-		04CA045B24BA000700660E7B /* MOLHSizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOLHSizable.swift; sourceTree = "<group>"; };
 		04CA045E24BA023400660E7B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		04CA045F24BA023500660E7B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		04CA046324BA03F500660E7B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -360,7 +370,6 @@
 		04E028FF265D6E7200F5E373 /* PartyPriceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyPriceCell.swift; sourceTree = "<group>"; };
 		04E02900265D6E7200F5E373 /* PartyPriceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PartyPriceCell.xib; sourceTree = "<group>"; };
 		04E0290D265D77D600F5E373 /* SettingVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVc.swift; sourceTree = "<group>"; };
-		04E0290E265D77D600F5E373 /* SettingVc.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingVc.xib; sourceTree = "<group>"; };
 		04F2BA37265AA462007F4E53 /* PartyPriceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyPriceVC.swift; sourceTree = "<group>"; };
 		04F2BA38265AA462007F4E53 /* PartyPriceVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PartyPriceVC.xib; sourceTree = "<group>"; };
 		04F2BA4B265ACE39007F4E53 /* ArtistHomeVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistHomeVc.swift; sourceTree = "<group>"; };
@@ -529,7 +538,7 @@
 			children = (
 				04306793266209ED00BDFE32 /* NoArtistAvailableVc */,
 				0430678C2661F36E00BDFE32 /* PartyDateVc.swift */,
-				0430678D2661F36E00BDFE32 /* PartyDateVc.xib */,
+				044FEB2426DD412E00F44413 /* PartyDateVc.xib */,
 			);
 			path = PartyDateVc;
 			sourceTree = "<group>";
@@ -538,7 +547,7 @@
 			isa = PBXGroup;
 			children = (
 				0430679426620A2A00BDFE32 /* NoArtistAvailableVc.swift */,
-				0430679526620A2A00BDFE32 /* NoArtistAvailableVc.xib */,
+				044FEB1C26DD40CF00F44413 /* NoArtistAvailableVc.xib */,
 			);
 			path = NoArtistAvailableVc;
 			sourceTree = "<group>";
@@ -548,7 +557,7 @@
 			children = (
 				043067A926620F3400BDFE32 /* Cell */,
 				0430679F26620DD100BDFE32 /* AllLiveVideoVC.swift */,
-				043067A026620DD100BDFE32 /* AllLiveVideoVC.xib */,
+				044FEB0926DD408300F44413 /* AllLiveVideoVC.xib */,
 			);
 			path = AllLiveVideoVC;
 			sourceTree = "<group>";
@@ -576,7 +585,7 @@
 			isa = PBXGroup;
 			children = (
 				04323C1324B2426F000F6395 /* NotificationsViewController.swift */,
-				04323C1424B2426F000F6395 /* NotificationsViewController.xib */,
+				044FEB8D26DD458A00F44413 /* NotificationsViewController.xib */,
 				04F2BA72265B194D007F4E53 /* NotificayionCell */,
 			);
 			path = Notifications;
@@ -586,7 +595,7 @@
 			isa = PBXGroup;
 			children = (
 				044EDE1C24BDAC8B00EC8E61 /* ConfirmReservationViewController.swift */,
-				044EDE1D24BDAC8B00EC8E61 /* ConfirmReservationViewController.xib */,
+				044FEB3C26DD421B00F44413 /* ConfirmReservationViewController.xib */,
 			);
 			path = "confirm Reservation";
 			sourceTree = "<group>";
@@ -806,7 +815,7 @@
 			isa = PBXGroup;
 			children = (
 				046E3BA224AE1A74006D1385 /* SearchViewController.swift */,
-				046E3BA324AE1A74006D1385 /* SearchViewController.xib */,
+				044FEAFE26DD256D00F44413 /* SearchViewController.xib */,
 				04F2BA76265B1A08007F4E53 /* Cell */,
 			);
 			path = HomeVc;
@@ -889,7 +898,7 @@
 			isa = PBXGroup;
 			children = (
 				047F8C1224B37E9800A86E86 /* ArtistProfileViewController.swift */,
-				047F8C1324B37E9800A86E86 /* ArtistProfileViewController.xib */,
+				044FEB7A26DD44CE00F44413 /* ArtistProfileViewController.xib */,
 				04F2BA87265B3FD2007F4E53 /* CommentCell */,
 				04F2BA8B265B3FE6007F4E53 /* ArtistProfileCell */,
 			);
@@ -900,7 +909,7 @@
 			isa = PBXGroup;
 			children = (
 				047F8C1F24B3A9B900A86E86 /* CommentsViewController.swift */,
-				047F8C2024B3A9B900A86E86 /* CommentsViewController.xib */,
+				044FEB7226DD44B300F44413 /* CommentsViewController.xib */,
 			);
 			path = Comments;
 			sourceTree = "<group>";
@@ -938,7 +947,7 @@
 			isa = PBXGroup;
 			children = (
 				048DCB572656B38200319F9F /* LoginUserVC.swift */,
-				048DCB582656B38200319F9F /* LoginUserVC.xib */,
+				044FEB5726DD430D00F44413 /* LoginUserVC.xib */,
 			);
 			path = LoginUser;
 			sourceTree = "<group>";
@@ -947,7 +956,7 @@
 			isa = PBXGroup;
 			children = (
 				046506F624B62ECF00694741 /* UserRegisterViewController.swift */,
-				046506F724B62ECF00694741 /* UserRegisterViewController.xib */,
+				044FEB6226DD439500F44413 /* UserRegisterViewController.xib */,
 			);
 			path = UserRegister;
 			sourceTree = "<group>";
@@ -956,7 +965,7 @@
 			isa = PBXGroup;
 			children = (
 				048DCB722656B4C800319F9F /* UserRegisterTypeVc.swift */,
-				048DCB732656B4C800319F9F /* UserRegisterTypeVc.xib */,
+				044FEB4C26DD42A500F44413 /* UserRegisterTypeVc.xib */,
 			);
 			path = UserRegisterType;
 			sourceTree = "<group>";
@@ -965,7 +974,7 @@
 			isa = PBXGroup;
 			children = (
 				048DCB96265735C100319F9F /* TermsAndConditionVc.swift */,
-				048DCB97265735C100319F9F /* TermsAndConditionVc.xib */,
+				044FEB3726DD41E100F44413 /* TermsAndConditionVc.xib */,
 			);
 			path = TermsAndCondition;
 			sourceTree = "<group>";
@@ -974,7 +983,7 @@
 			isa = PBXGroup;
 			children = (
 				048DCBA6265742C400319F9F /* PassWordInstructions.swift */,
-				048DCBA7265742C400319F9F /* PassWordInstructions.xib */,
+				044FEB2F26DD416200F44413 /* PassWordInstructions.xib */,
 			);
 			path = PassWordInstructions;
 			sourceTree = "<group>";
@@ -983,7 +992,7 @@
 			isa = PBXGroup;
 			children = (
 				0491AD462637733000398125 /* MainRegisterVC.swift */,
-				0491AD472637733000398125 /* MainRegisterVC.xib */,
+				044FEB6726DD444400F44413 /* MainRegisterVC.xib */,
 			);
 			path = LoginOrRegister;
 			sourceTree = "<group>";
@@ -992,7 +1001,7 @@
 			isa = PBXGroup;
 			children = (
 				049EA683267865D300EFB676 /* MostFamousVc.swift */,
-				049EA684267865D300EFB676 /* MostFamousVc.xib */,
+				044FEB1126DD40AC00F44413 /* MostFamousVc.xib */,
 			);
 			path = MostFamousVc;
 			sourceTree = "<group>";
@@ -1029,22 +1038,9 @@
 			path = Location;
 			sourceTree = "<group>";
 		};
-		04CA045224B9FF8500660E7B /* MOLH */ = {
-			isa = PBXGroup;
-			children = (
-				04CA045324B9FFD000660E7B /* MOLH.swift */,
-				04CA045524B9FFE000660E7B /* MOLHFont.swift */,
-				04CA045724B9FFED00660E7B /* MOLHFontLocalizableViews.swift */,
-				04CA045924B9FFFA00660E7B /* MOLHLanguage.swift */,
-				04CA045B24BA000700660E7B /* MOLHSizable.swift */,
-			);
-			path = MOLH;
-			sourceTree = "<group>";
-		};
 		04CA045D24BA012300660E7B /* Localization */ = {
 			isa = PBXGroup;
 			children = (
-				04CA045224B9FF8500660E7B /* MOLH */,
 				04CA046424BA03F500660E7B /* Localizable.strings */,
 			);
 			path = Localization;
@@ -1080,7 +1076,8 @@
 			isa = PBXGroup;
 			children = (
 				04E0290D265D77D600F5E373 /* SettingVc.swift */,
-				04E0290E265D77D600F5E373 /* SettingVc.xib */,
+				044FEB4426DD426C00F44413 /* SettingVc.xib */,
+				044FEAD626DD1BF400F44413 /* LanguageScreenVC.swift */,
 			);
 			path = "New Group";
 			sourceTree = "<group>";
@@ -1202,7 +1199,7 @@
 			isa = PBXGroup;
 			children = (
 				047F8C0D24B3792800A86E86 /* SearchResultTableViewCell.swift */,
-				047F8C0E24B3792800A86E86 /* SearchResultTableViewCell.xib */,
+				044FEB8526DD456300F44413 /* SearchResultTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -1370,49 +1367,49 @@
 			buildActionMask = 2147483647;
 			files = (
 				04323C1124B225B1000F6395 /* OffersTableViewCell.xib in Resources */,
-				048DCBA9265742C400319F9F /* PassWordInstructions.xib in Resources */,
-				0430679726620A2A00BDFE32 /* NoArtistAvailableVc.xib in Resources */,
+				044FEB2D26DD416200F44413 /* PassWordInstructions.xib in Resources */,
+				044FEB1A26DD40CF00F44413 /* NoArtistAvailableVc.xib in Resources */,
 				0411F09524B0F20A00F95A72 /* FavouriteViewController.xib in Resources */,
 				046506E424B5D22600694741 /* OfferPriceViewController.xib in Resources */,
 				047F8C3D24B4FC4C00A86E86 /* ArtistRegisterViewController.xib in Resources */,
 				04323C1A24B243B4000F6395 /* NotificationsTableViewCell.xib in Resources */,
 				04CA046224BA03F500660E7B /* Localizable.strings in Resources */,
-				0491AD492637733000398125 /* MainRegisterVC.xib in Resources */,
+				044FEB6526DD444400F44413 /* MainRegisterVC.xib in Resources */,
 				047F8C3124B3AE5800A86E86 /* RateTableViewCell.xib in Resources */,
 				0411F09A24B1034F00F95A72 /* FavouriteTableViewCell.xib in Resources */,
 				046E3B6A24ADD863006D1385 /* LaunchScreen.storyboard in Resources */,
-				048DCB752656B4C800319F9F /* UserRegisterTypeVc.xib in Resources */,
+				044FEB4A26DD42A500F44413 /* UserRegisterTypeVc.xib in Resources */,
 				0422501B265E715000723400 /* ForgetPasswordVC3.xib in Resources */,
 				04E02902265D6E7300F5E373 /* PartyPriceCell.xib in Resources */,
 				046E3BB724AE88F0006D1385 /* MostFamousCollectionViewCell.xib in Resources */,
-				047F8C1024B3792800A86E86 /* SearchResultTableViewCell.xib in Resources */,
-				048DCB99265735C100319F9F /* TermsAndConditionVc.xib in Resources */,
+				044FEB8326DD456300F44413 /* SearchResultTableViewCell.xib in Resources */,
+				044FEB3526DD41E100F44413 /* TermsAndConditionVc.xib in Resources */,
 				04F2BA3A265AA462007F4E53 /* PartyPriceVC.xib in Resources */,
 				046506E924B5E51500694741 /* InformationViewController.xib in Resources */,
 				044EDE2024BF011F00EC8E61 /* RateViewController.xib in Resources */,
 				047F8C1D24B3895F00A86E86 /* PhotoCollectionViewCell.xib in Resources */,
-				047F8C2224B3A9B900A86E86 /* CommentsViewController.xib in Resources */,
+				044FEB7026DD44B300F44413 /* CommentsViewController.xib in Resources */,
 				043067AD26620F5100BDFE32 /* AllLiveCell.xib in Resources */,
 				046E3B6724ADD863006D1385 /* Assets.xcassets in Resources */,
 				04CA045124B7FD5200660E7B /* LocationViewController.xib in Resources */,
 				046506EE24B60B8900694741 /* ArtistAccountViewController.xib in Resources */,
-				046506F924B62ECF00694741 /* UserRegisterViewController.xib in Resources */,
+				044FEB6026DD439500F44413 /* UserRegisterViewController.xib in Resources */,
 				0422502A265E835B00723400 /* RateArtistVc.xib in Resources */,
-				0430678F2661F36E00BDFE32 /* PartyDateVc.xib in Resources */,
+				044FEB2226DD412E00F44413 /* PartyDateVc.xib in Resources */,
 				0465070D24B7A31D00694741 /* SilentViewController.xib in Resources */,
 				04323C0D24B21B8E000F6395 /* OffersViewController.xib in Resources */,
 				0465071224B7A6EC00694741 /* ArtistMoreViewController.xib in Resources */,
-				043067A226620DD100BDFE32 /* AllLiveVideoVC.xib in Resources */,
-				049EA686267865D300EFB676 /* MostFamousVc.xib in Resources */,
+				044FEB0726DD408300F44413 /* AllLiveVideoVC.xib in Resources */,
+				044FEB0F26DD40AC00F44413 /* MostFamousVc.xib in Resources */,
 				046506F424B6157B00694741 /* LiveVideoViewController.xib in Resources */,
 				04F2BA59265B02AF007F4E53 /* ArtistMoreCell.xib in Resources */,
-				046E3BA524AE1A74006D1385 /* SearchViewController.xib in Resources */,
+				044FEAFC26DD256D00F44413 /* SearchViewController.xib in Resources */,
 				04225032265E851800723400 /* CancelReservationVc.xib in Resources */,
-				044EDE1F24BDAC8B00EC8E61 /* ConfirmReservationViewController.xib in Resources */,
-				04E02910265D77D600F5E373 /* SettingVc.xib in Resources */,
+				044FEB3A26DD421B00F44413 /* ConfirmReservationViewController.xib in Resources */,
+				044FEB4226DD426C00F44413 /* SettingVc.xib in Resources */,
 				046E3BB324AE46B6006D1385 /* GE_SS_Two_Bold.otf in Resources */,
 				047F8C1924B3890E00A86E86 /* CommentsTableViewCell.xib in Resources */,
-				048DCB5A2656B38200319F9F /* LoginUserVC.xib in Resources */,
+				044FEB5526DD430D00F44413 /* LoginUserVC.xib in Resources */,
 				04225014265E714100723400 /* ForgetPasswordVC2.xib in Resources */,
 				0465070824B79B7900694741 /* ArtistReservationTableViewCell.xib in Resources */,
 				04F7497124B1D4D6004DE8CD /* CallCenterViewController.xib in Resources */,
@@ -1421,9 +1418,9 @@
 				0411F09124B0A5A400F95A72 /* EditProfileViewController.xib in Resources */,
 				04CF96F62651712D00184441 /* LoginVC.xib in Resources */,
 				046E3B6524ADD861006D1385 /* Main.storyboard in Resources */,
-				04323C1624B2426F000F6395 /* NotificationsViewController.xib in Resources */,
+				044FEB8B26DD458A00F44413 /* NotificationsViewController.xib in Resources */,
 				047F8C0C24B3790400A86E86 /* SearchResultViewController.xib in Resources */,
-				047F8C1524B37E9800A86E86 /* ArtistProfileViewController.xib in Resources */,
+				044FEB7826DD44CE00F44413 /* ArtistProfileViewController.xib in Resources */,
 				04F2BA4E265ACE39007F4E53 /* ArtistHomeVc.xib in Resources */,
 				046E3BB124AE1ADC006D1385 /* MoreViewController.xib in Resources */,
 				046E3BAD24AE1ABB006D1385 /* AccountViewController.xib in Resources */,
@@ -1620,7 +1617,6 @@
 				049EA685267865D300EFB676 /* MostFamousVc.swift in Sources */,
 				04643AD8267538EE00510426 /* HelperMethods.swift in Sources */,
 				046E3B9724AE12F6006D1385 /* TabBarController.swift in Sources */,
-				04CA045A24B9FFFA00660E7B /* MOLHLanguage.swift in Sources */,
 				0465071124B7A6EC00694741 /* ArtistMoreViewController.swift in Sources */,
 				04F7497024B1D4D6004DE8CD /* CallCenterViewController.swift in Sources */,
 				04CA048324BB07A700660E7B /* String.swift in Sources */,
@@ -1654,7 +1650,6 @@
 				0491AD3B26376D5500398125 /* CustomDropdown.swift in Sources */,
 				048DCB742656B4C800319F9F /* UserRegisterTypeVc.swift in Sources */,
 				0430679626620A2A00BDFE32 /* NoArtistAvailableVc.swift in Sources */,
-				04CA045624B9FFE000660E7B /* MOLHFont.swift in Sources */,
 				048569E32665501300B2670D /* AuthModel.swift in Sources */,
 				04ABD7B126BFF06400CCD994 /* OffersModel.swift in Sources */,
 				047F8C3C24B4FC4C00A86E86 /* ArtistRegisterViewController.swift in Sources */,
@@ -1662,6 +1657,7 @@
 				043067A126620DD100BDFE32 /* AllLiveVideoVC.swift in Sources */,
 				04F2BA4D265ACE39007F4E53 /* ArtistHomeVc.swift in Sources */,
 				04FAF37924DAED2D00F73189 /* GetServices.swift in Sources */,
+				044FEAD726DD1BF400F44413 /* LanguageScreenVC.swift in Sources */,
 				047F8C1824B3890E00A86E86 /* CommentsTableViewCell.swift in Sources */,
 				046506F824B62ECF00694741 /* UserRegisterViewController.swift in Sources */,
 				04225039265EC08100723400 /* ReservetionDetailsVc.swift in Sources */,
@@ -1673,13 +1669,11 @@
 				0411F09924B1034F00F95A72 /* FavouriteTableViewCell.swift in Sources */,
 				0411EB8926764E7D0023FA5B /* HomeViewModel.swift in Sources */,
 				0411EB8426764C700023FA5B /* HomeModel.swift in Sources */,
-				04CA045C24BA000700660E7B /* MOLHSizable.swift in Sources */,
 				04417E1F24AF6B370022C32F /* ReservationTableViewCell.swift in Sources */,
 				04F2BA6E265B1548007F4E53 /* Helper.swift in Sources */,
 				048569DE2665464F00B2670D /* Errors.swift in Sources */,
 				046506ED24B60B8900694741 /* ArtistAccountViewController.swift in Sources */,
 				047F8C2124B3A9B900A86E86 /* CommentsViewController.swift in Sources */,
-				04CA045424B9FFD000660E7B /* MOLH.swift in Sources */,
 				048EDADB267ADC28009CB854 /* ReservationModel.swift in Sources */,
 				047F8C3024B3AE5800A86E86 /* RateTableViewCell.swift in Sources */,
 				0430678E2661F36E00BDFE32 /* PartyDateVc.swift in Sources */,
@@ -1690,7 +1684,6 @@
 				046506E324B5D22600694741 /* OfferPriceViewController.swift in Sources */,
 				048DCBA8265742C400319F9F /* PassWordInstructions.swift in Sources */,
 				047F8C2824B3AC8D00A86E86 /* FloatRatingView.swift in Sources */,
-				04CA045824B9FFED00660E7B /* MOLHFontLocalizableViews.swift in Sources */,
 				043067B22662102C00BDFE32 /* CustomImageView.swift in Sources */,
 				0491AD3626376D3E00398125 /* Button+Extention.swift in Sources */,
 				047F8C3824B4CBC100A86E86 /* ChooseUSerTypeVC.swift in Sources */,
@@ -1735,6 +1728,159 @@
 				044EDE2124BF011F00EC8E61 /* Base */,
 			);
 			name = RateViewController.xib;
+			sourceTree = "<group>";
+		};
+		044FEAFE26DD256D00F44413 /* SearchViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				044FEAFD26DD256D00F44413 /* Base */,
+				044FEB0326DD257700F44413 /* ar */,
+			);
+			name = SearchViewController.xib;
+			sourceTree = "<group>";
+		};
+		044FEB0926DD408300F44413 /* AllLiveVideoVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				044FEB0826DD408300F44413 /* Base */,
+				044FEB0B26DD408A00F44413 /* ar */,
+			);
+			name = AllLiveVideoVC.xib;
+			sourceTree = "<group>";
+		};
+		044FEB1126DD40AC00F44413 /* MostFamousVc.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				044FEB1026DD40AC00F44413 /* Base */,
+				044FEB1626DD40B200F44413 /* ar */,
+			);
+			name = MostFamousVc.xib;
+			sourceTree = "<group>";
+		};
+		044FEB1C26DD40CF00F44413 /* NoArtistAvailableVc.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				044FEB1B26DD40CF00F44413 /* Base */,
+				044FEB1E26DD40D500F44413 /* ar */,
+			);
+			name = NoArtistAvailableVc.xib;
+			sourceTree = "<group>";
+		};
+		044FEB2426DD412E00F44413 /* PartyDateVc.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				044FEB2326DD412E00F44413 /* Base */,
+				044FEB2926DD413600F44413 /* ar */,
+			);
+			name = PartyDateVc.xib;
+			sourceTree = "<group>";
+		};
+		044FEB2F26DD416200F44413 /* PassWordInstructions.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				044FEB2E26DD416200F44413 /* Base */,
+				044FEB3126DD416600F44413 /* ar */,
+			);
+			name = PassWordInstructions.xib;
+			sourceTree = "<group>";
+		};
+		044FEB3726DD41E100F44413 /* TermsAndConditionVc.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				044FEB3626DD41E100F44413 /* Base */,
+				044FEB3926DD41E500F44413 /* ar */,
+			);
+			name = TermsAndConditionVc.xib;
+			sourceTree = "<group>";
+		};
+		044FEB3C26DD421B00F44413 /* ConfirmReservationViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				044FEB3B26DD421B00F44413 /* Base */,
+				044FEB4126DD422000F44413 /* ar */,
+			);
+			name = ConfirmReservationViewController.xib;
+			sourceTree = "<group>";
+		};
+		044FEB4426DD426C00F44413 /* SettingVc.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				044FEB4326DD426C00F44413 /* Base */,
+				044FEB4626DD426F00F44413 /* ar */,
+			);
+			name = SettingVc.xib;
+			sourceTree = "<group>";
+		};
+		044FEB4C26DD42A500F44413 /* UserRegisterTypeVc.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				044FEB4B26DD42A500F44413 /* Base */,
+				044FEB5126DD42A800F44413 /* ar */,
+			);
+			name = UserRegisterTypeVc.xib;
+			sourceTree = "<group>";
+		};
+		044FEB5726DD430D00F44413 /* LoginUserVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				044FEB5626DD430D00F44413 /* Base */,
+				044FEB5C26DD431200F44413 /* ar */,
+			);
+			name = LoginUserVC.xib;
+			sourceTree = "<group>";
+		};
+		044FEB6226DD439500F44413 /* UserRegisterViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				044FEB6126DD439500F44413 /* Base */,
+				044FEB6426DD439900F44413 /* ar */,
+			);
+			name = UserRegisterViewController.xib;
+			sourceTree = "<group>";
+		};
+		044FEB6726DD444400F44413 /* MainRegisterVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				044FEB6626DD444400F44413 /* Base */,
+				044FEB6C26DD444700F44413 /* ar */,
+			);
+			name = MainRegisterVC.xib;
+			sourceTree = "<group>";
+		};
+		044FEB7226DD44B300F44413 /* CommentsViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				044FEB7126DD44B300F44413 /* Base */,
+				044FEB7726DD44B800F44413 /* ar */,
+			);
+			name = CommentsViewController.xib;
+			sourceTree = "<group>";
+		};
+		044FEB7A26DD44CE00F44413 /* ArtistProfileViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				044FEB7926DD44CE00F44413 /* Base */,
+				044FEB7F26DD44D400F44413 /* ar */,
+			);
+			name = ArtistProfileViewController.xib;
+			sourceTree = "<group>";
+		};
+		044FEB8526DD456300F44413 /* SearchResultTableViewCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				044FEB8426DD456300F44413 /* Base */,
+				044FEB8A26DD456A00F44413 /* ar */,
+			);
+			name = SearchResultTableViewCell.xib;
+			sourceTree = "<group>";
+		};
+		044FEB8D26DD458A00F44413 /* NotificationsViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				044FEB8C26DD458A00F44413 /* Base */,
+				044FEB8F26DD458D00F44413 /* ar */,
+			);
+			name = NotificationsViewController.xib;
 			sourceTree = "<group>";
 		};
 		046E3B6324ADD861006D1385 /* Main.storyboard */ = {

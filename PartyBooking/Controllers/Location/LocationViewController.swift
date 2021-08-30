@@ -50,7 +50,7 @@ class LocationViewController: UIViewController{
     
     func setUPLocalize(){
         chooseBtn.setTitle("choose".localized, for: .normal)
-        if MOLHLanguage.currentAppleLanguage() == "en" {
+        if "lang".localized  == "en" {
             chooseBtn.titleLabel!.font = UIFont(name: "Georgia-Bold", size: 17)
         }
     }

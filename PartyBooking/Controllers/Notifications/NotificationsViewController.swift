@@ -39,7 +39,7 @@ class NotificationsViewController: UIViewController {
     func setUPLocalize(){
         titleLabel.text = "notification".localized
         noNotificationLabel.text = "noNotification".localized
-        if MOLHLanguage.currentAppleLanguage() == "en" {
+        if "lang".localized  == "en" {
                  let font = UIFont(name: "Georgia-Bold", size: 14)
                      titleLabel.font = font
                      noNotificationLabel.font = font

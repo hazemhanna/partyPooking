@@ -17,8 +17,8 @@ class CommentsTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         profileView.layer.cornerRadius = profileView.frame.width / 2
-        if MOLHLanguage.currentAppleLanguage() == "en" {
-        
+        if "lang".localized  == "en" {
+
         }
 
     }

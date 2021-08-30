@@ -359,6 +359,123 @@
             </objects>
             <point key="canvasLocation" x="553.62318840579712" y="-60.267857142857139"/>
         </scene>
+        <!--Language ScreenVC-->
+        <scene sceneID="CoZ-Ma-qoJ">
+            <objects>
+                <viewController storyboardIdentifier="LanguageScreenVC" id="uFU-hd-utj" customClass="LanguageScreenVC" customModule="PartyBooking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xPA-5c-GZu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="86cf8e28-357a-44e8-9038-273466afd91a" translatesAutoresizingMaskIntoConstraints="NO" id="PQ2-ZG-nSJ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PartyBooking" translatesAutoresizingMaskIntoConstraints="NO" id="cuc-Eu-S6i">
+                                <rect key="frame" x="32" y="148" width="350" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0Bj-PA-o2R"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="welcome.let's start" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9F-u4-Ssr">
+                                <rect key="frame" x="137.5" y="210" width="139" height="17.5"/>
+                                <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="fCZ-ns-Ipu">
+                                <rect key="frame" x="8" y="728" width="398" height="126"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gy0-vf-w8o">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="55"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qcq-gp-NGN">
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="55"/>
+                                                <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="16"/>
+                                                <state key="normal" title="English ">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="EnglishLanguageAction:" destination="uFU-hd-utj" eventType="touchUpInside" id="yG0-z8-n4U"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.043137254899999998" green="0.4039215686" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="Qcq-gp-NGN" firstAttribute="width" secondItem="Gy0-vf-w8o" secondAttribute="width" id="2iy-Ve-wJx"/>
+                                            <constraint firstItem="Qcq-gp-NGN" firstAttribute="centerY" secondItem="Gy0-vf-w8o" secondAttribute="centerY" id="BwO-cb-Zw5"/>
+                                            <constraint firstAttribute="height" constant="55" id="GZW-t9-R4B"/>
+                                            <constraint firstItem="Qcq-gp-NGN" firstAttribute="centerX" secondItem="Gy0-vf-w8o" secondAttribute="centerX" id="JdG-WT-lsY"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="Zwd-CS-f6m"/>
+                                            <constraint firstItem="Qcq-gp-NGN" firstAttribute="height" secondItem="Gy0-vf-w8o" secondAttribute="height" id="oPq-g8-c6e"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TW2-MG-Hoj">
+                                        <rect key="frame" x="0.0" y="71" width="398" height="55"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T8c-2K-JzU">
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="55"/>
+                                                <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="16"/>
+                                                <state key="normal" title="عربي">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="ArabicLanguageAction:" destination="uFU-hd-utj" eventType="touchUpInside" id="B88-LH-LJN"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.16862745100000001" green="0.70588235290000001" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="T8c-2K-JzU" firstAttribute="centerX" secondItem="TW2-MG-Hoj" secondAttribute="centerX" id="L6c-aj-6mP"/>
+                                            <constraint firstItem="T8c-2K-JzU" firstAttribute="centerY" secondItem="TW2-MG-Hoj" secondAttribute="centerY" id="NW9-gg-gJ3"/>
+                                            <constraint firstItem="T8c-2K-JzU" firstAttribute="height" secondItem="TW2-MG-Hoj" secondAttribute="height" id="mE9-mt-a7E"/>
+                                            <constraint firstItem="T8c-2K-JzU" firstAttribute="width" secondItem="TW2-MG-Hoj" secondAttribute="width" id="pxZ-IN-WmX"/>
+                                            <constraint firstAttribute="height" constant="55" id="rqi-V4-G2t"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kNB-gj-54X"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fCZ-ns-Ipu" firstAttribute="leading" secondItem="kNB-gj-54X" secondAttribute="leading" constant="8" id="6yJ-4H-SyJ"/>
+                            <constraint firstItem="PQ2-ZG-nSJ" firstAttribute="centerX" secondItem="xPA-5c-GZu" secondAttribute="centerX" id="8g0-3i-r1K"/>
+                            <constraint firstItem="cuc-Eu-S6i" firstAttribute="leading" secondItem="kNB-gj-54X" secondAttribute="leading" constant="32" id="AQ8-hS-0c0"/>
+                            <constraint firstItem="PQ2-ZG-nSJ" firstAttribute="centerY" secondItem="xPA-5c-GZu" secondAttribute="centerY" id="NVQ-3z-3oS"/>
+                            <constraint firstItem="kNB-gj-54X" firstAttribute="trailing" secondItem="fCZ-ns-Ipu" secondAttribute="trailing" constant="8" id="Q9G-Qq-Cgd"/>
+                            <constraint firstItem="cuc-Eu-S6i" firstAttribute="top" secondItem="kNB-gj-54X" secondAttribute="top" constant="60" id="RPV-Ld-TnJ"/>
+                            <constraint firstItem="kNB-gj-54X" firstAttribute="trailing" secondItem="cuc-Eu-S6i" secondAttribute="trailing" constant="32" id="TUL-wQ-hpy"/>
+                            <constraint firstItem="K9F-u4-Ssr" firstAttribute="top" secondItem="cuc-Eu-S6i" secondAttribute="bottom" constant="32" id="WG0-k4-Vfz"/>
+                            <constraint firstItem="PQ2-ZG-nSJ" firstAttribute="height" secondItem="xPA-5c-GZu" secondAttribute="height" id="WcR-cR-1Wf"/>
+                            <constraint firstItem="PQ2-ZG-nSJ" firstAttribute="width" secondItem="xPA-5c-GZu" secondAttribute="width" id="bCI-Li-QDW"/>
+                            <constraint firstItem="kNB-gj-54X" firstAttribute="bottom" secondItem="fCZ-ns-Ipu" secondAttribute="bottom" constant="8" id="dNu-0A-fhA"/>
+                            <constraint firstItem="K9F-u4-Ssr" firstAttribute="centerX" secondItem="xPA-5c-GZu" secondAttribute="centerX" id="p2h-i4-jTJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Nox-fb-1gH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NOc-jr-ACc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1494" y="621"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BRY-Hx-acI">
+            <objects>
+                <navigationController storyboardIdentifier="LanguageScreenNav" automaticallyAdjustsScrollViewInsets="NO" id="hpw-Wa-5kx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ENV-Tt-QcS">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uFU-hd-utj" kind="relationship" relationship="rootViewController" id="n4j-06-nNg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lG7-D2-sTu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="581" y="621"/>
+        </scene>
     </scenes>
     <resources>
         <image name="86cf8e28-357a-44e8-9038-273466afd91a" width="720" height="1280"/>

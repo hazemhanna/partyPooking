@@ -36,17 +36,48 @@ struct ReservationModel: Codable {
     }
 }
 
-// MARK: - Datum
-struct Reservation: Codable {
+
+
+struct Reservation : Codable {
     let id, userID, artistID: Int?
-    let status, date: String?
+    let status: String?
+    let date: String?
+    let fromTime, toTime: String?
+    let price, taxes, rate: Int
+    let address: String?
+    let isRated: Int?
+    let cancelReason: String?
+    let artist: artistName?
+    let partyType, area: Areas?
 
     enum CodingKeys: String, CodingKey {
         case id
         case userID = "user_id"
         case artistID = "artist_id"
         case status, date
-      
+        case fromTime = "from_time"
+        case toTime = "to_time"
+        case price, taxes, rate, address
+        case isRated = "is_rated"
+        case cancelReason = "cancel_reason"
+        case artist
+        case partyType = "party_type"
+        case area
     }
 }
 
+
+// MARK: - Country
+struct artistName: Codable {
+    let id: Int?
+    let firstName,lastName: String?
+    let favourite: Int?
+
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case favourite
+        case firstName = "first_name"
+        case lastName = "last_name"
+    }
+}

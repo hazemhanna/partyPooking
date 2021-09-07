@@ -68,8 +68,6 @@ struct Artists: Codable {
     }
 }
 
-
-
 // MARK: - PartyTypeModelJSON
 struct PartyTypeModelJSON: Codable {
     let status: Bool?

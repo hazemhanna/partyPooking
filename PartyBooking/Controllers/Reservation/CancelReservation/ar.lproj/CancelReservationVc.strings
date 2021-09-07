@@ -1,0 +1,15 @@
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "LW4-Ly-tBH"; */
+"LW4-Ly-tBH.normalTitle" = "الغاء";
+
+/* Class = "UILabel"; text = "Are you sure to cancel ? "; ObjectID = "QBM-x0-tJQ"; */
+"QBM-x0-tJQ.text" = "هل انت متاكد ؟ ";
+
+/* Class = "UILabel"; text = "Cancel reasons"; ObjectID = "g5E-nd-pOW"; */
+"g5E-nd-pOW.text" = "سبب الالفاء";
+
+/* Class = "UIButton"; normalTitle = "Confirm"; ObjectID = "iJX-YD-vdV"; */
+"iJX-YD-vdV.normalTitle" = "تاكيد";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "kcH-V7-Zno"; */
+"kcH-V7-Zno.normalTitle" = "تم";

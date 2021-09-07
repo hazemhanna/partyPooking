@@ -77,7 +77,7 @@ func getLive() {
         }
     }, onError: { (error) in
         self.liveVM.dismissIndicator()
-        displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
+      //  displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
     }).disposed(by: disposeBag)
  }
 }

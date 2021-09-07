@@ -9,11 +9,15 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import IQKeyboardManagerSwift
+
 
 class LoginUserVC: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passTextField: UITextField!
+    fileprivate var returnHandler : IQKeyboardReturnKeyHandler!
+
     
     private let AuthViewModel = AuthenticationViewModel()
     var disposeBag = DisposeBag()
@@ -21,8 +25,18 @@ class LoginUserVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         DataBinding()
+        updateReturnHandler()
     }
 
+    func updateReturnHandler(){
+        if returnHandler == nil {
+            returnHandler = IQKeyboardReturnKeyHandler(controller: self)
+        }else{
+            returnHandler.removeResponderFromView(self.view)
+            returnHandler.addResponderFromView(self.view)
+        }
+        returnHandler.lastTextFieldReturnKeyType = .done
+    }
     
     override func viewWillAppear(_ animated: Bool) {
       self.navigationController?.navigationBar.isHidden = true

@@ -16,79 +16,64 @@ let CellHeight = 80
 
 class ReservationViewController: UIViewController {
     
-    @IBOutlet weak var currentReservationTableViewConstraint: NSLayoutConstraint!
-    @IBOutlet weak var endedReservationTableViewConstraint: NSLayoutConstraint!
-    @IBOutlet weak var cancelReservationTableViewConstraint: NSLayoutConstraint!
-    @IBOutlet weak var currentReservationTableView: UITableView!
-    @IBOutlet weak var endedReservationTableView: UITableView!
-    @IBOutlet weak var canceledReservationTableView: UITableView!
-    @IBOutlet weak var currentLabel : UILabel!
-    @IBOutlet weak var endedLabel : UILabel!
-    @IBOutlet weak var canceledLabel : UILabel!
+    @IBOutlet weak var reservationTableView: UITableView!
     @IBOutlet weak var titleLabel : UILabel!
+    @IBOutlet weak var typeTextField: TextFieldDropDown!
+    
+    var token = Helper.getAPIToken() ?? ""
 
+    
     private let reservationVM = ReservationViewModel()
     var disposeBag = DisposeBag()
+    var currentReservation: [Reservation]=[]
+    var endedReservation: [Reservation]=[]
+    var cancelReservation: [Reservation]=[]
     
     
-    
-    var currentReservation: [Reservation]=[]{
-        didSet {
-            if currentReservation.count > 0{
-                let dynamicTableHeight = currentReservation.count * CellHeight
-                currentReservationTableViewConstraint.constant = CGFloat(dynamicTableHeight)
-            }else{
-                currentReservationTableViewConstraint.constant = 73
-            }
-        }
-    }
-    
-    
-    var endedReservation: [Reservation]=[]{
-        didSet {
-            if endedReservation.count > 0{
-                let dynamicTableHeight = endedReservation.count * CellHeight
-                endedReservationTableViewConstraint.constant = CGFloat(dynamicTableHeight)
-            }else{
-                endedReservationTableViewConstraint.constant = 73
-            }
-        }
-    }
-    
-    var cancelReservation: [Reservation]=[]{
-        didSet {
-            if cancelReservation.count > 0{
-                let dynamicTableHeight = currentReservation.count * CellHeight
-                cancelReservationTableViewConstraint.constant = CGFloat(dynamicTableHeight)
-            }else{
-                cancelReservationTableViewConstraint.constant = 73
-            }
-        }
-    }
-    
+    var typeArr: [String]=["current".localized, "ended".localized, "cancelReservation".localized]
+
+
+    var type = "current"
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        currentReservationTableView.register(UINib(nibName: "ReservationTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
-        endedReservationTableView.register(UINib(nibName: "ReservationTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
-        canceledReservationTableView.register(UINib(nibName: "ReservationTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
-
+        reservationTableView.register(UINib(nibName: "ReservationTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
         setUPLocalize()
-        reservationVM.showIndicator()
-        getReservation()
-        
+        setuptypeDropDown()
+        typeTextField.text = "current".localized
     }
     
+    
+    func setuptypeDropDown() {
+        typeTextField.optionArray = self.typeArr
+        typeTextField.didSelect { (selectedText, index, id) in
+            if index == 0 {
+                self.type = "current"
+            }else if index == 1 {
+                self.type = "ended"
+            }else {
+                self.type = "cancel"
+            }
+            self.reservationTableView.reloadData()
+        }
+    }
     
     func setUPLocalize(){
         titleLabel.text = "myReservation".localized
-        currentLabel.text = "current".localized
-        endedLabel.text = "ended".localized
   }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = true
+        if token == "" {
+            let main = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Nav")
+           if let appDelegate = UIApplication.shared.delegate {
+               appDelegate.window??.rootViewController = main
+           }
+        }else{
+         reservationVM.showIndicator()
+         getReservation()
+         self.navigationController?.navigationBar.isHidden = true
+        }
     }
+    
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = false
     }
@@ -100,9 +85,9 @@ class ReservationViewController: UIViewController {
 
 extension ReservationViewController : UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if tableView == currentReservationTableView{
+        if type == "current"{
             return currentReservation.count
-        }else if tableView == endedReservationTableView{
+        }else if type == "ended"{
             return endedReservation.count
         }else{
             return cancelReservation.count
@@ -111,10 +96,12 @@ extension ReservationViewController : UITableViewDelegate , UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ReservationTableViewCell
-        if tableView == currentReservationTableView{
+        if type == "current"{
             cell.cancelBtn.isHidden = false
             cell.confirmNumberLabel.textColor = #colorLiteral(red: 0.4392156863, green: 0.4392156863, blue: 0.4392156863, alpha: 1)
             cell.NumberLabel.textColor = #colorLiteral(red: 0.4392156863, green: 0.4392156863, blue: 0.4392156863, alpha: 1)
+            cell.NumberLabel.text = "\(self.currentReservation[indexPath.row].id ?? 0)"
+
             cell.cancel = {
                 let vc = CancelReservationVc.instantiateFromNib()
                vc!.onClickCancel = {
@@ -127,14 +114,17 @@ extension ReservationViewController : UITableViewDelegate , UITableViewDataSourc
                 
                 vc?.onClickDone = {
                     self.presentingViewController?.dismiss(animated: true)
+                    self.canceReservation(booking_id: self.currentReservation[indexPath.row].id ?? 0, cancel_reason:  vc?.reasonTF.text ?? "")
                 }
                self.present(vc!, animated: true, completion: nil)
            }
-        }else if tableView == endedReservationTableView{
+        }else if type == "ended"{
             cell.cancelBtn.isHidden = true
             cell.confirmNumberLabel.textColor = #colorLiteral(red: 0.4392156863, green: 0.4392156863, blue: 0.4392156863, alpha: 1)
             cell.NumberLabel.textColor = #colorLiteral(red: 0.4392156863, green: 0.4392156863, blue: 0.4392156863, alpha: 1)
+            cell.NumberLabel.text = "\(self.endedReservation[indexPath.row].id ?? 0)"
         }else{
+            cell.NumberLabel.text = "\(self.cancelReservation[indexPath.row].id ?? 0)"
             cell.cancelBtn.isHidden = true
             cell.confirmNumberLabel.textColor = #colorLiteral(red: 0.9529411765, green: 0.3137254902, blue: 0.3137254902, alpha: 1)
             cell.NumberLabel.textColor = #colorLiteral(red: 0.9529411765, green: 0.3137254902, blue: 0.3137254902, alpha: 1)
@@ -145,16 +135,20 @@ extension ReservationViewController : UITableViewDelegate , UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if tableView == currentReservationTableView{
+        if type == "current"{
             let destinationVC = ReservetionDetailsVc.instantiateFromNib()
+            destinationVC?.reservation = currentReservation[indexPath.row]
             self.navigationController?.pushViewController(destinationVC!, animated: true)
-        }else if tableView == endedReservationTableView{
+        }else if type == "ended"{
             let destinationVC = ReservetionDetailsVc.instantiateFromNib()
             destinationVC!.ended = true
+            destinationVC?.reservation = endedReservation[indexPath.row]
+
             self.navigationController?.pushViewController(destinationVC!, animated: true)
         }else{
             let destinationVC = ReservetionDetailsVc.instantiateFromNib()
             destinationVC!.cancel = true
+            destinationVC?.reservation = cancelReservation[indexPath.row]
             self.navigationController?.pushViewController(destinationVC!, animated: true)
         }
     }
@@ -175,15 +169,26 @@ func getReservation() {
         self.currentReservation = data.result?.currentBookings?.data ?? []
         self.endedReservation = data.result?.completedBookings?.data ?? []
         self.cancelReservation = data.result?.cancelledBookings?.data ?? []
-        self.currentReservationTableView.reloadData()
-        self.endedReservationTableView.reloadData()
-        self.canceledReservationTableView.reloadData()
-        
+        self.reservationTableView.reloadData()
     }
 }, onError: { (error) in
     self.reservationVM.dismissIndicator()
-    displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
+  //  displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
 }).disposed(by: disposeBag)
 }
 
+    
+    func canceReservation(booking_id:Int,cancel_reason : String) {
+        reservationVM.cancelReservation(booking_id: booking_id, cancel_reason: cancel_reason).subscribe(onNext: { (data) in
+        self.reservationVM.dismissIndicator()
+        if data.status ?? false {
+            self.getReservation()
+            self.reservationTableView.reloadData()
+        }
+    }, onError: { (error) in
+        self.reservationVM.dismissIndicator()
+    }).disposed(by: disposeBag)
+    }
+
+    
 }

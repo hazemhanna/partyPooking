@@ -8,6 +8,7 @@
 
 import UIKit
 import FSCalendar
+import IQKeyboardManagerSwift
 
 
 class ArtistReservationViewController: UIViewController ,FSCalendarDataSource, FSCalendarDelegate{
@@ -17,14 +18,26 @@ class ArtistReservationViewController: UIViewController ,FSCalendarDataSource, F
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var searchTf: UITextField!
     @IBOutlet weak var searchImage: UIImage!
+    fileprivate var returnHandler : IQKeyboardReturnKeyHandler!
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         reservationTableView.register(UINib(nibName: "ArtistReservationTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
         setUPLocalize()
+        updateReturnHandler()
     }
     
+    
+    func updateReturnHandler(){
+        if returnHandler == nil {
+            returnHandler = IQKeyboardReturnKeyHandler(controller: self)
+        }else{
+            returnHandler.removeResponderFromView(self.view)
+            returnHandler.addResponderFromView(self.view)
+        }
+        returnHandler.lastTextFieldReturnKeyType = .done
+    }
     
     func setUPLocalize(){
            titleLabel.text = "reservation".localized
@@ -34,7 +47,7 @@ class ArtistReservationViewController: UIViewController ,FSCalendarDataSource, F
              titleLabel.font = font
              searchTf.font =  font
          }
-        }
+    }
     
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {

@@ -11,15 +11,22 @@ import RxSwift
 import RxCocoa
 
 class TermsAndConditionVc: UIViewController {
-
+    
     @IBOutlet weak var termsTextView: UITextView!
     private let AuthViewModel = AuthenticationViewModel()
     var disposeBag = DisposeBag()
     
+    var type = String()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.AuthViewModel.showIndicator()
-        getTerms()
+        if type == "terms"{
+            getTerms()
+        }else{
+            about()
+        }
+        
         termsTextView.isEditable = false
         termsTextView.isSelectable = false
     }
@@ -45,5 +52,24 @@ class TermsAndConditionVc: UIViewController {
             displayMessage(title: "", message: "Something went wrong in getting terms", status: .error, forController: self)
         }).disposed(by: disposeBag)
     }
+    
+    
+    func about() {
+        AuthViewModel.about().subscribe(onNext: { (data) in
+            self.AuthViewModel.dismissIndicator()
+            if data.status ?? false {
+                if "lang".localized == "ar" {
+                    self.termsTextView.text = data.result?.arAboutus ?? ""
+                }else{
+                    self.termsTextView.text = data.result?.enAboutus ?? ""
+
+                }
+                }
+        }, onError: { (error) in
+            self.AuthViewModel.dismissIndicator()
+            displayMessage(title: "", message: "Something went wrong in getting terms", status: .error, forController: self)
+        }).disposed(by: disposeBag)
+    }
+    
     
 }

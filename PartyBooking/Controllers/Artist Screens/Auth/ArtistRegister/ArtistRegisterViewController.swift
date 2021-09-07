@@ -8,6 +8,7 @@
 
 import UIKit
 import FlagPhoneNumber
+import IQKeyboardManagerSwift
 
 
 class ArtistRegisterViewController: UIViewController {
@@ -36,6 +37,9 @@ class ArtistRegisterViewController: UIViewController {
     @IBOutlet weak var partyTextField: TextFieldDropDown!
     @IBOutlet weak var banckTextField: UITextField!
     
+    fileprivate var returnHandler : IQKeyboardReturnKeyHandler!
+
+    
     var titles = ["5","4","3","2","1"]
     var gender = ["male","female"]
 
@@ -61,6 +65,17 @@ class ArtistRegisterViewController: UIViewController {
         genderDropDown()
         serviceTypeDropDown()
         partTypeDropDown()
+        updateReturnHandler()
+    }
+    
+    func updateReturnHandler(){
+        if returnHandler == nil {
+            returnHandler = IQKeyboardReturnKeyHandler(controller: self)
+        }else{
+            returnHandler.removeResponderFromView(self.view)
+            returnHandler.addResponderFromView(self.view)
+        }
+        returnHandler.lastTextFieldReturnKeyType = .done
     }
     
     func setupCountryPHone(){

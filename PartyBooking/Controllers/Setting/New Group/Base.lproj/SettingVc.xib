@@ -82,8 +82,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JBh-eg-6eu">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5eb-Z6-O4n">
-                                        <rect key="frame" x="20" y="25" width="75.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اللغة العربية" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5eb-Z6-O4n">
+                                        <rect key="frame" x="20" y="25" width="80" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -96,7 +96,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <action selector="arabicButtonWithSender:" destination="vrc-1W-LpA" eventType="touchUpInside" id="Xqm-pn-emw"/>
+                                            <action selector="ArabicLanguageAction:" destination="vrc-1W-LpA" eventType="touchUpInside" id="cMb-UH-mcF"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -116,8 +116,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FoR-28-Ykq">
                                 <rect key="frame" x="0.0" y="72" width="414" height="70"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vwx-Yh-E2P">
-                                        <rect key="frame" x="20" y="25" width="75.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vwx-Yh-E2P">
+                                        <rect key="frame" x="20" y="25" width="134.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -130,7 +130,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <action selector="EnglishButtonWithSender:" destination="vrc-1W-LpA" eventType="touchUpInside" id="AOn-Dx-iGF"/>
+                                            <action selector="EnglishLanguageAction:" destination="vrc-1W-LpA" eventType="touchUpInside" id="j7Y-UW-6VC"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -166,8 +166,6 @@
             </view>
             <connections>
                 <outlet property="ArabicBtn" destination="J3c-E5-xT6" id="zDa-Wa-XF9"/>
-                <outlet property="EnglishLbl" destination="Vwx-Yh-E2P" id="6LD-W4-kHv"/>
-                <outlet property="arabicLbl" destination="5eb-Z6-O4n" id="P2r-c6-Ocd"/>
                 <outlet property="contentStack" destination="Aao-2H-ie4" id="KvB-8A-d7m"/>
                 <outlet property="englishBtn" destination="319-Zk-tsF" id="ze2-FR-f6w"/>
                 <outlet property="titleLbl" destination="Ifp-qX-x62" id="B8H-5p-AFB"/>

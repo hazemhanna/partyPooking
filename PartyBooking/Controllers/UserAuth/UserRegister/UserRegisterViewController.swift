@@ -10,6 +10,8 @@ import UIKit
 import FlagPhoneNumber
 import RxSwift
 import RxCocoa
+import IQKeyboardManagerSwift
+
 
 class UserRegisterViewController: UIViewController {
 
@@ -39,7 +41,9 @@ class UserRegisterViewController: UIViewController {
     @IBOutlet weak var doneBtn : UIButton!
     @IBOutlet weak var privcyLabel : UILabel!
     @IBOutlet weak var termsConditionsButton: CustomButtons!
+    fileprivate var returnHandler : IQKeyboardReturnKeyHandler!
 
+    
     let listController: FPNCountryListViewController = FPNCountryListViewController(style: .grouped)
     private let AuthViewModel = AuthenticationViewModel()
     var disposeBag = DisposeBag()
@@ -75,11 +79,24 @@ class UserRegisterViewController: UIViewController {
         DataBinding()
         AuthViewModel.showIndicator()
         getAllCountry()
+        updateReturnHandler()
     }
+    
+    
+    func updateReturnHandler(){
+        if returnHandler == nil {
+            returnHandler = IQKeyboardReturnKeyHandler(controller: self)
+        }else{
+            returnHandler.removeResponderFromView(self.view)
+            returnHandler.addResponderFromView(self.view)
+        }
+        returnHandler.lastTextFieldReturnKeyType = .done
+    }
+    
 
     func setUPLocalize(){
         titleLabel.text = "information".localized
-        doneBtn.setTitle("done".localized, for: .normal)
+        doneBtn.setTitle("Register".localized, for: .normal)
         fNameLabel.text = "first".localized
         lNameLabel.text = "last".localized
         emailLabel.text = "email".localized
@@ -148,12 +165,13 @@ class UserRegisterViewController: UIViewController {
     
     @objc func PrivecyTapAction(_ sender: UITapGestureRecognizer) {
           let main = TermsAndConditionVc.instantiateFromNib()
+           main?.type = "terms"
           self.navigationController?.pushViewController(main!, animated: true)
       }
     
        func setupMultiColorRegisterLabel() {
-          let main_string = "read and agree terms and condition"
-          let coloredString2 = "terms and condition"
+        let main_string = "read and agree terms and condition".localized
+        let coloredString2 = "terms and condition".localized
           let Range2 = (main_string as NSString).range(of: coloredString2)
           let attribute2 = NSMutableAttributedString.init(string: main_string)
           attribute2.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.blue , range: Range2)
@@ -309,6 +327,7 @@ extension UserRegisterViewController : FPNTextFieldDelegate {
     func fpnDidValidatePhoneNumber(textField: FPNTextField, isValid: Bool) {
    
     }
+    
 }
 
 extension UserRegisterViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {

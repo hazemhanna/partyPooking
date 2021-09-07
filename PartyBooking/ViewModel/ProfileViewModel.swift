@@ -18,6 +18,7 @@ struct ProfileViewModel {
     var last_name = BehaviorSubject<String>(value: "")
     var phone = BehaviorSubject<String>(value: "")
     var country = BehaviorSubject<String>(value: "")
+    var password = BehaviorSubject<String>(value: "")
 
     
     func showIndicator() {
@@ -111,5 +112,46 @@ struct ProfileViewModel {
         let observer = GetServices.shared.getAllCountry()
         return observer
     }
+    
+    
+    func postBooking(artistId  : Int, area_id:Int, party_type_id : Int,address : String,lat: Double,long : Double, price : Int , date : String , from_time : String ,to_time : String ) -> Observable<ContactUSModelJson> {
+        let params: [String: Any] = [
+            "artist_id": artistId,
+            "area_id": area_id,
+            "party_type_id": party_type_id,
+            "address": address,
+            "lat": lat,
+            "long": long,
+            "price": price,
+            "date": date,
+            "from_time": from_time,
+            "to_time": to_time,
+            ]
+        let observer = AddServices.shared.postBooking(params: params)
+        return observer
+    }
+    
+    
+    //MARK:- Attempt to register
+    func attemptToRegister(image : UIImage,countryId:Int) -> Observable<AuthMdelsJSON> {
+        let bindedEmail = (try? self.email.value()) ?? ""
+        let bindedPassword = (try? self.password.value()) ?? ""
+        let bindedFirstName = (try? self.first_name.value()) ?? ""
+        let bindedLastName = (try? self.last_name.value()) ?? ""
+        let bindedPhone = (try? self.phone.value()) ?? ""
+        
+        let params: [String: Any] = [
+            "email": bindedEmail,
+            "password": bindedPassword,
+            "country_id": countryId,
+            "first_name": bindedFirstName ,
+            "last_name": bindedLastName ,
+            "phone": bindedPhone ,
+            ]
+        let observer = Authentication.shared.postRegister(image:image,params: params)
+        return observer
+    }
+    
+    
     
 }

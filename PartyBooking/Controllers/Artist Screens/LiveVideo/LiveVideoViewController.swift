@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 class LiveVideoViewController: UIViewController {
 
     @IBOutlet weak var closeBtn : UIButton!
     @IBOutlet weak var messageTF : UITextField!
+    fileprivate var returnHandler : IQKeyboardReturnKeyHandler!
 
+    
     override var prefersStatusBarHidden: Bool {
         return true
     }
@@ -21,9 +24,19 @@ class LiveVideoViewController: UIViewController {
         super.viewDidLoad()
         closeBtn.layer.cornerRadius = closeBtn.frame.width / 2
         messageTF.layer.cornerRadius = 50
-
-
+        updateReturnHandler()
     }
+    
+    func updateReturnHandler(){
+        if returnHandler == nil {
+            returnHandler = IQKeyboardReturnKeyHandler(controller: self)
+        }else{
+            returnHandler.removeResponderFromView(self.view)
+            returnHandler.addResponderFromView(self.view)
+        }
+        returnHandler.lastTextFieldReturnKeyType = .done
+    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         

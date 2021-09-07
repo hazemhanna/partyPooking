@@ -47,3 +47,33 @@ struct Offers: Codable {
         case status, from, to
     }
 }
+
+// MARK: - OffersModelJSON
+struct OffersDetailsModelJSON: Codable {
+    let status: Bool?
+    let message: String?
+    let result: OffersDetail?
+}
+
+// MARK: - Result
+struct OffersDetail : Codable {
+    let id, artistID: Int?
+    let artistName, title, resultDescription: String?
+    let offerPartyType: String?
+    let url, attachmentType, status, from: String?
+    let to: String?
+    let offerValue: Int?
+
+    enum CodingKeys: String, CodingKey {
+        case id
+        case artistID = "artist_id"
+        case artistName = "artist_name"
+        case title
+        case resultDescription = "description"
+        case offerPartyType = "offer_party_type"
+        case url
+        case attachmentType = "attachment_type"
+        case status, from, to
+        case offerValue = "offer_value"
+    }
+}

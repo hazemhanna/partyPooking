@@ -80,6 +80,7 @@ extension SearchResultViewController : UITableViewDelegate , UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let destinationVC = ArtistProfileViewController.instantiateFromNib()
         destinationVC!.artistId = filterdArtist[indexPath.row].id ?? 0
+        destinationVC?.search = true
         self.navigationController?.pushViewController(destinationVC!, animated: true)
         
         
@@ -103,7 +104,7 @@ func getsearchResult(area : Int , date : String , type : Int) {
         }
     }, onError: { (error) in
         self.searchVM.dismissIndicator()
-        displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
+        //displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
     }).disposed(by: disposeBag)
  }
     
@@ -112,12 +113,12 @@ func getsearchResult(area : Int , date : String , type : Int) {
         searchVM.addFavourite(artistId: artistId).subscribe(onNext: { (data) in
             self.searchVM.dismissIndicator()
             if data.status ?? false {
-                displayMessage(title: "", message: data.message ?? "", status: .success, forController: self)
+               // displayMessage(title: "", message: data.message ?? "", status: .success, forController: self)
                 self.getsearchResult(area: self.areaId, date: self.date, type:self.typeId )
             }
         }, onError: { (error) in
             self.searchVM.dismissIndicator()
-            displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
+           // displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
         }).disposed(by: disposeBag)
      }
       

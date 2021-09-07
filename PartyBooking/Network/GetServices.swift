@@ -79,7 +79,52 @@ struct GetServices {
         }
     }//END of GET All Jobs
     
-
+    
+    func about() -> Observable<AboutUSModelJSON> {
+        return Observable.create { (observer) -> Disposable in
+            let url = ConfigURLs.getAbout
+            
+            Alamofire.request(url, method: .post, parameters: nil, encoding: JSONEncoding.default, headers: nil)
+                .validate(statusCode: 200..<300)
+                .responseJSON { (response: DataResponse<Any>) in
+                    do {
+                        let data = try JSONDecoder().decode(AboutUSModelJSON.self, from: response.data!)
+                        observer.onNext(data)
+                    } catch {
+                        print(error.localizedDescription)
+                        observer.onError(error)
+                    }
+            }
+            
+            return Disposables.create()
+        }
+    }//END of GET All Jobs
+    
+    func contactUs(params: [String : Any]) -> Observable<ContactUSModelJson> {
+        return Observable.create { (observer) -> Disposable in
+            let url = ConfigURLs.contactUs
+            
+            let token = Helper.getAPIToken() ?? ""
+            let headers = [
+                "Authorization": "Bearer \(token)"
+            ]
+            
+            Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers)
+                .validate(statusCode: 200..<300)
+                .responseJSON { (response: DataResponse<Any>) in
+                    do {
+                        let data = try JSONDecoder().decode(ContactUSModelJson.self, from: response.data!)
+                        observer.onNext(data)
+                    } catch {
+                        print(error.localizedDescription)
+                        observer.onError(error)
+                    }
+            }
+            
+            return Disposables.create()
+        }
+    }//END of GET All Jobs
+    
     
     
     func getHome() -> Observable<HomeModelJSON> {
@@ -302,6 +347,8 @@ struct GetServices {
     }
     
     
+    
+    
     func getProfile() -> Observable<ProfileModelJSON> {
         return Observable.create { (observer) -> Disposable in
             let url = ConfigURLs.getProfile
@@ -324,6 +371,26 @@ struct GetServices {
         }
     }//END
     
-    
+    func getNotification() -> Observable<NotificationModelJSON> {
+        return Observable.create { (observer) -> Disposable in
+            let url = ConfigURLs.getNotification
+            let token = Helper.getAPIToken() ?? ""
+            let headers = [
+                "Authorization": "Bearer \(token)"
+            ]
+            Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers)
+                .validate(statusCode: 200..<300)
+                .responseJSON { (response: DataResponse<Any>) in
+                    do {
+                        let data = try JSONDecoder().decode(NotificationModelJSON.self, from: response.data!)
+                        observer.onNext(data)
+                    } catch {
+                        print(error.localizedDescription)
+                        observer.onError(error)
+                    }
+            }
+            return Disposables.create()
+        }
+    }//END
     
 }

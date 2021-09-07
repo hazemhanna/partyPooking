@@ -26,6 +26,8 @@ class ArtistProfileViewController: UIViewController{
     @IBOutlet weak var rateLabel : UILabel!
     @IBOutlet weak var addressLabel : UILabel!
     @IBOutlet weak var descreptionTV : UITextView!
+   
+    var token = Helper.getAPIToken() ?? ""
 
     
     @IBOutlet weak var backButton: UIButton! {
@@ -39,6 +41,10 @@ class ArtistProfileViewController: UIViewController{
     var disposeBag = DisposeBag()
     var comments = [Comment]()
     var work = [ArtistWork]()
+    
+    var partyPrice = [PartyPrice]()
+    var country = [Country]()
+    var search = false
     var isFavourite = Int()
     var artistId = Int()
     override func viewDidLoad() {
@@ -111,6 +117,7 @@ class ArtistProfileViewController: UIViewController{
     
     
     @IBAction func likeButton(sender: UIButton) {
+        if token != ""{
         homeVM.showIndicator()
         if isFavourite == 0 {
             self.isFavourite = 1
@@ -119,17 +126,35 @@ class ArtistProfileViewController: UIViewController{
             self.isFavourite = 0
             self.likeBtn.setImage( UIImage(named:"heart"), for: .normal)
         }
-        
-        addFavourite(artistId: self.artistId)
+      addFavourite(artistId: self.artistId)
+    }else{
+        if "lang".localized == "ar" {
+            displayMessage(title: "", message: "من فضلك قم بتسجيل الدخول ", status: .error, forController: self)
+        }else{
+            displayMessage(title: "", message: "please login first", status: .error, forController: self)
+
+        }
+       }
     }
-    
     
     @IBAction func backButton(sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
-    
-    
-}
+   
+    @IBAction func reservation(sender: UIButton) {
+            if search {
+                    let destinationVC = FinalBookingVC.instantiateFromNib()
+                     destinationVC?.artistId = self.artistId 
+                    self.navigationController?.pushViewController(destinationVC!, animated: true)
+            }else{
+                let destinationVC = BookingVC.instantiateFromNib()
+                destinationVC?.artistId = self.artistId
+                destinationVC?.partyType = self.partyPrice
+                destinationVC?.country = self.country
+                self.navigationController?.pushViewController(destinationVC!, animated: true)
+        }
+     }
+  }
 
 
 extension ArtistProfileViewController : UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -186,11 +211,11 @@ extension ArtistProfileViewController {
         homeVM.addFavourite(artistId: artistId).subscribe(onNext: { (data) in
             self.homeVM.dismissIndicator()
             if data.status ?? false {
-                displayMessage(title: "", message: data.message ?? "", status: .success, forController: self)
+                //displayMessage(title: "", message: data.message ?? "", status: .success, forController: self)
             }
         }, onError: { (error) in
             self.homeVM.dismissIndicator()
-            displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
+           // displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
         }).disposed(by: disposeBag)
      }
     
@@ -199,11 +224,26 @@ extension ArtistProfileViewController {
         self.homeVM.dismissIndicator()
         if data.status ?? false {
             self.comments = data.result?.comments ?? []
+            self.partyPrice = data.result?.partyPrices ?? []
+            self.country = data.result?.areas ?? []
             self.commentTableView.reloadData()
             self.rateLabel.text = "\(data.result?.rate ?? 0)"
-            self.addressLabel.text = data.result?.address ?? ""
+            if self.search {
+            for party in  self.partyPrice {
+                if party.id ?? 0 == Helper.getPID() ?? 0 {
+                    Helper.savePrice(date: Int(party.partyPrice ?? 0) )
+                    self.amountValueLabel.text = String(party.partyPrice ?? 0)  + " " + "SR".localized
+                }
+            }
+            }else{
+                self.amountValueLabel.text = String(data.result?.partyPrice ?? 0 ) + " " + "SR".localized
+            }
+            if "lang".localized == "ar" {
+                self.addressLabel.text = data.result?.country?.arName ?? ""
+            }else{
+                self.addressLabel.text = data.result?.country?.enName ?? ""
+            }
             self.descreptionTV.text = data.result?.resultDescription ?? ""
-            self.amountValueLabel.text = String(data.result?.partyPrice ?? 0 ) + "" + "SR"
             self.isFavourite = data.result?.favourite ?? 0
 
             if data.result?.favourite == 0 {
@@ -219,7 +259,7 @@ extension ArtistProfileViewController {
         }
     }, onError: { (error) in
         self.homeVM.dismissIndicator()
-        displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
+        //displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
     }).disposed(by: disposeBag)
  }
 
@@ -233,7 +273,7 @@ extension ArtistProfileViewController {
         }
     }, onError: { (error) in
         self.homeVM.dismissIndicator()
-        displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
+       // displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
     }).disposed(by: disposeBag)
  }
     

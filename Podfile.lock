@@ -27,6 +27,8 @@ PODS:
   - GoogleMaps/Base (3.9.0)
   - GoogleMaps/Maps (3.9.0):
     - GoogleMaps/Base
+  - GooglePlaces (3.9.0):
+    - GoogleMaps/Base (= 3.9.0)
   - GoogleSignIn (5.0.2):
     - AppAuth (~> 1.2)
     - GTMAppAuth (~> 1.0)
@@ -39,6 +41,8 @@ PODS:
   - GTMSessionFetcher/Core (1.5.0)
   - GTMSessionFetcher/Full (1.5.0):
     - GTMSessionFetcher/Core (= 1.5.0)
+  - IQKeyboardManagerSwift (6.5.6)
+  - JWTDecode (2.6.2)
   - Kingfisher (5.4.0)
   - MOLH (1.4.3)
   - RNActivityView (0.0.7)
@@ -53,6 +57,9 @@ PODS:
     - SwiftMessages/App (= 6.0.2)
   - SwiftMessages/App (6.0.2)
   - SwiftyJSON (5.0.0)
+  - TwitterCore (3.2.0)
+  - TwitterKit5 (5.2.0):
+    - TwitterCore (>= 3.1.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.8.2)
@@ -63,7 +70,10 @@ DEPENDENCIES:
   - FlagPhoneNumber
   - FSCalendar
   - GoogleMaps
+  - GooglePlaces
   - GoogleSignIn
+  - IQKeyboardManagerSwift
+  - JWTDecode
   - Kingfisher (~> 5.4.0)
   - MOLH
   - RNActivityView (= 0.0.7)
@@ -72,6 +82,7 @@ DEPENDENCIES:
   - SVProgressHUD (~> 2.2.5)
   - SwiftMessages (~> 6.0.2)
   - SwiftyJSON (~> 5.0.0)
+  - TwitterKit5
 
 SPEC REPOS:
   trunk:
@@ -85,9 +96,12 @@ SPEC REPOS:
     - FlagPhoneNumber
     - FSCalendar
     - GoogleMaps
+    - GooglePlaces
     - GoogleSignIn
     - GTMAppAuth
     - GTMSessionFetcher
+    - IQKeyboardManagerSwift
+    - JWTDecode
     - Kingfisher
     - MOLH
     - RNActivityView
@@ -97,6 +111,8 @@ SPEC REPOS:
     - SVProgressHUD
     - SwiftMessages
     - SwiftyJSON
+    - TwitterCore
+    - TwitterKit5
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
@@ -109,9 +125,12 @@ SPEC CHECKSUMS:
   FlagPhoneNumber: 3712455b95f66cb0f2016fef7d9e34cddf8c7f9a
   FSCalendar: 5245140456fcbcac5824c203b98bd8068bdfee1a
   GoogleMaps: 4b5346bddfe6911bb89155d43c903020170523ac
+  GooglePlaces: 1634d019549b969d40fe0ccb0b9513055adebe01
   GoogleSignIn: 7137d297ddc022a7e0aa4619c86d72c909fa7213
   GTMAppAuth: 197a8dabfea5d665224aa00d17f164fc2248dab9
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  JWTDecode: 2cc56f950540c95fd11b14ff6388f7c6cb9760ab
   Kingfisher: 9c8f2cc6710334e06f32ba2b45e77707d5e2f0c9
   MOLH: e45827d200aeb1310641090fd8cd03ad2b42ae72
   RNActivityView: d1bde2ec4956ad8f69da9650afe7898311221a8e
@@ -121,7 +140,9 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftMessages: 8b3cc68dba2f1c91aac1a74c90b10287aac35371
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
+  TwitterKit5: 64095dfefcf39be2355711ef27112d55e340d90e
 
-PODFILE CHECKSUM: ec99125f75bfd6eb60202490c28ea0e0b7893c7d
+PODFILE CHECKSUM: 9cede964c92a1fc612215b2ae847a84143561456
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.10.2

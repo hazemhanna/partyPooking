@@ -39,25 +39,12 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sIz-0D-4G7">
-                                <rect key="frame" x="12" y="35" width="25" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="Ctj-98-HEb"/>
-                                    <constraint firstAttribute="width" constant="25" id="gvi-ly-YFR"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="back"/>
-                                <connections>
-                                    <action selector="backButtonWithSender:" destination="Q8y-e3-sAy" eventType="touchUpInside" id="2fc-60-RZj"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.16862745100000001" green="0.74117647060000003" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="74" id="1xM-40-4xh"/>
                             <constraint firstAttribute="bottom" secondItem="yiG-3y-bt2" secondAttribute="bottom" constant="12" id="Fp7-uV-ArK"/>
-                            <constraint firstAttribute="bottom" secondItem="sIz-0D-4G7" secondAttribute="bottom" constant="14" id="eL3-1N-xAP"/>
                             <constraint firstItem="yiG-3y-bt2" firstAttribute="centerX" secondItem="ZLZ-BI-uME" secondAttribute="centerX" id="icE-Kn-yd4"/>
-                            <constraint firstItem="sIz-0D-4G7" firstAttribute="leading" secondItem="ZLZ-BI-uME" secondAttribute="leading" constant="12" id="irM-yD-cUq"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -77,11 +64,10 @@
                 <outlet property="liveTableView" destination="nUB-9t-Iab" id="Neb-b4-NXg"/>
                 <outlet property="titleLabel" destination="yiG-3y-bt2" id="qIH-Q4-Gsl"/>
             </connections>
-            <point key="canvasLocation" x="-329" y="-64"/>
+            <point key="canvasLocation" x="-330.43478260869568" y="-64.285714285714278"/>
         </viewController>
     </objects>
     <resources>
-        <image name="back" width="37.5" height="37.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

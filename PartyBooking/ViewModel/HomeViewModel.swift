@@ -87,4 +87,29 @@ struct HomeViewModel {
         return observer
     }
     
+    func getOfferDetails(artistId : Int ) -> Observable<OffersDetailsModelJSON> {
+        let params: [String: Any] = [
+            "artist_id": artistId,
+            ]
+        let observer = AddServices.shared.OffersDetails(params: params)
+        return observer
+    }
+   
+    func getSrearchOffer(area_id:Int, party_type_id : Int,date :String) -> Observable<OffersModelJSON> {
+        
+        let params: [String: Any] = [
+            "date": date,
+            "area_id": area_id,
+            "part_type_id": party_type_id,]
+        
+        let observer = AddServices.shared.OffersSearch(params: params)
+        return observer
+    }
+    
+    
+    func getNotification() -> Observable<NotificationModelJSON> {
+        let observer = GetServices.shared.getNotification()
+        return observer
+    }
+    
 }

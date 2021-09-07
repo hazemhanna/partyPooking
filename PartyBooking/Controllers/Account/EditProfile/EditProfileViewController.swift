@@ -10,6 +10,7 @@ import UIKit
 import FlagPhoneNumber
 import RxSwift
 import RxCocoa
+import IQKeyboardManagerSwift
 
 
 class EditProfileViewController: UIViewController {
@@ -26,6 +27,8 @@ class EditProfileViewController: UIViewController {
     @IBOutlet weak var countryTextField: TextFieldDropDown!
     @IBOutlet weak var fNameTextField: UITextField!
     @IBOutlet weak var phoneTextField: FPNTextField!
+
+    fileprivate var returnHandler : IQKeyboardReturnKeyHandler!
 
     private let profileVM = ProfileViewModel()
     var disposeBag = DisposeBag()
@@ -49,6 +52,7 @@ class EditProfileViewController: UIViewController {
         setUPLocalize()
         setupCountryPHone()
         getAllCountry()
+        updateReturnHandler()
     }
     func setUPLocalize(){
         saveBtn.layer.cornerRadius = 7
@@ -87,6 +91,16 @@ class EditProfileViewController: UIViewController {
             fNameTextField.textAlignment = .right
             phoneTextField.textAlignment = .right
         }
+    }
+    
+    func updateReturnHandler(){
+        if returnHandler == nil {
+            returnHandler = IQKeyboardReturnKeyHandler(controller: self)
+        }else{
+            returnHandler.removeResponderFromView(self.view)
+            returnHandler.addResponderFromView(self.view)
+        }
+        returnHandler.lastTextFieldReturnKeyType = .done
     }
     
     func setupCountryPHone(){
@@ -190,7 +204,7 @@ func getProfile() {
         }
     }, onError: { (error) in
         self.profileVM.dismissIndicator()
-        displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
+       // displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
     }).disposed(by: disposeBag)
  }
     
@@ -219,9 +233,15 @@ func getProfile() {
         profileVM.editProfile(country_id: country_id).subscribe(onNext: { (data) in
             self.profileVM.dismissIndicator()
             if data.status ?? false {
-                displayMessage(title: "", message: data.message ?? "", status: .success, forController: self)
+                if "lang".localized  == "en" {
+                    displayMessage(title: "", message: "done change profile", status: .success, forController: self)
+                }else{
+                    displayMessage(title: "", message: "تم تغير الملف الشخصي", status: .success, forController: self)
+                }
                 self.navigationController?.popViewController(animated: true)
-
+            }else {
+                self.profileVM.dismissIndicator()
+                displayMessage(title: "", message: data.message ?? "", status: .error, forController: self)
             }
         }, onError: { (error) in
             self.profileVM.dismissIndicator()

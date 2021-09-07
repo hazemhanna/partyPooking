@@ -39,7 +39,7 @@ class SearchResultTableViewCell: UITableViewCell {
         artistNameValueLabel.text = name
         countryLabel.text = locaction
         rateCountLabel.text = "\(rate)"
-        amountValueLabel.text = "\(price) SR"
+        amountValueLabel.text = "\(price)" + ("SR".localized)
         if isFavourite == 0 {
             self.isFavourite = false
             favourtieBtn.setImage( UIImage(named:"heart (1).png"), for: .normal)
@@ -55,7 +55,7 @@ class SearchResultTableViewCell: UITableViewCell {
     
     func setUPLocalize(){
         amountLabel.text = "amount".localized
-        taxesLabel.text = "\("taxes".localized) + SR 450"
+        taxesLabel.text = "\("taxes".localized) 450 \("SR".localized)"
         if "lang".localized  == "en" {
           let font = UIFont(name: "Georgia-Bold", size: 8)
         amountLabel.font = font

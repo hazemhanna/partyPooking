@@ -85,4 +85,30 @@ class Authentication {
         }
     }//END of POST Login
     
+    
+    func postLoginWithSocial(params: [String: Any]) -> Observable<AuthMdelsJSON> {
+        return Observable.create { (observer) -> Disposable in
+            let url = ConfigURLs.userLoginWithSocial
+            
+            Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers: nil)
+                .validate(statusCode: 200..<300)
+                .responseJSON { (response: DataResponse<Any>) in
+                    do {
+                        let loginData = try JSONDecoder().decode(AuthMdelsJSON.self, from: response.data!)
+                        if let data = loginData.result {
+                           Helper.saveAPIToken(token: data.accessToken ?? "")
+
+                        }
+                        observer.onNext(loginData)
+                    } catch {
+                        print(error.localizedDescription)
+                        observer.onError(error)
+                    }
+            }
+            
+            
+            return Disposables.create()
+        }
+    }//END of POST Login
+    
 }

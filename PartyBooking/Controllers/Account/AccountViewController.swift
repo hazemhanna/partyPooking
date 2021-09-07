@@ -17,12 +17,11 @@ class AccountViewController: UIViewController {
     @IBOutlet weak var profilehImage : UIImageView!
     @IBOutlet weak var titleLabel : UILabel!
     @IBOutlet weak var nameLabel : UILabel!
-
-    
+    var token = Helper.getAPIToken() ?? ""
     private let profileVM = ProfileViewModel()
     var disposeBag = DisposeBag()
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
          style()
@@ -46,15 +45,20 @@ class AccountViewController: UIViewController {
         
     }
     
-    
-    
-   
     override func viewWillAppear(_ animated: Bool) {
-        self.profileVM.showIndicator()
-        getProfile()
-         self.navigationController?.navigationBar.isHidden = true
-       }
-       override func viewWillDisappear(_ animated: Bool) {
+        if token == "" {
+            let main = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Nav")
+           if let appDelegate = UIApplication.shared.delegate {
+               appDelegate.window??.rootViewController = main
+           }
+        }else{
+            self.profileVM.showIndicator()
+            getProfile()
+             self.navigationController?.navigationBar.isHidden = true
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
            self.navigationController?.navigationBar.isHidden = false
        }
     
@@ -84,7 +88,7 @@ func getProfile() {
         }
     }, onError: { (error) in
         self.profileVM.dismissIndicator()
-        displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
+        //displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
     }).disposed(by: disposeBag)
  }
     
@@ -92,11 +96,11 @@ func getProfile() {
         profileVM.changePhoto(image: image).subscribe(onNext: { (data) in
             self.profileVM.dismissIndicator()
             if data.status ?? false {
-                displayMessage(title: "", message: data.message ?? "", status: .success, forController: self)
+               // displayMessage(title: "", message: data.message ?? "", status: .success, forController: self)
             }
         }, onError: { (error) in
             self.profileVM.dismissIndicator()
-            displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
+           // displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
         }).disposed(by: disposeBag)
      }
 }

@@ -13,9 +13,7 @@
 		0411F09024B0A5A400F95A72 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411F08E24B0A5A400F95A72 /* EditProfileViewController.swift */; };
 		0411F09124B0A5A400F95A72 /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0411F08F24B0A5A400F95A72 /* EditProfileViewController.xib */; };
 		0411F09424B0F20A00F95A72 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411F09224B0F20A00F95A72 /* FavouriteViewController.swift */; };
-		0411F09524B0F20A00F95A72 /* FavouriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0411F09324B0F20A00F95A72 /* FavouriteViewController.xib */; };
 		0411F09924B1034F00F95A72 /* FavouriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411F09724B1034F00F95A72 /* FavouriteTableViewCell.swift */; };
-		0411F09A24B1034F00F95A72 /* FavouriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0411F09824B1034F00F95A72 /* FavouriteTableViewCell.xib */; };
 		0420A83326B8C2C000643213 /* LiveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0420A83226B8C2C000643213 /* LiveModel.swift */; };
 		0420A84C26B8C43B00643213 /* LiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0420A84B26B8C43B00643213 /* LiveViewModel.swift */; };
 		0422500C265E713200723400 /* ForgetPasswordVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422500A265E713200723400 /* ForgetPasswordVC1.swift */; };
@@ -27,9 +25,7 @@
 		04225029265E835B00723400 /* RateArtistVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04225027265E835B00723400 /* RateArtistVc.swift */; };
 		0422502A265E835B00723400 /* RateArtistVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04225028265E835B00723400 /* RateArtistVc.xib */; };
 		04225031265E851800723400 /* CancelReservationVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422502F265E851800723400 /* CancelReservationVc.swift */; };
-		04225032265E851800723400 /* CancelReservationVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04225030265E851800723400 /* CancelReservationVc.xib */; };
 		04225039265EC08100723400 /* ReservetionDetailsVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04225037265EC08000723400 /* ReservetionDetailsVc.swift */; };
-		0422503A265EC08100723400 /* ReservetionDetailsVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04225038265EC08000723400 /* ReservetionDetailsVc.xib */; };
 		0430678E2661F36E00BDFE32 /* PartyDateVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430678C2661F36E00BDFE32 /* PartyDateVc.swift */; };
 		0430679626620A2A00BDFE32 /* NoArtistAvailableVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430679426620A2A00BDFE32 /* NoArtistAvailableVc.swift */; };
 		043067A126620DD100BDFE32 /* AllLiveVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430679F26620DD100BDFE32 /* AllLiveVideoVC.swift */; };
@@ -37,12 +33,22 @@
 		043067AD26620F5100BDFE32 /* AllLiveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043067AB26620F5100BDFE32 /* AllLiveCell.xib */; };
 		043067B22662102C00BDFE32 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043067B12662102C00BDFE32 /* CustomImageView.swift */; };
 		04323C0C24B21B8E000F6395 /* OffersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04323C0A24B21B8E000F6395 /* OffersViewController.swift */; };
-		04323C0D24B21B8E000F6395 /* OffersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04323C0B24B21B8E000F6395 /* OffersViewController.xib */; };
 		04323C1024B225B1000F6395 /* OffersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04323C0E24B225B1000F6395 /* OffersTableViewCell.swift */; };
 		04323C1124B225B1000F6395 /* OffersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04323C0F24B225B1000F6395 /* OffersTableViewCell.xib */; };
 		04323C1524B2426F000F6395 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04323C1324B2426F000F6395 /* NotificationsViewController.swift */; };
 		04323C1924B243B4000F6395 /* NotificationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04323C1724B243B4000F6395 /* NotificationsTableViewCell.swift */; };
 		04323C1A24B243B4000F6395 /* NotificationsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04323C1824B243B4000F6395 /* NotificationsTableViewCell.xib */; };
+		0436D1D426DFDCBD00BD5276 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0436D1D326DFDCBD00BD5276 /* GoogleService-Info.plist */; };
+		0436D1D826DFE33B00BD5276 /* ReservationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0436D1DA26DFE33B00BD5276 /* ReservationViewController.xib */; };
+		0436D1E026DFEAC400BD5276 /* ReservetionDetailsVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0436D1E226DFEAC400BD5276 /* ReservetionDetailsVc.xib */; };
+		0436D1E826DFEB6300BD5276 /* CancelReservationVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0436D1EA26DFEB6300BD5276 /* CancelReservationVc.xib */; };
+		0436D1F026DFEBBB00BD5276 /* FavouriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0436D1F226DFEBBB00BD5276 /* FavouriteViewController.xib */; };
+		0436D1F826DFEBD500BD5276 /* CallCenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0436D1FA26DFEBD500BD5276 /* CallCenterViewController.xib */; };
+		0436D20026DFEC2500BD5276 /* OffersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0436D20226DFEC2500BD5276 /* OffersViewController.xib */; };
+		0436D20E26E002E000BD5276 /* OffersDetailsVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0436D20C26E002E000BD5276 /* OffersDetailsVc.swift */; };
+		0436D21626E00C6E00BD5276 /* OffersDetailsVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0436D21826E00C6E00BD5276 /* OffersDetailsVc.xib */; };
+		04400C6926E1981900CA57DA /* BookingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04400C6726E1981900CA57DA /* BookingVC.swift */; };
+		04400C7126E1A2CA00CA57DA /* BookingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04400C7326E1A2CA00CA57DA /* BookingVC.xib */; };
 		04417E1F24AF6B370022C32F /* ReservationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04417E1D24AF6B370022C32F /* ReservationTableViewCell.swift */; };
 		04417E2024AF6B370022C32F /* ReservationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04417E1E24AF6B370022C32F /* ReservationTableViewCell.xib */; };
 		044EDE1E24BDAC8B00EC8E61 /* ConfirmReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EDE1C24BDAC8B00EC8E61 /* ConfirmReservationViewController.swift */; };
@@ -97,7 +103,6 @@
 		046E3B9924AE131F006D1385 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E3B9824AE131F006D1385 /* TabBarItem.swift */; };
 		046E3BA424AE1A74006D1385 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E3BA224AE1A74006D1385 /* SearchViewController.swift */; };
 		046E3BA824AE1A9E006D1385 /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E3BA624AE1A9E006D1385 /* ReservationViewController.swift */; };
-		046E3BA924AE1A9E006D1385 /* ReservationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046E3BA724AE1A9E006D1385 /* ReservationViewController.xib */; };
 		046E3BAC24AE1ABB006D1385 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E3BAA24AE1ABB006D1385 /* AccountViewController.swift */; };
 		046E3BAD24AE1ABB006D1385 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046E3BAB24AE1ABB006D1385 /* AccountViewController.xib */; };
 		046E3BB024AE1ADB006D1385 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E3BAE24AE1ADB006D1385 /* MoreViewController.swift */; };
@@ -125,6 +130,8 @@
 		048569C42665407800B2670D /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048569C32665407800B2670D /* Authentication.swift */; };
 		048569DE2665464F00B2670D /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048569DD2665464F00B2670D /* Errors.swift */; };
 		048569E32665501300B2670D /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048569E22665501300B2670D /* AuthModel.swift */; };
+		048D929626E682160036041E /* FinalBookingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D929426E682160036041E /* FinalBookingVC.swift */; };
+		048D929726E682160036041E /* FinalBookingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048D929526E682160036041E /* FinalBookingVC.xib */; };
 		048DCB592656B38200319F9F /* LoginUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048DCB572656B38200319F9F /* LoginUserVC.swift */; };
 		048DCB742656B4C800319F9F /* UserRegisterTypeVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048DCB722656B4C800319F9F /* UserRegisterTypeVc.swift */; };
 		048DCB8E2657324000319F9F /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048DCB8D2657324000319F9F /* AlertService.swift */; };
@@ -151,9 +158,11 @@
 		04CA048324BB07A700660E7B /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA048224BB07A700660E7B /* String.swift */; };
 		04CF96F52651712D00184441 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF96F32651712D00184441 /* LoginVC.swift */; };
 		04CF96F62651712D00184441 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CF96F42651712D00184441 /* LoginVC.xib */; };
+		04CFE68926E38CA300D35D25 /* FavouriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CFE68B26E38CA300D35D25 /* FavouriteTableViewCell.xib */; };
 		04D6221326B8CDEC000A1B24 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6221226B8CDEC000A1B24 /* ProfileModel.swift */; };
 		04D6221826B8D1F4000A1B24 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6221726B8D1F4000A1B24 /* ProfileViewModel.swift */; };
 		04D6221D26B8DB44000A1B24 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6221C26B8DB44000A1B24 /* MessageModel.swift */; };
+		04DFB9F526E3EEAC00C3A9B1 /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DFB9F426E3EEAC00C3A9B1 /* NotificationModel.swift */; };
 		04E02901265D6E7200F5E373 /* PartyPriceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E028FF265D6E7200F5E373 /* PartyPriceCell.swift */; };
 		04E02902265D6E7300F5E373 /* PartyPriceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E02900265D6E7200F5E373 /* PartyPriceCell.xib */; };
 		04E0290F265D77D600F5E373 /* SettingVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0290D265D77D600F5E373 /* SettingVc.swift */; };
@@ -166,7 +175,6 @@
 		04F2BA66265B0586007F4E53 /* SideMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2BA65265B0586007F4E53 /* SideMenuModel.swift */; };
 		04F2BA6E265B1548007F4E53 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2BA6D265B1548007F4E53 /* Helper.swift */; };
 		04F7497024B1D4D6004DE8CD /* CallCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7496E24B1D4D6004DE8CD /* CallCenterViewController.swift */; };
-		04F7497124B1D4D6004DE8CD /* CallCenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F7496F24B1D4D6004DE8CD /* CallCenterViewController.xib */; };
 		04FAF37724DAA46700F73189 /* ConfigURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FAF37624DAA46700F73189 /* ConfigURLs.swift */; };
 		04FAF37924DAED2D00F73189 /* GetServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FAF37824DAED2D00F73189 /* GetServices.swift */; };
 		50DF56453048D3FF5D6CE0BA /* Pods_PartyBookingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7CB4F6B2FD0135CDD4660E8 /* Pods_PartyBookingTests.framework */; };
@@ -198,9 +206,7 @@
 		0411F08E24B0A5A400F95A72 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		0411F08F24B0A5A400F95A72 /* EditProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileViewController.xib; sourceTree = "<group>"; };
 		0411F09224B0F20A00F95A72 /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
-		0411F09324B0F20A00F95A72 /* FavouriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouriteViewController.xib; sourceTree = "<group>"; };
 		0411F09724B1034F00F95A72 /* FavouriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteTableViewCell.swift; sourceTree = "<group>"; };
-		0411F09824B1034F00F95A72 /* FavouriteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouriteTableViewCell.xib; sourceTree = "<group>"; };
 		0420A83226B8C2C000643213 /* LiveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveModel.swift; sourceTree = "<group>"; };
 		0420A84B26B8C43B00643213 /* LiveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewModel.swift; sourceTree = "<group>"; };
 		0422500A265E713200723400 /* ForgetPasswordVC1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordVC1.swift; sourceTree = "<group>"; };
@@ -212,9 +218,7 @@
 		04225027265E835B00723400 /* RateArtistVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateArtistVc.swift; sourceTree = "<group>"; };
 		04225028265E835B00723400 /* RateArtistVc.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RateArtistVc.xib; sourceTree = "<group>"; };
 		0422502F265E851800723400 /* CancelReservationVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelReservationVc.swift; sourceTree = "<group>"; };
-		04225030265E851800723400 /* CancelReservationVc.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CancelReservationVc.xib; sourceTree = "<group>"; };
 		04225037265EC08000723400 /* ReservetionDetailsVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservetionDetailsVc.swift; sourceTree = "<group>"; };
-		04225038265EC08000723400 /* ReservetionDetailsVc.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReservetionDetailsVc.xib; sourceTree = "<group>"; };
 		0430678C2661F36E00BDFE32 /* PartyDateVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyDateVc.swift; sourceTree = "<group>"; };
 		0430679426620A2A00BDFE32 /* NoArtistAvailableVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoArtistAvailableVc.swift; sourceTree = "<group>"; };
 		0430679F26620DD100BDFE32 /* AllLiveVideoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllLiveVideoVC.swift; sourceTree = "<group>"; };
@@ -222,12 +226,30 @@
 		043067AB26620F5100BDFE32 /* AllLiveCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllLiveCell.xib; sourceTree = "<group>"; };
 		043067B12662102C00BDFE32 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		04323C0A24B21B8E000F6395 /* OffersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersViewController.swift; sourceTree = "<group>"; };
-		04323C0B24B21B8E000F6395 /* OffersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OffersViewController.xib; sourceTree = "<group>"; };
 		04323C0E24B225B1000F6395 /* OffersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersTableViewCell.swift; sourceTree = "<group>"; };
 		04323C0F24B225B1000F6395 /* OffersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OffersTableViewCell.xib; sourceTree = "<group>"; };
 		04323C1324B2426F000F6395 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		04323C1724B243B4000F6395 /* NotificationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewCell.swift; sourceTree = "<group>"; };
 		04323C1824B243B4000F6395 /* NotificationsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationsTableViewCell.xib; sourceTree = "<group>"; };
+		0436D1D326DFDCBD00BD5276 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0436D1D926DFE33B00BD5276 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ReservationViewController.xib; sourceTree = "<group>"; };
+		0436D1DC26DFE34000BD5276 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ReservationViewController.strings; sourceTree = "<group>"; };
+		0436D1E126DFEAC400BD5276 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ReservetionDetailsVc.xib; sourceTree = "<group>"; };
+		0436D1E426DFEAC800BD5276 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ReservetionDetailsVc.strings; sourceTree = "<group>"; };
+		0436D1E926DFEB6300BD5276 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/CancelReservationVc.xib; sourceTree = "<group>"; };
+		0436D1EC26DFEB6700BD5276 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/CancelReservationVc.strings; sourceTree = "<group>"; };
+		0436D1F126DFEBBB00BD5276 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/FavouriteViewController.xib; sourceTree = "<group>"; };
+		0436D1F726DFEBBF00BD5276 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/FavouriteViewController.strings; sourceTree = "<group>"; };
+		0436D1F926DFEBD500BD5276 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/CallCenterViewController.xib; sourceTree = "<group>"; };
+		0436D1FF26DFEBD800BD5276 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/CallCenterViewController.strings; sourceTree = "<group>"; };
+		0436D20126DFEC2500BD5276 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/OffersViewController.xib; sourceTree = "<group>"; };
+		0436D20726DFEC2800BD5276 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/OffersViewController.strings; sourceTree = "<group>"; };
+		0436D20C26E002E000BD5276 /* OffersDetailsVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersDetailsVc.swift; sourceTree = "<group>"; };
+		0436D21726E00C6E00BD5276 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/OffersDetailsVc.xib; sourceTree = "<group>"; };
+		0436D21D26E00C7100BD5276 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/OffersDetailsVc.strings; sourceTree = "<group>"; };
+		04400C6726E1981900CA57DA /* BookingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingVC.swift; sourceTree = "<group>"; };
+		04400C7226E1A2CA00CA57DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/BookingVC.xib; sourceTree = "<group>"; };
+		04400C7526E1A2CD00CA57DA /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/BookingVC.strings; sourceTree = "<group>"; };
 		04417E1D24AF6B370022C32F /* ReservationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationTableViewCell.swift; sourceTree = "<group>"; };
 		04417E1E24AF6B370022C32F /* ReservationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReservationTableViewCell.xib; sourceTree = "<group>"; };
 		044EDE1C24BDAC8B00EC8E61 /* ConfirmReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmReservationViewController.swift; sourceTree = "<group>"; };
@@ -305,7 +327,6 @@
 		046E3B9824AE131F006D1385 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		046E3BA224AE1A74006D1385 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		046E3BA624AE1A9E006D1385 /* ReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationViewController.swift; sourceTree = "<group>"; };
-		046E3BA724AE1A9E006D1385 /* ReservationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReservationViewController.xib; sourceTree = "<group>"; };
 		046E3BAA24AE1ABB006D1385 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		046E3BAB24AE1ABB006D1385 /* AccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
 		046E3BAE24AE1ADB006D1385 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
@@ -335,6 +356,8 @@
 		048569C32665407800B2670D /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		048569DD2665464F00B2670D /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		048569E22665501300B2670D /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
+		048D929426E682160036041E /* FinalBookingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalBookingVC.swift; sourceTree = "<group>"; };
+		048D929526E682160036041E /* FinalBookingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FinalBookingVC.xib; sourceTree = "<group>"; };
 		048DCB572656B38200319F9F /* LoginUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserVC.swift; sourceTree = "<group>"; };
 		048DCB722656B4C800319F9F /* UserRegisterTypeVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegisterTypeVc.swift; sourceTree = "<group>"; };
 		048DCB8D2657324000319F9F /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
@@ -364,9 +387,12 @@
 		04CA048224BB07A700660E7B /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		04CF96F32651712D00184441 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		04CF96F42651712D00184441 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
+		04CFE68A26E38CA300D35D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/FavouriteTableViewCell.xib; sourceTree = "<group>"; };
+		04CFE68D26E38CAA00D35D25 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/FavouriteTableViewCell.strings; sourceTree = "<group>"; };
 		04D6221226B8CDEC000A1B24 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		04D6221726B8D1F4000A1B24 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		04D6221C26B8DB44000A1B24 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
+		04DFB9F426E3EEAC00C3A9B1 /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
 		04E028FF265D6E7200F5E373 /* PartyPriceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyPriceCell.swift; sourceTree = "<group>"; };
 		04E02900265D6E7200F5E373 /* PartyPriceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PartyPriceCell.xib; sourceTree = "<group>"; };
 		04E0290D265D77D600F5E373 /* SettingVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVc.swift; sourceTree = "<group>"; };
@@ -379,7 +405,6 @@
 		04F2BA65265B0586007F4E53 /* SideMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuModel.swift; sourceTree = "<group>"; };
 		04F2BA6D265B1548007F4E53 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		04F7496E24B1D4D6004DE8CD /* CallCenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallCenterViewController.swift; sourceTree = "<group>"; };
-		04F7496F24B1D4D6004DE8CD /* CallCenterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CallCenterViewController.xib; sourceTree = "<group>"; };
 		04FAF37624DAA46700F73189 /* ConfigURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigURLs.swift; sourceTree = "<group>"; };
 		04FAF37824DAED2D00F73189 /* GetServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetServices.swift; sourceTree = "<group>"; };
 		08190AB59A0A96514B76C90B /* Pods-PartyBooking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyBooking.release.xcconfig"; path = "Target Support Files/Pods-PartyBooking/Pods-PartyBooking.release.xcconfig"; sourceTree = "<group>"; };
@@ -434,7 +459,7 @@
 			isa = PBXGroup;
 			children = (
 				0411F09224B0F20A00F95A72 /* FavouriteViewController.swift */,
-				0411F09324B0F20A00F95A72 /* FavouriteViewController.xib */,
+				0436D1F226DFEBBB00BD5276 /* FavouriteViewController.xib */,
 				04F2BA7B265B1C65007F4E53 /* Cell */,
 			);
 			path = Favourite;
@@ -444,6 +469,7 @@
 			isa = PBXGroup;
 			children = (
 				046E3B5D24ADD861006D1385 /* AppDelegate.swift */,
+				0436D1D326DFDCBD00BD5276 /* GoogleService-Info.plist */,
 				046E3B6B24ADD863006D1385 /* Info.plist */,
 			);
 			name = ApppFile;
@@ -501,7 +527,7 @@
 			isa = PBXGroup;
 			children = (
 				046E3BA624AE1A9E006D1385 /* ReservationViewController.swift */,
-				046E3BA724AE1A9E006D1385 /* ReservationViewController.xib */,
+				0436D1DA26DFE33B00BD5276 /* ReservationViewController.xib */,
 			);
 			path = Reservation;
 			sourceTree = "<group>";
@@ -519,7 +545,7 @@
 			isa = PBXGroup;
 			children = (
 				0422502F265E851800723400 /* CancelReservationVc.swift */,
-				04225030265E851800723400 /* CancelReservationVc.xib */,
+				0436D1EA26DFEB6300BD5276 /* CancelReservationVc.xib */,
 			);
 			path = CancelReservation;
 			sourceTree = "<group>";
@@ -528,7 +554,7 @@
 			isa = PBXGroup;
 			children = (
 				04225037265EC08000723400 /* ReservetionDetailsVc.swift */,
-				04225038265EC08000723400 /* ReservetionDetailsVc.xib */,
+				0436D1E226DFEAC400BD5276 /* ReservetionDetailsVc.xib */,
 			);
 			path = "Reservetion Details";
 			sourceTree = "<group>";
@@ -574,8 +600,9 @@
 		04323C0924B21B77000F6395 /* Offers */ = {
 			isa = PBXGroup;
 			children = (
+				0436D20B26E002BD00BD5276 /* OffersDetailsVc */,
 				04323C0A24B21B8E000F6395 /* OffersViewController.swift */,
-				04323C0B24B21B8E000F6395 /* OffersViewController.xib */,
+				0436D20226DFEC2500BD5276 /* OffersViewController.xib */,
 				04F2BA7F265B1C75007F4E53 /* Cell */,
 			);
 			path = Offers;
@@ -589,6 +616,34 @@
 				04F2BA72265B194D007F4E53 /* NotificayionCell */,
 			);
 			path = Notifications;
+			sourceTree = "<group>";
+		};
+		0436D20B26E002BD00BD5276 /* OffersDetailsVc */ = {
+			isa = PBXGroup;
+			children = (
+				0436D20C26E002E000BD5276 /* OffersDetailsVc.swift */,
+				0436D21826E00C6E00BD5276 /* OffersDetailsVc.xib */,
+			);
+			path = OffersDetailsVc;
+			sourceTree = "<group>";
+		};
+		04400C6526E197EA00CA57DA /* Booking */ = {
+			isa = PBXGroup;
+			children = (
+				048D928D26E681FC0036041E /* FinalBookingVC */,
+				04400C6626E1980A00CA57DA /* BookingVC */,
+				04CA044D24B7FD2000660E7B /* Location */,
+			);
+			path = Booking;
+			sourceTree = "<group>";
+		};
+		04400C6626E1980A00CA57DA /* BookingVC */ = {
+			isa = PBXGroup;
+			children = (
+				04400C6726E1981900CA57DA /* BookingVC.swift */,
+				04400C7326E1A2CA00CA57DA /* BookingVC.xib */,
+			);
+			path = BookingVC;
 			sourceTree = "<group>";
 		};
 		044EDE1B24BDAC4F00EC8E61 /* confirm Reservation */ = {
@@ -824,6 +879,7 @@
 		046E3B9324AE11CC006D1385 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				04400C6526E197EA00CA57DA /* Booking */,
 				049EA6822678658700EFB676 /* MostFamousVc */,
 				0430679E26620DB300BDFE32 /* AllLiveVideoVC */,
 				0430678B2661F33100BDFE32 /* PartyDateVc */,
@@ -833,7 +889,6 @@
 				048DCB952657359D00319F9F /* TermsAndCondition */,
 				044EDE1B24BDAC4F00EC8E61 /* confirm Reservation */,
 				04CA046624BA385700660E7B /* Setting */,
-				04CA044D24B7FD2000660E7B /* Location */,
 				046506F524B62EB100694741 /* UserAuth */,
 				047F8C3224B4A5E500A86E86 /* MainAuth */,
 				047F8C2924B3ADDE00A86E86 /* RateView */,
@@ -941,6 +996,15 @@
 				047F8C3B24B4FC4C00A86E86 /* ArtistRegisterViewController.xib */,
 			);
 			path = ArtistRegister;
+			sourceTree = "<group>";
+		};
+		048D928D26E681FC0036041E /* FinalBookingVC */ = {
+			isa = PBXGroup;
+			children = (
+				048D929426E682160036041E /* FinalBookingVC.swift */,
+				048D929526E682160036041E /* FinalBookingVC.xib */,
+			);
+			path = FinalBookingVC;
 			sourceTree = "<group>";
 		};
 		048DCB562656B35100319F9F /* LoginUser */ = {
@@ -1146,6 +1210,7 @@
 				04D6221226B8CDEC000A1B24 /* ProfileModel.swift */,
 				04D6221C26B8DB44000A1B24 /* MessageModel.swift */,
 				04ABD7B026BFF06300CCD994 /* OffersModel.swift */,
+				04DFB9F426E3EEAC00C3A9B1 /* NotificationModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1181,7 +1246,7 @@
 			isa = PBXGroup;
 			children = (
 				0411F09724B1034F00F95A72 /* FavouriteTableViewCell.swift */,
-				0411F09824B1034F00F95A72 /* FavouriteTableViewCell.xib */,
+				04CFE68B26E38CA300D35D25 /* FavouriteTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -1226,7 +1291,7 @@
 			isa = PBXGroup;
 			children = (
 				04F7496E24B1D4D6004DE8CD /* CallCenterViewController.swift */,
-				04F7496F24B1D4D6004DE8CD /* CallCenterViewController.xib */,
+				0436D1FA26DFEBD500BD5276 /* CallCenterViewController.xib */,
 			);
 			path = CallCenter;
 			sourceTree = "<group>";
@@ -1369,14 +1434,14 @@
 				04323C1124B225B1000F6395 /* OffersTableViewCell.xib in Resources */,
 				044FEB2D26DD416200F44413 /* PassWordInstructions.xib in Resources */,
 				044FEB1A26DD40CF00F44413 /* NoArtistAvailableVc.xib in Resources */,
-				0411F09524B0F20A00F95A72 /* FavouriteViewController.xib in Resources */,
+				0436D1F026DFEBBB00BD5276 /* FavouriteViewController.xib in Resources */,
 				046506E424B5D22600694741 /* OfferPriceViewController.xib in Resources */,
 				047F8C3D24B4FC4C00A86E86 /* ArtistRegisterViewController.xib in Resources */,
 				04323C1A24B243B4000F6395 /* NotificationsTableViewCell.xib in Resources */,
 				04CA046224BA03F500660E7B /* Localizable.strings in Resources */,
 				044FEB6526DD444400F44413 /* MainRegisterVC.xib in Resources */,
 				047F8C3124B3AE5800A86E86 /* RateTableViewCell.xib in Resources */,
-				0411F09A24B1034F00F95A72 /* FavouriteTableViewCell.xib in Resources */,
+				04CFE68926E38CA300D35D25 /* FavouriteTableViewCell.xib in Resources */,
 				046E3B6A24ADD863006D1385 /* LaunchScreen.storyboard in Resources */,
 				044FEB4A26DD42A500F44413 /* UserRegisterTypeVc.xib in Resources */,
 				0422501B265E715000723400 /* ForgetPasswordVC3.xib in Resources */,
@@ -1385,26 +1450,30 @@
 				044FEB8326DD456300F44413 /* SearchResultTableViewCell.xib in Resources */,
 				044FEB3526DD41E100F44413 /* TermsAndConditionVc.xib in Resources */,
 				04F2BA3A265AA462007F4E53 /* PartyPriceVC.xib in Resources */,
+				048D929726E682160036041E /* FinalBookingVC.xib in Resources */,
 				046506E924B5E51500694741 /* InformationViewController.xib in Resources */,
+				0436D1D426DFDCBD00BD5276 /* GoogleService-Info.plist in Resources */,
 				044EDE2024BF011F00EC8E61 /* RateViewController.xib in Resources */,
 				047F8C1D24B3895F00A86E86 /* PhotoCollectionViewCell.xib in Resources */,
 				044FEB7026DD44B300F44413 /* CommentsViewController.xib in Resources */,
 				043067AD26620F5100BDFE32 /* AllLiveCell.xib in Resources */,
 				046E3B6724ADD863006D1385 /* Assets.xcassets in Resources */,
 				04CA045124B7FD5200660E7B /* LocationViewController.xib in Resources */,
+				04400C7126E1A2CA00CA57DA /* BookingVC.xib in Resources */,
 				046506EE24B60B8900694741 /* ArtistAccountViewController.xib in Resources */,
 				044FEB6026DD439500F44413 /* UserRegisterViewController.xib in Resources */,
 				0422502A265E835B00723400 /* RateArtistVc.xib in Resources */,
 				044FEB2226DD412E00F44413 /* PartyDateVc.xib in Resources */,
 				0465070D24B7A31D00694741 /* SilentViewController.xib in Resources */,
-				04323C0D24B21B8E000F6395 /* OffersViewController.xib in Resources */,
+				0436D20026DFEC2500BD5276 /* OffersViewController.xib in Resources */,
 				0465071224B7A6EC00694741 /* ArtistMoreViewController.xib in Resources */,
 				044FEB0726DD408300F44413 /* AllLiveVideoVC.xib in Resources */,
 				044FEB0F26DD40AC00F44413 /* MostFamousVc.xib in Resources */,
 				046506F424B6157B00694741 /* LiveVideoViewController.xib in Resources */,
 				04F2BA59265B02AF007F4E53 /* ArtistMoreCell.xib in Resources */,
 				044FEAFC26DD256D00F44413 /* SearchViewController.xib in Resources */,
-				04225032265E851800723400 /* CancelReservationVc.xib in Resources */,
+				0436D1E826DFEB6300BD5276 /* CancelReservationVc.xib in Resources */,
+				0436D21626E00C6E00BD5276 /* OffersDetailsVc.xib in Resources */,
 				044FEB3A26DD421B00F44413 /* ConfirmReservationViewController.xib in Resources */,
 				044FEB4226DD426C00F44413 /* SettingVc.xib in Resources */,
 				046E3BB324AE46B6006D1385 /* GE_SS_Two_Bold.otf in Resources */,
@@ -1412,7 +1481,7 @@
 				044FEB5526DD430D00F44413 /* LoginUserVC.xib in Resources */,
 				04225014265E714100723400 /* ForgetPasswordVC2.xib in Resources */,
 				0465070824B79B7900694741 /* ArtistReservationTableViewCell.xib in Resources */,
-				04F7497124B1D4D6004DE8CD /* CallCenterViewController.xib in Resources */,
+				0436D1F826DFEBD500BD5276 /* CallCenterViewController.xib in Resources */,
 				0422500D265E713200723400 /* ForgetPasswordVC1.xib in Resources */,
 				0465070424B7983800694741 /* ArtistReservationViewController.xib in Resources */,
 				0411F09124B0A5A400F95A72 /* EditProfileViewController.xib in Resources */,
@@ -1426,8 +1495,8 @@
 				046E3BAD24AE1ABB006D1385 /* AccountViewController.xib in Resources */,
 				046506FE24B780ED00694741 /* AvailableReservationViewController.xib in Resources */,
 				04417E2024AF6B370022C32F /* ReservationTableViewCell.xib in Resources */,
-				0422503A265EC08100723400 /* ReservetionDetailsVc.xib in Resources */,
-				046E3BA924AE1A9E006D1385 /* ReservationViewController.xib in Resources */,
+				0436D1E026DFEAC400BD5276 /* ReservetionDetailsVc.xib in Resources */,
+				0436D1D826DFE33B00BD5276 /* ReservationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1589,6 +1658,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04400C6926E1981900CA57DA /* BookingVC.swift in Sources */,
 				04CF96F52651712D00184441 /* LoginVC.swift in Sources */,
 				046E3B9924AE131F006D1385 /* TabBarItem.swift in Sources */,
 				046E3BA424AE1A74006D1385 /* SearchViewController.swift in Sources */,
@@ -1648,6 +1718,7 @@
 				048DCB8E2657324000319F9F /* AlertService.swift in Sources */,
 				0411F09024B0A5A400F95A72 /* EditProfileViewController.swift in Sources */,
 				0491AD3B26376D5500398125 /* CustomDropdown.swift in Sources */,
+				04DFB9F526E3EEAC00C3A9B1 /* NotificationModel.swift in Sources */,
 				048DCB742656B4C800319F9F /* UserRegisterTypeVc.swift in Sources */,
 				0430679626620A2A00BDFE32 /* NoArtistAvailableVc.swift in Sources */,
 				048569E32665501300B2670D /* AuthModel.swift in Sources */,
@@ -1671,6 +1742,8 @@
 				0411EB8426764C700023FA5B /* HomeModel.swift in Sources */,
 				04417E1F24AF6B370022C32F /* ReservationTableViewCell.swift in Sources */,
 				04F2BA6E265B1548007F4E53 /* Helper.swift in Sources */,
+				0436D20E26E002E000BD5276 /* OffersDetailsVc.swift in Sources */,
+				048D929626E682160036041E /* FinalBookingVC.swift in Sources */,
 				048569DE2665464F00B2670D /* Errors.swift in Sources */,
 				046506ED24B60B8900694741 /* ArtistAccountViewController.swift in Sources */,
 				047F8C2124B3A9B900A86E86 /* CommentsViewController.swift in Sources */,
@@ -1722,6 +1795,78 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		0436D1DA26DFE33B00BD5276 /* ReservationViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0436D1D926DFE33B00BD5276 /* Base */,
+				0436D1DC26DFE34000BD5276 /* ar */,
+			);
+			name = ReservationViewController.xib;
+			sourceTree = "<group>";
+		};
+		0436D1E226DFEAC400BD5276 /* ReservetionDetailsVc.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0436D1E126DFEAC400BD5276 /* Base */,
+				0436D1E426DFEAC800BD5276 /* ar */,
+			);
+			name = ReservetionDetailsVc.xib;
+			sourceTree = "<group>";
+		};
+		0436D1EA26DFEB6300BD5276 /* CancelReservationVc.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0436D1E926DFEB6300BD5276 /* Base */,
+				0436D1EC26DFEB6700BD5276 /* ar */,
+			);
+			name = CancelReservationVc.xib;
+			sourceTree = "<group>";
+		};
+		0436D1F226DFEBBB00BD5276 /* FavouriteViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0436D1F126DFEBBB00BD5276 /* Base */,
+				0436D1F726DFEBBF00BD5276 /* ar */,
+			);
+			name = FavouriteViewController.xib;
+			sourceTree = "<group>";
+		};
+		0436D1FA26DFEBD500BD5276 /* CallCenterViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0436D1F926DFEBD500BD5276 /* Base */,
+				0436D1FF26DFEBD800BD5276 /* ar */,
+			);
+			name = CallCenterViewController.xib;
+			sourceTree = "<group>";
+		};
+		0436D20226DFEC2500BD5276 /* OffersViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0436D20126DFEC2500BD5276 /* Base */,
+				0436D20726DFEC2800BD5276 /* ar */,
+			);
+			name = OffersViewController.xib;
+			sourceTree = "<group>";
+		};
+		0436D21826E00C6E00BD5276 /* OffersDetailsVc.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0436D21726E00C6E00BD5276 /* Base */,
+				0436D21D26E00C7100BD5276 /* ar */,
+			);
+			name = OffersDetailsVc.xib;
+			sourceTree = "<group>";
+		};
+		04400C7326E1A2CA00CA57DA /* BookingVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04400C7226E1A2CA00CA57DA /* Base */,
+				04400C7526E1A2CD00CA57DA /* ar */,
+			);
+			name = BookingVC.xib;
+			sourceTree = "<group>";
+		};
 		044EDE2224BF011F00EC8E61 /* RateViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1910,6 +2055,15 @@
 			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
+		04CFE68B26E38CA300D35D25 /* FavouriteTableViewCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04CFE68A26E38CA300D35D25 /* Base */,
+				04CFE68D26E38CAA00D35D25 /* ar */,
+			);
+			name = FavouriteTableViewCell.xib;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -2036,6 +2190,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 5R2Z9F2376;
 				INFOPLIST_FILE = PartyBooking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2057,6 +2212,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 5R2Z9F2376;
 				INFOPLIST_FILE = PartyBooking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

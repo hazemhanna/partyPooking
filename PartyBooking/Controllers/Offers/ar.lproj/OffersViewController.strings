@@ -1,0 +1,15 @@
+
+/* Class = "UIButton"; normalTitle = "بحث"; ObjectID = "PbK-Ek-XLd"; */
+"PbK-Ek-XLd.normalTitle" = "بحث";
+
+/* Class = "UILabel"; text = "نوع الحفلة"; ObjectID = "U9H-GZ-tIl"; */
+"U9H-GZ-tIl.text" = "نوع الحفلة";
+
+/* Class = "UILabel"; text = "الاثنين،٦ابريل"; ObjectID = "bgc-25-Eza"; */
+"bgc-25-Eza.text" = "الاثنين،٦ابريل";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "svE-tm-Abp"; */
+"svE-tm-Abp.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "الموقع"; ObjectID = "vlD-rw-Iwb"; */
+"vlD-rw-Iwb.text" = "الموقع";

@@ -1,0 +1,36 @@
+
+/* Class = "UILabel"; text = "Offers "; ObjectID = "IuR-BK-FWw"; */
+"IuR-BK-FWw.text" = "العروض ";
+
+/* Class = "UILabel"; text = "Valid to "; ObjectID = "MVZ-cM-S7T"; */
+"MVZ-cM-S7T.text" = "ساري حتي";
+
+/* Class = "UILabel"; text = "wedding"; ObjectID = "MVb-Vx-hFc"; */
+"MVb-Vx-hFc.text" = "wedding";
+
+/* Class = "UILabel"; text = "Artist Name"; ObjectID = "W0X-FS-Nog"; */
+"W0X-FS-Nog.text" = "اسم الفنان";
+
+/* Class = "UILabel"; text = "hazem hanna"; ObjectID = "WhS-n2-gnq"; */
+"WhS-n2-gnq.text" = "hazem hanna";
+
+/* Class = "UILabel"; text = "20"; ObjectID = "bgX-3u-6lV"; */
+"bgX-3u-6lV.text" = "20";
+
+/* Class = "UILabel"; text = "party Type"; ObjectID = "l0Z-XN-gvr"; */
+"l0Z-XN-gvr.text" = "نوع الحفلة";
+
+/* Class = "UILabel"; text = "Cost"; ObjectID = "miP-Zk-ZNq"; */
+"miP-Zk-ZNq.text" = "التكلفة";
+
+/* Class = "UILabel"; text = "22/6/2021"; ObjectID = "n6P-zt-E2S"; */
+"n6P-zt-E2S.text" = "22/6/2021";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "the-ck-Vek"; */
+"the-ck-Vek.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Party Location "; ObjectID = "vNe-W4-ZTG"; */
+"vNe-W4-ZTG.text" = "مكان الحفلة";
+
+/* Class = "UILabel"; text = "Saudi arabia"; ObjectID = "zX3-eN-2vZ"; */
+"zX3-eN-2vZ.text" = "Saudi arabia";

@@ -1,0 +1,66 @@
+
+/* Class = "UILabel"; text = "Party Type"; ObjectID = "4Wo-AD-Frs"; */
+"4Wo-AD-Frs.text" = "نوع الحفلة";
+
+/* Class = "UILabel"; text = "Reservation Nummber"; ObjectID = "5mT-I3-R0N"; */
+"5mT-I3-R0N.text" = "رقم الحجز";
+
+/* Class = "UIButton"; normalTitle = "Load Bill bdf"; ObjectID = "6QJ-RS-PPF"; */
+"6QJ-RS-PPF.normalTitle" = "تحميل العقد";
+
+/* Class = "UILabel"; text = "Reservation "; ObjectID = "8kC-3F-uEz"; */
+"8kC-3F-uEz.text" = "الحجوزات ";
+
+/* Class = "UILabel"; text = "Party Location "; ObjectID = "AWq-E1-FVY"; */
+"AWq-E1-FVY.text" = "موقع الحفلة";
+
+/* Class = "UILabel"; text = "Cancel Reason"; ObjectID = "BHA-cp-CgW"; */
+"BHA-cp-CgW.text" = "سبب الالغاء";
+
+/* Class = "UILabel"; text = "Party Time"; ObjectID = "Gvf-db-ijw"; */
+"Gvf-db-ijw.text" = "توقيت الحفلة";
+
+/* Class = "UILabel"; text = "Notes"; ObjectID = "Hcx-vh-9x5"; */
+"Hcx-vh-9x5.text" = "الملاحظات";
+
+/* Class = "UILabel"; text = "hazem hanna"; ObjectID = "KQ3-dc-SGQ"; */
+"KQ3-dc-SGQ.text" = "hazem hanna";
+
+/* Class = "UILabel"; text = "Artist Name"; ObjectID = "PPW-mL-czQ"; */
+"PPW-mL-czQ.text" = "اسم الفنان";
+
+/* Class = "UILabel"; text = "Cancel Reason"; ObjectID = "QjA-Gh-htZ"; */
+"QjA-Gh-htZ.text" = "سبب الالغاء";
+
+/* Class = "UILabel"; text = "112233"; ObjectID = "Qod-RU-Ea6"; */
+"Qod-RU-Ea6.text" = "112233";
+
+/* Class = "UILabel"; text = "Saudi arabia"; ObjectID = "U09-UB-thd"; */
+"U09-UB-thd.text" = "Saudi arabia";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "VGI-Av-3eE"; */
+"VGI-Av-3eE.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "22/6/2021"; ObjectID = "XM5-io-Usd"; */
+"XM5-io-Usd.text" = "22/6/2021";
+
+/* Class = "UILabel"; text = "wedding"; ObjectID = "eGP-g9-Jdk"; */
+"eGP-g9-Jdk.text" = "wedding";
+
+/* Class = "UILabel"; text = "No Notes"; ObjectID = "eI3-pf-vCG"; */
+"eI3-pf-vCG.text" = "No Notes";
+
+/* Class = "UILabel"; text = "Status"; ObjectID = "gcC-xn-pdb"; */
+"gcC-xn-pdb.text" = "الحالة";
+
+/* Class = "UILabel"; text = "From 1:00 To 5:00"; ObjectID = "nLv-6J-XdY"; */
+"nLv-6J-XdY.text" = "From 1:00 To 5:00";
+
+/* Class = "UILabel"; text = "Ended"; ObjectID = "p6v-au-0IK"; */
+"p6v-au-0IK.text" = "Ended";
+
+/* Class = "UILabel"; text = "first name"; ObjectID = "qyF-n8-cy6"; */
+"qyF-n8-cy6.text" = "التقييم";
+
+/* Class = "UILabel"; text = "Party Date"; ObjectID = "rGw-AS-Rjs"; */
+"rGw-AS-Rjs.text" = "تاريخ الحفلة";

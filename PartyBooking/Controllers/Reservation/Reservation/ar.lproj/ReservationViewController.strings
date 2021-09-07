@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "reservation"; ObjectID = "PqS-1t-Vx5"; */
+"PqS-1t-Vx5.text" = "الحجوزات";
+
+/* Class = "UILabel"; text = "current reservation"; ObjectID = "cMp-hq-Qex"; */
+"cMp-hq-Qex.text" = "الحجوزات الحالية ";
+
+/* Class = "UILabel"; text = "ended reservation"; ObjectID = "gWd-ph-7yk"; */
+"gWd-ph-7yk.text" = "الحجوزات المنتهية";
+
+/* Class = "UILabel"; text = "cancel reservation"; ObjectID = "oJK-MP-3Tr"; */
+"oJK-MP-3Tr.text" = "الحجوزات الملغاة";

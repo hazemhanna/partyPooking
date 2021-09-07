@@ -64,11 +64,12 @@ extension FavouriteViewController : UITableViewDelegate , UITableViewDataSource 
         cell.confic(imageUrl:  self.favourite[indexPath.row].artist?.image ?? "", name: ((self.favourite[indexPath.row].artist?.firstName ?? "") + " " + (self.favourite[indexPath.row].artist?.lastName ?? "")), locaction: (self.favourite[indexPath.row].artist?.address ?? ""), rate: (self.favourite[indexPath.row].artist?.rate ?? 0))
         cell.Favourite = {
             self.favouriteVM.showIndicator()
-            self.addFavourite(artistId: (self.favourite[indexPath.row].id ?? 0))
+            self.addFavourite(artistId: (self.favourite[indexPath.row].artist?.id ?? 0))
         }
         
         cell.viewProfile = {
             let destinationVC = ArtistProfileViewController.instantiateFromNib()
+            destinationVC?.artistId = (self.favourite[indexPath.row].artist?.id ?? 0)
             self.navigationController?.pushViewController(destinationVC!, animated: true)
         }
         
@@ -93,7 +94,7 @@ func getFavourite() {
         }
     }, onError: { (error) in
         self.favouriteVM.dismissIndicator()
-        displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
+        //displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
     }).disposed(by: disposeBag)
  }
     
@@ -103,11 +104,11 @@ func getFavourite() {
             self.favouriteVM.dismissIndicator()
             if data.status ?? false {
                 self.getFavourite()
-                displayMessage(title: "", message: data.message ?? "", status: .success, forController: self)
+               // displayMessage(title: "", message: data.message ?? "", status: .success, forController: self)
             }
         }, onError: { (error) in
             self.favouriteVM.dismissIndicator()
-            displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
+            //displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
         }).disposed(by: disposeBag)
      }
       

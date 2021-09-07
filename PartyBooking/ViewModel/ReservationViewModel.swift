@@ -33,6 +33,15 @@ struct ReservationViewModel {
         return observer
     }
     
-
-
+    
+    func cancelReservation(booking_id:Int,cancel_reason : String) -> Observable<ContactUSModelJson> {
+        let params: [String: Any] = [
+            "booking_id": booking_id,
+            "cancel_reason": cancel_reason
+            ]
+        
+        let observer = AddServices.shared.cancelReservation(params: params)
+        return observer
+    }
+    
 }

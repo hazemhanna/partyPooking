@@ -1,0 +1,30 @@
+
+/* Class = "UILabel"; text = "Cost : "; ObjectID = "0De-te-lLd"; */
+"0De-te-lLd.text" = "التكلفة";
+
+/* Class = "UITextField"; text = "party type"; ObjectID = "1bU-E5-4Jb"; */
+"1bU-E5-4Jb.text" = "نوع الحفلة";
+
+/* Class = "UILabel"; text = "monday,6april"; ObjectID = "7kq-0W-i6d"; */
+"7kq-0W-i6d.text" = "monday,6april";
+
+/* Class = "UILabel"; text = "location"; ObjectID = "Bc3-i5-0Gr"; */
+"Bc3-i5-0Gr.text" = "الموقع";
+
+/* Class = "UILabel"; text = "From"; ObjectID = "J0K-yw-CqM"; */
+"J0K-yw-CqM.text" = "من ";
+
+/* Class = "UILabel"; text = "Reservation "; ObjectID = "OY7-FH-vnc"; */
+"OY7-FH-vnc.text" = "الحجز ";
+
+/* Class = "UILabel"; text = "To "; ObjectID = "TUa-CW-beT"; */
+"TUa-CW-beT.text" = "الي ";
+
+/* Class = "UILabel"; text = "0 SR"; ObjectID = "TfT-og-BZd"; */
+"TfT-og-BZd.text" = "0 SR";
+
+/* Class = "UITextField"; text = "Address"; ObjectID = "mgZ-au-V0j"; */
+"mgZ-au-V0j.text" = "العنوان";
+
+/* Class = "UIButton"; normalTitle = "Reserve Now "; ObjectID = "tfz-GD-OXJ"; */
+"tfz-GD-OXJ.normalTitle" = "احجز الان ";

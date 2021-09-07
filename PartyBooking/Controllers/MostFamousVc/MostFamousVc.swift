@@ -82,7 +82,7 @@ func getBest() {
         }
     }, onError: { (error) in
         self.homeVM.dismissIndicator()
-        displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
+        //displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
     }).disposed(by: disposeBag)
  }
     

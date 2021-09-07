@@ -8,37 +8,34 @@
 
 import UIKit
 import CollapseTableView
+import MOLH
 
 class SettingVc: UIViewController {
   
     @IBOutlet weak var englishBtn: UIButton!
     @IBOutlet weak var ArabicBtn: UIButton!
-    @IBOutlet weak var EnglishLbl: UILabel!
-    @IBOutlet weak var titleLbl: UILabel!
-    @IBOutlet weak var languageLbl: UILabel!
 
-    @IBOutlet weak var arabicLbl: UILabel!
+    @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var contentStack: UIStackView!
     
     var hide = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if "lang".localized  == "en" {
-            ArabicBtn.isHidden = false
-            englishBtn.isHidden = true
-        }else{
-            ArabicBtn.isHidden = true
-            englishBtn.isHidden = false
-        }
         
-        arabicLbl.text = "arabic".localized
         titleLbl.text = "setting".localized
-        EnglishLbl.text = "english".localized
         
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        
+        if "lang".localized  == "en" {
+            ArabicBtn.isHidden = true
+            englishBtn.isHidden = false
+        }else{
+            ArabicBtn.isHidden = false
+            englishBtn.isHidden = true
+        }
         self.navigationController?.navigationBar.isHidden = true
     }
     override func viewWillDisappear(_ animated: Bool) {
@@ -61,18 +58,35 @@ class SettingVc: UIViewController {
         }
     }
     
-    @IBAction func arabicButton(sender: UIButton) {
-        if "lang".localized  == "en" {
-            ArabicBtn.isHidden = false
-            englishBtn.isHidden = true
+    @IBAction func EnglishLanguageAction(_ sender: CustomButtons) {
+        Helper.saveLang(Lang: "en")
+        if MOLHLanguage.currentAppleLanguage() == "ar" {
+            MOLH.setLanguageTo(MOLHLanguage.currentAppleLanguage() == "en" ? "ar" : "en")
+            UIView.appearance().semanticContentAttribute = .forceLeftToRight
+            
+        } else{
+            if ("lang".localized == "en") {
+                displayMessage(title: "", message: "Your App is Already in English Language", status: .info, forController: self)
+            } else {
+                displayMessage(title: "", message: "البرنامج بالفعل على اللغة الإنجليزية", status: .info, forController: self)
+            }
         }
+        MOLH.reset()
     }
-    
-    @IBAction func EnglishButton(sender: UIButton) {
-        if "lang".localized  == "en" {
-            ArabicBtn.isHidden = true
-            englishBtn.isHidden = false
-         }
+    @IBAction func ArabicLanguageAction(_ sender: CustomButtons) {
+        Helper.saveLang(Lang: "ar")
+        if MOLHLanguage.currentAppleLanguage() == "en" {
+            MOLH.setLanguageTo(MOLHLanguage.currentAppleLanguage() == "en" ? "ar" : "en")
+            MOLH.setLanguageTo("ar")
+            UIView.appearance().semanticContentAttribute = .forceRightToLeft
+            MOLH.reset()
+        } else {
+            if ("lang".localized == "en") {
+                displayMessage(title: "", message: "Your App is Already in Arabic Language", status: .info, forController: self )
+            } else {
+                displayMessage(title: "", message: "البرنامج بالفعل على اللغة العربية", status: .info, forController: self )
+            }
+        }
     }
     
     

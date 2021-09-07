@@ -54,7 +54,6 @@ class MoreViewController: UIViewController {
             if "lang".localized == "ar" {
                      self.Items = [
                                SideMenuModel(Name: "العروض", Id: "Offers", image: #imageLiteral(resourceName: "1")),
-                               SideMenuModel(Name: "الدعم الفني", Id: "callCenter", image: #imageLiteral(resourceName: "support")),
                                SideMenuModel(Name: "الاعدادات", Id: "setting", image: #imageLiteral(resourceName: "settings (1)")),
                                SideMenuModel(Name: "من نحن", Id: "about", image: #imageLiteral(resourceName: "5-2")),
                                SideMenuModel(Name: "تسجيل دخول", Id: "Login", image: #imageLiteral(resourceName: "5-3")),
@@ -62,7 +61,6 @@ class MoreViewController: UIViewController {
                 }else {
                        self.Items = [
                                SideMenuModel(Name: "Offers", Id: "Offers", image: #imageLiteral(resourceName: "1")),
-                               SideMenuModel(Name: "Call Center", Id: "callCenter", image: #imageLiteral(resourceName: "support")),
                                SideMenuModel(Name: "Setting", Id: "setting", image: #imageLiteral(resourceName: "settings (1)")),
                                SideMenuModel(Name: "About", Id: "about", image: #imageLiteral(resourceName: "5-2")),
                                SideMenuModel(Name: "Login", Id: "Login", image: #imageLiteral(resourceName: "5-3")),
@@ -94,14 +92,17 @@ class MoreViewController: UIViewController {
                 let destinationVC = SettingVc.instantiateFromNib()
              self.navigationController?.pushViewController(destinationVC!, animated: true)
             case "about":
-             print("about")
+                let main = TermsAndConditionVc.instantiateFromNib()
+                 main?.type = "about"
+                self.navigationController?.pushViewController(main!, animated: true)
+
             case "Login"  :
                  let main = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Nav")
                 if let appDelegate = UIApplication.shared.delegate {
                     appDelegate.window??.rootViewController = main
                 }
             case "logOut":
-                let alert = UIAlertController(title: "LogOut".localized, message: "Are".localized, preferredStyle: .alert)
+                let alert = UIAlertController(title: "logOut".localized, message: "Are".localized, preferredStyle: .alert)
                 let yesAction = UIAlertAction(title: "YES".localized, style: .default) { (action) in
                     alert.dismiss(animated: true, completion: nil)
                     Helper.LogOut()

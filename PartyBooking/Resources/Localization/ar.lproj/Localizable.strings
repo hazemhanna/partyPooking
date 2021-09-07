@@ -42,6 +42,8 @@
 "password" = "الرقم السري";
 "payment" = "طريقة الدفع";
 "done" = "اتمام الحجز";
+"Register" = "تسجيل";
+
 // user reservation
 "myReservation" = "حجوزاتي";
 "current" = "الحجوازات الحالية";
@@ -160,3 +162,18 @@
 "clientNmae"="اسم العميل:";
 "city"="المدينة:";
 
+"read and agree terms and condition"="اوافق علي الشروط والاحكام";
+"terms and condition"="الشروط والاحكام";
+"DoneB"="تم";
+"cancelReservation" ="الحجوزات الملغاة";
+"SR" = "ريال";
+"reserve Now" = "احجز الان";
+"From" = "من ";
+"To" = "الي";
+
+"completed" = "مكتلة";
+"new" = "جديد";
+"cancelled" = "ملغاة";
+"Are" = "هل انت متاكد";
+"YES" ="نعم" ;
+"NO" ="لآ" ;

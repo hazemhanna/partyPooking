@@ -25,7 +25,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="74"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reservation " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8kC-3F-uEz">
-                                <rect key="frame" x="168" y="45.5" width="78.5" height="16.5"/>
+                                <rect key="frame" x="165.5" y="47" width="83.5" height="15"/>
                                 <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -461,8 +461,8 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Cancel Reason" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QjA-Gh-htZ">
-                                                        <rect key="frame" x="187" y="17.5" width="93.5" height="15"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Cancel Reason" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QjA-Gh-htZ">
+                                                        <rect key="frame" x="187" y="17.5" width="195" height="15"/>
                                                         <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="13"/>
                                                         <color key="textColor" red="0.043137254899999998" green="0.4039215686" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -473,6 +473,7 @@
                                                     <constraint firstItem="2Zv-My-ZV6" firstAttribute="top" secondItem="V40-Fh-lLL" secondAttribute="top" id="6S2-7t-KtD"/>
                                                     <constraint firstItem="2Zv-My-ZV6" firstAttribute="leading" secondItem="V40-Fh-lLL" secondAttribute="leading" id="9LL-ma-T9N"/>
                                                     <constraint firstItem="QjA-Gh-htZ" firstAttribute="leading" secondItem="2Zv-My-ZV6" secondAttribute="trailing" constant="32" id="Dwd-9k-MjD"/>
+                                                    <constraint firstAttribute="trailing" secondItem="QjA-Gh-htZ" secondAttribute="trailing" id="Jbm-qx-rB0"/>
                                                     <constraint firstItem="QjA-Gh-htZ" firstAttribute="centerY" secondItem="V40-Fh-lLL" secondAttribute="centerY" id="as1-Uw-erP"/>
                                                     <constraint firstAttribute="bottom" secondItem="2Zv-My-ZV6" secondAttribute="bottom" id="hfN-6o-fli"/>
                                                     <constraint firstAttribute="height" constant="50" id="j9y-Ue-X7O"/>
@@ -489,8 +490,8 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Yq-do-Cwk" customClass="CustomView" customModule="PartyBooking" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="155" height="50"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="first name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyF-n8-cy6">
-                                                                <rect key="frame" x="46.5" y="17.5" width="62.5" height="15"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyF-n8-cy6">
+                                                                <rect key="frame" x="63.5" y="17.5" width="28.5" height="15"/>
                                                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="13"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -508,7 +509,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bQV-HB-4Ys" customClass="CosmosView" customModule="Cosmos">
+                                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bQV-HB-4Ys" customClass="CosmosView" customModule="Cosmos">
                                                         <rect key="frame" x="187" y="15" width="120" height="20"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </view>
@@ -581,15 +582,28 @@
                 </constraints>
             </view>
             <connections>
+                <outlet property="PartyTime" destination="nLv-6J-XdY" id="MUF-Db-0zQ"/>
+                <outlet property="Partydate" destination="XM5-io-Usd" id="JyB-Pm-Z1C"/>
+                <outlet property="Partydlocation" destination="U09-UB-thd" id="ERY-R4-zu8"/>
+                <outlet property="artistName" destination="KQ3-dc-SGQ" id="waH-WK-3ua"/>
                 <outlet property="cancelReasonView" destination="V40-Fh-lLL" id="R99-MG-Qcz"/>
+                <outlet property="canelReason" destination="QjA-Gh-htZ" id="Gx6-b8-aBX"/>
+                <outlet property="noteLbl" destination="eI3-pf-vCG" id="Lij-T8-2vz"/>
+                <outlet property="partyType" destination="eGP-g9-Jdk" id="oFw-ji-0TS"/>
+                <outlet property="ratView" destination="bQV-HB-4Ys" id="yrE-n9-8eW"/>
                 <outlet property="rateView" destination="eYj-er-zXt" id="i4D-C7-Mg1"/>
+                <outlet property="reservationNum" destination="Qod-RU-Ea6" id="nSc-CY-1sw"/>
+                <outlet property="statusLbl" destination="p6v-au-0IK" id="emk-x9-Tb8"/>
             </connections>
             <point key="canvasLocation" x="786.95652173913049" y="-39.508928571428569"/>
         </viewController>
     </objects>
     <designables>
         <designable name="6QJ-RS-PPF">
-            <size key="intrinsicContentSize" width="97" height="32"/>
+            <size key="intrinsicContentSize" width="101" height="31"/>
+        </designable>
+        <designable name="bQV-HB-4Ys">
+            <size key="intrinsicContentSize" width="120" height="20"/>
         </designable>
     </designables>
     <resources>

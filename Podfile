@@ -10,6 +10,7 @@ target 'PartyBooking' do
   pod 'RNActivityView', '0.0.7'
   pod 'FSCalendar'
   pod 'GoogleMaps'
+  pod 'GooglePlaces'
   pod 'CollapseTableView'
   pod 'Alamofire', '~> 4.8.2'
   pod 'SwiftyJSON', '~> 5.0.0'
@@ -23,7 +24,10 @@ target 'PartyBooking' do
   pod 'FBSDKLoginKit'
   pod 'GoogleSignIn'
   pod 'MOLH'
-
+  pod 'IQKeyboardManagerSwift'
+  pod 'TwitterKit5'
+  pod 'JWTDecode'
+  
   target 'PartyBookingTests' do
     inherit! :search_paths
     # Pods for testing

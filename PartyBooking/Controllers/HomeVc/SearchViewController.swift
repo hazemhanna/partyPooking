@@ -42,19 +42,26 @@ class SearchViewController: UIViewController ,UICollectionViewDataSource, UIColl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     
+        
         mostFamousCollection.delegate = self
         mostFamousCollection.dataSource = self
         mostFamousCollection.register(UINib(nibName: "MostFamousCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
         offerCollection.delegate = self
         offerCollection.dataSource = self
         offerCollection.register(UINib(nibName: "MostFamousCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
-   
         style ()
         setUPLocalize()
         getHome()
         getPartyType()
         getAllCountry()
+        
+        if "lang".localized == "ar" {
+            partyTypeTextField.textAlignment = .right
+            countryTextField.textAlignment = .right
+        }else{
+            partyTypeTextField.textAlignment = .left
+            countryTextField.textAlignment = .left
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -90,7 +97,13 @@ class SearchViewController: UIViewController ,UICollectionViewDataSource, UIColl
         countryTextField.didSelect { (selectedText, index, id) in
             self.countryTextField.text = selectedText
             self.countryId = self.country[index].id ?? 0
-
+            Helper.saveCID(date:  self.country[index].id ?? 0)
+            if "lang".localized == "ar" {
+            Helper.saveCName(date: self.country[index].arName ?? "" )
+            }else{
+                Helper.saveCName(date: self.country[index].enName ?? "" )
+            }
+            
         }
     }
     
@@ -99,6 +112,13 @@ class SearchViewController: UIViewController ,UICollectionViewDataSource, UIColl
         partyTypeTextField.didSelect { (selectedText, index, id) in
             self.partyTypeTextField.text = selectedText
             self.typeId = self.partyType[index].id ?? 0
+            Helper.savePID(date:  self.partyType[index].id ?? 0)
+            if "lang".localized == "ar" {
+            Helper.savePName(date: self.partyType[index].arName ?? "" )
+            }else{
+                Helper.savePName(date: self.partyType[index].enName ?? "" )
+
+            }
         }
     }
     
@@ -135,7 +155,6 @@ class SearchViewController: UIViewController ,UICollectionViewDataSource, UIColl
     
      @IBAction func searchButton(sender: UIButton) {
         
-       if token != ""{
         if typeId == nil || countryId == nil || selectedDate == "" {
         if "lang".localized == "ar" {
             displayMessage(title: "", message: "اكمل البيانات", status: .error, forController: self)
@@ -149,15 +168,7 @@ class SearchViewController: UIViewController ,UICollectionViewDataSource, UIColl
         destinationVC!.date = dateLbl.text ?? ""
         self.navigationController?.pushViewController(destinationVC!, animated: true)
         }
-        }else{
-            if "lang".localized == "ar" {
-                displayMessage(title: "", message: "من فضلك قم بتسجيل الدخول ", status: .error, forController: self)
-
-            }else{
-                displayMessage(title: "", message: "please login first", status: .error, forController: self)
-
-            }
-        }
+        
      }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -191,6 +202,11 @@ class SearchViewController: UIViewController ,UICollectionViewDataSource, UIColl
         let destinationVC = ArtistProfileViewController.instantiateFromNib()
         destinationVC!.artistId = best[indexPath.row].id ?? 0
         self.navigationController?.pushViewController(destinationVC!, animated: true)
+        }else{
+            let destinationVC = OffersDetailsVc.instantiateFromNib()
+            destinationVC!.artistId = offers[indexPath.row].artistID ?? 0
+            self.navigationController?.pushViewController(destinationVC!, animated: true)
+               
         }
     }
     

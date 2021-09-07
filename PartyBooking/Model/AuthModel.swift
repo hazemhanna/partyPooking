@@ -73,3 +73,28 @@ struct Terms: Codable {
     }
 }
 
+
+// MARK: - AboutUSModelJSON
+struct AboutUSModelJSON: Codable {
+    let status: Bool?
+    let message: String?
+    let result: AboutUSModel?
+}
+
+// MARK: - Result
+struct AboutUSModel: Codable {
+    let arAboutus, enAboutus: String?
+
+    enum CodingKeys: String, CodingKey {
+        case arAboutus = "ar_aboutus"
+        case enAboutus = "en_aboutus"
+    }
+}
+
+
+// MARK: - CompetitionsModelJSON
+struct ContactUSModelJson: Codable {
+    let status: Bool?
+    let message: String?
+    let result: String?
+}

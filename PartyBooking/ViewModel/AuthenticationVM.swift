@@ -10,7 +10,6 @@ import Foundation
 import RxSwift
 import SVProgressHUD
 
-
 struct AuthenticationViewModel {
     var email = BehaviorSubject<String>(value: "")
     var password = BehaviorSubject<String>(value: "")
@@ -50,6 +49,22 @@ struct AuthenticationViewModel {
         let observer = Authentication.shared.postRegister(image:image,params: params)
         return observer
     }
+    
+    
+    //MARK:- Attempt to register
+    func attemptToLoginWithSocial(email: String , Name : String , token : String , type : String,phone : String) -> Observable<AuthMdelsJSON> {
+        let params: [String: Any] = [
+            "email": email,
+            "social_id": token,
+            "type": type,
+            "name": Name ,
+            "phone": phone ,
+            ]
+        let observer = Authentication.shared.postLoginWithSocial(params: params)
+        return observer
+    }
+    
+    
     
     func validate(country : String) -> Observable<String> {
             return Observable.create({ (observer) -> Disposable in
@@ -144,7 +159,6 @@ struct AuthenticationViewModel {
                 return Disposables.create()
             })
         }
-
     
     func getCountry() -> Observable<CountriesModelJson> {
         let observer = GetServices.shared.getAllCountry()
@@ -155,6 +169,25 @@ struct AuthenticationViewModel {
         let observer = GetServices.shared.getTerms()
         return observer
     }
+    
+    
+    func about() -> Observable<AboutUSModelJSON> {
+        let observer = GetServices.shared.about()
+        return observer
+    }
+    
+    
+    func ContactUS(name:String,email : String,type: String, message:String ) -> Observable<ContactUSModelJson> {
+        let params: [String: Any] = [
+            "email": email,
+            "name": name,
+            "type": type,
+            "message": message
+            ]
+        let observer = GetServices.shared.contactUs(params: params)
+        return observer
+    }
+    
     
     
     

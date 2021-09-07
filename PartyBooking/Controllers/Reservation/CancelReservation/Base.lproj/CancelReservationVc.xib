@@ -204,6 +204,7 @@
             </view>
             <connections>
                 <outlet property="firstView" destination="yeY-ju-VTV" id="gSe-vT-oQl"/>
+                <outlet property="reasonTF" destination="AMm-6N-seE" id="TbC-vp-1pq"/>
                 <outlet property="secondView" destination="Xuq-Ha-MoE" id="O7e-XM-0qK"/>
             </connections>
             <point key="canvasLocation" x="-974" y="185"/>

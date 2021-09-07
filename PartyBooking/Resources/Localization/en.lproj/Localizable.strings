@@ -6,7 +6,6 @@
   Copyright © 2020 MAC. All rights reserved.
 */
 
-
 "lang" = "en";
 //tab Bar
 "more" = "More";
@@ -89,6 +88,8 @@
 "facebook" = "Register by facebook";
 "artistRegister" = "Artist Register";
 "userRegister" = "User Register";
+"Register" = "Register";
+
 /// artist Register
 "area " = "supported area";
 "service" = "service type";
@@ -162,8 +163,18 @@
 "cancelRservation"="cancel Rservation";
 "clientNmae"="client Nmae:";
 "city"="City :";
-
-
-
-
-
+"read and agree terms and condition"="read and agree terms and condition";
+"terms and condition"="terms and condition";
+"DoneB"="Done";
+"cancelReservation" ="Cancel Reservation";
+"SR" = "SR";
+"reserve Now" = "reserve Now";
+"From" = "From";
+"To" = "To";
+"completed" = "completed";
+"new" = "new";
+"cancelled" = "cancelled";
+"Are" = "Are you Sure";
+"YES" ="YES" ;
+"NO" ="NO" ;
+"Address" = "Address";

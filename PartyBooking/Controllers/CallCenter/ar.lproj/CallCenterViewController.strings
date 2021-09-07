@@ -1,0 +1,18 @@
+
+/* Class = "UIButton"; normalTitle = "send"; ObjectID = "5d8-qL-qIM"; */
+"5d8-qL-qIM.normalTitle" = "ارسال";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "6uS-Q4-49P"; */
+"6uS-Q4-49P.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "      خدمة العملاء"; ObjectID = "Hen-dJ-jm1"; */
+"Hen-dJ-jm1.text" = "خدمة العملاء";
+
+/* Class = "UILabel"; text = "message"; ObjectID = "NOL-C7-oWz"; */
+"NOL-C7-oWz.text" = "الرسالة";
+
+/* Class = "UITextField"; placeholder = "Message"; ObjectID = "ueg-9K-bwy"; */
+"ueg-9K-bwy.placeholder" = "الرسالة";
+
+/* Class = "UILabel"; text = "Message Title"; ObjectID = "zdR-Zg-Shn"; */
+"zdR-Zg-Shn.text" = "عنوان الرسالة";

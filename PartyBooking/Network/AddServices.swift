@@ -64,6 +64,28 @@ struct AddServices {
         }
     }//END
     
+    func OffersSearch(params: [String : Any]) -> Observable<OffersModelJSON> {
+        return Observable.create { (observer) -> Disposable in
+            let url = ConfigURLs.OffersSearch
+            let token = Helper.getAPIToken() ?? ""
+            let headers = [
+                "Authorization": "Bearer \(token)"
+            ]
+            Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers)
+                .validate(statusCode: 200..<300)
+                .responseJSON { (response: DataResponse<Any>) in
+                    do {
+                        let data = try JSONDecoder().decode(OffersModelJSON.self, from: response.data!)
+                        observer.onNext(data)
+                    } catch {
+                        print(error.localizedDescription)
+                        observer.onError(error)
+                    }
+            }
+            
+            return Disposables.create()
+        }
+    }//
     
     //MARK:- POST Register
     func chageProfilePhoto(image: UIImage?) -> Observable<MessageModel> {
@@ -124,5 +146,77 @@ struct AddServices {
         }
     }//END
     
+    
+    
+    func OffersDetails(params: [String : Any]) -> Observable<OffersDetailsModelJSON> {
+        return Observable.create { (observer) -> Disposable in
+            let url = ConfigURLs.offerDetails
+            let token = Helper.getAPIToken() ?? ""
+            let headers = [
+                "Authorization": "Bearer \(token)"
+            ]
+            Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers)
+                .validate(statusCode: 200..<300)
+                .responseJSON { (response: DataResponse<Any>) in
+                    do {
+                        let data = try JSONDecoder().decode(OffersDetailsModelJSON.self, from: response.data!)
+                        observer.onNext(data)
+                    } catch {
+                        print(error.localizedDescription)
+                        observer.onError(error)
+                    }
+            }
+            
+            return Disposables.create()
+        }
+    }//END
+    
+    
+    func cancelReservation(params: [String : Any]) -> Observable<ContactUSModelJson> {
+        return Observable.create { (observer) -> Disposable in
+            let url = ConfigURLs.cancelReservation
+            let token = Helper.getAPIToken() ?? ""
+            let headers = [
+                "Authorization": "Bearer \(token)"
+            ]
+            Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers)
+                .validate(statusCode: 200..<300)
+                .responseJSON { (response: DataResponse<Any>) in
+                    do {
+                        let data = try JSONDecoder().decode(ContactUSModelJson.self, from: response.data!)
+                        observer.onNext(data)
+                    } catch {
+                        print(error.localizedDescription)
+                        observer.onError(error)
+                    }
+            }
+            
+            return Disposables.create()
+        }
+    }//END
+    
+    
+    func postBooking(params: [String : Any]) -> Observable<ContactUSModelJson> {
+        return Observable.create { (observer) -> Disposable in
+            let url = ConfigURLs.postBooking
+            let token = Helper.getAPIToken() ?? ""
+            let headers = [
+                "Authorization": "Bearer \(token)"
+            ]
+            Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers)
+                .validate(statusCode: 200..<300)
+                .responseJSON { (response: DataResponse<Any>) in
+                    do {
+                        let data = try JSONDecoder().decode(ContactUSModelJson.self, from: response.data!)
+                        observer.onNext(data)
+                    } catch {
+                        print(error.localizedDescription)
+                        observer.onError(error)
+                    }
+            }
+            
+            return Disposables.create()
+        }
+    }//END
     
 }

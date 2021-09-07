@@ -13,6 +13,7 @@ class CancelReservationVc: UIViewController {
     
     @IBOutlet weak var firstView: UIView!
     @IBOutlet weak var secondView: UIView!
+    @IBOutlet weak var reasonTF: UITextField!
 
     
     var onClickCancel :()->() = {}

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GE_SS_Two_Bold.otf">
+            <string>GESSTwoBold-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReservationViewController" customModule="PartyBooking" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="7Q2-KJ-SLb" customClass="ReservationViewController" customModule="PartyBooking" customModuleProvider="target">
+            <view key="view" contentMode="scaleToFill" id="XGJ-6b-wR5">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zH9-2g-2hi">
+                        <rect key="frame" x="0.0" y="74" width="414" height="822"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n8U-vj-8go" customClass="TextFieldDropDown" customModule="PartyBooking" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="16" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="g0q-q4-cAz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="55c-0x-bUm">
+                                <rect key="frame" x="0.0" y="74" width="414" height="748"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="7Q2-KJ-SLb" id="0JY-wg-OBj"/>
+                                    <outlet property="delegate" destination="7Q2-KJ-SLb" id="tBg-fV-bEg"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="n8U-vj-8go" firstAttribute="leading" secondItem="zH9-2g-2hi" secondAttribute="leading" id="8G4-lB-feg"/>
+                            <constraint firstItem="55c-0x-bUm" firstAttribute="leading" secondItem="zH9-2g-2hi" secondAttribute="leading" id="AbB-S1-u74"/>
+                            <constraint firstItem="55c-0x-bUm" firstAttribute="top" secondItem="n8U-vj-8go" secondAttribute="bottom" constant="8" id="Dqv-OH-9XI"/>
+                            <constraint firstItem="n8U-vj-8go" firstAttribute="top" secondItem="zH9-2g-2hi" secondAttribute="top" constant="16" id="ESL-nw-rR7"/>
+                            <constraint firstAttribute="trailing" secondItem="n8U-vj-8go" secondAttribute="trailing" id="YnB-lk-d1S"/>
+                            <constraint firstAttribute="trailing" secondItem="55c-0x-bUm" secondAttribute="trailing" id="yHZ-eZ-qmK"/>
+                            <constraint firstAttribute="bottom" secondItem="55c-0x-bUm" secondAttribute="bottom" id="zWY-6E-zVP"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PQI-oo-aCt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="74"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="reservation" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PqS-1t-Vx5">
+                                <rect key="frame" x="169.5" y="47" width="75.5" height="15"/>
+                                <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.16862745100000001" green="0.74117647060000003" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PqS-1t-Vx5" firstAttribute="centerX" secondItem="PQI-oo-aCt" secondAttribute="centerX" id="RWn-80-Q6Q"/>
+                            <constraint firstAttribute="bottom" secondItem="PqS-1t-Vx5" secondAttribute="bottom" constant="12" id="dzp-Yu-Bap"/>
+                            <constraint firstAttribute="height" constant="74" id="lo5-ke-LcK"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <viewLayoutGuide key="safeArea" id="xGG-LF-CKr"/>
+                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <constraints>
+                    <constraint firstItem="zH9-2g-2hi" firstAttribute="trailing" secondItem="xGG-LF-CKr" secondAttribute="trailing" id="2If-3j-Pbt"/>
+                    <constraint firstAttribute="bottom" secondItem="zH9-2g-2hi" secondAttribute="bottom" id="DJU-0C-sBz"/>
+                    <constraint firstAttribute="trailing" secondItem="PQI-oo-aCt" secondAttribute="trailing" id="LZt-Um-5lA"/>
+                    <constraint firstItem="PQI-oo-aCt" firstAttribute="top" secondItem="XGJ-6b-wR5" secondAttribute="top" id="UjV-FW-Cbu"/>
+                    <constraint firstItem="PQI-oo-aCt" firstAttribute="leading" secondItem="XGJ-6b-wR5" secondAttribute="leading" id="Vio-QL-geD"/>
+                    <constraint firstItem="zH9-2g-2hi" firstAttribute="top" secondItem="PQI-oo-aCt" secondAttribute="bottom" id="gBM-wO-3AB"/>
+                    <constraint firstItem="zH9-2g-2hi" firstAttribute="leading" secondItem="xGG-LF-CKr" secondAttribute="leading" id="nnZ-W3-Hfd"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="reservationTableView" destination="55c-0x-bUm" id="8eb-5D-ii3"/>
+                <outlet property="titleLabel" destination="PqS-1t-Vx5" id="4CP-Pf-l6x"/>
+                <outlet property="typeTextField" destination="n8U-vj-8go" id="a4P-eK-nfi"/>
+            </connections>
+            <point key="canvasLocation" x="-329" y="-64"/>
+        </viewController>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

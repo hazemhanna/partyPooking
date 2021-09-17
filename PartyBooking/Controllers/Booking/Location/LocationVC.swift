@@ -1,20 +1,23 @@
 //
 //  LocationVC.swift
-//  Sal7ha
+//  PartyBooking
 //
-//  Created by Macbook on 12/16/19.
-//  Copyright © 2019 Dtag. All rights reserved.
+//  Created by MAC on 08/09/2021.
+//  Copyright © 2021 MAC. All rights reserved.
 //
+
+
 
 import UIKit
 import MapKit
 import CoreLocation
 
-class LocationViewController: UIViewController {
+class LocationVC: UIViewController {
     @IBOutlet weak var LocationLabel: UILabel!
     @IBOutlet weak var locationConfirmation: UIButton!
     
     var resultSearchController:UISearchController? = UISearchController()
+
     var locationFor = 0
     let locationManager = CLLocationManager()
     let regionInMeters: Double = 300
@@ -43,22 +46,73 @@ class LocationViewController: UIViewController {
         checklocationAuthorization()
         setupLocationManager()
         startTackingUserLocation()
+        locationConfirmation.setTitle("confirm".localized, for: .normal)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        super.viewWillDisappear(animated)
+        
+        //self.navigationController?.navigationBar.isHidden = false
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(true)
+        
+        //self.navigationController?.navigationBar.isHidden = true
+
+        DispatchQueue.main.async {
+////
+            let locationSearchTable = self.storyboard!.instantiateViewController(withIdentifier: "LocationSearchTable") as! LocationSearchTable
+            self.resultSearchController = UISearchController(searchResultsController: locationSearchTable)
+            self.resultSearchController?.searchResultsUpdater = locationSearchTable
+//
+
+        //    self.searchBarLB.delegate = self
+        let searchBar =  self.resultSearchController!.searchBar
+            searchBar.barTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+           searchBar.sizeToFit()
+            searchBar.placeholder = "Search for places".localized
+            locationSearchTable.handleMapSearchDelegate = self
+            locationSearchTable.mapView = self.MapView
+//
+            searchBar.backgroundColor = #colorLiteral(red: 0.153167218, green: 0.2862507105, blue: 0.4761998057, alpha: 1)
+      
+
+                if let textfield = searchBar.value(forKey: "searchField") as? UITextField {
+
+                textfield.backgroundColor = #colorLiteral(red: 0.1176470588, green: 0.2156862745, blue: 0.4, alpha: 1)
+                textfield.attributedPlaceholder = NSAttributedString(string: textfield.placeholder ?? "", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
+
+                textfield.textColor = UIColor.white
+
+                if let leftView = textfield.leftView as? UIImageView {
+                    leftView.image = leftView.image?.withRenderingMode(.alwaysTemplate)
+                    leftView.tintColor = UIColor.white
+                }
+            }
+
+
+            self.resultSearchController?.hidesNavigationBarDuringPresentation = false
+
+
+            self.navigationItem.searchController = self.resultSearchController
 
 
 
+
+            self.definesPresentationContext = true
+       }
     }
     
     
  
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.navigationController?.navigationBar.isHidden = false
+    @IBAction func backButton(sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        self.navigationController?.navigationBar.isHidden = true
-    }
+
     
     
     func handleLongPress (gestureRecognizer: UILongPressGestureRecognizer) {
@@ -128,13 +182,13 @@ class LocationViewController: UIViewController {
         }
     }
     
-    
     @IBAction func LocationConfirmation(_ sender: Any) {
         Helper.saveLat(Lang: self.lat)
         Helper.saveLong(Lang: self.long)
         Helper.saveAddress(Lang: self.LocationLabel.text ?? "")
         self.navigationController?.popViewController(animated: true)
     }
+    
     func checklocationAuthorization() {
         switch CLLocationManager.authorizationStatus() {
         case .authorizedWhenInUse:
@@ -237,13 +291,13 @@ class LocationViewController: UIViewController {
     
 }
 
-extension LocationViewController: CLLocationManagerDelegate {
+extension LocationVC: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         checklocationAuthorization()
     }
     
 }
-extension LocationViewController: MKMapViewDelegate {
+extension LocationVC: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
         let center = getCenterLocation(for: mapView)
         
@@ -287,6 +341,33 @@ extension LocationViewController: MKMapViewDelegate {
         }
         
     }
+//
+//    func mapView(_ mapView: MKMapView, regionDidChangeAnimated: Bool) {
+//        let center = getCenterLocation(for: mapView)
+//
+//        guard let previousLocation = self.perviousLocation else { return }
+//        guard center.distance(from: previousLocation) > 50 else {return}
+//        perviousLocation = center
+//        guard self.perviousLocation != nil else {return}
+//        geoCoder.reverseGeocodeLocation(center) { [weak self] (Placemark, error) in
+//            guard  let self = self else {return}
+//            if let error = error {
+//                print(error.localizedDescription)
+//                return
+//
+//            }
+//            guard  let Placemark = Placemark?.first else {
+//                return
+//            }
+//            let streetNumber = Placemark.subThoroughfare ?? ""
+//            let streetName = Placemark.thoroughfare ?? ""
+//            DispatchQueue.main.async {
+//                self.LocationLabel.text = "\(streetNumber) \(streetName)"
+//            }
+//
+//        }
+//    }
+    
     
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated: Bool) {
         let center = getCenterLocation(for: mapView)
@@ -339,7 +420,7 @@ protocol HandleMapSearch {
     func dropPinZoomIn(placemark:MKPlacemark)
 }
 
-extension LocationViewController: HandleMapSearch {
+extension LocationVC: HandleMapSearch {
     
     
     @objc func dismissKeyboard() {
@@ -377,11 +458,22 @@ extension LocationViewController: HandleMapSearch {
         }
         
         DispatchQueue.main.async {
+        
             self.LocationLabel.text = "\(streetNumber)"
         }
+        
+//        if let city = placemark.locality,
+//            let state = placemark.administrativeArea {
+//                annotation.subtitle = "\(city) \(state)"
+//        }
+        
         MapView.addAnnotation(annotation)
+        
         let region = MKCoordinateRegion(center: placemark.coordinate, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
             MapView.setRegion(region, animated: true)
+        
+       // mapView(MapView, regionDidChangeAnimated: true)
+           
         }
 }
 

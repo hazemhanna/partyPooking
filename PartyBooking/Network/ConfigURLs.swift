@@ -43,18 +43,14 @@ struct ConfigURLs {
     static var getFavourite = BASE_URL  + "user/favourite/get"
     static var getArtistDetails = BASE_URL  + "user/artist/details"
     static var getArtistWork = BASE_URL  + "user/home/artist-works"
-    static var getOffers = BASE_URL  + "user/offer/get"
-    
-    static var OffersSearch = BASE_URL  + "user/offer/search"
-
-    
-    
+    static var getOffers = BASE_URL  + "user/offer/get-new"
+    static var OffersSearch = BASE_URL  + "user/offer/search-new"
+    static var offerDetails = BASE_URL  + "user/offer/details-new"
     //MARK:- get Live
     static var getLive = BASE_URL  + "user/setting/getLives"
     static var getProfile = BASE_URL  + "user/auth/profile"
     static var chageProfilePhoto = BASE_URL  + "user/auth/changePhoto"
     static var editProfile = BASE_URL  + "user/auth/updateProfile"
-    static var offerDetails = BASE_URL  + "user/offer/details"
     // booking
     static var postBooking = BASE_URL  + "user/booking/book"
     static var getReservation = BASE_URL  + "user/booking/getBookings"
@@ -62,7 +58,10 @@ struct ConfigURLs {
     static var getNotification = BASE_URL  + "user/notification/all"
 
     //MARK:- artist
-    //MARK:- POST Artist Login
-    static var artistLogin = BASE_URL + "artist/login"
-    
+    static var artistLogin = BASE_URL + "artist/auth/login"
+    static var postRegisterArtist = BASE_URL  + "artist/auth/register"
+
+
+
+
 }

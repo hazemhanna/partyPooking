@@ -79,7 +79,7 @@ class UserRegisterViewController: UIViewController {
         DataBinding()
         AuthViewModel.showIndicator()
         getAllCountry()
-        updateReturnHandler()
+       // updateReturnHandler()
     }
     
     

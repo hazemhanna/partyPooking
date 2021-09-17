@@ -9,6 +9,8 @@
 import UIKit
 import FlagPhoneNumber
 import IQKeyboardManagerSwift
+import RxSwift
+import RxCocoa
 
 
 class ArtistRegisterViewController: UIViewController {
@@ -28,21 +30,31 @@ class ArtistRegisterViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passTextField: UITextField!
     @IBOutlet weak var lNameTextField: UITextField!
-    @IBOutlet weak var countryTextField: UITextField!
+    @IBOutlet weak var countryTextField: TextFieldDropDown!
     @IBOutlet weak var fNameTextField: UITextField!
     @IBOutlet weak var phoneTextField: FPNTextField!
     @IBOutlet weak var areaTextField: TextFieldDropDown!
     @IBOutlet weak var serviceTextField: TextFieldDropDown!
     @IBOutlet weak var genderTextField: TextFieldDropDown!
-    @IBOutlet weak var partyTextField: TextFieldDropDown!
     @IBOutlet weak var banckTextField: UITextField!
+    @IBOutlet weak var banckAcountTextField: UITextField!
+
     
     fileprivate var returnHandler : IQKeyboardReturnKeyHandler!
+    private let authModel = ArtistAuthenticationVM()
+    var disposeBag = DisposeBag()
 
+    var service = [PartyType]()
+    var filterService = [String]()
+    var country = [Country]()
+    var filterCountry = [String]()
+    var areas = [Areas]()
+    var filterAreas = [String]()
+    var countryId :Int?
+    var serviceId :Int?
+    var areaId :Int?
+    var gender = ["male".localized,"female".localized]
     
-    var titles = ["5","4","3","2","1"]
-    var gender = ["male","female"]
-
     let listController: FPNCountryListViewController = FPNCountryListViewController(style: .grouped)
     var dialCode = String()
     var profliePic : UIImage?
@@ -53,7 +65,6 @@ class ArtistRegisterViewController: UIViewController {
         }
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         nextBtn.layer.cornerRadius = 7
@@ -61,11 +72,20 @@ class ArtistRegisterViewController: UIViewController {
         numberView.layer.borderWidth = 1
         setUPLocalize()
         setupCountryPHone()
-        areaTitleDropDown()
         genderDropDown()
-        serviceTypeDropDown()
-        partTypeDropDown()
-        updateReturnHandler()
+        authModel.showIndicator()
+        getServices()
+        getAllCountry()
+        getArea()
+        DataBinding()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
     }
     
     func updateReturnHandler(){
@@ -87,18 +107,17 @@ class ArtistRegisterViewController: UIViewController {
              listController.didSelect = { [weak self] country in
              self?.phoneTextField.setFlag(countryCode: country.code)
              }
-         }
-    
+    }
     
     func areaTitleDropDown() {
-        areaTextField.optionArray = self.titles
+        areaTextField.optionArray = self.filterAreas
         areaTextField.didSelect { (selectedText, index, id) in
             self.areaTextField.text = selectedText
         }
     }
     
     func serviceTypeDropDown() {
-        serviceTextField.optionArray = self.titles
+        serviceTextField.optionArray = self.filterService
         serviceTextField.didSelect { (selectedText, index, id) in
             self.serviceTextField.text = selectedText
         }
@@ -111,10 +130,10 @@ class ArtistRegisterViewController: UIViewController {
         }
     }
     
-    func partTypeDropDown() {
-        partyTextField.optionArray = self.titles
-        partyTextField.didSelect { (selectedText, index, id) in
-            self.partyTextField.text = selectedText
+    func countryDropDown() {
+        countryTextField.optionArray = self.filterCountry
+        countryTextField.didSelect { (selectedText, index, id) in
+            self.countryTextField.text = selectedText
         }
     }
     
@@ -137,9 +156,9 @@ class ArtistRegisterViewController: UIViewController {
        // serviceTextField.placeholder =  serviceLabel.text
         areaLabel.text = "area".localized
         //areaTextField.placeholder =  areaLabel.text
-        banckLabel.text = "bank".localized
+        banckLabel.text = "bankName".localized
+        banckAcountTextField.placeholder = "bank".localized
         //banckTextField.placeholder = banckLabel.text
-        
         if "lang".localized  == "en" {
 
             emailTextField.textAlignment = .left
@@ -151,7 +170,8 @@ class ArtistRegisterViewController: UIViewController {
             areaTextField.textAlignment = .left
             serviceTextField.textAlignment = .left
             banckTextField.textAlignment = .left
-            
+            banckAcountTextField.textAlignment = .left
+
             let font = UIFont(name: "Georgia-Bold", size: 14)
             titleLabel.font = font
             fNameLabel.font = font
@@ -184,6 +204,7 @@ class ArtistRegisterViewController: UIViewController {
             areaTextField.textAlignment = .right
             serviceTextField.textAlignment = .right
             banckTextField.textAlignment = .right
+            banckAcountTextField.textAlignment = .right
         }
         
     }
@@ -197,22 +218,12 @@ class ArtistRegisterViewController: UIViewController {
         self.present(vc!, animated: true, completion: nil)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = true
-        
-        
-    }
-    override func viewWillDisappear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = false
-        
-    }
-    
     @IBAction func backButton(sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
     
-    
     @IBAction func nextButton(sender: UIButton) {
+        guard self.validateInput() else { return }
         let destinationVC = OfferPriceViewController.instantiateFromNib()
         self.navigationController?.pushViewController(destinationVC!, animated: true)
     }
@@ -236,6 +247,7 @@ extension ArtistRegisterViewController : FPNTextFieldDelegate {
    
     }
 }
+
 
 extension ArtistRegisterViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -291,3 +303,101 @@ extension ArtistRegisterViewController : UIImagePickerControllerDelegate, UINavi
     
 }
 
+
+extension ArtistRegisterViewController {
+    //MARK:- DataBinding
+    func DataBinding() {
+        _ = self.emailTextField.rx.text.map({$0 ?? ""}).bind(to: authModel.email).disposed(by: disposeBag)
+        _ = self.fNameTextField.rx.text.map({$0 ?? ""}).bind(to: authModel.first_name).disposed(by: disposeBag)
+        _ = self.lNameTextField.rx.text.map({$0 ?? ""}).bind(to: authModel.last_name).disposed(by: disposeBag)
+        _ = self.passTextField.rx.text.map({$0 ?? ""}).bind(to: authModel.password).disposed(by: disposeBag)
+        _ = self.countryTextField.rx.text.map({$0 ?? ""}).bind(to: authModel.country).disposed(by: disposeBag)
+        _ = self.phoneTextField.rx.text.map({$0 ?? ""}).bind(to: authModel.phone).disposed(by: disposeBag)
+        _ = self.banckTextField.rx.text.map({$0 ?? ""}).bind(to: authModel.bankName).disposed(by: disposeBag)
+        _ = self.banckAcountTextField.rx.text.map({$0 ?? ""}).bind(to: authModel.bankAcount).disposed(by: disposeBag)
+
+    }
+}
+
+
+extension ArtistRegisterViewController {
+
+    func validateInput() -> Bool {
+        var valid = false
+        authModel.validate(country: countryTextField.text ?? "", area: areaTextField.text ?? "", service: serviceTextField.text ?? "", gender: genderTextField.text ?? "").subscribe(onNext: { (result) in
+            if result.isEmpty {
+                valid = true
+            } else {
+                self.authModel.dismissIndicator()
+                displayMessage(title: "", message: result, status: .error, forController: self)
+                valid = false
+            }
+        }).disposed(by: disposeBag)
+        return valid
+    }
+    
+    
+    func getServices() {
+        authModel.getServices().subscribe(onNext: { (data) in
+            if data.status ?? false {
+                self.authModel.dismissIndicator()
+                self.service = data.result ?? []
+                for index in self.service {
+                    if "lang".localized == "ar" {
+                    self.filterService.append(index.arName ?? "")
+                    }else{
+                     self.filterService.append(index.enName ?? "")
+                    }
+                }
+                self.serviceTypeDropDown()
+            }
+        }, onError: { (error) in
+            self.authModel.dismissIndicator()
+        }).disposed(by: disposeBag)
+     }
+    
+    
+    
+    
+    func getArea() {
+        authModel.getArea().subscribe(onNext: { (data) in
+            if data.status ?? false {
+                self.authModel.dismissIndicator()
+                self.areas = data.result ?? []
+                for index in self.areas {
+                    if "lang".localized == "ar" {
+                    self.filterAreas.append(index.arName ?? "")
+                    }else{
+                        self.filterAreas.append(index.enName ?? "")
+
+                    }
+                }
+                self.areaTitleDropDown()
+            }
+        }, onError: { (error) in
+            self.authModel.dismissIndicator()
+        }).disposed(by: disposeBag)
+     }
+    
+    
+    func getAllCountry() {
+        authModel.getCountry().subscribe(onNext: { (data) in
+            self.authModel.dismissIndicator()
+            if data.status ?? false {
+                self.country = data.result ?? []
+                for index in self.country{
+                    if "lang".localized == "ar" {
+                        self.filterCountry.append(index.arName ?? "")
+                    }else{
+                        self.filterCountry.append(index.enName ?? "")
+                    }
+                }
+                self.countryDropDown()
+            }
+        }, onError: { (error) in
+            self.authModel.dismissIndicator()
+        }).disposed(by: disposeBag)
+    }
+    
+    
+}

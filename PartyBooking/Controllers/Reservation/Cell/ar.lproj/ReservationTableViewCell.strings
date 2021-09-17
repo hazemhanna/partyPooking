@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "1234565433"; ObjectID = "5kw-QH-VaR"; */
+"5kw-QH-VaR.text" = "1234565433";
+
+/* Class = "UIButton"; normalTitle = "load"; ObjectID = "ReT-OC-zbb"; */
+"ReT-OC-zbb.normalTitle" = "تحميل";
+
+/* Class = "UILabel"; text = "contract"; ObjectID = "VME-nJ-V8m"; */
+"VME-nJ-V8m.text" = "العقد";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "hN8-fx-rDn"; */
+"hN8-fx-rDn.normalTitle" = "الغاء";
+
+/* Class = "UILabel"; text = "confirmation number "; ObjectID = "hRC-88-OoU"; */
+"hRC-88-OoU.text" = "رقم التاكيد";

@@ -25,6 +25,11 @@ class InformationViewController: UIViewController {
     @IBOutlet weak var ReadyBtn : UIButton!
     @IBOutlet weak var notReadyLabel : UILabel!
     @IBOutlet weak var titleLabel : UILabel!
+    @IBOutlet weak var succesLabel : UILabel!
+    @IBOutlet weak var doneBtn : UIButton!
+    @IBOutlet weak var succesView : UIView!
+
+
     @IBOutlet weak var backButton: UIButton! {
         didSet {
             backButton.setImage(backButton.currentImage?.flipIfNeeded(), for: .normal)
@@ -35,6 +40,8 @@ class InformationViewController: UIViewController {
         super.viewDidLoad()
         nextBtn.layer.cornerRadius = 7
         setUPLocalize()
+        succesView.isHidden = true
+        
     }
     
     
@@ -52,6 +59,10 @@ class InformationViewController: UIViewController {
         agreeLabel.text = "agree".localized
         readLabel.text = "read".localized
         termsLabel.text = "terms".localized
+        succesLabel.text = "investigation".localized
+        doneBtn.setTitle("DoneB".localized, for: .normal)
+
+        
         if "lang".localized  == "en" {
             let font = UIFont(name: "Georgia-Bold", size: 14)
             let font2 = UIFont(name: "Georgia-Bold", size: 11)
@@ -83,12 +94,19 @@ class InformationViewController: UIViewController {
     }
     
     @IBAction func nextButton(sender: UIButton) {
-        let destinationVC = TabBarController.instantiate(fromAppStoryboard: .Main)
-        destinationVC.type = .artist
-        if let appDelegate = UIApplication.shared.delegate {
-            appDelegate.window??.rootViewController = destinationVC
-        }
+        succesView.isHidden = false
     }
+    
+    @IBAction func succesButton(sender: UIButton) {
+        let main = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Nav")
+       if let appDelegate = UIApplication.shared.delegate {
+           appDelegate.window??.rootViewController = main
+        
+       }
+    }
+    
+    
+    
     
     var unchecked = true
     @IBAction func tick(sender: UIButton) {

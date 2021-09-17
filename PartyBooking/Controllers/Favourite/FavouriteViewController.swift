@@ -13,6 +13,8 @@ import RxCocoa
 class FavouriteViewController: UIViewController {
     
     @IBOutlet weak var favouriteTableView: UITableView!
+    @IBOutlet weak var backview: UIView!
+    @IBOutlet weak var noFavouriteLabel : UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var backButton: UIButton! {
         didSet {
@@ -29,12 +31,13 @@ class FavouriteViewController: UIViewController {
         super.viewDidLoad()
         favouriteTableView.register(UINib(nibName: "FavouriteTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
         setUPLocalize()
-      
     }
     
     func setUPLocalize(){
+        noFavouriteLabel.text = "noFav".localized
         titleLabel.text = "favourite".localized
      }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         favouriteVM.showIndicator()
@@ -91,6 +94,11 @@ func getFavourite() {
         if data.status ?? false {
             self.favourite = data.result?.data ?? []
             self.favouriteTableView.reloadData()
+            if self.favourite.count > 0 {
+                self.backview.isHidden = true
+            }else{
+                self.backview.isHidden = false
+            }
         }
     }, onError: { (error) in
         self.favouriteVM.dismissIndicator()
@@ -98,7 +106,6 @@ func getFavourite() {
     }).disposed(by: disposeBag)
  }
     
-   
     func addFavourite(artistId : Int ) {
         favouriteVM.addFavourite(artistId: artistId).subscribe(onNext: { (data) in
             self.favouriteVM.dismissIndicator()

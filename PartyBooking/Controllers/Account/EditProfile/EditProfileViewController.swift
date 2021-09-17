@@ -52,7 +52,7 @@ class EditProfileViewController: UIViewController {
         setUPLocalize()
         setupCountryPHone()
         getAllCountry()
-        updateReturnHandler()
+       // updateReturnHandler()
     }
     func setUPLocalize(){
         saveBtn.layer.cornerRadius = 7

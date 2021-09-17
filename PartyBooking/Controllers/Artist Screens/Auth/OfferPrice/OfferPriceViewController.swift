@@ -90,6 +90,7 @@ class OfferPriceViewController: UIViewController {
     
     
     @IBAction func nextButton(sender: UIButton) {
+        
         let destinationVC = InformationViewController.instantiateFromNib()
         self.navigationController?.pushViewController(destinationVC!, animated: true)
     }

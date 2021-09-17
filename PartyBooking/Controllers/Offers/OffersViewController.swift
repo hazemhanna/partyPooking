@@ -195,6 +195,7 @@ extension OffersViewController : UITableViewDelegate , UITableViewDataSource {
         
         let destinationVC = OffersDetailsVc.instantiateFromNib()
         destinationVC!.artistId = offers[indexPath.row].artistID ?? 0
+        destinationVC?.typeId =  offers[indexPath.row].partyTypeID ?? 0
         self.navigationController?.pushViewController(destinationVC!, animated: true)
             
     }

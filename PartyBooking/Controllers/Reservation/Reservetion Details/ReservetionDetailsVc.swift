@@ -50,7 +50,7 @@ class ReservetionDetailsVc : UIViewController {
         
         let from = reservation?.fromTime ?? ""
         let  to =  reservation?.toTime ?? ""
-        PartyTime.text =  ("From".localized + from) + ("To".localized + to)
+        PartyTime.text =  ("From".localized + from) + " " + ("To".localized + to)
         noteLbl.text = reservation?.partyType?.arName
         statusLbl.text = reservation?.status?.localized ?? ""
         artistName.text = (reservation?.artist?.firstName ?? "" ) + " " + (reservation?.artist?.lastName ?? "")
@@ -58,13 +58,8 @@ class ReservetionDetailsVc : UIViewController {
         canelReason.text = reservation?.cancelReason ?? ""
         Partydate.text = reservation?.date ?? ""
         ratView.rating = Double(reservation?.rate ?? 0)
-        
-        if "lang".localized == "ar" {
-            Partydlocation.text = reservation?.area?.arName ?? ""
-         }else{
-            Partydlocation.text = reservation?.area?.enName ?? ""
-        }
-        
+       Partydlocation.text = reservation?.address  ??  ""
+         
         cancelReasonView.isHidden = true
         rateView.isHidden = true
         if ended {

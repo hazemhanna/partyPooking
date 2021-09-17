@@ -1,0 +1,54 @@
+
+/* Class = "UILabel"; text = "payment way "; ObjectID = "09l-84-ftz"; */
+"09l-84-ftz.text" = "طرق الدفع";
+
+/* Class = "UILabel"; text = "+ SR 450 taxis"; ObjectID = "4DZ-DW-5jj"; */
+"4DZ-DW-5jj.text" = "+ SR 450 taxis";
+
+/* Class = "UILabel"; text = "last name"; ObjectID = "80z-Aq-QGo"; */
+"80z-Aq-QGo.text" = "الاسم الاخير";
+
+/* Class = "UILabel"; text = "choose party time "; ObjectID = "CSe-ca-V0C"; */
+"CSe-ca-V0C.text" = "اختر وقت الحفلة";
+
+/* Class = "UILabel"; text = "total"; ObjectID = "F6p-v5-o18"; */
+"F6p-v5-o18.text" = "المجموع";
+
+/* Class = "UILabel"; text = "password"; ObjectID = "FEX-tL-uKO"; */
+"FEX-tL-uKO.text" = "الرقم السري";
+
+/* Class = "UILabel"; text = "phone number "; ObjectID = "Fs6-5z-lDt"; */
+"Fs6-5z-lDt.text" = "رقم الهاتف";
+
+/* Class = "UILabel"; text = "e-mail"; ObjectID = "OG5-ZT-XU3"; */
+"OG5-ZT-XU3.text" = "البريد الالكتروني";
+
+/* Class = "UILabel"; text = "SR 98.0000"; ObjectID = "U7S-sq-ruC"; */
+"U7S-sq-ruC.text" = "SR 98.0000";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "drh-vQ-Ukg"; */
+"drh-vQ-Ukg.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Booking Now"; ObjectID = "e39-Ny-tZj"; */
+"e39-Ny-tZj.text" = "احجز الان";
+
+/* Class = "UIButton"; normalTitle = "Done reservation"; ObjectID = "jBt-wp-htn"; */
+"jBt-wp-htn.normalTitle" = "اتمام الحجز";
+
+/* Class = "UILabel"; text = "location"; ObjectID = "kLx-Hb-xVM"; */
+"kLx-Hb-xVM.text" = "الموقع";
+
+/* Class = "UILabel"; text = "country"; ObjectID = "spv-fl-85i"; */
+"spv-fl-85i.text" = "الدولة";
+
+/* Class = "UILabel"; text = "To "; ObjectID = "utC-Rd-7UO"; */
+"utC-Rd-7UO.text" = "الي ";
+
+/* Class = "UILabel"; text = "From"; ObjectID = "waN-V0-X9H"; */
+"waN-V0-X9H.text" = "من";
+
+/* Class = "UILabel"; text = "choose party Location"; ObjectID = "wuT-L5-aS3"; */
+"wuT-L5-aS3.text" = "اختر موقع الحفلة";
+
+/* Class = "UILabel"; text = "first name"; ObjectID = "ww9-5Q-YkQ"; */
+"ww9-5Q-YkQ.text" = "الاسم الاول";

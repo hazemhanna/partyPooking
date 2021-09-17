@@ -37,7 +37,8 @@ class PartyPriceVC: UIViewController {
     }
 
     @IBAction func saveButton(sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
+    self.navigationController?.popViewController(animated: true)
+        
     }
 
 }

@@ -38,14 +38,8 @@
                             <constraint firstAttribute="bottom" secondItem="Z2O-8H-ckW" secondAttribute="bottom" constant="12" id="RIL-c2-2jR"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="version 1-2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQV-1S-vWS">
-                        <rect key="frame" x="161" y="815" width="92" height="15"/>
-                        <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="14"/>
-                        <color key="textColor" red="0.1803921568627451" green="0.1803921568627451" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hHL-sQ-JbQ">
-                        <rect key="frame" x="0.0" y="74" width="414" height="709"/>
+                        <rect key="frame" x="0.0" y="74" width="414" height="688"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </tableView>
                 </subviews>
@@ -53,12 +47,10 @@
                 <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstItem="hHL-sQ-JbQ" firstAttribute="leading" secondItem="ENN-Ay-NVJ" secondAttribute="leading" id="BcI-Ux-XnJ"/>
-                    <constraint firstItem="zQV-1S-vWS" firstAttribute="top" secondItem="hHL-sQ-JbQ" secondAttribute="bottom" constant="32" id="HY2-Wz-bcw"/>
                     <constraint firstItem="hHL-sQ-JbQ" firstAttribute="top" secondItem="GuV-n8-FJN" secondAttribute="bottom" id="Jpa-QJ-NpA"/>
-                    <constraint firstItem="ENN-Ay-NVJ" firstAttribute="bottom" secondItem="zQV-1S-vWS" secondAttribute="bottom" constant="32" id="Mgn-sY-tC3"/>
-                    <constraint firstItem="zQV-1S-vWS" firstAttribute="centerX" secondItem="Bdz-k8-wrB" secondAttribute="centerX" id="nu9-2P-oA4"/>
                     <constraint firstAttribute="trailing" secondItem="GuV-n8-FJN" secondAttribute="trailing" id="pH9-uL-kjB"/>
                     <constraint firstItem="ENN-Ay-NVJ" firstAttribute="trailing" secondItem="hHL-sQ-JbQ" secondAttribute="trailing" id="uHV-rf-z3p"/>
+                    <constraint firstItem="ENN-Ay-NVJ" firstAttribute="bottom" secondItem="hHL-sQ-JbQ" secondAttribute="bottom" constant="100" id="viw-E0-SXd"/>
                     <constraint firstItem="GuV-n8-FJN" firstAttribute="leading" secondItem="Bdz-k8-wrB" secondAttribute="leading" id="w6S-d7-Jfr"/>
                     <constraint firstItem="GuV-n8-FJN" firstAttribute="top" secondItem="Bdz-k8-wrB" secondAttribute="top" id="zCK-Y1-tVN"/>
                 </constraints>
@@ -66,7 +58,6 @@
             <connections>
                 <outlet property="tableView" destination="hHL-sQ-JbQ" id="kq5-1G-5VE"/>
                 <outlet property="titleLabel" destination="Z2O-8H-ckW" id="das-VS-ZqP"/>
-                <outlet property="version" destination="zQV-1S-vWS" id="nT1-5g-0JN"/>
             </connections>
             <point key="canvasLocation" x="-338" y="-5"/>
         </viewController>

@@ -91,9 +91,11 @@
 "Register" = "Register";
 
 /// artist Register
-"area " = "supported area";
+"area" = "supported area";
 "service" = "service type";
 "bank" = "your bank account";
+"bankName" = "your bank name";
+
 "next" = "next";
 /// upload image
 "add" = "add Image";
@@ -178,3 +180,9 @@
 "YES" ="YES" ;
 "NO" ="NO" ;
 "Address" = "Address";
+"Search for places" = "Search for places";
+"confirm" = "confirm";
+"noFav" = "No Favourite yest";
+"male" = "male";
+"female" = "female";
+"investigation"="Your application is under consideration by our investigation team";

@@ -169,6 +169,25 @@ struct GetServices {
         }
     }//END of GET All Jobs
     
+      func getServices() -> Observable<PartyTypeModelJSON> {
+          return Observable.create { (observer) -> Disposable in
+              let url = ConfigURLs.getService
+              
+              Alamofire.request(url, method: .post, parameters: nil, encoding: JSONEncoding.default, headers: nil)
+                  .validate(statusCode: 200..<300)
+                  .responseJSON { (response: DataResponse<Any>) in
+                      do {
+                          let data = try JSONDecoder().decode(PartyTypeModelJSON.self, from: response.data!)
+                          observer.onNext(data)
+                      } catch {
+                          print(error.localizedDescription)
+                          observer.onError(error)
+                      }
+              }
+              
+              return Disposables.create()
+          }
+      }
     
     func getBestArtist() -> Observable<BestArtistModelJSON> {
         return Observable.create { (observer) -> Disposable in

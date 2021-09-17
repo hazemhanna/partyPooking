@@ -13,7 +13,7 @@ import RxCocoa
 import IQKeyboardManagerSwift
 
 
-class FinalBookingVC: UIViewController {
+class FinalBookingVC: UIViewController ,UITextFieldDelegate{
     @IBOutlet weak var visaView : UIView!
     @IBOutlet weak var masterView : UIView!
     @IBOutlet weak var payView : UIView!
@@ -40,7 +40,15 @@ class FinalBookingVC: UIViewController {
     @IBOutlet weak var doneBtn : UIButton!
     @IBOutlet weak var passTextField: UITextField!
     @IBOutlet weak var passwordLabel : UILabel!
-
+    @IBOutlet weak var timeTo: CustomTextField!
+    @IBOutlet weak var timeFrom: CustomTextField!
+    @IBOutlet weak var backButton: UIButton! {
+        didSet {
+            backButton.setImage(backButton.currentImage?.flipIfNeeded(), for: .normal)
+        }
+    }
+    private var timePicker1: UIDatePicker?
+    private var timePicker2: UIDatePicker?
     fileprivate var returnHandler : IQKeyboardReturnKeyHandler!
     let listController: FPNCountryListViewController = FPNCountryListViewController(style: .grouped)
 
@@ -53,16 +61,10 @@ class FinalBookingVC: UIViewController {
     var countryId = Int()
     var typeId :Int?
     var artistId :Int?
-    
+    var from = String()
+    var to = String()
     var token = Helper.getAPIToken() ?? ""
-
-    
-    @IBOutlet weak var backButton: UIButton! {
-        didSet {
-            backButton.setImage(backButton.currentImage?.flipIfNeeded(), for: .normal)
-        }
-    }
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         doneBtn.layer.cornerRadius = 7
@@ -76,15 +78,28 @@ class FinalBookingVC: UIViewController {
         DataBinding()
         profileVM.showIndicator()
         getAllCountry()
-        updateReturnHandler()
+    //  updateReturnHandler()
         getProfile()
-        amountValueLabel.text = String(Helper.getPrice() ?? 0 ) + ("SR".localized)
+        amountValueLabel.text = String(Helper.getPrice() ?? 0 ) + " " + ("SR".localized)
         if token != "" {
             passwordView.isHidden = true
         }else{
             passwordView.isHidden = false
-
         }
+        
+        timePicker1 = UIDatePicker()
+        timePicker2 = UIDatePicker()
+        let loc = Locale.current
+        timePicker1?.locale = loc
+        timePicker2?.locale = loc
+        timePicker1?.datePickerMode = .time
+        timePicker1?.addTarget(self, action: #selector(time1Changed(TimePicker:)), for: .valueChanged)
+        timeFrom .inputView = timePicker1
+        timeFrom.delegate = self
+        timePicker2?.datePickerMode = .time
+        timePicker2?.addTarget(self, action: #selector(time2Changed(TimePicker:)), for: .valueChanged)
+        timeTo.inputView = timePicker2
+        timeTo.delegate = self
     }
     
     func updateReturnHandler(){
@@ -110,17 +125,16 @@ class FinalBookingVC: UIViewController {
         paymentLabel.text = "payment".localized
         amountLabel.text = "amount".localized
         passwordLabel.text = "password".localized
-
-        taxesLabel.text = "\("taxes".localized) 450\("SR".localized)"
+        taxesLabel.text = "\("taxes".localized) 450 \("SR".localized)"
+        
         if "lang".localized  == "en" {
                 emailTextField.textAlignment = .left
                 lNameTextField.textAlignment = .left
                 countryTextField.textAlignment = .left
                 fNameTextField.textAlignment = .left
                 phoneTextField.textAlignment = .left
-            passTextField.textAlignment = .left
-
-                let font = UIFont(name: "Georgia-Bold", size: 14)
+                passTextField.textAlignment = .left
+      let font = UIFont(name: "Georgia-Bold", size: 14)
                            titleLabel.font = font
                            fNameLabel.font = font
                            fNameTextField.font = font
@@ -143,10 +157,9 @@ class FinalBookingVC: UIViewController {
                 fNameTextField.textAlignment = .right
                 phoneTextField.textAlignment = .right
                 passTextField.textAlignment = .right
-
             }
-        
      }
+    
     
     func setupCountryPHone(){
              self.phoneTextField.delegate = self
@@ -156,17 +169,14 @@ class FinalBookingVC: UIViewController {
              listController.setup(repository: self.phoneTextField.countryRepository)
              listController.didSelect = { [weak self] country in
              self?.phoneTextField.setFlag(countryCode: country.code)
-             }
-         }
-    
-    
+            }
+    }
     
     func setupCountryDropDown() {
         countryTextField.optionArray = self.filterCountry
         countryTextField.didSelect { (selectedText, index, id) in
             self.countryTextField.text = selectedText
             self.countryId = self.country[index].id ?? 0
-
         }
     }
     
@@ -180,15 +190,13 @@ class FinalBookingVC: UIViewController {
         view.layer.shadowRadius = 2.0
         view.layer.shadowOpacity = 0.5
         view.layer.masksToBounds = false
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.locationLbl.text = Helper.getAddress() ?? "location".localized
          self.navigationController?.navigationBar.isHidden = true
-        
     }
-
+    
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = false
     }
@@ -199,31 +207,49 @@ class FinalBookingVC: UIViewController {
     
     
     @IBAction func resevrButton(sender: UIButton) {
-      if token != ""{
+       if timeTo.text == "" {
+        if "lang".localized == "ar" {
+            displayMessage(title: "", message: "اختر الوقت", status: .error, forController: self)
+        }else{
+            displayMessage(title: "", message: "choose time", status: .error, forController: self)
+        }
+       }else if  timeTo.text == "" {
+         
+        if "lang".localized == "ar" {
+            displayMessage(title: "", message: "اختر الوقت", status: .error, forController: self)
+        }else{
+            displayMessage(title: "", message: "choose time", status: .error, forController: self)
+        }
+       } else if locationLbl.text == ""{
+            if "lang".localized == "ar" {
+                displayMessage(title: "", message: "اختر الموقع", status: .error, forController: self)
+            }else{
+                displayMessage(title: "", message: "choose party location", status: .error, forController: self)
+            }
+        }else{
+        if token != ""{
            self.profileVM.showIndicator()
            self.postBooking(artistId: artistId ?? 0
                             , area_id: Helper.getCID() ?? 0
                             , party_type_id: Helper.getPID() ?? 0
-                            , address: self.countryTextField.text ?? ""
+                            , address: Helper.getAddress() ?? ""
                             , lat: Helper.getLat() ?? 0.0
                             , long: Helper.getLong() ?? 0.0
                             , price:  Helper.getPrice() ?? 0
                             , date: Helper.getdate() ?? ""
-                            , from_time: "10:20"
-                            , to_time: "12:30")
+                            , from_time: timeFrom.text ?? ""
+                            , to_time: timeTo.text ?? "")
         
              }else{
-          
                 guard self.validateInput() else { return }
                 profileVM.showIndicator()
                 postRegister()
        }
     }
-    
-    
+ }
     @IBAction func locationTapped(sender: UIButton) {
-        let destinationVC = LocationViewController.instantiateFromNib()
-        self.navigationController?.pushViewController(destinationVC!, animated: true)
+        let destinationVC = LocationVC.instantiate(fromAppStoryboard: .Main)
+        self.navigationController?.pushViewController(destinationVC, animated: true)
       }
     
     @IBAction func PassWordInstructionsAction(_ sender: UIButton) {
@@ -232,6 +258,22 @@ class FinalBookingVC: UIViewController {
             self.presentingViewController?.dismiss(animated: true)
         }
         self.present(vc!, animated: true, completion: nil)
+    }
+    
+    
+    @objc func time1Changed(TimePicker: UIDatePicker) {
+        let formatter = DateFormatter()
+        formatter.locale = .current
+        formatter.dateFormat = "hh:mm"
+        timeFrom.text = formatter.string(from: TimePicker.date)
+    }
+    
+    
+    @objc func time2Changed(TimePicker: UIDatePicker) {
+        let formatter = DateFormatter()
+        formatter.locale = .current
+        formatter.dateFormat = "hh:mm"
+        timeTo.text = formatter.string(from: TimePicker.date)
     }
     
 }
@@ -270,7 +312,6 @@ func getProfile() {
     profileVM.getProfile().subscribe(onNext: { (data) in
         self.profileVM.dismissIndicator()
         if data.status ?? false {
-            
             self.emailTextField.text = data.result?.user?.email ?? ""
             self.lNameTextField.text =  data.result?.user?.lastName ?? ""
             self.countryTextField.text =  data.result?.user?.country?.enName ?? ""
@@ -303,7 +344,6 @@ func getProfile() {
             displayMessage(title: "", message: "Something went wrong in getting Country", status: .error, forController: self)
         }).disposed(by: disposeBag)
     }
-  
     
     func postBooking(artistId  : Int, area_id:Int, party_type_id : Int,address : String,lat: Double,long : Double, price : Int , date : String , from_time : String ,to_time : String ) {
         profileVM.postBooking(artistId: artistId, area_id: area_id, party_type_id: party_type_id, address: address, lat: lat, long: long, price: price, date: date, from_time: from_time, to_time: to_time).subscribe(onNext: { (data) in
@@ -314,16 +354,19 @@ func getProfile() {
             }else{
                 displayMessage(title: "done", message: "wait to artist confirm", status: .success, forController: self)
             }
-        }
+            
             let main = TabBarController.instantiate(fromAppStoryboard: .Main)
            if let appDelegate = UIApplication.shared.delegate {
                appDelegate.window??.rootViewController = main
            }
+        }else{
+            displayMessage(title: "", message: data.message ?? "", status: .error, forController: self)
+
+        }
     }, onError: { (error) in
         self.profileVM.dismissIndicator()
     }).disposed(by: disposeBag)
  }
-   
     
     func postRegister(){
         profileVM.attemptToRegister(image: self.profliePic, countryId: self.countryId).subscribe(onNext: { (registerData) in
@@ -336,8 +379,8 @@ func getProfile() {
                              , long: Helper.getLong() ?? 0.0
                              , price:  Helper.getPrice() ?? 0
                              , date: Helper.getdate() ?? ""
-                             , from_time: "10:20"
-                             , to_time: "12:30")
+                             , from_time: self.timeFrom.text ?? ""
+                             , to_time: self.timeTo.text ?? "")
             
            }else {
             self.profileVM.dismissIndicator()
@@ -348,12 +391,10 @@ func getProfile() {
             displayMessage(title: "", message: error.localizedDescription, status: .error, forController: self)
         }).disposed(by: disposeBag)
     }
-    
-    
 }
 
-
 extension FinalBookingVC : FPNTextFieldDelegate {
+    
     func fpnDisplayCountryList() {
         let navigationViewController = UINavigationController(rootViewController: listController)
         listController.title = "Countries"
@@ -368,5 +409,7 @@ extension FinalBookingVC : FPNTextFieldDelegate {
     func fpnDidValidatePhoneNumber(textField: FPNTextField, isValid: Bool) {
    
     }
+
 }
+
 

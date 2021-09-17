@@ -25,8 +25,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="74"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal Data" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x0w-CJ-dID">
-                                <rect key="frame" x="161" y="47" width="92.5" height="15"/>
-                                <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="14"/>
+                                <rect key="frame" x="150.5" y="43" width="113.5" height="19"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -51,127 +51,6 @@
                             <constraint firstItem="fUN-lu-rX8" firstAttribute="leading" secondItem="RA4-G6-Vhc" secondAttribute="leading" constant="12" id="xin-D7-kRd"/>
                         </constraints>
                     </view>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="62I-2W-sIz">
-                        <rect key="frame" x="16" y="106" width="366" height="243.5"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Important information about PArtyBooking " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5F-EP-Pt8">
-                                <rect key="frame" x="0.0" y="0.0" width="283.5" height="15"/>
-                                <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="14"/>
-                                <color key="textColor" red="0.18039215689999999" green="0.18039215689999999" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="EC6-a0-kdH">
-                                <rect key="frame" x="0.0" y="35" width="178" height="29"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="is the reservation confirmed fast ? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jf4-Rb-qDw">
-                                        <rect key="frame" x="0.0" y="0.0" width="178" height="12"/>
-                                        <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="11"/>
-                                        <color key="textColor" red="0.1803921568627451" green="0.1803921568627451" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="yes . after pay is done " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIl-p8-tdB">
-                                        <rect key="frame" x="0.0" y="17" width="112.5" height="12"/>
-                                        <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="11"/>
-                                        <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ZQA-Tl-nAA">
-                                <rect key="frame" x="0.0" y="84" width="218" height="29"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="can i choose the pepole that can reserve ? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QvO-yn-l7b">
-                                        <rect key="frame" x="0.0" y="0.0" width="218" height="12"/>
-                                        <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="11"/>
-                                        <color key="textColor" red="0.1803921568627451" green="0.1803921568627451" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="no . all pepole can reserve " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4G-38-clc">
-                                        <rect key="frame" x="0.0" y="17" width="135" height="12"/>
-                                        <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="11"/>
-                                        <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="XVN-AO-LTS">
-                                <rect key="frame" x="0.0" y="133" width="348" height="40.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="can i choose the time for recieveing reservation ? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MhN-xg-iHF">
-                                        <rect key="frame" x="0.0" y="0.0" width="255.5" height="12"/>
-                                        <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="11"/>
-                                        <color key="textColor" red="0.1803921568627451" green="0.1803921568627451" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="yes . and the best way is to keep you rate update . and close the date that you do not want reservation in it " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5cp-dR-nGd">
-                                        <rect key="frame" x="0.0" y="17" width="348" height="23.5"/>
-                                        <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="11"/>
-                                        <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sdP-sp-NQG">
-                                <rect key="frame" x="0.0" y="193.5" width="366" height="15"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fut-8Y-SAB">
-                                        <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="15" id="CfC-iG-mlV"/>
-                                            <constraint firstAttribute="width" constant="15" id="HbK-98-URf"/>
-                                        </constraints>
-                                        <state key="normal" title="Button" image="unchecked"/>
-                                        <connections>
-                                            <action selector="tickWithSender:" destination="nvt-Da-kRR" eventType="touchUpInside" id="SOe-M8-91x"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="i agree that all information are real and legal and it belong to the name that i mention " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H6b-RC-3wM">
-                                        <rect key="frame" x="23" y="0.0" width="343" height="9"/>
-                                        <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="8"/>
-                                        <color key="textColor" red="0.1803921568627451" green="0.1803921568627451" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="380-Pr-HCy">
-                                <rect key="frame" x="0.0" y="228.5" width="225" height="15"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dpt-KI-vUT">
-                                        <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="15" id="C07-yP-koN"/>
-                                            <constraint firstAttribute="width" constant="15" id="zy5-ZF-frW"/>
-                                        </constraints>
-                                        <state key="normal" title="Button" image="unchecked"/>
-                                        <connections>
-                                            <action selector="termsBtnWithSender:" destination="nvt-Da-kRR" eventType="touchUpInside" id="AOB-vl-FfI"/>
-                                        </connections>
-                                    </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="03k-no-G8g">
-                                        <rect key="frame" x="23" y="0.0" width="202" height="15"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="i read and accept  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ig-5U-uIp">
-                                                <rect key="frame" x="0.0" y="0.0" width="92" height="15"/>
-                                                <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="11"/>
-                                                <color key="textColor" red="0.1803921568627451" green="0.1803921568627451" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="terms and conditions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KhI-PB-gST">
-                                                <rect key="frame" x="92" y="0.0" width="110" height="15"/>
-                                                <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="11"/>
-                                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="sdP-sp-NQG" firstAttribute="leading" secondItem="62I-2W-sIz" secondAttribute="leading" id="eb2-Uy-kBW"/>
-                            <constraint firstAttribute="trailing" secondItem="sdP-sp-NQG" secondAttribute="trailing" id="glB-QL-mGa"/>
-                        </constraints>
-                    </stackView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Weg-Co-u1a">
                         <rect key="frame" x="182" y="754" width="200" height="44"/>
                         <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -187,18 +66,199 @@
                             <action selector="nextButtonWithSender:" destination="nvt-Da-kRR" eventType="touchUpInside" id="tUv-NB-2zB"/>
                         </connections>
                     </button>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="62I-2W-sIz">
+                        <rect key="frame" x="16" y="106" width="366" height="267"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Important information about PArtyBooking " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5F-EP-Pt8">
+                                <rect key="frame" x="0.0" y="0.0" width="324" height="17.5"/>
+                                <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="16"/>
+                                <color key="textColor" red="0.18039215689999999" green="0.18039215689999999" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="EC6-a0-kdH">
+                                <rect key="frame" x="0.0" y="37.5" width="210.5" height="33"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="is the reservation confirmed fast ? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jf4-Rb-qDw">
+                                        <rect key="frame" x="0.0" y="0.0" width="210.5" height="14"/>
+                                        <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="13"/>
+                                        <color key="textColor" red="0.1803921568627451" green="0.1803921568627451" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="yes . after pay is done " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIl-p8-tdB">
+                                        <rect key="frame" x="0.0" y="19" width="133" height="14"/>
+                                        <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="13"/>
+                                        <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ZQA-Tl-nAA">
+                                <rect key="frame" x="0.0" y="90.5" width="257.5" height="33"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="can i choose the pepole that can reserve ? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QvO-yn-l7b">
+                                        <rect key="frame" x="0.0" y="0.0" width="257.5" height="14"/>
+                                        <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="13"/>
+                                        <color key="textColor" red="0.1803921568627451" green="0.1803921568627451" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="no . all pepole can reserve " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4G-38-clc">
+                                        <rect key="frame" x="0.0" y="19" width="159.5" height="14"/>
+                                        <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="13"/>
+                                        <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="XVN-AO-LTS">
+                                <rect key="frame" x="0.0" y="143.5" width="359.5" height="47"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="can i choose the time for recieveing reservation ? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MhN-xg-iHF">
+                                        <rect key="frame" x="0.0" y="0.0" width="301.5" height="14"/>
+                                        <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="13"/>
+                                        <color key="textColor" red="0.1803921568627451" green="0.1803921568627451" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="yes . and the best way is to keep you rate update . and close the date that you do not want reservation in it " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5cp-dR-nGd">
+                                        <rect key="frame" x="0.0" y="19" width="359.5" height="28"/>
+                                        <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="13"/>
+                                        <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sdP-sp-NQG">
+                                <rect key="frame" x="0.0" y="210.5" width="366" height="21.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fut-8Y-SAB">
+                                        <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="15" id="CfC-iG-mlV"/>
+                                            <constraint firstAttribute="width" constant="15" id="HbK-98-URf"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="unchecked"/>
+                                        <connections>
+                                            <action selector="tickWithSender:" destination="nvt-Da-kRR" eventType="touchUpInside" id="SOe-M8-91x"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="i agree that all information are real and legal and it belong to the name that i mention " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H6b-RC-3wM">
+                                        <rect key="frame" x="23" y="0.0" width="343" height="21.5"/>
+                                        <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="10"/>
+                                        <color key="textColor" red="0.1803921568627451" green="0.1803921568627451" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="380-Pr-HCy">
+                                <rect key="frame" x="0.0" y="252" width="262" height="15"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dpt-KI-vUT">
+                                        <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="15" id="C07-yP-koN"/>
+                                            <constraint firstAttribute="width" constant="15" id="zy5-ZF-frW"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="unchecked"/>
+                                        <connections>
+                                            <action selector="termsBtnWithSender:" destination="nvt-Da-kRR" eventType="touchUpInside" id="AOB-vl-FfI"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="03k-no-G8g">
+                                        <rect key="frame" x="23" y="0.0" width="239" height="15"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="i read and accept  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ig-5U-uIp">
+                                                <rect key="frame" x="0.0" y="0.0" width="109" height="15"/>
+                                                <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="13"/>
+                                                <color key="textColor" red="0.1803921568627451" green="0.1803921568627451" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="terms and conditions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KhI-PB-gST">
+                                                <rect key="frame" x="109" y="0.0" width="130" height="15"/>
+                                                <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="13"/>
+                                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="sdP-sp-NQG" firstAttribute="leading" secondItem="62I-2W-sIz" secondAttribute="leading" id="eb2-Uy-kBW"/>
+                            <constraint firstAttribute="trailing" secondItem="sdP-sp-NQG" secondAttribute="trailing" id="glB-QL-mGa"/>
+                        </constraints>
+                    </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xL6-mj-JuR">
+                        <rect key="frame" x="0.0" y="84" width="414" height="778"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jqg-Gu-tbm" customClass="CustomView" customModule="PartyBooking" customModuleProvider="target">
+                                <rect key="frame" x="62" y="272.5" width="290" height="233"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your application is under consideration by our investigation team" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mth-0B-azq">
+                                        <rect key="frame" x="16" y="89.5" width="258" height="54"/>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVZ-JE-Mqg" customClass="CustomButtons" customModule="PartyBooking" customModuleProvider="target">
+                                        <rect key="frame" x="95" y="177" width="100" height="40"/>
+                                        <color key="backgroundColor" red="0.1176470588" green="0.2156862745" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="sLN-2Y-cDH"/>
+                                            <constraint firstAttribute="height" constant="40" id="vxw-DA-Q7i"/>
+                                        </constraints>
+                                        <state key="normal" title="Done">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="succesButtonWithSender:" destination="nvt-Da-kRR" eventType="touchUpInside" id="EDu-VM-7Dv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.16862745100000001" green="0.70588235290000001" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="tVZ-JE-Mqg" firstAttribute="centerX" secondItem="Jqg-Gu-tbm" secondAttribute="centerX" id="1hG-xN-iaN"/>
+                                    <constraint firstAttribute="bottom" secondItem="tVZ-JE-Mqg" secondAttribute="bottom" constant="16" id="1xE-uz-Nxc"/>
+                                    <constraint firstAttribute="trailing" secondItem="Mth-0B-azq" secondAttribute="trailing" constant="16" id="4O9-Mt-JdO"/>
+                                    <constraint firstItem="Mth-0B-azq" firstAttribute="leading" secondItem="Jqg-Gu-tbm" secondAttribute="leading" constant="16" id="UOb-tQ-s1f"/>
+                                    <constraint firstItem="Mth-0B-azq" firstAttribute="centerX" secondItem="Jqg-Gu-tbm" secondAttribute="centerX" id="VtB-TI-2Db"/>
+                                    <constraint firstItem="Mth-0B-azq" firstAttribute="centerY" secondItem="Jqg-Gu-tbm" secondAttribute="centerY" id="tYE-SU-aJK"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Jqg-Gu-tbm" firstAttribute="height" secondItem="xL6-mj-JuR" secondAttribute="height" multiplier="0.3" id="D2z-m0-7qv"/>
+                            <constraint firstItem="Jqg-Gu-tbm" firstAttribute="centerX" secondItem="xL6-mj-JuR" secondAttribute="centerX" id="IMR-hd-X1e"/>
+                            <constraint firstItem="Jqg-Gu-tbm" firstAttribute="centerY" secondItem="xL6-mj-JuR" secondAttribute="centerY" id="k2d-GC-92v"/>
+                            <constraint firstItem="Jqg-Gu-tbm" firstAttribute="width" secondItem="xL6-mj-JuR" secondAttribute="width" multiplier="0.7" id="lAG-h9-UDV"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <viewLayoutGuide key="safeArea" id="ueR-pg-W0u"/>
                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="62I-2W-sIz" secondAttribute="trailing" constant="32" id="1z0-45-tBu"/>
+                    <constraint firstItem="xL6-mj-JuR" firstAttribute="leading" secondItem="ueR-pg-W0u" secondAttribute="leading" id="4FV-4Q-Gmh"/>
                     <constraint firstItem="62I-2W-sIz" firstAttribute="top" secondItem="RA4-G6-Vhc" secondAttribute="bottom" constant="32" id="9Os-38-Afk"/>
                     <constraint firstItem="ueR-pg-W0u" firstAttribute="trailing" secondItem="RA4-G6-Vhc" secondAttribute="trailing" id="Er0-ev-70Y"/>
+                    <constraint firstItem="ueR-pg-W0u" firstAttribute="bottom" secondItem="xL6-mj-JuR" secondAttribute="bottom" id="Rw5-cb-8Ra"/>
                     <constraint firstItem="ueR-pg-W0u" firstAttribute="trailing" secondItem="Weg-Co-u1a" secondAttribute="trailing" constant="32" id="UJk-em-md7"/>
                     <constraint firstItem="ueR-pg-W0u" firstAttribute="bottom" secondItem="Weg-Co-u1a" secondAttribute="bottom" constant="64" id="aJf-2n-5JI"/>
                     <constraint firstItem="62I-2W-sIz" firstAttribute="leading" secondItem="ueR-pg-W0u" secondAttribute="leading" constant="16" id="aK4-0S-LNy"/>
                     <constraint firstItem="RA4-G6-Vhc" firstAttribute="leading" secondItem="ppS-ww-sgT" secondAttribute="leading" id="ax9-ZG-Ojc"/>
                     <constraint firstItem="RA4-G6-Vhc" firstAttribute="top" secondItem="ppS-ww-sgT" secondAttribute="top" id="ifU-sl-Cyq"/>
+                    <constraint firstItem="xL6-mj-JuR" firstAttribute="top" secondItem="ueR-pg-W0u" secondAttribute="top" constant="40" id="pta-IE-C0T"/>
+                    <constraint firstItem="ueR-pg-W0u" firstAttribute="trailing" secondItem="xL6-mj-JuR" secondAttribute="trailing" id="vWB-L7-nZ0"/>
                 </constraints>
             </view>
             <connections>
@@ -207,10 +267,12 @@
                 <outlet property="agreeLabel" destination="H6b-RC-3wM" id="CzM-hb-fPo"/>
                 <outlet property="backButton" destination="fUN-lu-rX8" id="RlB-oQ-5yc"/>
                 <outlet property="choosePepoleLabel" destination="QvO-yn-l7b" id="jK8-b3-fpj"/>
+                <outlet property="doneBtn" destination="tVZ-JE-Mqg" id="wgu-or-L9P"/>
                 <outlet property="fastLabel" destination="Jf4-Rb-qDw" id="ENT-45-a3Z"/>
                 <outlet property="nextBtn" destination="Weg-Co-u1a" id="60i-jC-Ur4"/>
                 <outlet property="noLabel" destination="H4G-38-clc" id="Oi0-Vc-Qgy"/>
                 <outlet property="readLabel" destination="8ig-5U-uIp" id="WyR-ek-vMB"/>
+                <outlet property="succesLabel" destination="Mth-0B-azq" id="3FG-Vk-ZGS"/>
                 <outlet property="termsLabel" destination="KhI-PB-gST" id="hAG-DM-c8c"/>
                 <outlet property="timeRecieveingLabel" destination="MhN-xg-iHF" id="4ie-Re-nkb"/>
                 <outlet property="titleLabel" destination="x0w-CJ-dID" id="nid-xw-2h5"/>
@@ -220,6 +282,11 @@
             <point key="canvasLocation" x="53.623188405797109" y="20.758928571428569"/>
         </viewController>
     </objects>
+    <designables>
+        <designable name="tVZ-JE-Mqg">
+            <size key="intrinsicContentSize" width="37" height="30"/>
+        </designable>
+    </designables>
     <resources>
         <image name="back" width="37.5" height="37.5"/>
         <image name="unchecked" width="60" height="54"/>

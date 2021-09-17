@@ -1,22 +1,14 @@
-//
-//  ReservationModel.swift
-//  PartyBooking
-//
-//  Created by MAC on 17/06/2021.
-//  Copyright © 2021 MAC. All rights reserved.
-//
-
 import Foundation
 
 // MARK: - ReservationModelJSON
 struct ReservationModelJSON: Codable {
     let status: Bool?
     let message: String?
-    let result: ReservationTypeModel?
+    let result: ReservationModels?
 }
 
 // MARK: - Result
-struct ReservationTypeModel: Codable {
+struct ReservationModels : Codable {
     let currentBookings, completedBookings, cancelledBookings: ReservationModel?
 }
 
@@ -25,7 +17,8 @@ struct ReservationModel: Codable {
     let data: [Reservation]?
     let total, count, perPage, currentPage: Int?
     let totalPages: Int?
-    let prev, next: Int?
+    let prev: String?
+    let next: String?
 
     enum CodingKeys: String, CodingKey {
         case data, total, count
@@ -36,19 +29,18 @@ struct ReservationModel: Codable {
     }
 }
 
-
-
-struct Reservation : Codable {
+// MARK: - Datum
+struct Reservation: Codable {
     let id, userID, artistID: Int?
     let status: String?
     let date: String?
     let fromTime, toTime: String?
-    let price, taxes, rate: Int
+    let price, taxes, rate: Int?
     let address: String?
     let isRated: Int?
     let cancelReason: String?
-    let artist: artistName?
-    let partyType, area: Areas?
+    let artist: Artist?
+    let partyType, area: Area?
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -66,18 +58,28 @@ struct Reservation : Codable {
     }
 }
 
-
-// MARK: - Country
-struct artistName: Codable {
+// MARK: - Area
+struct Area: Codable {
     let id: Int?
-    let firstName,lastName: String?
-    let favourite: Int?
+    let arName, enName: String?
 
-    
     enum CodingKeys: String, CodingKey {
         case id
-        case favourite
-        case firstName = "first_name"
-        case lastName = "last_name"
+        case arName = "ar_name"
+        case enName = "en_name"
     }
 }
+
+// MARK: - Artist
+struct Artist: Codable {
+    let firstName: String?
+    let lastName: String?
+    let favourite: Int?
+
+    enum CodingKeys: String, CodingKey {
+        case firstName = "first_name"
+        case lastName = "last_name"
+        case favourite
+    }
+}
+

@@ -205,6 +205,7 @@ class SearchViewController: UIViewController ,UICollectionViewDataSource, UIColl
         }else{
             let destinationVC = OffersDetailsVc.instantiateFromNib()
             destinationVC!.artistId = offers[indexPath.row].artistID ?? 0
+            destinationVC?.typeId =  offers[indexPath.row].partyTypeID ?? 2
             self.navigationController?.pushViewController(destinationVC!, animated: true)
                
         }

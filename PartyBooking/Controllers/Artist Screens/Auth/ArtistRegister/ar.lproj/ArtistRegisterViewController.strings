@@ -1,0 +1,48 @@
+
+/* Class = "UILabel"; text = "Party type"; ObjectID = "3vz-X9-Q1c"; */
+"3vz-X9-Q1c.text" = "Party type";
+
+/* Class = "UILabel"; text = "phone number "; ObjectID = "A5Z-Dt-bqc"; */
+"A5Z-Dt-bqc.text" = "phone number ";
+
+/* Class = "UILabel"; text = "password"; ObjectID = "C29-R8-s1V"; */
+"C29-R8-s1V.text" = "password";
+
+/* Class = "UILabel"; text = "e-mail"; ObjectID = "CYF-02-MOf"; */
+"CYF-02-MOf.text" = "e-mail";
+
+/* Class = "UILabel"; text = "Take Picture OR choose from gallary"; ObjectID = "DPd-IY-Tie"; */
+"DPd-IY-Tie.text" = "التقط صورة او اختار من الصور";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "INp-OF-LVB"; */
+"INp-OF-LVB.normalTitle" = "Next";
+
+/* Class = "UILabel"; text = "Service"; ObjectID = "Mcr-65-2l7"; */
+"Mcr-65-2l7.text" = "Service";
+
+/* Class = "UILabel"; text = "Gender"; ObjectID = "RrX-DR-Qar"; */
+"RrX-DR-Qar.text" = "النوع";
+
+/* Class = "UILabel"; text = "banck Account"; ObjectID = "T88-c2-BQl"; */
+"T88-c2-BQl.text" = "banck Account";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "VCx-B5-7mE"; */
+"VCx-B5-7mE.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Personal data"; ObjectID = "anv-5r-uu6"; */
+"anv-5r-uu6.text" = "Personal data";
+
+/* Class = "UILabel"; text = "Area "; ObjectID = "bsD-lC-jFS"; */
+"bsD-lC-jFS.text" = "Area ";
+
+/* Class = "UILabel"; text = "last name"; ObjectID = "gfd-Mp-KNm"; */
+"gfd-Mp-KNm.text" = "last name";
+
+/* Class = "UILabel"; text = "Take Picture"; ObjectID = "iIh-SA-3wh"; */
+"iIh-SA-3wh.text" = "التقط صورة";
+
+/* Class = "UILabel"; text = "country"; ObjectID = "qvu-FA-x72"; */
+"qvu-FA-x72.text" = "country";
+
+/* Class = "UILabel"; text = "first name"; ObjectID = "vZY-Zg-w0f"; */
+"vZY-Zg-w0f.text" = "first name";

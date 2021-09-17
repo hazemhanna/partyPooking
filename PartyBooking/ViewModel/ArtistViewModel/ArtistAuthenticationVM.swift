@@ -1,22 +1,29 @@
 //
-//  AuthenticationVM.swift
+//  ArtistAuthenticationVM.swift
 //  PartyBooking
 //
-//  Created by MAC on 12/06/2021.
+//  Created by MAC on 13/09/2021.
 //  Copyright © 2021 MAC. All rights reserved.
 //
+
 
 import Foundation
 import RxSwift
 import SVProgressHUD
 
-struct AuthenticationViewModel {
+struct ArtistAuthenticationVM {
+    
     var email = BehaviorSubject<String>(value: "")
     var password = BehaviorSubject<String>(value: "")
     var first_name = BehaviorSubject<String>(value: "")
     var last_name = BehaviorSubject<String>(value: "")
     var phone = BehaviorSubject<String>(value: "")
     var country = BehaviorSubject<String>(value: "")
+
+    var area = BehaviorSubject<String>(value: "")
+    var service = BehaviorSubject<String>(value: "")
+    var bankName = BehaviorSubject<String>(value: "")
+    var bankAcount = BehaviorSubject<String>(value: "")
 
     
     func showIndicator() {
@@ -37,7 +44,6 @@ struct AuthenticationViewModel {
         let bindedFirstName = (try? self.first_name.value()) ?? ""
         let bindedLastName = (try? self.last_name.value()) ?? ""
         let bindedPhone = (try? self.phone.value()) ?? ""
-        
         let params: [String: Any] = [
             "email": bindedEmail,
             "password": bindedPassword,
@@ -50,29 +56,15 @@ struct AuthenticationViewModel {
         return observer
     }
     
-    
-    //MARK:- Attempt to register
-    func attemptToLoginWithSocial(email: String , Name : String , token : String , type : String,phone : String) -> Observable<AuthMdelsJSON> {
-        let params: [String: Any] = [
-            "email": email,
-            "social_id": token,
-            "type": type,
-            "name": Name ,
-            "phone": phone ,
-            ]
-        let observer = Authentication.shared.postLoginWithSocial(params: params)
-        return observer
-    }
-    
-    
-    
-    func validate(country : String) -> Observable<String> {
+    func validate(country : String,area : String,service : String,gender :String) -> Observable<String> {
             return Observable.create({ (observer) -> Disposable in
                 let bindedName = (try? self.first_name.value()) ?? ""
                 let bindedLastName = (try? self.last_name.value()) ?? ""
                 let bindedEmail = (try? self.email.value()) ?? ""
                 let bindedPhone = (try? self.phone.value()) ?? ""
                 let bindedPassword = (try? self.password.value()) ?? ""
+                let bankName = (try? self.bankName.value()) ?? ""
+                let bankAcount = (try? self.bankAcount.value()) ?? ""
 
                 if bindedName.isEmpty {
                       if "lang".localized == "ar" {
@@ -109,6 +101,36 @@ struct AuthenticationViewModel {
                          observer.onNext("الرجاء تحديد دولة")
                     } else {
                         observer.onNext("Please select your country")
+                    }
+                }else if area.isEmpty {
+                                     if "lang".localized == "ar" {
+                                          observer.onNext("الرجاء تحديد المنطقة")
+                                     } else {
+                                         observer.onNext("Please select your area")
+                                     }
+                   }else if service.isEmpty {
+                    if "lang".localized == "ar" {
+                         observer.onNext("الرجاء تحديد الخدمة")
+                    } else {
+                        observer.onNext("Please select your service")
+                    }
+                    }else if bankName.isEmpty {
+                        if "lang".localized == "ar" {
+                             observer.onNext("الرجاء تحديد اسم البنك")
+                        } else {
+                            observer.onNext("Please select your bank name")
+                    }
+                  }else if bankAcount.isEmpty {
+                            if "lang".localized == "ar" {
+                                 observer.onNext("الرجاء تحديد حساب البنك ")
+                            } else {
+                                observer.onNext("Please select your bank acount")
+                            }
+                    }else if gender.isEmpty {
+                        if "lang".localized == "ar" {
+                        observer.onNext("الرجاء تحديد الجنس ")
+                      } else {
+                        observer.onNext("Please select your gender")
                     }
                 }else{
                     observer.onNext("")
@@ -159,26 +181,14 @@ struct AuthenticationViewModel {
         return observer
     }
     
-    func getTerms() -> Observable<TermsModelJSON> {
-        let observer = GetServices.shared.getTerms()
+    
+    func getArea() -> Observable<AreaModelJson> {
+        let observer = GetServices.shared.getArea()
         return observer
     }
-    
-    
-    func about() -> Observable<AboutUSModelJSON> {
-        let observer = GetServices.shared.about()
-        return observer
-    }
-    
-    
-    func ContactUS(name:String,email : String,type: String, message:String ) -> Observable<ContactUSModelJson> {
-        let params: [String: Any] = [
-            "email": email,
-            "name": name,
-            "type": type,
-            "message": message
-            ]
-        let observer = GetServices.shared.contactUs(params: params)
+ 
+    func getServices() -> Observable<PartyTypeModelJSON> {
+        let observer = GetServices.shared.getServices()
         return observer
     }
     

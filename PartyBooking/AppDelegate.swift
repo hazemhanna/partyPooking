@@ -7,13 +7,11 @@
 //
 
 import UIKit
-import GoogleMaps
 import FBSDKCoreKit
 import GoogleSignIn
 import MOLH
 import IQKeyboardManagerSwift
 import TwitterKit
-import GooglePlaces
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate,MOLHResetable{
@@ -22,8 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,MOLHResetable{
     var token = Helper.getAPIToken() ?? ""
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        GMSServices.provideAPIKey("AIzaSyAG_FGV2ATqdGF8a4d_JyaZBcgZ6osz8J4")
-        GMSPlacesClient.provideAPIKey("AIzaSyAG_FGV2ATqdGF8a4d_JyaZBcgZ6osz8J4")
+        //GMSServices.provideAPIKey("AIzaSyAG_FGV2ATqdGF8a4d_JyaZBcgZ6osz8J4")
+        //GMSPlacesClient.provideAPIKey("AIzaSyAG_FGV2ATqdGF8a4d_JyaZBcgZ6osz8J4")
         
         MOLH.shared.activate(true)
         MOLH.shared.specialKeyWords = ["Cancel","Done"]

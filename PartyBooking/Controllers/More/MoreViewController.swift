@@ -125,17 +125,14 @@ class MoreViewController: UIViewController {
 
   
     func setUPLocalize(){
-         version.text = "\("version".localized) - 2.2.1"
           titleLabel.text = "more".localized
         if "lang".localized  == "en" {
             let font = UIFont(name: "Georgia-Bold", size: 14)
             titleLabel.font = font
-            version.font = font
         }
-
-        
       }
 
+    
      override func viewWillAppear(_ animated: Bool) {
        self.navigationController?.navigationBar.isHidden = true
      }

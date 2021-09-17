@@ -26,11 +26,11 @@ class OffersDetailsVc : UIViewController {
     private let homeVM = HomeViewModel()
     var disposeBag = DisposeBag()
     var artistId = Int()
+    var typeId = Int()
     override func viewDidLoad() {
         super.viewDidLoad()
         reserveBtn.setTitle("reserve Now".localized, for: .normal)
     }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         self.homeVM.showIndicator()
@@ -42,7 +42,7 @@ class OffersDetailsVc : UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        getOffers(artistId:artistId)
+        getOffers(artistId:artistId, typeId: typeId)
     }
     
     @IBAction func backButton(sender: UIButton) {
@@ -51,9 +51,17 @@ class OffersDetailsVc : UIViewController {
     
     
     @IBAction func resrvationBtn(sender: UIButton){
-       let destinationVC = FinalBookingVC.instantiateFromNib()
-       destinationVC!.artistId = artistId
-       self.navigationController?.pushViewController(destinationVC!, animated: true)  
+        if dateTapped {
+          let destinationVC = FinalBookingVC.instantiateFromNib()
+         destinationVC!.artistId = artistId
+         self.navigationController?.pushViewController(destinationVC!, animated: true)
+        }else{
+            if "lang".localized == "ar" {
+                displayMessage(title: "", message: "من فضلك قم باختيار تايخ الحفلة ", status: .error, forController: self)
+            }else{
+                displayMessage(title: "", message: "please choose part date ", status: .error, forController: self)
+            }
+        }
     }
     
     @IBAction func artistBtn(sender: UIButton){
@@ -75,25 +83,30 @@ class OffersDetailsVc : UIViewController {
 }
 
 extension OffersDetailsVc {
-    func getOffers(artistId:Int) {
-        homeVM.getOfferDetails(artistId: artistId).subscribe(onNext: { (data) in
+    func getOffers(artistId:Int,typeId:Int) {
+        homeVM.getOfferDetails(artistId: artistId,typeId:typeId).subscribe(onNext: { (data) in
             self.homeVM.dismissIndicator()
             if data.status ?? false {
                 self.artitstName.text = data.result?.artistName ?? ""
-                self.partyLocation.text = data.result?.title ?? ""
-                self.partyType.text = data.result?.title ?? ""
+                if "lang".localized == "ar" {
+                self.partyType.text = data.result?.offerPartyType?.arName ?? ""
+                self.partyLocation.text = data.result?.offerArea?.arName ?? ""
+                }else{
+                    self.partyType.text = data.result?.offerPartyType?.enName ?? ""
+                    self.partyLocation.text = data.result?.offerArea?.enName ?? ""
+                }
+
                 self.PartyTime.text = data.result?.to ?? ""
-                self.PartyPrice.text =  "20" //data.result?.artistName ?? ""
-                
+                self.PartyPrice.text =  String(data.result?.offerPrice ?? 0)
                 self.from = data.result?.from ?? ""
                 self.to = data.result?.to ?? ""
                 
                 if let iamg = URL(string: "https://partybooking.dtagdev.com/" + (data.result?.url ?? "")){
                     self.offerImage.kf.setImage(with: iamg, placeholder: #imageLiteral(resourceName: "يريءؤر سيرلايسب"))
                 }
-                 Helper.saveCID(date: 58 )
-                Helper.savePrice(date: 20)
-               Helper.savePID(date:  2)
+                Helper.saveCID(date: data.result?.offerArea?.id ?? 0  )
+                Helper.savePrice(date: data.result?.offerPrice  ?? 0 )
+                Helper.savePID(date:   data.result?.partyTypeID ?? 0 )
             }
         }, onError: { (error) in
             self.homeVM.dismissIndicator()

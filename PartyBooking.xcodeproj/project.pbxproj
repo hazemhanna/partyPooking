@@ -26,6 +26,7 @@
 		0422502A265E835B00723400 /* RateArtistVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04225028265E835B00723400 /* RateArtistVc.xib */; };
 		04225031265E851800723400 /* CancelReservationVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422502F265E851800723400 /* CancelReservationVc.swift */; };
 		04225039265EC08100723400 /* ReservetionDetailsVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04225037265EC08000723400 /* ReservetionDetailsVc.swift */; };
+		0428861726E805C4008C152B /* ReservationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0428861926E805C4008C152B /* ReservationTableViewCell.xib */; };
 		0430678E2661F36E00BDFE32 /* PartyDateVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430678C2661F36E00BDFE32 /* PartyDateVc.swift */; };
 		0430679626620A2A00BDFE32 /* NoArtistAvailableVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430679426620A2A00BDFE32 /* NoArtistAvailableVc.swift */; };
 		043067A126620DD100BDFE32 /* AllLiveVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430679F26620DD100BDFE32 /* AllLiveVideoVC.swift */; };
@@ -50,7 +51,6 @@
 		04400C6926E1981900CA57DA /* BookingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04400C6726E1981900CA57DA /* BookingVC.swift */; };
 		04400C7126E1A2CA00CA57DA /* BookingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04400C7326E1A2CA00CA57DA /* BookingVC.xib */; };
 		04417E1F24AF6B370022C32F /* ReservationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04417E1D24AF6B370022C32F /* ReservationTableViewCell.swift */; };
-		04417E2024AF6B370022C32F /* ReservationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04417E1E24AF6B370022C32F /* ReservationTableViewCell.xib */; };
 		044EDE1E24BDAC8B00EC8E61 /* ConfirmReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EDE1C24BDAC8B00EC8E61 /* ConfirmReservationViewController.swift */; };
 		044EDE2024BF011F00EC8E61 /* RateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044EDE2224BF011F00EC8E61 /* RateViewController.xib */; };
 		044FEAD726DD1BF400F44413 /* LanguageScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044FEAD626DD1BF400F44413 /* LanguageScreenVC.swift */; };
@@ -125,13 +125,12 @@
 		047F8C3124B3AE5800A86E86 /* RateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047F8C2F24B3AE5800A86E86 /* RateTableViewCell.xib */; };
 		047F8C3824B4CBC100A86E86 /* ChooseUSerTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F8C3724B4CBC100A86E86 /* ChooseUSerTypeVC.swift */; };
 		047F8C3C24B4FC4C00A86E86 /* ArtistRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F8C3A24B4FC4C00A86E86 /* ArtistRegisterViewController.swift */; };
-		047F8C3D24B4FC4C00A86E86 /* ArtistRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047F8C3B24B4FC4C00A86E86 /* ArtistRegisterViewController.xib */; };
 		048569BF2665405700B2670D /* AddServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048569BE2665405700B2670D /* AddServices.swift */; };
 		048569C42665407800B2670D /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048569C32665407800B2670D /* Authentication.swift */; };
 		048569DE2665464F00B2670D /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048569DD2665464F00B2670D /* Errors.swift */; };
 		048569E32665501300B2670D /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048569E22665501300B2670D /* AuthModel.swift */; };
+		0488569726F276A700391A00 /* ArtistLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488569626F276A700391A00 /* ArtistLoginModel.swift */; };
 		048D929626E682160036041E /* FinalBookingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D929426E682160036041E /* FinalBookingVC.swift */; };
-		048D929726E682160036041E /* FinalBookingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048D929526E682160036041E /* FinalBookingVC.xib */; };
 		048DCB592656B38200319F9F /* LoginUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048DCB572656B38200319F9F /* LoginUserVC.swift */; };
 		048DCB742656B4C800319F9F /* UserRegisterTypeVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048DCB722656B4C800319F9F /* UserRegisterTypeVc.swift */; };
 		048DCB8E2657324000319F9F /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048DCB8D2657324000319F9F /* AlertService.swift */; };
@@ -146,16 +145,20 @@
 		0491AD3B26376D5500398125 /* CustomDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0491AD3A26376D5500398125 /* CustomDropdown.swift */; };
 		0491AD482637733000398125 /* MainRegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0491AD462637733000398125 /* MainRegisterVC.swift */; };
 		0491AD5C2637830F00398125 /* TextField+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0491AD5B2637830F00398125 /* TextField+Extention.swift */; };
+		0499EB0226F4ACD4000C2DAD /* ArtistRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0499EB0426F4ACD4000C2DAD /* ArtistRegisterViewController.xib */; };
 		049EA685267865D300EFB676 /* MostFamousVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049EA683267865D300EFB676 /* MostFamousVc.swift */; };
 		049EA68B2678768600EFB676 /* SearchResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049EA68A2678768600EFB676 /* SearchResultModel.swift */; };
 		049EA6902678777B00EFB676 /* SearchResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049EA68F2678777B00EFB676 /* SearchResultViewModel.swift */; };
+		04A2871A26E8DF830025ADCB /* FinalBookingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A2871C26E8DF830025ADCB /* FinalBookingVC.xib */; };
 		04ABD7B126BFF06400CCD994 /* OffersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ABD7B026BFF06300CCD994 /* OffersModel.swift */; };
+		04AEA2E826EF4E6E00495059 /* ArtistAuthenticationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEA2E726EF4E6E00495059 /* ArtistAuthenticationVM.swift */; };
 		04BF70C9267514F600080730 /* AuthenticationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF70C8267514F600080730 /* AuthenticationVM.swift */; };
 		04BF70CF2675167B00080730 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF70CE2675167B00080730 /* String+Extension.swift */; };
-		04CA045024B7FD5200660E7B /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA044E24B7FD5200660E7B /* LocationViewController.swift */; };
-		04CA045124B7FD5200660E7B /* LocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CA044F24B7FD5200660E7B /* LocationViewController.xib */; };
 		04CA046224BA03F500660E7B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04CA046424BA03F500660E7B /* Localizable.strings */; };
 		04CA048324BB07A700660E7B /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA048224BB07A700660E7B /* String.swift */; };
+		04CC7EFE26E92F520023C94E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC7EFD26E92F520023C94E /* LocationManager.swift */; };
+		04CC7F5126E933720023C94E /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC7F5026E933720023C94E /* LocationVC.swift */; };
+		04CC7F5626E9339D0023C94E /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC7F5526E9339D0023C94E /* LocationSearchTable.swift */; };
 		04CF96F52651712D00184441 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF96F32651712D00184441 /* LoginVC.swift */; };
 		04CF96F62651712D00184441 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CF96F42651712D00184441 /* LoginVC.xib */; };
 		04CFE68926E38CA300D35D25 /* FavouriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CFE68B26E38CA300D35D25 /* FavouriteTableViewCell.xib */; };
@@ -219,6 +222,8 @@
 		04225028265E835B00723400 /* RateArtistVc.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RateArtistVc.xib; sourceTree = "<group>"; };
 		0422502F265E851800723400 /* CancelReservationVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelReservationVc.swift; sourceTree = "<group>"; };
 		04225037265EC08000723400 /* ReservetionDetailsVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservetionDetailsVc.swift; sourceTree = "<group>"; };
+		0428861826E805C4008C152B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ReservationTableViewCell.xib; sourceTree = "<group>"; };
+		0428861E26E805C8008C152B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ReservationTableViewCell.strings; sourceTree = "<group>"; };
 		0430678C2661F36E00BDFE32 /* PartyDateVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyDateVc.swift; sourceTree = "<group>"; };
 		0430679426620A2A00BDFE32 /* NoArtistAvailableVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoArtistAvailableVc.swift; sourceTree = "<group>"; };
 		0430679F26620DD100BDFE32 /* AllLiveVideoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllLiveVideoVC.swift; sourceTree = "<group>"; };
@@ -251,7 +256,6 @@
 		04400C7226E1A2CA00CA57DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/BookingVC.xib; sourceTree = "<group>"; };
 		04400C7526E1A2CD00CA57DA /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/BookingVC.strings; sourceTree = "<group>"; };
 		04417E1D24AF6B370022C32F /* ReservationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationTableViewCell.swift; sourceTree = "<group>"; };
-		04417E1E24AF6B370022C32F /* ReservationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReservationTableViewCell.xib; sourceTree = "<group>"; };
 		044EDE1C24BDAC8B00EC8E61 /* ConfirmReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmReservationViewController.swift; sourceTree = "<group>"; };
 		044EDE2124BF011F00EC8E61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/RateViewController.xib; sourceTree = "<group>"; };
 		044FEAD626DD1BF400F44413 /* LanguageScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageScreenVC.swift; sourceTree = "<group>"; };
@@ -351,13 +355,12 @@
 		047F8C2F24B3AE5800A86E86 /* RateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RateTableViewCell.xib; sourceTree = "<group>"; };
 		047F8C3724B4CBC100A86E86 /* ChooseUSerTypeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseUSerTypeVC.swift; sourceTree = "<group>"; };
 		047F8C3A24B4FC4C00A86E86 /* ArtistRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistRegisterViewController.swift; sourceTree = "<group>"; };
-		047F8C3B24B4FC4C00A86E86 /* ArtistRegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistRegisterViewController.xib; sourceTree = "<group>"; };
 		048569BE2665405700B2670D /* AddServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServices.swift; sourceTree = "<group>"; };
 		048569C32665407800B2670D /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		048569DD2665464F00B2670D /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		048569E22665501300B2670D /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
+		0488569626F276A700391A00 /* ArtistLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistLoginModel.swift; sourceTree = "<group>"; };
 		048D929426E682160036041E /* FinalBookingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalBookingVC.swift; sourceTree = "<group>"; };
-		048D929526E682160036041E /* FinalBookingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FinalBookingVC.xib; sourceTree = "<group>"; };
 		048DCB572656B38200319F9F /* LoginUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserVC.swift; sourceTree = "<group>"; };
 		048DCB722656B4C800319F9F /* UserRegisterTypeVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegisterTypeVc.swift; sourceTree = "<group>"; };
 		048DCB8D2657324000319F9F /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
@@ -372,19 +375,25 @@
 		0491AD3A26376D5500398125 /* CustomDropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDropdown.swift; sourceTree = "<group>"; };
 		0491AD462637733000398125 /* MainRegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRegisterVC.swift; sourceTree = "<group>"; };
 		0491AD5B2637830F00398125 /* TextField+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extention.swift"; sourceTree = "<group>"; };
+		0499EB0326F4ACD4000C2DAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ArtistRegisterViewController.xib; sourceTree = "<group>"; };
+		0499EB0626F4ACDA000C2DAD /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ArtistRegisterViewController.strings; sourceTree = "<group>"; };
 		049EA683267865D300EFB676 /* MostFamousVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostFamousVc.swift; sourceTree = "<group>"; };
 		049EA68A2678768600EFB676 /* SearchResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultModel.swift; sourceTree = "<group>"; };
 		049EA68F2678777B00EFB676 /* SearchResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewModel.swift; sourceTree = "<group>"; };
+		04A2871B26E8DF830025ADCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/FinalBookingVC.xib; sourceTree = "<group>"; };
+		04A2872126E8DF8A0025ADCB /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/FinalBookingVC.strings; sourceTree = "<group>"; };
 		04ABD7B026BFF06300CCD994 /* OffersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersModel.swift; sourceTree = "<group>"; };
+		04AEA2E726EF4E6E00495059 /* ArtistAuthenticationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistAuthenticationVM.swift; sourceTree = "<group>"; };
 		04BF70C8267514F600080730 /* AuthenticationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationVM.swift; sourceTree = "<group>"; };
 		04BF70CE2675167B00080730 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
-		04CA044E24B7FD5200660E7B /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
-		04CA044F24B7FD5200660E7B /* LocationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationViewController.xib; sourceTree = "<group>"; };
 		04CA045E24BA023400660E7B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		04CA045F24BA023500660E7B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		04CA046324BA03F500660E7B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		04CA046524BA03FC00660E7B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		04CA048224BB07A700660E7B /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		04CC7EFD26E92F520023C94E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		04CC7F5026E933720023C94E /* LocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
+		04CC7F5526E9339D0023C94E /* LocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
 		04CF96F32651712D00184441 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		04CF96F42651712D00184441 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		04CFE68A26E38CA300D35D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/FavouriteTableViewCell.xib; sourceTree = "<group>"; };
@@ -879,17 +888,17 @@
 		046E3B9324AE11CC006D1385 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				046506F024B6150400694741 /* Artist Screens */,
+				046506F524B62EB100694741 /* UserAuth */,
 				04400C6526E197EA00CA57DA /* Booking */,
 				049EA6822678658700EFB676 /* MostFamousVc */,
 				0430679E26620DB300BDFE32 /* AllLiveVideoVC */,
 				0430678B2661F33100BDFE32 /* PartyDateVc */,
-				046506F024B6150400694741 /* Artist Screens */,
 				04225003265E709E00723400 /* ForgetPassword */,
 				048DCBA5265741F800319F9F /* PassWordInstructions */,
 				048DCB952657359D00319F9F /* TermsAndCondition */,
 				044EDE1B24BDAC4F00EC8E61 /* confirm Reservation */,
 				04CA046624BA385700660E7B /* Setting */,
-				046506F524B62EB100694741 /* UserAuth */,
 				047F8C3224B4A5E500A86E86 /* MainAuth */,
 				047F8C2924B3ADDE00A86E86 /* RateView */,
 				047F8C1E24B3A99B00A86E86 /* Comments */,
@@ -993,16 +1002,24 @@
 			isa = PBXGroup;
 			children = (
 				047F8C3A24B4FC4C00A86E86 /* ArtistRegisterViewController.swift */,
-				047F8C3B24B4FC4C00A86E86 /* ArtistRegisterViewController.xib */,
+				0499EB0426F4ACD4000C2DAD /* ArtistRegisterViewController.xib */,
 			);
 			path = ArtistRegister;
+			sourceTree = "<group>";
+		};
+		0488569226F2768B00391A00 /* ArtistModel */ = {
+			isa = PBXGroup;
+			children = (
+				0488569626F276A700391A00 /* ArtistLoginModel.swift */,
+			);
+			path = ArtistModel;
 			sourceTree = "<group>";
 		};
 		048D928D26E681FC0036041E /* FinalBookingVC */ = {
 			isa = PBXGroup;
 			children = (
 				048D929426E682160036041E /* FinalBookingVC.swift */,
-				048D929526E682160036041E /* FinalBookingVC.xib */,
+				04A2871C26E8DF830025ADCB /* FinalBookingVC.xib */,
 			);
 			path = FinalBookingVC;
 			sourceTree = "<group>";
@@ -1070,9 +1087,18 @@
 			path = MostFamousVc;
 			sourceTree = "<group>";
 		};
+		04AEA2C026EF4E2E00495059 /* ArtistViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				04AEA2E726EF4E6E00495059 /* ArtistAuthenticationVM.swift */,
+			);
+			path = ArtistViewModel;
+			sourceTree = "<group>";
+		};
 		04BF70C72675148000080730 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				04AEA2C026EF4E2E00495059 /* ArtistViewModel */,
 				04BF70C8267514F600080730 /* AuthenticationVM.swift */,
 				0411EB8826764E7D0023FA5B /* HomeViewModel.swift */,
 				049EA68F2678777B00EFB676 /* SearchResultViewModel.swift */,
@@ -1096,8 +1122,9 @@
 		04CA044D24B7FD2000660E7B /* Location */ = {
 			isa = PBXGroup;
 			children = (
-				04CA044E24B7FD5200660E7B /* LocationViewController.swift */,
-				04CA044F24B7FD5200660E7B /* LocationViewController.xib */,
+				04CC7EFD26E92F520023C94E /* LocationManager.swift */,
+				04CC7F5026E933720023C94E /* LocationVC.swift */,
+				04CC7F5526E9339D0023C94E /* LocationSearchTable.swift */,
 			);
 			path = Location;
 			sourceTree = "<group>";
@@ -1198,6 +1225,7 @@
 		04F2BA64265B056E007F4E53 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0488569226F2768B00391A00 /* ArtistModel */,
 				04F2BA65265B0586007F4E53 /* SideMenuModel.swift */,
 				048569DD2665464F00B2670D /* Errors.swift */,
 				048569E22665501300B2670D /* AuthModel.swift */,
@@ -1237,7 +1265,7 @@
 			isa = PBXGroup;
 			children = (
 				04417E1D24AF6B370022C32F /* ReservationTableViewCell.swift */,
-				04417E1E24AF6B370022C32F /* ReservationTableViewCell.xib */,
+				0428861926E805C4008C152B /* ReservationTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -1436,7 +1464,7 @@
 				044FEB1A26DD40CF00F44413 /* NoArtistAvailableVc.xib in Resources */,
 				0436D1F026DFEBBB00BD5276 /* FavouriteViewController.xib in Resources */,
 				046506E424B5D22600694741 /* OfferPriceViewController.xib in Resources */,
-				047F8C3D24B4FC4C00A86E86 /* ArtistRegisterViewController.xib in Resources */,
+				0499EB0226F4ACD4000C2DAD /* ArtistRegisterViewController.xib in Resources */,
 				04323C1A24B243B4000F6395 /* NotificationsTableViewCell.xib in Resources */,
 				04CA046224BA03F500660E7B /* Localizable.strings in Resources */,
 				044FEB6526DD444400F44413 /* MainRegisterVC.xib in Resources */,
@@ -1450,7 +1478,7 @@
 				044FEB8326DD456300F44413 /* SearchResultTableViewCell.xib in Resources */,
 				044FEB3526DD41E100F44413 /* TermsAndConditionVc.xib in Resources */,
 				04F2BA3A265AA462007F4E53 /* PartyPriceVC.xib in Resources */,
-				048D929726E682160036041E /* FinalBookingVC.xib in Resources */,
+				04A2871A26E8DF830025ADCB /* FinalBookingVC.xib in Resources */,
 				046506E924B5E51500694741 /* InformationViewController.xib in Resources */,
 				0436D1D426DFDCBD00BD5276 /* GoogleService-Info.plist in Resources */,
 				044EDE2024BF011F00EC8E61 /* RateViewController.xib in Resources */,
@@ -1458,7 +1486,6 @@
 				044FEB7026DD44B300F44413 /* CommentsViewController.xib in Resources */,
 				043067AD26620F5100BDFE32 /* AllLiveCell.xib in Resources */,
 				046E3B6724ADD863006D1385 /* Assets.xcassets in Resources */,
-				04CA045124B7FD5200660E7B /* LocationViewController.xib in Resources */,
 				04400C7126E1A2CA00CA57DA /* BookingVC.xib in Resources */,
 				046506EE24B60B8900694741 /* ArtistAccountViewController.xib in Resources */,
 				044FEB6026DD439500F44413 /* UserRegisterViewController.xib in Resources */,
@@ -1494,7 +1521,7 @@
 				046E3BB124AE1ADC006D1385 /* MoreViewController.xib in Resources */,
 				046E3BAD24AE1ABB006D1385 /* AccountViewController.xib in Resources */,
 				046506FE24B780ED00694741 /* AvailableReservationViewController.xib in Resources */,
-				04417E2024AF6B370022C32F /* ReservationTableViewCell.xib in Resources */,
+				0428861726E805C4008C152B /* ReservationTableViewCell.xib in Resources */,
 				0436D1E026DFEAC400BD5276 /* ReservetionDetailsVc.xib in Resources */,
 				0436D1D826DFE33B00BD5276 /* ReservationViewController.xib in Resources */,
 			);
@@ -1662,6 +1689,7 @@
 				04CF96F52651712D00184441 /* LoginVC.swift in Sources */,
 				046E3B9924AE131F006D1385 /* TabBarItem.swift in Sources */,
 				046E3BA424AE1A74006D1385 /* SearchViewController.swift in Sources */,
+				04AEA2E826EF4E6E00495059 /* ArtistAuthenticationVM.swift in Sources */,
 				049EA68B2678768600EFB676 /* SearchResultModel.swift in Sources */,
 				047F8C0B24B3790400A86E86 /* SearchResultViewController.swift in Sources */,
 				0491AD5C2637830F00398125 /* TextField+Extention.swift in Sources */,
@@ -1686,6 +1714,7 @@
 				046E3BA824AE1A9E006D1385 /* ReservationViewController.swift in Sources */,
 				049EA685267865D300EFB676 /* MostFamousVc.swift in Sources */,
 				04643AD8267538EE00510426 /* HelperMethods.swift in Sources */,
+				04CC7EFE26E92F520023C94E /* LocationManager.swift in Sources */,
 				046E3B9724AE12F6006D1385 /* TabBarController.swift in Sources */,
 				0465071124B7A6EC00694741 /* ArtistMoreViewController.swift in Sources */,
 				04F7497024B1D4D6004DE8CD /* CallCenterViewController.swift in Sources */,
@@ -1705,7 +1734,6 @@
 				047F8C1424B37E9800A86E86 /* ArtistProfileViewController.swift in Sources */,
 				0420A83326B8C2C000643213 /* LiveModel.swift in Sources */,
 				048EDAD1267ACB57009CB854 /* FavouritModel.swift in Sources */,
-				04CA045024B7FD5200660E7B /* LocationViewController.swift in Sources */,
 				046506FD24B780ED00694741 /* AvailableReservationViewController.swift in Sources */,
 				0491AD482637733000398125 /* MainRegisterVC.swift in Sources */,
 				04E0290F265D77D600F5E373 /* SettingVc.swift in Sources */,
@@ -1725,9 +1753,11 @@
 				04ABD7B126BFF06400CCD994 /* OffersModel.swift in Sources */,
 				047F8C3C24B4FC4C00A86E86 /* ArtistRegisterViewController.swift in Sources */,
 				04BF70C9267514F600080730 /* AuthenticationVM.swift in Sources */,
+				04CC7F5126E933720023C94E /* LocationVC.swift in Sources */,
 				043067A126620DD100BDFE32 /* AllLiveVideoVC.swift in Sources */,
 				04F2BA4D265ACE39007F4E53 /* ArtistHomeVc.swift in Sources */,
 				04FAF37924DAED2D00F73189 /* GetServices.swift in Sources */,
+				0488569726F276A700391A00 /* ArtistLoginModel.swift in Sources */,
 				044FEAD726DD1BF400F44413 /* LanguageScreenVC.swift in Sources */,
 				047F8C1824B3890E00A86E86 /* CommentsTableViewCell.swift in Sources */,
 				046506F824B62ECF00694741 /* UserRegisterViewController.swift in Sources */,
@@ -1748,6 +1778,7 @@
 				046506ED24B60B8900694741 /* ArtistAccountViewController.swift in Sources */,
 				047F8C2124B3A9B900A86E86 /* CommentsViewController.swift in Sources */,
 				048EDADB267ADC28009CB854 /* ReservationModel.swift in Sources */,
+				04CC7F5626E9339D0023C94E /* LocationSearchTable.swift in Sources */,
 				047F8C3024B3AE5800A86E86 /* RateTableViewCell.swift in Sources */,
 				0430678E2661F36E00BDFE32 /* PartyDateVc.swift in Sources */,
 				046E3B9524AE1295006D1385 /* StoryBoardExtension.swift in Sources */,
@@ -1795,6 +1826,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		0428861926E805C4008C152B /* ReservationTableViewCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0428861826E805C4008C152B /* Base */,
+				0428861E26E805C8008C152B /* ar */,
+			);
+			name = ReservationTableViewCell.xib;
+			sourceTree = "<group>";
+		};
 		0436D1DA26DFE33B00BD5276 /* ReservationViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -2046,6 +2086,24 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		0499EB0426F4ACD4000C2DAD /* ArtistRegisterViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0499EB0326F4ACD4000C2DAD /* Base */,
+				0499EB0626F4ACDA000C2DAD /* ar */,
+			);
+			name = ArtistRegisterViewController.xib;
+			sourceTree = "<group>";
+		};
+		04A2871C26E8DF830025ADCB /* FinalBookingVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04A2871B26E8DF830025ADCB /* Base */,
+				04A2872126E8DF8A0025ADCB /* ar */,
+			);
+			name = FinalBookingVC.xib;
+			sourceTree = "<group>";
+		};
 		04CA046424BA03F500660E7B /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -2190,7 +2248,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 5R2Z9F2376;
 				INFOPLIST_FILE = PartyBooking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2212,7 +2270,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 5R2Z9F2376;
 				INFOPLIST_FILE = PartyBooking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "Personal Data"; ObjectID = "58g-0q-8tH"; */
+"58g-0q-8tH.text" = "تسجيل حساب جديد";
+
+/* Class = "UILabel"; text = "Enter your party Price"; ObjectID = "JM3-pf-kgK"; */
+"JM3-pf-kgK.text" = "ادخل أسعار الحفلات الخاصة بك";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "j27-u7-slt"; */
+"j27-u7-slt.normalTitle" = "حفظ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "uoj-h3-eNJ"; */
+"uoj-h3-eNJ.normalTitle" = "Button";

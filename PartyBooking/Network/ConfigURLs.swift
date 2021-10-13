@@ -60,8 +60,18 @@ struct ConfigURLs {
     //MARK:- artist
     static var artistLogin = BASE_URL + "artist/auth/login"
     static var postRegisterArtist = BASE_URL  + "artist/auth/register"
+    static var getArtistProfile = BASE_URL  + "artist/auth/profile"
+    static var artistChageProfilePhoto = BASE_URL  + "artist/auth/changePhoto"
+    static var updateDescription = BASE_URL  + "artist/auth/updateDescription"
+    static var updatePrices = BASE_URL  + "artist/auth/updatePrices"
+    static var availability = BASE_URL  + "artist/availability/status"
+    static var getAvailability = BASE_URL  + "artist/availability/get"
+    static var getReview = BASE_URL  + "artist/setting/reviewes"
+    static var getBooking = BASE_URL  + "artist/booking/getBookings"
 
-
-
+    static var cancelBooking = BASE_URL  + "artist/booking/cancelBooking"
+    static var getNotificationArtist = BASE_URL  + "artist/notification/all"
+    
+    
 
 }

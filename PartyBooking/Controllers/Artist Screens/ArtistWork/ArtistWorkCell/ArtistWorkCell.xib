@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ArtistWorkCell" id="gTV-IL-0wX" customClass="ArtistWorkCell" customModule="PartyBooking" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="119" height="107"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="119" height="107"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7pa-89-Fmp">
+                        <rect key="frame" x="0.0" y="0.0" width="119" height="107"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aasx" translatesAutoresizingMaskIntoConstraints="NO" id="gzW-xc-Thq">
+                                <rect key="frame" x="0.0" y="0.0" width="119" height="107"/>
+                            </imageView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8gZ-lW-gSM" customClass="CustomView" customModule="PartyBooking" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="119" height="107"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WB2-qA-lPf" customClass="CustomView" customModule="PartyBooking" customModuleProvider="target">
+                                <rect key="frame" x="39.5" y="33.5" width="40" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpy-Ps-jhd">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.14999999999999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="ef0-va-4Ea"/>
+                                            <constraint firstAttribute="width" constant="40" id="sch-GW-1Yp"/>
+                                        </constraints>
+                                        <state key="normal" image="icons8-play-30"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="UcK-Xm-yAd"/>
+                                    <constraint firstAttribute="height" constant="40" id="X9X-yg-1ys"/>
+                                    <constraint firstItem="hpy-Ps-jhd" firstAttribute="centerY" secondItem="WB2-qA-lPf" secondAttribute="centerY" id="jpi-wk-h4c"/>
+                                    <constraint firstItem="hpy-Ps-jhd" firstAttribute="centerX" secondItem="WB2-qA-lPf" secondAttribute="centerX" id="teR-7f-TnE"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="8gZ-lW-gSM" secondAttribute="trailing" id="202-T7-VOZ"/>
+                            <constraint firstItem="gzW-xc-Thq" firstAttribute="top" secondItem="7pa-89-Fmp" secondAttribute="top" id="OlC-e6-vAW"/>
+                            <constraint firstAttribute="bottom" secondItem="8gZ-lW-gSM" secondAttribute="bottom" id="Xcv-nO-ynn"/>
+                            <constraint firstAttribute="bottom" secondItem="gzW-xc-Thq" secondAttribute="bottom" id="Y6c-ZU-EzY"/>
+                            <constraint firstItem="WB2-qA-lPf" firstAttribute="centerY" secondItem="7pa-89-Fmp" secondAttribute="centerY" id="eXb-yx-QZ8"/>
+                            <constraint firstAttribute="trailing" secondItem="gzW-xc-Thq" secondAttribute="trailing" id="kvK-X1-Cpm"/>
+                            <constraint firstItem="8gZ-lW-gSM" firstAttribute="leading" secondItem="7pa-89-Fmp" secondAttribute="leading" id="l0h-im-6L6"/>
+                            <constraint firstItem="gzW-xc-Thq" firstAttribute="leading" secondItem="7pa-89-Fmp" secondAttribute="leading" id="nog-Oa-GgC"/>
+                            <constraint firstItem="WB2-qA-lPf" firstAttribute="centerX" secondItem="7pa-89-Fmp" secondAttribute="centerX" id="qSZ-F4-v8Q"/>
+                            <constraint firstItem="8gZ-lW-gSM" firstAttribute="top" secondItem="7pa-89-Fmp" secondAttribute="top" id="vwl-Ee-o8e"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="7pa-89-Fmp" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="H3H-Ct-glM"/>
+                <constraint firstAttribute="bottom" secondItem="7pa-89-Fmp" secondAttribute="bottom" id="IcR-MD-Uyi"/>
+                <constraint firstAttribute="trailing" secondItem="7pa-89-Fmp" secondAttribute="trailing" id="Pek-11-73b"/>
+                <constraint firstItem="7pa-89-Fmp" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="dSI-uz-vJg"/>
+            </constraints>
+            <size key="customSize" width="119" height="107"/>
+            <connections>
+                <outlet property="artistImageView" destination="gzW-xc-Thq" id="mwz-gF-Xug"/>
+                <outlet property="playButton" destination="hpy-Ps-jhd" id="Ucn-Mg-ZSx"/>
+                <outlet property="playView" destination="WB2-qA-lPf" id="jUj-yN-L5T"/>
+                <outlet property="videoPlayView" destination="8gZ-lW-gSM" id="eBA-fv-oVt"/>
+            </connections>
+            <point key="canvasLocation" x="36.956521739130437" y="74.665178571428569"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="aasx" width="1088" height="504"/>
+        <image name="icons8-play-30" width="30" height="30"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -54,11 +54,10 @@ class ArtistRegisterViewController: UIViewController {
     var serviceId :Int?
     var areaId :Int?
     var gender = ["male".localized,"female".localized]
-    
     let listController: FPNCountryListViewController = FPNCountryListViewController(style: .grouped)
     var dialCode = String()
     var profliePic : UIImage?
-    
+    var selectedgender = String()
     @IBOutlet weak var backButton: UIButton! {
         didSet {
             backButton.setImage(backButton.currentImage?.flipIfNeeded(), for: .normal)
@@ -113,6 +112,7 @@ class ArtistRegisterViewController: UIViewController {
         areaTextField.optionArray = self.filterAreas
         areaTextField.didSelect { (selectedText, index, id) in
             self.areaTextField.text = selectedText
+            self.areaId = self.areas[index].id ?? 0
         }
     }
     
@@ -120,6 +120,7 @@ class ArtistRegisterViewController: UIViewController {
         serviceTextField.optionArray = self.filterService
         serviceTextField.didSelect { (selectedText, index, id) in
             self.serviceTextField.text = selectedText
+            self.serviceId = self.service[index].id ?? 0
         }
     }
     
@@ -127,6 +128,11 @@ class ArtistRegisterViewController: UIViewController {
         genderTextField.optionArray = self.gender
         genderTextField.didSelect { (selectedText, index, id) in
             self.genderTextField.text = selectedText
+            if index == 0 {
+                self.selectedgender = "male"
+            }else{
+                self.selectedgender = "female"
+            }
         }
     }
     
@@ -134,6 +140,7 @@ class ArtistRegisterViewController: UIViewController {
         countryTextField.optionArray = self.filterCountry
         countryTextField.didSelect { (selectedText, index, id) in
             self.countryTextField.text = selectedText
+            self.countryId = self.country[index].id ?? 0
         }
     }
     
@@ -222,14 +229,25 @@ class ArtistRegisterViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    
     @IBAction func nextButton(sender: UIButton) {
-        guard self.validateInput() else { return }
+       // guard self.validateInput() else { return }
         let destinationVC = OfferPriceViewController.instantiateFromNib()
+        destinationVC?.emailTextField = emailTextField.text ?? ""
+        destinationVC?.passTextField =  passTextField.text ?? ""
+        destinationVC?.lNameTextField =  lNameTextField.text ?? ""
+        destinationVC?.countryTextField =  countryId ?? 0
+        destinationVC?.fNameTextField = fNameTextField.text ?? ""
+        destinationVC?.phoneTextField =  phoneTextField.text ?? ""
+        destinationVC?.area = areaId ?? 0
+        destinationVC?.serviceTextField =  serviceId ?? 0
+        destinationVC?.banckTextField =  banckTextField.text ?? ""
+        destinationVC?.banckAcountTextField =  banckAcountTextField.text ?? ""
+        destinationVC?.genderTextField = selectedgender
+        destinationVC?.image =  profliePic ?? #imageLiteral(resourceName: "5")
         self.navigationController?.pushViewController(destinationVC!, animated: true)
     }
 }
-
-
 
 extension ArtistRegisterViewController : FPNTextFieldDelegate {
     func fpnDisplayCountryList() {
@@ -293,10 +311,8 @@ extension ArtistRegisterViewController : UIImagePickerControllerDelegate, UINavi
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
             self.profliePic =  editedImage
-            //self.ProfileImageView.image = editedImage
         } else if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             self.profliePic =  originalImage
-           // self.ProfileImageView.image = originalImage
         }
         dismiss(animated: true, completion: nil)
     }

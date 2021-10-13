@@ -15,6 +15,19 @@ import TwitterKit
 class Helper {
     
     
+    
+    class func saveType(token: String) {
+        let def = UserDefaults.standard
+        def.set(token, forKey: "type")
+        def.synchronize()
+    }
+    
+   class func getType() -> String? {
+      let def = UserDefaults.standard
+      return def.object(forKey: "type") as? String
+   }
+    
+    
     class func saveAPIToken(token: String) {
         let def = UserDefaults.standard
         def.set(token, forKey: "token")
@@ -169,5 +182,30 @@ class Helper {
         let def = UserDefaults.standard
         return def.object(forKey: "Address") as? String
     }
+    
+    
+    
+    class func saveArtistId(id: Int) {
+        let def = UserDefaults.standard
+        def.set(id, forKey: "id")
+        def.synchronize()
+    }
+    
+   class func getArtistId() -> Int? {
+      let def = UserDefaults.standard
+      return def.object(forKey: "id") as? Int
+   }
+    
+   
+    class func savePartyPrice(id: [[String : Any]]) {
+        let def = UserDefaults.standard
+        def.set(id, forKey: "PartyPrice")
+        def.synchronize()
+    }
+    
+   class func getPartyPrice() -> [[String : Any]]? {
+      let def = UserDefaults.standard
+      return def.object(forKey: "PartyPrice") as? [[String : Any]]
+   }
     
 }

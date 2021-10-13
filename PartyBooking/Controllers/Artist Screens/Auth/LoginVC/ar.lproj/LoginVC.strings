@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "welcome.let's start"; ObjectID = "2US-pM-eNz"; */
+"2US-pM-eNz.text" = "هيا بنا نبدا";
+
+/* Class = "UITextField"; placeholder = "password"; ObjectID = "JQz-r3-z18"; */
+"JQz-r3-z18.placeholder" = "الرقم السري";
+
+/* Class = "UIButton"; normalTitle = "login"; ObjectID = "aDO-qb-wRi"; */
+"aDO-qb-wRi.normalTitle" = "دخول";
+
+/* Class = "UITextField"; placeholder = "Emial or phone number "; ObjectID = "eaH-jH-cGB"; */
+"eaH-jH-cGB.placeholder" = "البريد الالكتروني";

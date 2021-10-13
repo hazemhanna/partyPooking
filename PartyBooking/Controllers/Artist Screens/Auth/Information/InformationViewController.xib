@@ -273,6 +273,7 @@
                 <outlet property="noLabel" destination="H4G-38-clc" id="Oi0-Vc-Qgy"/>
                 <outlet property="readLabel" destination="8ig-5U-uIp" id="WyR-ek-vMB"/>
                 <outlet property="succesLabel" destination="Mth-0B-azq" id="3FG-Vk-ZGS"/>
+                <outlet property="succesView" destination="xL6-mj-JuR" id="vCO-NX-VWq"/>
                 <outlet property="termsLabel" destination="KhI-PB-gST" id="hAG-DM-c8c"/>
                 <outlet property="timeRecieveingLabel" destination="MhN-xg-iHF" id="4ie-Re-nkb"/>
                 <outlet property="titleLabel" destination="x0w-CJ-dID" id="nid-xw-2h5"/>

@@ -239,8 +239,12 @@ struct GetServices {
     
     func getReservation() -> Observable<ReservationModelJSON> {
         return Observable.create { (observer) -> Disposable in
-            let url = ConfigURLs.getReservation
-            
+            var url = String()
+            if Helper.getType() == "user" {
+             url = ConfigURLs.getReservation
+            }else{
+             url = ConfigURLs.getBooking
+            }
             let token = Helper.getAPIToken() ?? ""
             let headers = [
                 "Authorization": "Bearer \(token)"
@@ -392,7 +396,14 @@ struct GetServices {
     
     func getNotification() -> Observable<NotificationModelJSON> {
         return Observable.create { (observer) -> Disposable in
-            let url = ConfigURLs.getNotification
+           
+            var url = String()
+            if Helper.getType() == "user" {
+                 url = ConfigURLs.getNotification
+            }else{
+                  url = ConfigURLs.getNotificationArtist
+            }
+            
             let token = Helper.getAPIToken() ?? ""
             let headers = [
                 "Authorization": "Bearer \(token)"
@@ -411,5 +422,53 @@ struct GetServices {
             return Disposables.create()
         }
     }//END
+    
+    //MARK:- Artist Api
+    func getArtistProfile() -> Observable<ArtistHomeModelJson> {
+        return Observable.create { (observer) -> Disposable in
+            let url = ConfigURLs.getArtistProfile
+            let token = Helper.getAPIToken() ?? ""
+            let headers = [
+                "Authorization": "Bearer \(token)"
+            ]
+            Alamofire.request(url, method: .post, parameters: nil, encoding: JSONEncoding.default, headers: headers)
+                .validate(statusCode: 200..<300)
+                .responseJSON { (response: DataResponse<Any>) in
+                    do {
+                        let data = try JSONDecoder().decode(ArtistHomeModelJson.self, from: response.data!)
+                        observer.onNext(data)
+                    } catch {
+                        print(error.localizedDescription)
+                        observer.onError(error)
+                    }
+            }
+            return Disposables.create()
+        }
+    }//END
+ 
+    
+    func getReview() -> Observable<ArtistReviewModelJSON> {
+        return Observable.create { (observer) -> Disposable in
+            let url = ConfigURLs.getReview
+            let token = Helper.getAPIToken() ?? ""
+            let headers = [
+                "Authorization": "Bearer \(token)"
+            ]
+            Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers)
+                .validate(statusCode: 200..<300)
+                .responseJSON { (response: DataResponse<Any>) in
+                    do {
+                        let data = try JSONDecoder().decode(ArtistReviewModelJSON.self, from: response.data!)
+                        observer.onNext(data)
+                    } catch {
+                        print(error.localizedDescription)
+                        observer.onError(error)
+                    }
+            }
+            return Disposables.create()
+        }
+    }//END
+ 
+    
     
 }

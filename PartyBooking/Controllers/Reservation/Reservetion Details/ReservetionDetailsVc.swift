@@ -20,6 +20,8 @@ class ReservetionDetailsVc : UIViewController {
     @IBOutlet weak var noteLbl  :UILabel!
     @IBOutlet weak var statusLbl :UILabel!
     @IBOutlet weak var artistName :UILabel!
+    @IBOutlet weak var artistNameLbl :UILabel!
+
     @IBOutlet weak var reservationNum :UILabel!
     @IBOutlet weak var canelReason :UILabel!
     @IBOutlet weak var ratView :CosmosView!
@@ -53,7 +55,14 @@ class ReservetionDetailsVc : UIViewController {
         PartyTime.text =  ("From".localized + from) + " " + ("To".localized + to)
         noteLbl.text = reservation?.partyType?.arName
         statusLbl.text = reservation?.status?.localized ?? ""
+        if Helper.getType() == "user"{
         artistName.text = (reservation?.artist?.firstName ?? "" ) + " " + (reservation?.artist?.lastName ?? "")
+          self.artistNameLbl.text = "artistName".localized
+        }else{
+        artistName.text = (reservation?.user?.firstName ?? "" ) + " " + (reservation?.user?.lastName ?? "")
+          self.artistNameLbl.text = "userName".localized
+        }
+        
         reservationNum.text = String(reservation?.id ?? 0 )
         canelReason.text = reservation?.cancelReason ?? ""
         Partydate.text = reservation?.date ?? ""

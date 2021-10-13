@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,MOLHResetable{
         
         MOLH.shared.activate(true)
         MOLH.shared.specialKeyWords = ["Cancel","Done"]
+        
         if ("lang".localized == "en") {
             MOLHLanguage.setDefaultLanguage("en")
             UIView.appearance().semanticContentAttribute = .forceLeftToRight

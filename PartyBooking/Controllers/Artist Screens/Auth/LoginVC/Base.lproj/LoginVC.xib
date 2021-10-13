@@ -157,6 +157,10 @@
                 </constraints>
             </view>
             <navigationItem key="navigationItem" id="bRY-UV-qxB"/>
+            <connections>
+                <outlet property="emailTextField" destination="eaH-jH-cGB" id="q8z-yv-vf0"/>
+                <outlet property="passTextField" destination="JQz-r3-z18" id="siZ-lr-6Xh"/>
+            </connections>
             <point key="canvasLocation" x="2505.7971014492755" y="-60.267857142857139"/>
         </viewController>
     </objects>

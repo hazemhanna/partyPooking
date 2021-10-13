@@ -12,8 +12,8 @@ class ArtistMoreViewController: UIViewController {
     
     @IBOutlet weak var tableView : UITableView!
     @IBOutlet weak var titleLabel  : UILabel!
-    @IBOutlet weak var version  : UILabel!
-    
+    var token = Helper.getAPIToken() ?? ""
+
     
     var Items = [SideMenuModel]() {
         didSet {
@@ -30,7 +30,7 @@ class ArtistMoreViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         setUPLocalize()
-        
+        if token != "" {
             if "lang".localized == "ar" {
                      self.Items = [
                                SideMenuModel(Name: "الفواتير", Id: "bills", image: #imageLiteral(resourceName: "1")),
@@ -38,8 +38,6 @@ class ArtistMoreViewController: UIViewController {
                                SideMenuModel(Name: "الدعم الفني", Id: "callCenter", image: #imageLiteral(resourceName: "support")),
                                SideMenuModel(Name: "وضع عدم الازعاج", Id: "silent", image: #imageLiteral(resourceName: "4")),
                                SideMenuModel(Name: "الاعدادات", Id: "setting", image: #imageLiteral(resourceName: "settings (1)")),
-                               SideMenuModel(Name: "الاشعارات", Id: "notification", image: #imageLiteral(resourceName: "5-1")),
-                               SideMenuModel(Name: "حسابي", Id: "account", image: #imageLiteral(resourceName: "5")),
                                SideMenuModel(Name: "من نحن", Id: "about", image: #imageLiteral(resourceName: "5-2")),
                                SideMenuModel(Name: "تسجيل الخروج", Id: "logOut", image: #imageLiteral(resourceName: "5-3")),
                            ]
@@ -50,12 +48,27 @@ class ArtistMoreViewController: UIViewController {
                                SideMenuModel(Name: "Call Center", Id: "callCenter", image: #imageLiteral(resourceName: "support")),
                                SideMenuModel(Name: "Silent", Id: "silent", image: #imageLiteral(resourceName: "4")),
                                SideMenuModel(Name: "Setting", Id: "setting", image: #imageLiteral(resourceName: "settings (1)")),
-                               SideMenuModel(Name: "Notification", Id: "notification", image: #imageLiteral(resourceName: "5-1")),
-                               SideMenuModel(Name: "Account", Id: "account", image: #imageLiteral(resourceName: "5")),
                                SideMenuModel(Name: "About", Id: "about", image: #imageLiteral(resourceName: "5-2")),
                                SideMenuModel(Name: "logOut", Id: "logOut", image: #imageLiteral(resourceName: "5-3")),
                            ]
             }
+        }else{
+            if "lang".localized == "ar" {
+                     self.Items = [
+                               SideMenuModel(Name: "العروض", Id: "Offers", image: #imageLiteral(resourceName: "1")),
+                               SideMenuModel(Name: "الاعدادات", Id: "setting", image: #imageLiteral(resourceName: "settings (1)")),
+                               SideMenuModel(Name: "من نحن", Id: "about", image: #imageLiteral(resourceName: "5-2")),
+                               SideMenuModel(Name: "تسجيل دخول", Id: "Login", image: #imageLiteral(resourceName: "5-3")),
+                           ]
+                }else {
+                       self.Items = [
+                               SideMenuModel(Name: "Offers", Id: "Offers", image: #imageLiteral(resourceName: "1")),
+                               SideMenuModel(Name: "Setting", Id: "setting", image: #imageLiteral(resourceName: "settings (1)")),
+                               SideMenuModel(Name: "About", Id: "about", image: #imageLiteral(resourceName: "5-2")),
+                               SideMenuModel(Name: "Login", Id: "Login", image: #imageLiteral(resourceName: "5-3")),
+                           ]
+            }
+        }
     }
     
        func selectionAction(index: Int) {
@@ -81,14 +94,16 @@ class ArtistMoreViewController: UIViewController {
                 let destinationVC = SettingVc.instantiateFromNib()
                 self.navigationController?.pushViewController(destinationVC!, animated: true)
                case "about":
-                print("about")
-
+                let main = TermsAndConditionVc.instantiateFromNib()
+                 main?.type = "about"
+                self.navigationController?.pushViewController(main!, animated: true)
                case "logOut":
                    let alert = UIAlertController(title: "LogOut".localized, message: "Are".localized, preferredStyle: .alert)
                    let yesAction = UIAlertAction(title: "YES".localized, style: .default) { (action) in
                        alert.dismiss(animated: true, completion: nil)
                        Helper.LogOut()
                        guard let main = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ChooseUSerTypeVC") as? ChooseUSerTypeVC else { return }
+                    Helper.saveType(token: "user")
                        self.navigationController?.pushViewController(main, animated: true)
                        
                    }
@@ -106,12 +121,10 @@ class ArtistMoreViewController: UIViewController {
        }
     
     func setUPLocalize(){
-        version.text = "\("version".localized) - 2.2.1"
         titleLabel.text = "more".localized
         if "lang".localized  == "en" {
             let font = UIFont(name: "Georgia-Bold", size: 14)
             titleLabel.font = font
-            version.font = font
         }
         
     }

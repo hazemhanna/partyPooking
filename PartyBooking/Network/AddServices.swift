@@ -123,6 +123,7 @@ struct AddServices {
         }
     }//END of POST Register
     
+    
     func editProfile(params: [String : Any]) -> Observable<MessageModel> {
         return Observable.create { (observer) -> Disposable in
             let url = ConfigURLs.editProfile
@@ -174,7 +175,14 @@ struct AddServices {
     
     func cancelReservation(params: [String : Any]) -> Observable<ContactUSModelJson> {
         return Observable.create { (observer) -> Disposable in
-            let url = ConfigURLs.cancelReservation
+            var url = String()
+            if Helper.getType() == "user" {
+             url = ConfigURLs.cancelReservation
+            }else{
+             url = ConfigURLs.cancelBooking
+            }
+            
+            
             let token = Helper.getAPIToken() ?? ""
             let headers = [
                 "Authorization": "Bearer \(token)"
@@ -219,4 +227,137 @@ struct AddServices {
         }
     }//END
     
+    
+    //MARK:- POST Register
+    func artistChageProfilePhoto(image: UIImage?) -> Observable<MessageModel> {
+        return Observable.create { (observer) -> Disposable in
+            let url = ConfigURLs.artistChageProfilePhoto
+            let token = Helper.getAPIToken() ?? ""
+            let headers = [
+                "Authorization": "Bearer \(token)"
+            ]
+            
+            Alamofire.upload(multipartFormData: { (form: MultipartFormData) in
+                if let data = image?.jpegData(compressionQuality: 0.8) {
+                    form.append(data, withName: "image", fileName: "image.jpeg", mimeType: "image/jpeg")
+                }
+                }, usingThreshold: SessionManager.multipartFormDataEncodingMemoryThreshold, to: url, method: .post, headers: headers) { (result: SessionManager.MultipartFormDataEncodingResult) in
+                    switch result {
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    observer.onError(error)
+                case .success(request: let upload, streamingFromDisk: _, streamFileURL: _):
+                    upload.uploadProgress { (progress) in
+                      print("Image Uploading Progress: \(progress.fractionCompleted)")
+                  }.responseJSON { (response: DataResponse<Any>) in
+             do {
+                    let data = try JSONDecoder().decode(MessageModel.self, from: response.data!)
+                    observer.onNext(data)
+                     } catch {
+                         print(error.localizedDescription)
+                        observer.onError(error)
+                    }
+                  }
+                }
+             }
+            return Disposables.create()
+        }
+    }//END of POST Register
+    
+    
+    
+    func updateDescription(params: [String : Any]) -> Observable<MessageModel> {
+        return Observable.create { (observer) -> Disposable in
+            let url = ConfigURLs.updateDescription
+            let token = Helper.getAPIToken() ?? ""
+            let headers = [
+                "Authorization": "Bearer \(token)"
+            ]
+            Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers)
+                .validate(statusCode: 200..<300)
+                .responseJSON { (response: DataResponse<Any>) in
+                    do {
+                        let data = try JSONDecoder().decode(MessageModel.self, from: response.data!)
+                        observer.onNext(data)
+                    } catch {
+                        print(error.localizedDescription)
+                        observer.onError(error)
+                    }
+            }
+            
+            return Disposables.create()
+        }
+    }//END
+    
+    func updatePrices(params: [String:Any])  -> Observable<MessageModel> {
+        return Observable.create { (observer) -> Disposable in
+
+        let url = ConfigURLs.updatePrices
+            let token = Helper.getAPIToken() ?? ""
+            let headers = [
+                "Authorization": "Bearer \(token)"
+            ]
+            Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers)
+            .validate(statusCode: 200..<300)
+            .responseJSON { (response: DataResponse<Any>) in
+                do {
+                    let data = try JSONDecoder().decode(MessageModel.self, from: response.data!)
+                    observer.onNext(data)
+                } catch {
+                    print(error.localizedDescription)
+                    observer.onError(error)
+                }
+        }
+            return Disposables.create()
+        }
+    }
+    
+    func availability(params: [String:Any])  -> Observable<MessageModel> {
+        return Observable.create { (observer) -> Disposable in
+
+        let url = ConfigURLs.availability
+            let token = Helper.getAPIToken() ?? ""
+            let headers = [
+                "Authorization": "Bearer \(token)"
+            ]
+            Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers)
+            .validate(statusCode: 200..<300)
+            .responseJSON { (response: DataResponse<Any>) in
+                do {
+                    let data = try JSONDecoder().decode(MessageModel.self, from: response.data!)
+                    observer.onNext(data)
+                } catch {
+                    print(error.localizedDescription)
+                    observer.onError(error)
+                }
+        }
+            return Disposables.create()
+        }
+    }
+    
+    
+    
+    func getAvailability(params: [String:Any])  -> Observable<AvailableDatesModelJSON> {
+        return Observable.create { (observer) -> Disposable in
+        let url = ConfigURLs.getAvailability
+            let token = Helper.getAPIToken() ?? ""
+            let headers = [
+                "Authorization": "Bearer \(token)"
+            ]
+            Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers)
+            .validate(statusCode: 200..<300)
+            .responseJSON { (response: DataResponse<Any>) in
+                do {
+                    let data = try JSONDecoder().decode(AvailableDatesModelJSON.self, from: response.data!)
+                    observer.onNext(data)
+                } catch {
+                    print(error.localizedDescription)
+                    observer.onError(error)
+                }
+        }
+            return Disposables.create()
+        }
+    }
 }
+    
+

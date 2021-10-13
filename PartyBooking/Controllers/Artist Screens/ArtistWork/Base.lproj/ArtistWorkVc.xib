@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GE_SS_Two_Bold.otf">
+            <string>GESSTwoBold-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ArtistWorkVc" customModule="PartyBooking" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="j1m-Li-EhI" customClass="ArtistWorkVc" customModule="PartyBooking" customModuleProvider="target">
+            <view key="view" contentMode="scaleToFill" id="eMt-VW-qZg">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Anv-QN-xlX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="74"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZbN-Hg-1ps">
+                                <rect key="frame" x="185" y="48" width="44" height="15"/>
+                                <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.16862745100000001" green="0.74117647060000003" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ZbN-Hg-1ps" secondAttribute="bottom" constant="11" id="KBS-ss-Iu4"/>
+                            <constraint firstItem="ZbN-Hg-1ps" firstAttribute="centerX" secondItem="Anv-QN-xlX" secondAttribute="centerX" id="Xnx-10-wo3"/>
+                            <constraint firstAttribute="height" constant="74" id="emT-9t-kLq"/>
+                        </constraints>
+                    </view>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="msX-Jt-cg7">
+                        <rect key="frame" x="16" y="90" width="382" height="690"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="10T-oM-60c">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="j1m-Li-EhI" id="ZKd-Qy-1oR"/>
+                            <outlet property="delegate" destination="j1m-Li-EhI" id="JDd-9w-AGh"/>
+                        </connections>
+                    </collectionView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJu-C9-OHa" customClass="CustomButtons" customModule="PartyBooking" customModuleProvider="target">
+                        <rect key="frame" x="232" y="796" width="150" height="50"/>
+                        <color key="backgroundColor" red="0.1176470588" green="0.2156862745" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="Sr8-fP-wEY"/>
+                            <constraint firstAttribute="height" constant="50" id="fEZ-Po-Kse"/>
+                        </constraints>
+                        <state key="normal" title="Add"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                </subviews>
+                <viewLayoutGuide key="safeArea" id="M3p-bK-FTg"/>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="M3p-bK-FTg" firstAttribute="bottom" secondItem="cJu-C9-OHa" secondAttribute="bottom" constant="16" id="1ag-UO-pwH"/>
+                    <constraint firstItem="Anv-QN-xlX" firstAttribute="leading" secondItem="eMt-VW-qZg" secondAttribute="leading" id="DNc-IQ-TzK"/>
+                    <constraint firstItem="M3p-bK-FTg" firstAttribute="trailing" secondItem="msX-Jt-cg7" secondAttribute="trailing" constant="16" id="KXb-a4-0BT"/>
+                    <constraint firstItem="Anv-QN-xlX" firstAttribute="top" secondItem="eMt-VW-qZg" secondAttribute="top" id="Svj-Zi-ZBP"/>
+                    <constraint firstItem="msX-Jt-cg7" firstAttribute="leading" secondItem="M3p-bK-FTg" secondAttribute="leading" constant="16" id="UKM-X0-tQj"/>
+                    <constraint firstAttribute="trailing" secondItem="Anv-QN-xlX" secondAttribute="trailing" id="XMV-fT-v7F"/>
+                    <constraint firstItem="msX-Jt-cg7" firstAttribute="top" secondItem="Anv-QN-xlX" secondAttribute="bottom" constant="16" id="ah6-9a-N8v"/>
+                    <constraint firstItem="M3p-bK-FTg" firstAttribute="trailing" secondItem="cJu-C9-OHa" secondAttribute="trailing" constant="32" id="bEK-dj-Gah"/>
+                    <constraint firstItem="cJu-C9-OHa" firstAttribute="top" secondItem="msX-Jt-cg7" secondAttribute="bottom" constant="16" id="xzC-1v-nzi"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="photoCollection" destination="msX-Jt-cg7" id="lbV-rO-Sgl"/>
+            </connections>
+            <point key="canvasLocation" x="53.623188405797109" y="77.678571428571431"/>
+        </viewController>
+    </objects>
+    <designables>
+        <designable name="cJu-C9-OHa">
+            <size key="intrinsicContentSize" width="33" height="34"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -8,17 +8,36 @@
 
 import UIKit
 
-class PartyPriceCell: UITableViewCell {
+class PartyPriceCell: UITableViewCell , UITextFieldDelegate{
+
+    @IBOutlet weak var partyName: UILabel!
+    @IBOutlet weak var partyPRice: UITextField!
+    @IBOutlet weak var partyTime: UITextField!
+    @IBOutlet weak var restTime: UITextField!
+
+
+    var updatePartyPrice : (() -> Void)? = nil
+    var updatePartyTime : (() -> Void)? = nil
+    var updateRestTime : (() -> Void)? = nil
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        partyPRice.delegate = self
+        restTime.delegate = self
+        partyTime.delegate = self
+
+        partyPRice.addTarget(self, action: #selector(PartyPriceCell.textFieldDidChange(_:)), for: .editingChanged)
+        restTime.addTarget(self, action: #selector(PartyPriceCell.textFieldDidChange(_:)), for: .editingChanged)
+        partyTime.addTarget(self, action: #selector(PartyPriceCell.textFieldDidChange(_:)), for: .editingChanged)
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    }
+    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+            updatePartyPrice?()
     }
     
 }

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class InformationViewController: UIViewController {
     
@@ -23,13 +25,31 @@ class InformationViewController: UIViewController {
     @IBOutlet weak var agreeLabel : UILabel!
     @IBOutlet weak var readLabel : UILabel!
     @IBOutlet weak var ReadyBtn : UIButton!
-    @IBOutlet weak var notReadyLabel : UILabel!
     @IBOutlet weak var titleLabel : UILabel!
     @IBOutlet weak var succesLabel : UILabel!
     @IBOutlet weak var doneBtn : UIButton!
     @IBOutlet weak var succesView : UIView!
 
-
+    
+    var emailTextField = String()
+    var passTextField =  String()
+    var lNameTextField =  String()
+    var countryTextField =  Int()
+    var fNameTextField =  String()
+    var phoneTextField =  String()
+    var area = Int()
+    var serviceTextField =  Int()
+    var genderTextField =  String()
+    var banckTextField =  String()
+    var banckAcountTextField =  String()
+    var retrieveMoney = Int()
+    var cancelTimeTF = 0
+    var image = UIImage()
+    
+    private let authModel = ArtistAuthenticationVM()
+    var disposeBag = DisposeBag()
+    
+    
     @IBOutlet weak var backButton: UIButton! {
         didSet {
             backButton.setImage(backButton.currentImage?.flipIfNeeded(), for: .normal)
@@ -94,7 +114,32 @@ class InformationViewController: UIViewController {
     }
     
     @IBAction func nextButton(sender: UIButton) {
-        succesView.isHidden = false
+        if termsUnchecked{
+            if "lang".localized == "ar" {
+            displayMessage(title: "", message: "من فضلك وافق علي الشروط والاحكام", status: .error, forController: self)
+            }else{
+                displayMessage(title: "", message: "please accept terms and condition", status: .error, forController: self)
+            }
+            return
+        }else{
+            self.authModel.showIndicator()
+            self.register(image: image
+                          , countryId: self.countryTextField
+                          , bindedEmail: emailTextField
+                          , bindedFirstName: fNameTextField
+                          , bindedLastName: lNameTextField
+                          , bindedPhone: phoneTextField
+                          , bindedPassword: passTextField
+                          , service_id: serviceTextField
+                          , areas: area
+                          , bank_name: banckTextField
+                          , bank_account: banckAcountTextField
+                          , retrieve_money: retrieveMoney
+                          , prices: Helper.getPartyPrice() ?? [[:]]
+                          , cancel_time: cancelTimeTF
+                          , gender: self.genderTextField)
+        }
+
     }
     
     @IBAction func succesButton(sender: UIButton) {
@@ -131,5 +176,23 @@ class InformationViewController: UIViewController {
             termsUnchecked = true
         }
     }
-    
+}
+
+
+extension InformationViewController {
+    func register (image : UIImage,countryId:Int,bindedEmail: String, bindedFirstName: String,bindedLastName: String,bindedPhone: String,bindedPassword: String,service_id: Int,areas: Int,bank_name: String,bank_account: String,retrieve_money: Int,prices: [[String : Any]],cancel_time: Int,gender: String) {
+        authModel.attemptToRegister(image: image, countryId: countryId, bindedEmail: bindedEmail, bindedFirstName: bindedFirstName, bindedLastName: bindedLastName, bindedPhone: bindedPhone, bindedPassword: bindedPassword, service_id: service_id, areas: areas, bank_name: bank_name, bank_account: bank_account, retrieve_money: retrieve_money, prices: prices, cancel_time: cancel_time, gender: gender).subscribe(onNext: { (data) in
+            if data.status ?? false {
+                self.authModel.dismissIndicator()
+                self.succesView.isHidden = false
+                displayMessage(title: "", message: data.message ??  ""  , status: .error, forController: self)
+            }else{
+                self.authModel.dismissIndicator()
+                displayMessage(title: "", message: data.message ??  "" , status: .error, forController: self)
+            }
+        }, onError: { (error) in
+            self.authModel.dismissIndicator()
+            displayMessage(title: "", message: error.localizedDescription , status: .error, forController: self)
+        }).disposed(by: disposeBag)
+     }
 }

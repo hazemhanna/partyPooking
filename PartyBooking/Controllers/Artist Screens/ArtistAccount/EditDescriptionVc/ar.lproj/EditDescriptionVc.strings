@@ -1,0 +1,21 @@
+
+/* Class = "UITextField"; placeholder = "Last Name"; ObjectID = "32H-Aw-IQq"; */
+"32H-Aw-IQq.placeholder" = "الاسم الاول";
+
+/* Class = "UILabel"; text = "Add description about your self or edit it "; ObjectID = "BCb-3R-JVQ"; */
+"BCb-3R-JVQ.text" = "اضف نبذة محتصرة عنك";
+
+/* Class = "UILabel"; text = "Profile"; ObjectID = "D5e-X5-g0b"; */
+"D5e-X5-g0b.text" = "الملف الشخصي";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "N0s-dM-O7i"; */
+"N0s-dM-O7i.normalTitle" = "حفظ";
+
+/* Class = "UILabel"; text = "Change Name"; ObjectID = "YwL-hU-Sfp"; */
+"YwL-hU-Sfp.text" = "تغيير الاسم";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "pLw-gn-L2z"; */
+"pLw-gn-L2z.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UITextField"; placeholder = "first Name"; ObjectID = "qvD-KZ-Yej"; */
+"qvD-KZ-Yej.placeholder" = "اسم العائلة";

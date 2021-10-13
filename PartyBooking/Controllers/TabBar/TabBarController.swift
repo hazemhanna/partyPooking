@@ -7,17 +7,12 @@
 //
 
 
-enum HomeType {
-    case user
-    case artist
-}
-
 import Foundation
 import UIKit
 
 class TabBarController: UITabBarController {
 
-    var type: HomeType = .user
+    var type = Helper.getType()
     private struct Constants {
         static let actionButtonSize = CGSize(width: 35, height: 35)
     }
@@ -35,15 +30,15 @@ class TabBarController: UITabBarController {
     }
     private func createTabbarControllers() {
         var systemTags : [RoundedTabBarItem] = []
-        if type == .user {
+        if type == "user" {
          systemTags = [RoundedTabBarItem.search,
                        RoundedTabBarItem.reservations,
                        RoundedTabBarItem.userLive,
                        RoundedTabBarItem.account,
                        RoundedTabBarItem.more]
-        }else{
+        }else if type == "artist" {
             systemTags = [RoundedTabBarItem.home,
-                          RoundedTabBarItem.artistreservations,
+                          RoundedTabBarItem.artistAvailable,
                           RoundedTabBarItem.live,
                           RoundedTabBarItem.artistaccount,
                           RoundedTabBarItem.artistMore]

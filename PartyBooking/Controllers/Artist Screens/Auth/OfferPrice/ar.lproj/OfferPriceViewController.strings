@@ -1,0 +1,51 @@
+
+/* Class = "UILabel"; text = "the period that can can cancel reservation and get"; ObjectID = "7N0-Jw-YN5"; */
+"7N0-Jw-YN5.text" = "المدة التي يتمكن المستخدم الغاء الحجز واستردادة";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "Irc-2V-RZr"; */
+"Irc-2V-RZr.normalTitle" = "التالي";
+
+/* Class = "UIButton"; normalTitle = "Can't"; ObjectID = "LAL-E7-WL3"; */
+"LAL-E7-WL3.normalTitle" = "لا يمكن";
+
+/* Class = "UILabel"; text = "can the client cancel party and recieve his mony ?"; ObjectID = "LNN-c6-ofo"; */
+"LNN-c6-ofo.text" = "هل يتمكن المستخدم بعد الغاء الحفلة استردار امواله";
+
+/* Class = "UILabel"; text = "befor the party"; ObjectID = "O0U-ag-Ca5"; */
+"O0U-ag-Ca5.text" = "قبل الحفلة ب";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "PlW-bP-cwG"; */
+"PlW-bP-cwG.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "save your time "; ObjectID = "QxK-0O-4SS"; */
+"QxK-0O-4SS.text" = "save your time ";
+
+/* Class = "UILabel"; text = "Call Center"; ObjectID = "Xdv-dE-cWj"; */
+"Xdv-dE-cWj.text" = "Call Center";
+
+/* Class = "UILabel"; text = "PartyBooking Commetion is 5 %"; ObjectID = "bsE-LZ-c36"; */
+"bsE-LZ-c36.text" = "عمولة PartyBooking 5%";
+
+/* Class = "UITextField"; placeholder = "0"; ObjectID = "dxW-3M-eJc"; */
+"dxW-3M-eJc.placeholder" = "0";
+
+/* Class = "UILabel"; text = "how much your offer ? "; ObjectID = "f5S-4m-KkR"; */
+"f5S-4m-KkR.text" = "how much your offer ? ";
+
+/* Class = "UILabel"; text = "Personal Data"; ObjectID = "fQz-K3-oe8"; */
+"fQz-K3-oe8.text" = "Personal Data";
+
+/* Class = "UILabel"; text = "his many "; ObjectID = "fsZ-uM-6DX"; */
+"fsZ-uM-6DX.text" = "اموالة";
+
+/* Class = "UIButton"; normalTitle = "Price client will pay"; ObjectID = "ma3-MH-olc"; */
+"ma3-MH-olc.normalTitle" = "المبلغ الذي يدفعة العميل";
+
+/* Class = "UILabel"; text = "days"; ObjectID = "qMt-p5-uqF"; */
+"qMt-p5-uqF.text" = "ايام";
+
+/* Class = "UIButton"; normalTitle = "Can"; ObjectID = "t5Z-gQ-Rjk"; */
+"t5Z-gQ-Rjk.normalTitle" = "يمكن";
+
+/* Class = "UILabel"; text = "shopping by your name "; ObjectID = "ziY-S9-qI5"; */
+"ziY-S9-qI5.text" = "shopping by your name ";

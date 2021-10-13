@@ -26,32 +26,31 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ayu-Uk-ZwY">
                         <rect key="frame" x="8" y="20.5" width="40" height="40"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Chd-eZ-Mb6">
-                                <rect key="frame" x="14" y="11" width="12.5" height="18.5"/>
-                                <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qbT-DZ-5nb">
+                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
-                            <constraint firstItem="Chd-eZ-Mb6" firstAttribute="centerX" secondItem="Ayu-Uk-ZwY" secondAttribute="centerX" id="8t9-2I-eBv"/>
+                            <constraint firstAttribute="bottom" secondItem="qbT-DZ-5nb" secondAttribute="bottom" id="86u-m2-aMg"/>
                             <constraint firstAttribute="height" constant="40" id="CL9-pE-nCz"/>
-                            <constraint firstItem="Chd-eZ-Mb6" firstAttribute="centerY" secondItem="Ayu-Uk-ZwY" secondAttribute="centerY" id="NX8-Hg-bHC"/>
+                            <constraint firstItem="qbT-DZ-5nb" firstAttribute="leading" secondItem="Ayu-Uk-ZwY" secondAttribute="leading" id="D5p-cd-3f9"/>
+                            <constraint firstAttribute="trailing" secondItem="qbT-DZ-5nb" secondAttribute="trailing" id="KaK-j5-TOb"/>
+                            <constraint firstItem="qbT-DZ-5nb" firstAttribute="top" secondItem="Ayu-Uk-ZwY" secondAttribute="top" id="WI8-aG-HuZ"/>
                             <constraint firstAttribute="width" constant="40" id="WkU-Vx-HKY"/>
                         </constraints>
                     </view>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4a8-UI-VxR">
-                        <rect key="frame" x="56" y="8" width="120" height="65"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4a8-UI-VxR">
+                        <rect key="frame" x="64" y="8" width="120" height="65"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nawaf fawzy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BgZ-ip-duN">
-                                <rect key="frame" x="0.0" y="0.0" width="120" height="45"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="nawaf fawzy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BgZ-ip-duN">
+                                <rect key="frame" x="0.0" y="0.0" width="120" height="20"/>
                                 <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="14"/>
                                 <color key="textColor" red="0.18039215689999999" green="0.18039215689999999" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ddt-01-n6r" customClass="CosmosView" customModule="Cosmos">
-                                <rect key="frame" x="0.0" y="45" width="120" height="20"/>
+                                <rect key="frame" x="0.0" y="28" width="120" height="20"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="XJK-Dp-NRE"/>
@@ -71,6 +70,12 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nawaf fawzy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f94-bf-Fgk">
+                                <rect key="frame" x="0.0" y="56" width="120" height="9"/>
+                                <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="8"/>
+                                <color key="textColor" red="0.18039215689999999" green="0.18039215689999999" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                     </stackView>
                 </subviews>
@@ -80,17 +85,25 @@
                     <constraint firstItem="Ayu-Uk-ZwY" firstAttribute="centerY" secondItem="gQv-33-mW9" secondAttribute="centerY" id="VxN-H4-euG"/>
                     <constraint firstAttribute="bottom" secondItem="4a8-UI-VxR" secondAttribute="bottom" constant="8" id="qmS-jd-qdh"/>
                     <constraint firstItem="4a8-UI-VxR" firstAttribute="top" secondItem="gQv-33-mW9" secondAttribute="top" constant="8" id="xGv-Rf-Xip"/>
-                    <constraint firstItem="4a8-UI-VxR" firstAttribute="leading" secondItem="Ayu-Uk-ZwY" secondAttribute="trailing" constant="8" id="xKH-VD-uzt"/>
+                    <constraint firstItem="4a8-UI-VxR" firstAttribute="leading" secondItem="Ayu-Uk-ZwY" secondAttribute="trailing" constant="16" id="xKH-VD-uzt"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="HzA-gy-RoM"/>
             <connections>
+                <outlet property="commentLbl" destination="f94-bf-Fgk" id="RqH-eD-r2M"/>
+                <outlet property="imageProfile" destination="qbT-DZ-5nb" id="1Jg-mx-K5c"/>
+                <outlet property="nameLbl" destination="BgZ-ip-duN" id="1Nb-87-FdO"/>
                 <outlet property="profileView" destination="Ayu-Uk-ZwY" id="KFX-29-4Kq"/>
                 <outlet property="rateView" destination="Ddt-01-n6r" id="Ogh-o1-nA6"/>
             </connections>
             <point key="canvasLocation" x="-12.318840579710146" y="115.51339285714285"/>
         </tableViewCell>
     </objects>
+    <designables>
+        <designable name="Ddt-01-n6r">
+            <size key="intrinsicContentSize" width="120" height="20"/>
+        </designable>
+    </designables>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

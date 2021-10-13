@@ -186,3 +186,5 @@
 "male" = "male";
 "female" = "female";
 "investigation"="Your application is under consideration by our investigation team";
+"artistName" = "artist Name";
+"userName" = "user Name";

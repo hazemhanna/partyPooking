@@ -63,7 +63,8 @@ class SettingVc: UIViewController {
         if MOLHLanguage.currentAppleLanguage() == "ar" {
             MOLH.setLanguageTo(MOLHLanguage.currentAppleLanguage() == "en" ? "ar" : "en")
             UIView.appearance().semanticContentAttribute = .forceLeftToRight
-            
+            MOLH.reset()
+
         } else{
             if ("lang".localized == "en") {
                 displayMessage(title: "", message: "Your App is Already in English Language", status: .info, forController: self)
@@ -71,7 +72,6 @@ class SettingVc: UIViewController {
                 displayMessage(title: "", message: "البرنامج بالفعل على اللغة الإنجليزية", status: .info, forController: self)
             }
         }
-        MOLH.reset()
     }
     @IBAction func ArabicLanguageAction(_ sender: CustomButtons) {
         Helper.saveLang(Lang: "ar")

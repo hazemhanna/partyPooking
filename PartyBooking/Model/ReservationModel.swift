@@ -40,6 +40,8 @@ struct Reservation: Codable {
     let isRated: Int?
     let cancelReason: String?
     let artist: Artist?
+    let user: Artist?
+
     let partyType, area: Area?
 
     enum CodingKeys: String, CodingKey {
@@ -54,7 +56,7 @@ struct Reservation: Codable {
         case cancelReason = "cancel_reason"
         case artist
         case partyType = "party_type"
-        case area
+        case area,user
     }
 }
 
@@ -74,12 +76,10 @@ struct Area: Codable {
 struct Artist: Codable {
     let firstName: String?
     let lastName: String?
-    let favourite: Int?
 
     enum CodingKeys: String, CodingKey {
         case firstName = "first_name"
         case lastName = "last_name"
-        case favourite
     }
 }
 

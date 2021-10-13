@@ -18,6 +18,21 @@ class OfferPriceViewController: UIViewController {
     @IBOutlet weak var titleLabel : UILabel!
     @IBOutlet weak var canBtn : UIButton!
     @IBOutlet weak var canNotBtn : UIButton!
+    @IBOutlet weak var cancelTimeTF : UITextField!
+     var emailTextField = String()
+     var passTextField =  String()
+     var lNameTextField =  String()
+     var countryTextField =  Int()
+     var fNameTextField =  String()
+     var phoneTextField =  String()
+      var area = Int()
+     var serviceTextField = Int()
+     var genderTextField =  String()
+     var banckTextField =  String()
+     var banckAcountTextField =  String()
+     var retrieveMoney = 1
+     var image = UIImage()
+     var showPrice = false
     
     @IBOutlet weak var backButton: UIButton! {
         didSet {
@@ -68,13 +83,11 @@ class OfferPriceViewController: UIViewController {
         canBtn.setTitleColor(UIColor.white, for: .normal)
         canBtn.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1).cgColor
         canBtn.layer.borderWidth = 0
-        
         canNotBtn.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         canNotBtn.layer.borderColor = #colorLiteral(red: 0.4392156863, green: 0.4392156863, blue: 0.4392156863, alpha: 1).cgColor
         canNotBtn.layer.borderWidth = 1
         canNotBtn.setTitleColor(UIColor.black, for: .normal)
-
-
+        retrieveMoney = 1
         
     }
     
@@ -86,16 +99,41 @@ class OfferPriceViewController: UIViewController {
         canBtn.layer.borderColor = #colorLiteral(red: 0.4392156863, green: 0.4392156863, blue: 0.4392156863, alpha: 1).cgColor
         canBtn.layer.borderWidth = 1
         canBtn.setTitleColor(UIColor.black, for: .normal)
+        retrieveMoney = 0
+
     }
     
     
     @IBAction func nextButton(sender: UIButton) {
-        
+        if showPrice {
         let destinationVC = InformationViewController.instantiateFromNib()
+        destinationVC?.emailTextField = emailTextField
+        destinationVC?.passTextField =  passTextField
+        destinationVC?.lNameTextField =  lNameTextField
+        destinationVC?.countryTextField =  countryTextField
+        destinationVC?.fNameTextField = fNameTextField
+        destinationVC?.phoneTextField =  phoneTextField
+        destinationVC?.area = area
+        destinationVC?.serviceTextField =  serviceTextField
+        destinationVC?.genderTextField =  genderTextField
+        destinationVC?.banckTextField =  banckTextField
+        destinationVC?.banckAcountTextField =  banckAcountTextField
+        destinationVC?.retrieveMoney =  retrieveMoney
+        destinationVC?.image =  image
+        destinationVC?.cancelTimeTF =  Int(cancelTimeTF.text ?? "0") ?? 0
         self.navigationController?.pushViewController(destinationVC!, animated: true)
+        }else{
+            if "lang".localized == "ar" {
+            displayMessage(title: "", message: " اضف سعر الحفلات" , status: .error, forController: self)
+            }else{
+                displayMessage(title: "", message: " add party prices " , status: .error, forController: self)
+
+            }
+        }
     }
     
     @IBAction func offerPriceButton(sender: UIButton) {
+        showPrice = true
         let destinationVC = PartyPriceVC.instantiateFromNib()
         self.navigationController?.pushViewController(destinationVC!, animated: true)
     }

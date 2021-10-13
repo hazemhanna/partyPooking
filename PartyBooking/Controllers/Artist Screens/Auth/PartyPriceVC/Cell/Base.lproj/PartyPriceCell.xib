@@ -34,10 +34,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jbo-2m-Wgs">
-                                                <rect key="frame" x="3" y="24" width="90" height="29"/>
+                                                <rect key="frame" x="15" y="24" width="66.5" height="29"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="200" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cUB-mF-Bsd" customClass="CustomTextField" customModule="PartyBooking" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="62.5" height="29"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cUB-mF-Bsd" customClass="CustomTextField" customModule="PartyBooking" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="39" height="29"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="textColor" red="0.16862745100000001" green="0.70588235290000001" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
@@ -58,7 +58,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntD-yc-s3H">
-                                                        <rect key="frame" x="70.5" y="0.0" width="19.5" height="29"/>
+                                                        <rect key="frame" x="47" y="0.0" width="19.5" height="29"/>
                                                         <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
                                                         <color key="textColor" red="0.16862745100000001" green="0.70588235290000001" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -76,8 +76,8 @@
                                                 <color key="textColor" red="0.16862745100000001" green="0.70588235290000001" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="3" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Eb-x3-JUQ" customClass="CustomTextField" customModule="PartyBooking" customModuleProvider="target">
-                                                <rect key="frame" x="27" y="24" width="42.5" height="29"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Eb-x3-JUQ" customClass="CustomTextField" customModule="PartyBooking" customModuleProvider="target">
+                                                <rect key="frame" x="28.5" y="24" width="39" height="29"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" red="0.16862745100000001" green="0.70588235290000001" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="15"/>
@@ -108,8 +108,8 @@
                                                 <color key="textColor" red="0.16862745100000001" green="0.70588235290000001" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s9M-es-0PD" customClass="CustomTextField" customModule="PartyBooking" customModuleProvider="target">
-                                                <rect key="frame" x="27" y="24" width="42.5" height="29"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s9M-es-0PD" customClass="CustomTextField" customModule="PartyBooking" customModuleProvider="target">
+                                                <rect key="frame" x="28.5" y="24" width="39" height="29"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" red="0.16862745100000001" green="0.70588235290000001" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="15"/>
@@ -151,18 +151,24 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="partyName" destination="nUY-L2-kE2" id="Etw-Cg-hVO"/>
+                <outlet property="partyPRice" destination="cUB-mF-Bsd" id="RqH-0A-00w"/>
+                <outlet property="partyTime" destination="9Eb-x3-JUQ" id="5Yd-ES-597"/>
+                <outlet property="restTime" destination="s9M-es-0PD" id="Ymr-GM-QJU"/>
+            </connections>
             <point key="canvasLocation" x="69.565217391304358" y="63.950892857142854"/>
         </tableViewCell>
     </objects>
     <designables>
         <designable name="9Eb-x3-JUQ">
-            <size key="intrinsicContentSize" width="42.5" height="41"/>
+            <size key="intrinsicContentSize" width="39" height="41"/>
         </designable>
         <designable name="cUB-mF-Bsd">
-            <size key="intrinsicContentSize" width="62.5" height="43"/>
+            <size key="intrinsicContentSize" width="39" height="43"/>
         </designable>
         <designable name="s9M-es-0PD">
-            <size key="intrinsicContentSize" width="42.5" height="41"/>
+            <size key="intrinsicContentSize" width="39" height="41"/>
         </designable>
     </designables>
     <resources>

@@ -98,6 +98,8 @@ class UserRegisterTypeVc: UIViewController,GIDSignInDelegate {
         }
     }
     
+    
+    
     @IBAction func googlelogin(_ sender: Any) {
         self.AuthViewModel.showIndicator()
         GIDSignIn.sharedInstance()?.presentingViewController = self

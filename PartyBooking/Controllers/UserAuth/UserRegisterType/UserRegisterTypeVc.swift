@@ -79,8 +79,6 @@ class UserRegisterTypeVc: UIViewController,GIDSignInDelegate {
     @IBAction func fblogin(_ sender: Any) {
         self.AuthViewModel.showIndicator()
         let loginManager = LoginManager()
-
-
         loginManager.logIn(permissions: [ .publicProfile,.email ], viewController: self) { loginResult in
             print(loginResult)
             let tokent = AccessToken.current?.tokenString
@@ -97,8 +95,6 @@ class UserRegisterTypeVc: UIViewController,GIDSignInDelegate {
             })
         }
     }
-    
-    
     
     @IBAction func googlelogin(_ sender: Any) {
         self.AuthViewModel.showIndicator()

@@ -107,8 +107,6 @@ class MoreViewController: UIViewController {
                     alert.dismiss(animated: true, completion: nil)
                     Helper.LogOut()
                     guard let main = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ChooseUSerTypeVC") as? ChooseUSerTypeVC else { return }
-                    Helper.saveType(token: "user")
-                    Helper.saveType(token: "")
 
                     self.navigationController?.pushViewController(main, animated: true)
                     

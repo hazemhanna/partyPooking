@@ -26,7 +26,6 @@ class LanguageScreenVC: UIViewController {
     
     @IBAction func EnglishLanguageAction(_ sender: CustomButtons) {
         Helper.saveLang(Lang: "en")
-        Helper.saveType(token: "user")
 
         if MOLHLanguage.currentAppleLanguage() == "ar" {
             MOLH.setLanguageTo(MOLHLanguage.currentAppleLanguage() == "en" ? "ar" : "en")
@@ -42,7 +41,6 @@ class LanguageScreenVC: UIViewController {
     }
     @IBAction func ArabicLanguageAction(_ sender: CustomButtons) {
         Helper.saveLang(Lang: "ar")
-        Helper.saveType(token: "user")
         if MOLHLanguage.currentAppleLanguage() == "en" {
             MOLH.setLanguageTo(MOLHLanguage.currentAppleLanguage() == "en" ? "ar" : "en")
             MOLH.setLanguageTo("ar")

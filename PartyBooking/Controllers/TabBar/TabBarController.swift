@@ -30,18 +30,20 @@ class TabBarController: UITabBarController {
     }
     private func createTabbarControllers() {
         var systemTags : [RoundedTabBarItem] = []
-        if type == "user" {
-         systemTags = [RoundedTabBarItem.search,
-                       RoundedTabBarItem.reservations,
-                       RoundedTabBarItem.userLive,
-                       RoundedTabBarItem.account,
-                       RoundedTabBarItem.more]
-        }else if type == "artist" {
+        if type == "artist" {
             systemTags = [RoundedTabBarItem.home,
                           RoundedTabBarItem.artistAvailable,
                           RoundedTabBarItem.live,
                           RoundedTabBarItem.artistaccount,
                           RoundedTabBarItem.artistMore]
+            
+        }else {
+            systemTags = [RoundedTabBarItem.search,
+                          RoundedTabBarItem.reservations,
+                          RoundedTabBarItem.userLive,
+                          RoundedTabBarItem.account,
+                          RoundedTabBarItem.more]
+         
         }
         let viewControllers = systemTags.compactMap { self.createController(for: $0, with: $0.tag) }
         self.viewControllers = viewControllers

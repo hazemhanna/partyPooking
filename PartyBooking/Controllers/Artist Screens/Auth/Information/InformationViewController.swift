@@ -185,7 +185,7 @@ extension InformationViewController {
             if data.status ?? false {
                 self.authModel.dismissIndicator()
                 self.succesView.isHidden = false
-                displayMessage(title: "", message: data.message ??  ""  , status: .error, forController: self)
+                displayMessage(title: "", message: data.message ??  ""  , status: .success, forController: self)
             }else{
                 self.authModel.dismissIndicator()
                 displayMessage(title: "", message: data.message ??  "" , status: .error, forController: self)

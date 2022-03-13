@@ -32,23 +32,22 @@ class ChooseUSerTypeVC : UIViewController {
     }
     
     @IBAction func skipButton(sender: UIButton) {
+        Helper.saveType(token: "user")
         let destinationVC = TabBarController.instantiate(fromAppStoryboard: .Main)
         if let appDelegate = UIApplication.shared.delegate {
             appDelegate.window??.rootViewController = destinationVC
         }
-        
-        
-        
     }
     
     @IBAction func registerUserButton(sender: UIButton) {
+        Helper.saveType(token: "user")
         let main = MainRegisterVC.instantiateFromNib()
         main?.isUser = true
         self.navigationController!.pushViewController(main!, animated: true)
     }
-
     
     @IBAction func registerArtistButton(sender: UIButton) {
+        Helper.saveType(token: "artist")
         let main = MainRegisterVC.instantiateFromNib()
         main?.isUser = false
         self.navigationController?.pushViewController(main!, animated: true)

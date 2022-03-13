@@ -41,9 +41,6 @@ class LoginVC : UIViewController {
         authModel.showIndicator()
         postlogin()
     }
-    
-
-    
 }
 
 extension LoginVC {
@@ -73,7 +70,6 @@ extension LoginVC {
            if registerData.status ?? false {
             self.authModel.dismissIndicator()
             let destinationVC = TabBarController.instantiate(fromAppStoryboard: .Main)
-            Helper.saveType(token: "artist")
             if let appDelegate = UIApplication.shared.delegate {
                 appDelegate.window??.rootViewController = destinationVC
             }
@@ -86,8 +82,4 @@ extension LoginVC {
             displayMessage(title: "", message: error.localizedDescription, status: .error, forController: self)
         }).disposed(by: disposeBag)
     }
-    
-    
-    
-    
 }

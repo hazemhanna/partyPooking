@@ -22,7 +22,7 @@ class UserRegisterTypeVc: UIViewController,GIDSignInDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         GIDSignIn.sharedInstance().delegate = self
-    }
+    } 
 
     override func viewWillAppear(_ animated: Bool) {
         
@@ -153,7 +153,6 @@ class UserRegisterTypeVc: UIViewController,GIDSignInDelegate {
            if registerData.status ?? false {
             self.AuthViewModel.dismissIndicator()
             let destinationVC = TabBarController.instantiate(fromAppStoryboard: .Main)
-            Helper.saveType(token: "user")
                if let appDelegate = UIApplication.shared.delegate {
                 appDelegate.window??.rootViewController = destinationVC
             }

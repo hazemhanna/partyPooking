@@ -231,7 +231,7 @@ class ArtistRegisterViewController: UIViewController {
     
     
     @IBAction func nextButton(sender: UIButton) {
-       // guard self.validateInput() else { return }
+        guard self.validateInput() else { return }
         let destinationVC = OfferPriceViewController.instantiateFromNib()
         destinationVC?.emailTextField = emailTextField.text ?? ""
         destinationVC?.passTextField =  passTextField.text ?? ""

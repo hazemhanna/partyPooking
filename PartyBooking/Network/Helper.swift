@@ -71,6 +71,8 @@ class Helper {
         def.removeObject(forKey: "email")
         def.removeObject(forKey: "role")
         def.removeObject(forKey: "name")
+        def.removeObject(forKey: "type")
+
         def.synchronize()
     }
 

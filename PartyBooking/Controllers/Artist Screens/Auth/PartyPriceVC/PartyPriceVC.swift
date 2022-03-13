@@ -43,9 +43,8 @@ class PartyPriceVC: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-            authModel.showIndicator()
-            getPartyType()
-        
+     authModel.showIndicator()
+     getPartyType()
     }
     
     @IBAction func backButton(sender: UIButton) {
@@ -55,6 +54,7 @@ class PartyPriceVC: UIViewController {
     @IBAction func saveButton(sender: UIButton) {
     self.tableView.reloadData()
     self.navigationController?.popViewController(animated: true)
+        
     }
     
     
@@ -72,24 +72,20 @@ extension PartyPriceVC : UITableViewDelegate , UITableViewDataSource {
         }else{
             cell.partyName.text = self.partyType[indexPath.row].enName ?? ""
         }
-        if cell.partyPRice.text != "" {
+        if cell.partyPRice.text != "" && cell.partyPRice.text != "" {
             self.prices.append(["party_type_id" : String(self.partyType[indexPath.row].id ?? 0), "price" : cell.partyPRice.text ?? "" , "party_time": cell.partyTime.text ?? "1", "break_time" : cell.restTime.text ?? "1"])
             Helper.savePartyPrice(id: self.prices)
         }
-        
-        
         return cell
-        
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+ func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(90)
     }
-
+    
 }
 
 extension PartyPriceVC {
-  
     func getPartyType() {
         authModel.getPartyType().subscribe(onNext: { (data) in
             if data.status ?? false {

@@ -103,8 +103,7 @@ class ArtistMoreViewController: UIViewController {
                        alert.dismiss(animated: true, completion: nil)
                        Helper.LogOut()
                        guard let main = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ChooseUSerTypeVC") as? ChooseUSerTypeVC else { return }
-                    Helper.saveType(token: "user")
-                       self.navigationController?.pushViewController(main, animated: true)
+                    self.navigationController?.pushViewController(main, animated: true)
                        
                    }
                    yesAction.setValue(#colorLiteral(red: 0.3104775548, green: 0.3218831122, blue: 0.4838557839, alpha: 1), forKey: "titleTextColor")

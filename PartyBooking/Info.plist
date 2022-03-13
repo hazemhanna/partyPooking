@@ -16,6 +16,7 @@
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+    
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -29,6 +30,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
+                
 				<string>twitterkit-w5Zb8L0AXnLyLBDSaj7bxk20E</string>
 				<string>com.googleusercontent.apps.700206282803-lgu72jq9arbf9ctem5qm1vb5i1dcnl8q</string>
 			</array>
@@ -36,6 +38,7 @@
 	</array>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
+    
 	<key>FacebookAppID</key>
 	<string>299942271910032</string>
 	<key>FacebookClientToken</key>
@@ -60,6 +63,7 @@
 		<string>fbauth2</string>
 		<string>fbshareextension</string>
 	</array>
+    
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>

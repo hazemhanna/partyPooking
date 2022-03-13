@@ -294,7 +294,6 @@ extension UserRegisterViewController {
            if registerData.status ?? false {
             self.AuthViewModel.dismissIndicator()
             let destinationVC = TabBarController.instantiate(fromAppStoryboard: .Main)
-            Helper.saveType(token: "user")
                if let appDelegate = UIApplication.shared.delegate {
                 appDelegate.window??.rootViewController = destinationVC
             }

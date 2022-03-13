@@ -49,7 +49,6 @@ class ConfirmReservationViewController: UIViewController {
     
     @IBAction func doneButton(sender: UIButton) {
         let destinationVC = TabBarController.instantiate(fromAppStoryboard: .Main)
-        Helper.saveType(token: "user")
         if let appDelegate = UIApplication.shared.delegate {
             appDelegate.window??.rootViewController = destinationVC
         }

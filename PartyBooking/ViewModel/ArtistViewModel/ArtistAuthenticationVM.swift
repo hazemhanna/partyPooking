@@ -41,47 +41,31 @@ struct ArtistAuthenticationVM {
     
     //MARK:- Attempt to register
     func attemptToRegister(image : UIImage,countryId:Int,bindedEmail: String, bindedFirstName: String,bindedLastName: String,bindedPhone: String,bindedPassword: String,service_id: Int,areas: Int,bank_name: String,bank_account: String,retrieve_money: Int,prices: [[String : Any]],cancel_time: Int,gender: String) -> Observable<ArtistModelLoginJSON> {
-//
-//        let params: [String: Any] = [
-//            "first_name": bindedFirstName ,
-//            "last_name": bindedLastName ,
-//            "email": bindedEmail,
-//            "password": bindedPassword,
-//            "phone": bindedPhone ,
-//            "country_id": countryId,
-//            "service_id": service_id ,
-//            "areas": [areas],
-//            "bank_name": bank_name ,
-//            "bank_account": bank_account ,
-//            "prices": prices ,
-//            "retrieve_money": retrieve_money ,
-//            "cancel_time": cancel_time ,
-//            "gender": gender ,
-//            ]
         
         var array = [[String: Any]]()
         let dic = ["price": 100,"party_type_id" : 3 ,"party_time" : 15,"break_time" : 5]
         array.removeAll()
         array.append(dic)
-        var area = [Int]()
-        area.append(58)
         
         let params: [String: Any] = [
-            "first_name": "bindedFirstName" ,
-            "last_name": "bindedLastName" ,
-            "email": "d@d.com",
-            "password": "bindedPassword",
-            "phone": "123456" ,
-            "country_id": 1,
-            "service_id": 2 ,
-            "areas": area,
-            "bank_name": "bank_name",
-            "bank_account": "bank_account" ,
-            "prices": array,
-            "retrieve_money": 1 ,
-            "cancel_time": 12 ,
-            "gender": "male" ,
+            "first_name": bindedFirstName ,
+            "last_name": bindedLastName ,
+            "email": bindedEmail,
+            "password": bindedPassword,
+            "phone": bindedPhone ,
+            "country_id": countryId,
+            "service_id": service_id ,
+            "areas": [areas],
+            "bank_name": bank_name ,
+            "bank_account": bank_account ,
+            "prices": array ,
+            "retrieve_money": retrieve_money ,
+            "cancel_time": cancel_time ,
+            "gender": gender ,
             ]
+        
+    
+   
         let observer = Authentication.shared.postRegisterArtist(params: params)
         return observer
     }

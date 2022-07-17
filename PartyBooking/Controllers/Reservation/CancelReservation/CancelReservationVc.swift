@@ -14,7 +14,6 @@ class CancelReservationVc: UIViewController {
     @IBOutlet weak var firstView: UIView!
     @IBOutlet weak var secondView: UIView!
     @IBOutlet weak var reasonTF: UITextField!
-
     
     var onClickCancel :()->() = {}
     var onClickConfirm :()->() = {}
@@ -49,6 +48,7 @@ class CancelReservationVc: UIViewController {
         self.modalPresentationStyle = .custom
         self.modalTransitionStyle = .crossDissolve
     }
+    
     convenience init() {
         self.init(nibName:nil, bundle:nil)
     }

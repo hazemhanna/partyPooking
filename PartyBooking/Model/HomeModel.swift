@@ -52,7 +52,7 @@ struct Artists: Codable {
     let country: Country?
     let partyPrices: [PartyPrice]?
     let comments: [Comment]?
-    let partyPrice: Int?
+    let partyPrice: Double?
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -64,7 +64,7 @@ struct Artists: Codable {
         case areas, country
         case partyPrices = "party_prices"
         case resultDescription = "description"
-        case partyPrice = "party_price"
+        case partyPrice = "artist_avrage_price"
     }
 }
 

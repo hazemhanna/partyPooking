@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -411,15 +411,15 @@
                                                         <rect key="frame" x="16" y="0.0" width="366" height="51.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Your Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wuT-L5-aS3">
-                                                                <rect key="frame" x="0.0" y="0.0" width="366" height="33.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="366" height="33"/>
                                                                 <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="12"/>
                                                                 <color key="textColor" red="0.73333333329999995" green="0.73333333329999995" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLx-Hb-xVM">
-                                                                <rect key="frame" x="0.0" y="38.5" width="366" height="13"/>
-                                                                <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="12"/>
-                                                                <color key="textColor" red="0.73333333329999995" green="0.73333333329999995" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <rect key="frame" x="0.0" y="38" width="366" height="13.5"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -766,7 +766,7 @@
             <size key="intrinsicContentSize" width="24" height="38.5"/>
         </designable>
         <designable name="DSA-KN-CYc">
-            <size key="intrinsicContentSize" width="24" height="38"/>
+            <size key="intrinsicContentSize" width="24" height="38.5"/>
         </designable>
         <designable name="FU0-JG-RWu">
             <size key="intrinsicContentSize" width="24" height="38.5"/>

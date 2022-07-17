@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -12,7 +14,11 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SilentViewController" customModule="PartyBooking" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SilentViewController" customModule="PartyBooking" customModuleProvider="target">
+            <connections>
+                <outlet property="switcherSilent" destination="uYs-ic-Sln" id="f4I-sl-ITN"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <viewController id="QjM-os-Xea" customClass="SilentViewController" customModule="PartyBooking" customModuleProvider="target">
             <view key="view" contentMode="scaleToFill" id="M6F-xy-e2Z">
@@ -23,8 +29,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="74"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selint" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kT1-Bm-cea">
-                                <rect key="frame" x="188" y="47" width="38.5" height="15"/>
-                                <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="14"/>
+                                <rect key="frame" x="187" y="45" width="40" height="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -49,60 +55,53 @@
                             <constraint firstItem="ygF-gg-eLU" firstAttribute="leading" secondItem="9AR-VS-wBB" secondAttribute="leading" constant="12" id="x19-YT-DQj"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selint" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDw-Lt-PnQ">
-                        <rect key="frame" x="32" y="106" width="38.5" height="15"/>
-                        <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="14"/>
-                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nc9-OZ-RL5">
-                        <rect key="frame" x="8" y="129" width="398" height="50"/>
+                        <rect key="frame" x="8" y="106" width="398" height="50"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Active" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O4d-YB-aky">
-                                <rect key="frame" x="8" y="18" width="40" height="14"/>
-                                <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="13"/>
-                                <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selint" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDw-Lt-PnQ">
+                                <rect key="frame" x="32" y="17.5" width="38.5" height="15"/>
+                                <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="14"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uYs-ic-Sln">
                                 <rect key="frame" x="329" y="9.5" width="51" height="31"/>
+                                <connections>
+                                    <action selector="btnMaleClickWithSender:" destination="QjM-os-Xea" eventType="touchUpInside" id="WCt-4B-mVY"/>
+                                </connections>
                             </switch>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="uYs-ic-Sln" firstAttribute="centerY" secondItem="nc9-OZ-RL5" secondAttribute="centerY" id="5lg-cy-S7d"/>
                             <constraint firstAttribute="trailing" secondItem="uYs-ic-Sln" secondAttribute="trailing" constant="20" id="60F-MT-fZF"/>
-                            <constraint firstItem="O4d-YB-aky" firstAttribute="centerY" secondItem="nc9-OZ-RL5" secondAttribute="centerY" id="M2O-5j-u5o"/>
-                            <constraint firstItem="O4d-YB-aky" firstAttribute="leading" secondItem="nc9-OZ-RL5" secondAttribute="leading" constant="8" id="aPI-5m-cmf"/>
+                            <constraint firstItem="dDw-Lt-PnQ" firstAttribute="leading" secondItem="nc9-OZ-RL5" secondAttribute="leading" constant="32" id="CDK-3D-pbd"/>
                             <constraint firstAttribute="height" constant="50" id="dIU-b9-8g4"/>
+                            <constraint firstItem="dDw-Lt-PnQ" firstAttribute="centerY" secondItem="nc9-OZ-RL5" secondAttribute="centerY" id="p8E-0w-Fco"/>
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="when active slient mode ,notifications that you recieve during selint hours will be selint " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sax-sc-trQ">
-                        <rect key="frame" x="32" y="195" width="318" height="28"/>
+                        <rect key="frame" x="32" y="172" width="318" height="28"/>
                         <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="13"/>
                         <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <viewLayoutGuide key="safeArea" id="cQU-Va-ONn"/>
                 <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstItem="9AR-VS-wBB" firstAttribute="top" secondItem="M6F-xy-e2Z" secondAttribute="top" id="0Yr-8C-loq"/>
                     <constraint firstItem="cQU-Va-ONn" firstAttribute="trailing" secondItem="9AR-VS-wBB" secondAttribute="trailing" id="3gC-bw-cyJ"/>
-                    <constraint firstItem="nc9-OZ-RL5" firstAttribute="top" secondItem="dDw-Lt-PnQ" secondAttribute="bottom" constant="8" id="3r1-zS-Hdp"/>
-                    <constraint firstItem="dDw-Lt-PnQ" firstAttribute="leading" secondItem="cQU-Va-ONn" secondAttribute="leading" constant="32" id="3w5-se-nSE"/>
                     <constraint firstItem="cQU-Va-ONn" firstAttribute="trailing" secondItem="nc9-OZ-RL5" secondAttribute="trailing" constant="8" id="GcA-ac-K8H"/>
-                    <constraint firstItem="dDw-Lt-PnQ" firstAttribute="leading" secondItem="cQU-Va-ONn" secondAttribute="leading" constant="32" id="KO2-bX-Q0e"/>
                     <constraint firstItem="nc9-OZ-RL5" firstAttribute="leading" secondItem="cQU-Va-ONn" secondAttribute="leading" constant="8" id="MJQ-cy-7Tt"/>
-                    <constraint firstItem="dDw-Lt-PnQ" firstAttribute="top" secondItem="9AR-VS-wBB" secondAttribute="bottom" constant="32" id="Mg1-jg-fmG"/>
+                    <constraint firstItem="nc9-OZ-RL5" firstAttribute="top" secondItem="9AR-VS-wBB" secondAttribute="bottom" constant="32" id="N7a-gk-PQV"/>
                     <constraint firstItem="9AR-VS-wBB" firstAttribute="leading" secondItem="M6F-xy-e2Z" secondAttribute="leading" id="OvP-sU-y17"/>
                     <constraint firstItem="sax-sc-trQ" firstAttribute="leading" secondItem="cQU-Va-ONn" secondAttribute="leading" constant="32" id="f9Z-wI-fgf"/>
                     <constraint firstItem="sax-sc-trQ" firstAttribute="top" secondItem="nc9-OZ-RL5" secondAttribute="bottom" constant="16" id="max-Mz-ylM"/>
                     <constraint firstItem="cQU-Va-ONn" firstAttribute="trailing" secondItem="sax-sc-trQ" secondAttribute="trailing" constant="64" id="oBI-LS-Gob"/>
                 </constraints>
-                <viewLayoutGuide key="safeArea" id="cQU-Va-ONn"/>
             </view>
             <connections>
-                <outlet property="activeLabel" destination="O4d-YB-aky" id="ZxW-jN-QjD"/>
                 <outlet property="backButton" destination="ygF-gg-eLU" id="7gh-fr-K08"/>
                 <outlet property="selintLabel" destination="dDw-Lt-PnQ" id="iQr-3a-N0q"/>
                 <outlet property="selintView" destination="nc9-OZ-RL5" id="BH6-dv-Iiy"/>
@@ -114,5 +113,8 @@
     </objects>
     <resources>
         <image name="back" width="37.5" height="37.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

@@ -102,7 +102,7 @@ func getFavourite() {
         }
     }, onError: { (error) in
         self.favouriteVM.dismissIndicator()
-        //displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
+        displayMessage(title: "", message: "Something went wrong in getting data".localized, status: .error, forController: self)
     }).disposed(by: disposeBag)
  }
     
@@ -115,7 +115,7 @@ func getFavourite() {
             }
         }, onError: { (error) in
             self.favouriteVM.dismissIndicator()
-            //displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
+            displayMessage(title: "", message: "Something went wrong in getting data".localized, status: .error, forController: self)
         }).disposed(by: disposeBag)
      }
       

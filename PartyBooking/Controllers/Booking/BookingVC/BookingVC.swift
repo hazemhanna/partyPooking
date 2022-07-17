@@ -62,10 +62,8 @@ class BookingVC: UIViewController {
             self.filterPartyType.append(index.arName ?? "")
             }else{
                 self.filterPartyType.append(index.enName ?? "")
-
             }
         }
-        
         for index in self.country{
             if "lang".localized == "ar" {
                 self.filterCountry.append(index.arName ?? "")

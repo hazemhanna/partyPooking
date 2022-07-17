@@ -13,21 +13,29 @@ import UIKit
 class TabBarController: UITabBarController {
 
     var type = Helper.getType()
+    
     private struct Constants {
         static let actionButtonSize = CGSize(width: 35, height: 35)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+    
         createTabbarControllers()
-        setupApperence()
         selectedIndex = 0
+        
+        if #available(iOS 15.0, *) {
+        let appearance = UITabBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = .white
+        tabBar.standardAppearance = appearance
+        tabBar.scrollEdgeAppearance = tabBar.standardAppearance
+        tabBar.shadowImage = UIImage()
+        tabBar.backgroundImage = UIImage()
+        tabBar.tintColor = #colorLiteral(red: 0.0431372549, green: 0.4039215686, blue: 0.5725490196, alpha: 1)
+        tabBar.unselectedItemTintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        }
     }
     
-    private func setupApperence() {
-        tabBar.barTintColor = #colorLiteral(red: 0.0431372549, green: 0.4039215686, blue: 0.5725490196, alpha: 1)
-        tabBar.unselectedItemTintColor = UIColor.white
-        UITabBar.appearance().tintColor = UIColor.white
-    }
     private func createTabbarControllers() {
         var systemTags : [RoundedTabBarItem] = []
         if type == "artist" {
@@ -48,10 +56,12 @@ class TabBarController: UITabBarController {
         let viewControllers = systemTags.compactMap { self.createController(for: $0, with: $0.tag) }
         self.viewControllers = viewControllers
     }
+    
     // MARK: - Actions
     @objc func dismissView(){
         self.dismiss(animated:true,completion:nil)
     }
+    
     private func createController(for customTabBarItem: RoundedTabBarItem, with tag: Int) -> UINavigationController? {
         var viewController = UIViewController()
         switch customTabBarItem {

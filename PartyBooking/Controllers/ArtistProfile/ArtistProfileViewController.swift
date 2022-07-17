@@ -13,6 +13,7 @@ import RxCocoa
 class ArtistProfileViewController: UIViewController{
     
     @IBOutlet weak var photoCollection: UICollectionView!
+    @IBOutlet weak var photoCollectionHeight : NSLayoutConstraint!
     @IBOutlet weak var commentTableView: UITableView!
     @IBOutlet weak var profileImage : UIImageView!
     @IBOutlet weak var profileView : UIView!
@@ -25,10 +26,9 @@ class ArtistProfileViewController: UIViewController{
     @IBOutlet weak var likeBtn : UIButton!
     @IBOutlet weak var rateLabel : UILabel!
     @IBOutlet weak var addressLabel : UILabel!
-    @IBOutlet weak var descreptionTV : UITextView!
-   
+    @IBOutlet weak var descreptionTV : UILabel!
+    
     var token = Helper.getAPIToken() ?? ""
-
     
     @IBOutlet weak var backButton: UIButton! {
            didSet {
@@ -36,7 +36,6 @@ class ArtistProfileViewController: UIViewController{
            }
        }
     
-
     private let homeVM = HomeViewModel()
     var disposeBag = DisposeBag()
     var comments = [Comment]()
@@ -53,9 +52,7 @@ class ArtistProfileViewController: UIViewController{
         photoCollection.delegate = self
         photoCollection.dataSource = self
         photoCollection.register(UINib(nibName: "PhotoCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
-        
         commentTableView.register(UINib(nibName: "CommentsTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
-        
         profileView.layer.cornerRadius = profileView.frame.width / 2
         profileImage.layer.cornerRadius = profileImage.frame.width / 2
         
@@ -72,14 +69,6 @@ class ArtistProfileViewController: UIViewController{
         reserveBtn.setTitle("reserve".localized, for: .normal)
         amountLabel.text = "amount".localized
         taxesLabel.text = "\("taxes".localized) + SR 450"
-        if "lang".localized  == "en" {
-        let font = UIFont(name: "Georgia-Bold", size: 14)
-            titleLabel.font = font
-            commentLabel.font = font
-            reserveBtn.titleLabel!.font = font
-            amountLabel.font = font
-            taxesLabel.font = font
-        }
      }
   
     override func viewWillAppear(_ animated: Bool) {
@@ -215,7 +204,7 @@ extension ArtistProfileViewController {
             }
         }, onError: { (error) in
             self.homeVM.dismissIndicator()
-           // displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
+            displayMessage(title: "", message: "Something went wrong in getting data".localized, status: .error, forController: self)
         }).disposed(by: disposeBag)
      }
     
@@ -228,16 +217,9 @@ extension ArtistProfileViewController {
             self.country = data.result?.areas ?? []
             self.commentTableView.reloadData()
             self.rateLabel.text = "\(data.result?.rate ?? 0)"
-            if self.search {
-            for party in  self.partyPrice {
-                if party.id ?? 0 == Helper.getPID() ?? 0 {
-                    Helper.savePrice(date: Int(party.partyPrice ?? 0) )
-                    self.amountValueLabel.text = String(party.partyPrice ?? 0)  + " " + "SR".localized
-                }
-            }
-            }else{
-                self.amountValueLabel.text = String(data.result?.partyPrice ?? 0 ) + " " + "SR".localized
-            }
+            self.amountValueLabel.text = String(data.result?.partyPrice ?? 0 ) + " " + "SR".localized
+            Helper.savePrice(date: Int(data.result?.partyPrice ?? 0 ))
+
             if "lang".localized == "ar" {
                 self.addressLabel.text = data.result?.country?.arName ?? ""
             }else{
@@ -259,7 +241,7 @@ extension ArtistProfileViewController {
         }
     }, onError: { (error) in
         self.homeVM.dismissIndicator()
-        //displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
+        displayMessage(title: "", message: "Something went wrong in getting data".localized, status: .error, forController: self)
     }).disposed(by: disposeBag)
  }
 
@@ -270,10 +252,15 @@ extension ArtistProfileViewController {
         if data.status ?? false {
             self.work = data.result?.data ?? []
             self.photoCollection.reloadData()
+            if self.work.count > 0 {
+                self.photoCollectionHeight.constant = 100
+            }else{
+                self.photoCollectionHeight.constant = 0
+            }
         }
     }, onError: { (error) in
         self.homeVM.dismissIndicator()
-       // displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
+        displayMessage(title: "", message: "Something went wrong in getting data".localized, status: .error, forController: self)
     }).disposed(by: disposeBag)
  }
     

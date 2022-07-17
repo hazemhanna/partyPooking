@@ -9,8 +9,7 @@ target 'PartyBooking' do
   pod 'Cosmos'
   pod 'RNActivityView', '0.0.7'
   pod 'FSCalendar'
-  pod 'GoogleMaps'
-  pod 'GooglePlaces'
+
   pod 'CollapseTableView'
   pod 'Alamofire', '~> 4.8.2'
   pod 'SwiftyJSON', '~> 5.0.0'

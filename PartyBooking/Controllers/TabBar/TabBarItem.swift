@@ -17,7 +17,7 @@ extension RoundedTabBarItem {
     var title: String {
         switch self {
          case .search:
-            return "search".localized
+            return "home".localized
         case .reservations:
             return "reservation".localized
        case .account:
@@ -38,12 +38,9 @@ extension RoundedTabBarItem {
             return "live".localized
         case .userLive:
             return "live".localized
-            
-        default:
-            return ""
+
         }
     }
-    
     
     var tag: Int {
         switch self {
@@ -99,7 +96,7 @@ extension RoundedTabBarItem {
         }
     }
     var tabBarItem: UITabBarItem {
-        let tabItem = UITabBarItem(title: "", image: image, tag: tag)
+        let tabItem = UITabBarItem(title: title, image: image, tag: tag)
         return tabItem
     }
 }

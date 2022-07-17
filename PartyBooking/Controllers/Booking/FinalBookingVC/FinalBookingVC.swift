@@ -49,6 +49,7 @@ class FinalBookingVC: UIViewController ,UITextFieldDelegate{
     }
     private var timePicker1: UIDatePicker?
     private var timePicker2: UIDatePicker?
+    
     fileprivate var returnHandler : IQKeyboardReturnKeyHandler!
     let listController: FPNCountryListViewController = FPNCountryListViewController(style: .grouped)
 
@@ -78,7 +79,6 @@ class FinalBookingVC: UIViewController ,UITextFieldDelegate{
         DataBinding()
         profileVM.showIndicator()
         getAllCountry()
-    //  updateReturnHandler()
         getProfile()
         amountValueLabel.text = String(Helper.getPrice() ?? 0 ) + " " + ("SR".localized)
         if token != "" {
@@ -89,7 +89,7 @@ class FinalBookingVC: UIViewController ,UITextFieldDelegate{
         
         timePicker1 = UIDatePicker()
         timePicker2 = UIDatePicker()
-        let loc = Locale.current
+        let loc = Locale(identifier: "en_US_POSIX")
         timePicker1?.locale = loc
         timePicker2?.locale = loc
         timePicker1?.datePickerMode = .time
@@ -134,21 +134,6 @@ class FinalBookingVC: UIViewController ,UITextFieldDelegate{
                 fNameTextField.textAlignment = .left
                 phoneTextField.textAlignment = .left
                 passTextField.textAlignment = .left
-      let font = UIFont(name: "Georgia-Bold", size: 14)
-                           titleLabel.font = font
-                           fNameLabel.font = font
-                           fNameTextField.font = font
-                           lNameLabel.font = font
-                           lNameTextField.font = font
-                           emailLabel.font = font
-                           emailTextField.font = font
-                           phoneLabel.font = font
-                           phoneTextField.font =  font
-                          locationLabel.font = font
-                           countryLabel.font = font
-                           countryTextField.font  = font
-                           doneBtn.titleLabel!.font =  UIFont(name: "Georgia-Bold", size: 17)
-                
             } else {
                 emailTextField.textAlignment = .right
                 emailTextField.textAlignment = .right
@@ -263,7 +248,7 @@ class FinalBookingVC: UIViewController ,UITextFieldDelegate{
     
     @objc func time1Changed(TimePicker: UIDatePicker) {
         let formatter = DateFormatter()
-        formatter.locale = .current
+        formatter.locale = Locale(identifier: "en_US_POSIX")
         formatter.dateFormat = "hh:mm"
         timeFrom.text = formatter.string(from: TimePicker.date)
     }
@@ -271,7 +256,7 @@ class FinalBookingVC: UIViewController ,UITextFieldDelegate{
     
     @objc func time2Changed(TimePicker: UIDatePicker) {
         let formatter = DateFormatter()
-        formatter.locale = .current
+        formatter.locale = Locale(identifier: "en_US_POSIX")
         formatter.dateFormat = "hh:mm"
         timeTo.text = formatter.string(from: TimePicker.date)
     }

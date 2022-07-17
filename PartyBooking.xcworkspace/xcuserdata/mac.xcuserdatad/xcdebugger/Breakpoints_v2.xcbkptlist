@@ -7,150 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F1446009-2D11-40C7-AD98-42369C73B43F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PartyBooking/Network/AddServices.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
-            landmarkName = "chageProfilePhoto(image:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B770C405-9394-41D9-8345-6A98E8C04DFB"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PartyBooking/Network/AddServices.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
-            landmarkName = "chageProfilePhoto(image:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "B770C405-9394-41D9-8345-6A98E8C04DFB - ab6223b26e218667"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in closure #2 (Alamofire.SessionManager.MultipartFormDataEncodingResult) -&gt; () in closure #1 (RxSwift.AnyObserver&lt;PartyBooking.MessageModel&gt;) -&gt; RxSwift.Disposable in PartyBooking.AddServices.chageProfilePhoto(image: Swift.Optional&lt;__C.UIImage&gt;) -&gt; RxSwift.Observable&lt;PartyBooking.MessageModel&gt;"
-                  moduleName = "PartyBooking"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mac/Desktop/work/DTag/PartyBooking/PartyBooking/Network/AddServices.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "115"
-                  endingLineNumber = "115"
-                  offsetFromSymbolStart = "815">
-               </Location>
-               <Location
-                  uuid = "B770C405-9394-41D9-8345-6A98E8C04DFB - ab6223b26e218667"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in closure #2 (Alamofire.SessionManager.MultipartFormDataEncodingResult) -&gt; () in closure #1 (RxSwift.AnyObserver&lt;PartyBooking.MessageModel&gt;) -&gt; RxSwift.Disposable in PartyBooking.AddServices.chageProfilePhoto(image: Swift.Optional&lt;__C.UIImage&gt;) -&gt; RxSwift.Observable&lt;PartyBooking.MessageModel&gt;"
-                  moduleName = "PartyBooking"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mac/Desktop/work/DTag/PartyBooking/PartyBooking/Network/AddServices.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "115"
-                  endingLineNumber = "115"
-                  offsetFromSymbolStart = "926">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "27B006A5-F19C-4ACE-A28C-9CEAE9CFB5B0"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PartyBooking/Network/AddServices.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
-            landmarkName = "chageProfilePhoto(image:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "03A2FA95-6671-44BA-97C8-2A0F69C6BCFB"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PartyBooking/Network/AddServices.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
-            landmarkName = "chageProfilePhoto(image:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "97BBFE59-D20B-4335-84D7-CB69EC1CD0DC"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PartyBooking/Network/AddServices.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
-            landmarkName = "editProfile(params:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0DACF0CD-B4BB-4D24-B281-F810AF6C7284"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PartyBooking/Network/AddServices.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
-            landmarkName = "editProfile(params:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "FE01AF63-7E58-4BB8-802D-97E89E4E52E0"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PartyBooking/Network/AddServices.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
-            landmarkName = "editProfile(params:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "8AA990FF-92AE-4508-8F3D-0C0889E5526A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -194,38 +50,6 @@
             endingLineNumber = "306"
             landmarkName = "updatePrices(params:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "DBC97EFA-484F-4520-98F3-B06C8D664E89 - e84f71f879be6c0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in closure #1 (RxSwift.AnyObserver&lt;PartyBooking.MessageModel&gt;) -&gt; RxSwift.Disposable in PartyBooking.AddServices.updatePrices(params: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; RxSwift.Observable&lt;PartyBooking.MessageModel&gt;"
-                  moduleName = "PartyBooking"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mac/Desktop/work/DTag/PartyBooking/PartyBooking/Network/AddServices.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "306"
-                  endingLineNumber = "306"
-                  offsetFromSymbolStart = "815">
-               </Location>
-               <Location
-                  uuid = "DBC97EFA-484F-4520-98F3-B06C8D664E89 - e84f71f879be6c0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in closure #1 (RxSwift.AnyObserver&lt;PartyBooking.MessageModel&gt;) -&gt; RxSwift.Disposable in PartyBooking.AddServices.updatePrices(params: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; RxSwift.Observable&lt;PartyBooking.MessageModel&gt;"
-                  moduleName = "PartyBooking"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mac/Desktop/work/DTag/PartyBooking/PartyBooking/Network/AddServices.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "306"
-                  endingLineNumber = "306"
-                  offsetFromSymbolStart = "926">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -305,6 +129,70 @@
             startingLineNumber = "60"
             endingLineNumber = "60"
             landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D1FDCE57-81E5-49B7-8660-58E5ECE2A995"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PartyBooking/Network/AddServices.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "218"
+            endingLineNumber = "218"
+            landmarkName = "postBooking(params:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "382C2EE1-272F-44FB-8907-7FB9E1C9EA74"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PartyBooking/Network/AddServices.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "219"
+            endingLineNumber = "219"
+            landmarkName = "postBooking(params:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3E2D512D-87FD-437B-8723-96A5B77D877A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PartyBooking/Network/AddServices.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "221"
+            endingLineNumber = "221"
+            landmarkName = "postBooking(params:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7F099EBB-5939-4BF5-9116-BB490A7D5CA4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PartyBooking/Network/AddServices.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "222"
+            endingLineNumber = "222"
+            landmarkName = "postBooking(params:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -55,12 +55,7 @@ struct User: Codable {
 struct TermsModelJSON: Codable {
     let status: Bool?
     let message: String?
-    let result: TermsModel?
-}
-
-// MARK: - Result
-struct TermsModel: Codable {
-    let terms: Terms?
+    let result: Terms?
 }
 
 // MARK: - Terms
@@ -72,7 +67,6 @@ struct Terms: Codable {
         case arTerms = "ar_terms"
     }
 }
-
 
 // MARK: - AboutUSModelJSON
 struct AboutUSModelJSON: Codable {

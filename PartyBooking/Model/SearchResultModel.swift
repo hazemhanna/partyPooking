@@ -7,41 +7,21 @@
 //
 
 import Foundation
-// MARK: - SearchResultModelJSON
+
 struct SearchResultModelJSON: Codable {
     let status: Bool?
     let message: String?
-    let result: [SearchResult]?
+    let result: SearchResult?
 }
 
-// MARK: - Result
 struct SearchResult: Codable {
-    let id: Int?
-    let firstName, lastName: String?
-    let resultDescription: String?
-    let email, phone: String?
-    let address: String?
-    let image: String?
-    let countryID, favourite: Int?
-    let partyPrices: [PartyPrice]?
-    let comments: [Comment]?
-    let rate, partyPrice: Int?
-
+    let data: [Artists]?
+    
     enum CodingKeys: String, CodingKey {
-        case id
-        case firstName = "first_name"
-        case lastName = "last_name"
-        case resultDescription = "description"
-        case email, phone, address, image
-        case countryID = "country_id"
-        case favourite
-        case partyPrices = "party_prices"
-        case comments, rate
-        case partyPrice = "party_price"
+        case data = "data"
     }
 }
 
-// MARK: - Comment
 struct Comment: Codable {
     let id: Int?
     let comment: String?
@@ -57,7 +37,6 @@ struct Comment: Codable {
     }
 }
 
-// MARK: - PartyPrice
 struct PartyPrice: Codable {
     let id: Int?
     let arName, enName: String?
@@ -75,4 +54,3 @@ struct PartyPrice: Codable {
         case partyTime = "party_time"
     }
 }
-

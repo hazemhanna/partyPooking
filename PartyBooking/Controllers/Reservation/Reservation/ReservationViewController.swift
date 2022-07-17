@@ -170,12 +170,12 @@ func getReservation() {
         self.endedReservation = data.result?.completedBookings?.data ?? []
         self.cancelReservation = data.result?.cancelledBookings?.data ?? []
         self.reservationTableView.reloadData()
-    }
-}, onError: { (error) in
+       }
+     }, onError: { (error) in
     self.reservationVM.dismissIndicator()
-  //  displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
-}).disposed(by: disposeBag)
-}
+         displayMessage(title: "", message: "Something went wrong in getting data".localized, status: .error, forController: self)
+    }).disposed(by: disposeBag)
+ }
 
     
     func canceReservation(booking_id:Int,cancel_reason : String) {

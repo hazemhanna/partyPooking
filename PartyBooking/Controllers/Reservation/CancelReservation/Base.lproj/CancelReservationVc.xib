@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -26,13 +26,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="200"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you sure to cancel ? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBM-x0-tJQ">
-                                                <rect key="frame" x="98" y="32" width="186.5" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="97" y="32" width="188" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                 <color key="textColor" red="0.043137254899999998" green="0.4039215686" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vjq-9f-FPE">
-                                                <rect key="frame" x="69" y="84.5" width="244" height="43"/>
+                                                <rect key="frame" x="69" y="83.5" width="244" height="43"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJX-YD-vdV" customClass="CustomButtons" customModule="PartyBooking" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="112" height="43"/>
@@ -41,6 +41,7 @@
                                                             <constraint firstAttribute="width" constant="112" id="5Wh-Na-5j6"/>
                                                             <constraint firstAttribute="height" constant="43" id="Ekc-SJ-8fa"/>
                                                         </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                         <state key="normal" title="Confirm">
                                                             <color key="titleColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
@@ -60,8 +61,9 @@
                                                             <constraint firstAttribute="height" constant="43" id="Fh8-ST-Gc6"/>
                                                             <constraint firstAttribute="width" constant="112" id="Jjv-oi-5US"/>
                                                         </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                         <state key="normal" title="Cancel">
-                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="titleColor" red="0.0039215686274509803" green="0.40392156862745099" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -105,19 +107,14 @@
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="300"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="yLr-Co-VHg">
-                                                <rect key="frame" x="32" y="32" width="318" height="177"/>
+                                                <rect key="frame" x="32" y="32" width="318" height="236"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="tuu-Db-9zu">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cancel reasons" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5E-nd-pOW">
                                                         <rect key="frame" x="0.0" y="0.0" width="318" height="20.5"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cancel reasons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5E-nd-pOW">
-                                                                <rect key="frame" x="100.5" y="0.0" width="117" height="20.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <color key="textColor" red="0.043137254899999998" green="0.4039215686" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                        <color key="textColor" red="0.043137254899999998" green="0.4039215686" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AMm-6N-seE" customClass="CustomTextField" customModule="PartyBooking" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="36.5" width="318" height="140.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -137,37 +134,62 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Hph-zC-lOV">
+                                                        <rect key="frame" x="0.0" y="193" width="318" height="43"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RLS-MK-azD" customClass="CustomButtons" customModule="PartyBooking" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="149" height="43"/>
+                                                                <color key="backgroundColor" red="0.043137254899999998" green="0.4039215686" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                                <state key="normal" title="Confirm">
+                                                                    <color key="titleColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="16"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="doneAction:" destination="wTE-lx-rns" eventType="touchUpInside" id="rru-Ed-o9j"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOT-BR-Py9" customClass="CustomButtons" customModule="PartyBooking" customModuleProvider="target">
+                                                                <rect key="frame" x="169" y="0.0" width="149" height="43"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="43" id="lng-eL-L7g"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                                <state key="normal" title="Cancel">
+                                                                    <color key="titleColor" red="0.0039215686269999999" green="0.4039215686" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="16"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                        <real key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                        <color key="value" red="0.043137254899999998" green="0.4039215686" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="dismisAction:" destination="wTE-lx-rns" eventType="touchUpInside" id="zBg-5z-70I"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcH-V7-Zno" customClass="CustomButtons" customModule="PartyBooking" customModuleProvider="target">
-                                                <rect key="frame" x="135" y="241" width="112" height="43"/>
-                                                <color key="backgroundColor" red="0.043137254899999998" green="0.4039215686" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="43" id="4D9-VA-jNL"/>
-                                                    <constraint firstAttribute="width" constant="112" id="iaj-xM-fQD"/>
-                                                </constraints>
-                                                <state key="normal" title="Done">
-                                                    <color key="titleColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="16"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="doneAction:" destination="wTE-lx-rns" eventType="touchUpInside" id="eHh-BQ-bNS"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="kcH-V7-Zno" firstAttribute="top" secondItem="yLr-Co-VHg" secondAttribute="bottom" constant="32" id="0fT-22-YGb"/>
-                                            <constraint firstAttribute="bottom" secondItem="kcH-V7-Zno" secondAttribute="bottom" constant="16" id="8ic-w5-JaK"/>
-                                            <constraint firstItem="yLr-Co-VHg" firstAttribute="top" secondItem="Xuq-Ha-MoE" secondAttribute="top" constant="32" id="940-Er-aDp"/>
-                                            <constraint firstAttribute="trailing" secondItem="yLr-Co-VHg" secondAttribute="trailing" constant="32" id="J7P-cp-u3c"/>
-                                            <constraint firstItem="yLr-Co-VHg" firstAttribute="leading" secondItem="Xuq-Ha-MoE" secondAttribute="leading" constant="32" id="SKZ-HI-Q4A"/>
-                                            <constraint firstItem="yLr-Co-VHg" firstAttribute="centerX" secondItem="Xuq-Ha-MoE" secondAttribute="centerX" id="cp4-Uy-Pv0"/>
-                                            <constraint firstItem="kcH-V7-Zno" firstAttribute="centerX" secondItem="Xuq-Ha-MoE" secondAttribute="centerX" id="tuU-iy-cBt"/>
+                                            <constraint firstItem="yLr-Co-VHg" firstAttribute="top" secondItem="Xuq-Ha-MoE" secondAttribute="top" constant="32" id="0hd-bm-HRH"/>
+                                            <constraint firstItem="yLr-Co-VHg" firstAttribute="leading" secondItem="Xuq-Ha-MoE" secondAttribute="leading" constant="32" id="R8n-3W-orG"/>
+                                            <constraint firstAttribute="bottom" secondItem="yLr-Co-VHg" secondAttribute="bottom" constant="32" id="ThE-Z7-Lx3"/>
+                                            <constraint firstAttribute="bottom" secondItem="yLr-Co-VHg" secondAttribute="bottom" constant="32" id="g2H-bY-HRA"/>
+                                            <constraint firstAttribute="trailing" secondItem="yLr-Co-VHg" secondAttribute="trailing" constant="32" id="nM8-sp-cYQ"/>
                                             <constraint firstAttribute="height" constant="300" id="woS-hh-cq1"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
@@ -215,13 +237,16 @@
             <size key="intrinsicContentSize" width="38" height="42.5"/>
         </designable>
         <designable name="LW4-Ly-tBH">
-            <size key="intrinsicContentSize" width="48" height="30"/>
+            <size key="intrinsicContentSize" width="51" height="30"/>
+        </designable>
+        <designable name="RLS-MK-azD">
+            <size key="intrinsicContentSize" width="60" height="30"/>
+        </designable>
+        <designable name="hOT-BR-Py9">
+            <size key="intrinsicContentSize" width="51" height="30"/>
         </designable>
         <designable name="iJX-YD-vdV">
-            <size key="intrinsicContentSize" width="55" height="30"/>
-        </designable>
-        <designable name="kcH-V7-Zno">
-            <size key="intrinsicContentSize" width="37" height="30"/>
+            <size key="intrinsicContentSize" width="60" height="30"/>
         </designable>
     </designables>
     <resources>

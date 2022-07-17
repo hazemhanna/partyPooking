@@ -13,8 +13,9 @@ class SilentViewController: UIViewController {
     
     @IBOutlet weak var selintLabel : UILabel!
     @IBOutlet weak var titleLabel : UILabel!
-    @IBOutlet weak var activeLabel : UILabel!
+//    @IBOutlet weak var activeLabel : UILabel!
     @IBOutlet weak var whenActiveLabel : UILabel!
+    @IBOutlet weak var switcherSilent: UISwitch!
     
     @IBOutlet weak var backButton: UIButton! {
            didSet {
@@ -29,19 +30,12 @@ class SilentViewController: UIViewController {
         setUPLocalize()
     }
     
-    
     func setUPLocalize(){
         titleLabel.text = "Selint".localized
         selintLabel.text = "Selint".localized
-        activeLabel.text = "Active".localized
+        //activeLabel.text = "Active".localized
         whenActiveLabel.text = "whenActive".localized
-        if "lang".localized  == "en" {
-             let font = UIFont(name: "Georgia-Bold", size: 14)
-             titleLabel.font = font
-             selintLabel.font =  font
-             activeLabel.font = font
-             whenActiveLabel.font = font
-         }
+       
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,4 +51,11 @@ class SilentViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func btnMaleClick(sender: UISwitch){
+        if sender.isOn{
+            displayMessage(title: "", message: "SelintOff".localized, status: .success, forController: self)
+        }else{
+            displayMessage(title: "", message: "SelintOn".localized, status: .success, forController: self)
+        }
+    }
 }

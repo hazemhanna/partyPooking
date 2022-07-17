@@ -40,7 +40,7 @@ class MostFamousVc: UIViewController ,UICollectionViewDataSource, UICollectionVi
         cell.locationImage.isHidden = false
         cell.titleLbl.isHidden = false
         cell.locationLbl.isHidden = false
-        cell.confic(imageUrl: self.best[indexPath.row].image ?? "", name: ((self.best[indexPath.row].firstName ?? "") + " " + (self.best[indexPath.row].lastName ?? "")), locaction: (self.best[indexPath.row].address ?? ""))
+        cell.confic(imageUrl: self.best[indexPath.row].image ?? "", name: ((self.best[indexPath.row].firstName ?? "") + " " + (self.best[indexPath.row].lastName ?? "")), locaction: (self.best[indexPath.row].country?.arName ?? ""))
         cell.layer.cornerRadius = 7
         return cell
     }
@@ -82,7 +82,7 @@ func getBest() {
         }
     }, onError: { (error) in
         self.homeVM.dismissIndicator()
-        //displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
+        displayMessage(title: "", message: "Something went wrong in getting data".localized, status: .error, forController: self)
     }).disposed(by: disposeBag)
  }
     

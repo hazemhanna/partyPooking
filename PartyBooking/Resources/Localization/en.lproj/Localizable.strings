@@ -21,7 +21,7 @@
 "Most" = "Most Famous";
 "artist" = "artist";
 "searchtitle" = "search";
-"home" = "home";
+"home" = "Home";
 "live" = "live";
 //// map
 "choose" = "choose";
@@ -120,7 +120,7 @@
 "notReady" = "not ready yet ";
 ///// artist acount
 "profilePic" = "profile Picture";
-"aboutMe" = "about Me";
+"aboutMe" = "who we are";
 "myWork" = "my Work";
 "live" = "make live video";
 /// artist Moer
@@ -167,6 +167,8 @@
 "city"="City :";
 "read and agree terms and condition"="read and agree terms and condition";
 "terms and condition"="terms and condition";
+"about" = "About App";
+
 "DoneB"="Done";
 "cancelReservation" ="Cancel Reservation";
 "SR" = "SR";
@@ -188,3 +190,6 @@
 "investigation"="Your application is under consideration by our investigation team";
 "artistName" = "artist Name";
 "userName" = "user Name";
+"Something went wrong in getting data" = "Something went wrong in getting data";
+"SelintOn" = "silent mode active";
+"SelintOff" = "silent mode inActive";

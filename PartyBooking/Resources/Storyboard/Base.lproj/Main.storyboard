@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WnB-in-wJT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WnB-in-wJT">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="GE_SS_Two_Bold.otf">
-            <string>GESSTwoBold-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Tab Bar Controller-->
         <scene sceneID="bEy-Lr-eqV">
@@ -61,7 +56,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N51-0f-LLa">
                                         <rect key="frame" x="20" y="0.0" width="33" height="20"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="16"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                         <state key="normal" title="skip">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -78,8 +73,8 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="welcome.let's start" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lLO-DU-l26">
-                                <rect key="frame" x="137.5" y="210" width="139" height="17.5"/>
-                                <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="16"/>
+                                <rect key="frame" x="131" y="210" width="152.5" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -90,8 +85,8 @@
                                         <rect key="frame" x="0.0" y="0.0" width="398" height="55"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mj7-I6-SW8">
-                                                <rect key="frame" x="137.5" y="12.5" width="123" height="30"/>
-                                                <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="16"/>
+                                                <rect key="frame" x="136.5" y="11.5" width="125" height="32"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                 <state key="normal" title="Register as user">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -116,8 +111,8 @@
                                         <rect key="frame" x="0.0" y="71" width="398" height="55"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYH-mv-ywA">
-                                                <rect key="frame" x="135" y="12.5" width="128" height="30"/>
-                                                <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="16"/>
+                                                <rect key="frame" x="132.5" y="11.5" width="133" height="32"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                 <state key="normal" title="Register as artist">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -178,7 +173,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="evd-CZ-xDu">
-                                <rect key="frame" x="20" y="53" width="53" height="20"/>
+                                <rect key="frame" x="20" y="53" width="55" height="20"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5N-C5-HGc">
                                         <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
@@ -193,9 +188,9 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z87-C5-9QX">
-                                        <rect key="frame" x="20" y="0.0" width="33" height="20"/>
+                                        <rect key="frame" x="20" y="0.0" width="35" height="20"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="16"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <state key="normal" title="skip">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -209,8 +204,8 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="welcome.let's start" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tkk-Gj-25w">
-                                <rect key="frame" x="137.5" y="166" width="139" height="17.5"/>
-                                <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="16"/>
+                                <rect key="frame" x="131" y="166" width="152.5" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -218,8 +213,8 @@
                                 <rect key="frame" x="8" y="610" width="398" height="55"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQL-we-LIr">
-                                        <rect key="frame" x="126" y="12.5" width="146" height="30"/>
-                                        <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="16"/>
+                                        <rect key="frame" x="125.5" y="11.5" width="147" height="32"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                         <state key="normal" title="Register on Google">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -252,8 +247,8 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rub-rq-k8n">
-                                        <rect key="frame" x="126" y="12.5" width="146" height="30"/>
-                                        <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="16"/>
+                                        <rect key="frame" x="125.5" y="11.5" width="147" height="32"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                         <state key="normal" title="Register on Google">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -272,8 +267,8 @@
                                 <rect key="frame" x="8" y="736" width="398" height="55"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkj-bl-2wq">
-                                        <rect key="frame" x="135" y="12.5" width="128" height="30"/>
-                                        <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="16"/>
+                                        <rect key="frame" x="132.5" y="11.5" width="133" height="32"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                         <state key="normal" title="Register as artist">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -291,8 +286,8 @@
                                 <rect key="frame" x="8" y="799" width="398" height="55"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGo-qh-g5b">
-                                        <rect key="frame" x="137.5" y="12.5" width="123" height="30"/>
-                                        <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="16"/>
+                                        <rect key="frame" x="136.5" y="11.5" width="125" height="32"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                         <state key="normal" title="Register as user">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -377,8 +372,8 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="welcome.let's start" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9F-u4-Ssr">
-                                <rect key="frame" x="137.5" y="210" width="139" height="17.5"/>
-                                <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="16"/>
+                                <rect key="frame" x="132" y="210" width="150" height="19.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -390,7 +385,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qcq-gp-NGN">
                                                 <rect key="frame" x="0.0" y="0.0" width="398" height="55"/>
-                                                <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="16"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                 <state key="normal" title="English ">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -414,7 +409,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T8c-2K-JzU">
                                                 <rect key="frame" x="0.0" y="0.0" width="398" height="55"/>
-                                                <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="16"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                 <state key="normal" title="عربي">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -486,7 +481,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="KBJ-uY-J8T" detailTextLabel="6D4-Db-mIR" style="IBUITableViewCellStyleSubtitle" id="Jyf-ZW-8yN">
-                                <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jyf-ZW-8yN" id="XD6-Aw-3uS">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
@@ -608,7 +603,6 @@
         <!--Navigation Controller-->
         <scene sceneID="yLU-iu-mYc">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="m68-mA-r4j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="LocationNav" automaticallyAdjustsScrollViewInsets="NO" id="wkq-i5-5F6" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xLl-vR-rHT">
@@ -623,6 +617,7 @@
                         <segue destination="VLc-js-iOH" kind="relationship" relationship="rootViewController" id="U9y-IS-dhn"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m68-mA-r4j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1058" y="1554"/>
         </scene>

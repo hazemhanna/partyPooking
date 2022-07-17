@@ -31,7 +31,7 @@ struct AddServices {
                         let data = try JSONDecoder().decode(SearchResultModelJSON.self, from: response.data!)
                         observer.onNext(data)
                     } catch {
-                        print(error.localizedDescription)
+                        print(error)
                         observer.onError(error)
                     }
             }

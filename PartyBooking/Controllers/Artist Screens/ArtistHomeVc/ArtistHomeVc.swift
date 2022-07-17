@@ -108,7 +108,7 @@ extension ArtistHomeVc{
         }
     }, onError: { (error) in
         self.profileVM.dismissIndicator()
-        //displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
+        displayMessage(title: "", message: "Something went wrong in getting data".localized, status: .error, forController: self)
     }).disposed(by: disposeBag)
  }
 
@@ -122,7 +122,7 @@ extension ArtistHomeVc{
         }
     }, onError: { (error) in
         self.profileVM.dismissIndicator()
-       // displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
+        displayMessage(title: "", message: "Something went wrong in getting data".localized, status: .error, forController: self)
     }).disposed(by: disposeBag)
  }
     

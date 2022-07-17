@@ -71,18 +71,14 @@ extension RateViewController : UITableViewDelegate , UITableViewDataSource {
         if let iamg = URL(string: "https://partybooking.dtagdev.com/" + (self.review[indexPath.row].user?.image ?? "")){
         cell.imageProfile.kf.setImage(with: iamg, placeholder: #imageLiteral(resourceName: "يريءؤر سيرلايسب-1"))
         }
-        
         cell.commentLbl.text = self.review[indexPath.row].comment ?? ""
         cell.rateView.rating = Double(self.review[indexPath.row].rate ?? 0)
 
         return cell
     }
     
-    
-    
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(100)
+        return CGFloat(120)
         
     }
 }

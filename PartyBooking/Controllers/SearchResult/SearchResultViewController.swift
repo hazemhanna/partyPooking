@@ -13,18 +13,22 @@ import RxCocoa
 
 class SearchResultViewController: UIViewController {
     
-    var filterdArtist = [SearchResult]()
-    private let searchVM = SearchResultViewModel()
-    
-    var disposeBag = DisposeBag()
-    
     @IBOutlet weak var SearchTableView: UITableView!
     @IBOutlet weak var backButton: UIButton! {
            didSet {
                backButton.setImage(backButton.currentImage?.flipIfNeeded(), for: .normal)
            }
        }
-      
+    
+    private let searchVM = SearchResultViewModel()
+    var disposeBag = DisposeBag()
+    
+    var filterdArtist :[Artists] = []{
+        didSet{
+            SearchTableView.reloadData()
+        }
+    }
+
     var areaId =  Int()
     var typeId = Int()
     var date = String()
@@ -65,9 +69,9 @@ extension SearchResultViewController : UITableViewDelegate , UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SearchResultTableViewCell
         cell.confic(imageUrl:  self.filterdArtist[indexPath.row].image ?? "",
                     name: ((self.filterdArtist[indexPath.row].firstName ?? "") + " " + (self.filterdArtist[indexPath.row].lastName ?? "")),
-                    locaction: (self.filterdArtist[indexPath.row].address ?? ""),
+                    locaction: (self.filterdArtist[indexPath.row].areas?[0].arName ?? ""),
                     rate: (self.filterdArtist[indexPath.row].rate ?? 0),
-                    price : self.filterdArtist[indexPath.row].partyPrice ?? 0 ,
+                    price : Int(self.filterdArtist[indexPath.row].partyPrice ?? 0.0) ,
                     isFavourite :self.filterdArtist[indexPath.row].favourite ?? 0)
         cell.addFavourite = {
             self.searchVM.showIndicator()
@@ -82,13 +86,10 @@ extension SearchResultViewController : UITableViewDelegate , UITableViewDataSour
         destinationVC!.artistId = filterdArtist[indexPath.row].id ?? 0
         destinationVC?.search = true
         self.navigationController?.pushViewController(destinationVC!, animated: true)
-        
-        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             return CGFloat(150)
-        
     }
 }
 
@@ -99,16 +100,14 @@ func getsearchResult(area : Int , date : String , type : Int) {
     searchVM.getSearchResult(area: area, date: date, type: type).subscribe(onNext: { (data) in
         self.searchVM.dismissIndicator()
         if data.status ?? false {
-            self.filterdArtist = data.result ?? []
-            self.SearchTableView.reloadData()
+            self.filterdArtist = data.result?.data ?? []
         }
     }, onError: { (error) in
         self.searchVM.dismissIndicator()
-        //displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
+        displayMessage(title: "", message: "Something went wrong in getting data".localized, status: .error, forController: self)
     }).disposed(by: disposeBag)
  }
     
-   
     func addFavourite(artistId : Int ) {
         searchVM.addFavourite(artistId: artistId).subscribe(onNext: { (data) in
             self.searchVM.dismissIndicator()
@@ -118,7 +117,7 @@ func getsearchResult(area : Int , date : String , type : Int) {
             }
         }, onError: { (error) in
             self.searchVM.dismissIndicator()
-           // displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
+            displayMessage(title: "", message: "Something went wrong in getting data".localized, status: .error, forController: self)
         }).disposed(by: disposeBag)
      }
       

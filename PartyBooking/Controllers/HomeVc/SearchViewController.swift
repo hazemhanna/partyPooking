@@ -63,7 +63,6 @@ class SearchViewController: UIViewController ,UICollectionViewDataSource, UIColl
             countryTextField.textAlignment = .left
         }
     }
-    
     override func viewWillAppear(_ animated: Bool) {
         if dateTapped {
          dateLbl.text = Helper.getdate() ?? ""
@@ -91,7 +90,6 @@ class SearchViewController: UIViewController ,UICollectionViewDataSource, UIColl
         partyTypeTextField.text = "partyType".localized
      }
     
-    
     func setupCountryDropDown() {
         countryTextField.optionArray = self.filterCountry
         countryTextField.didSelect { (selectedText, index, id) in
@@ -101,9 +99,8 @@ class SearchViewController: UIViewController ,UICollectionViewDataSource, UIColl
             if "lang".localized == "ar" {
             Helper.saveCName(date: self.country[index].arName ?? "" )
             }else{
-                Helper.saveCName(date: self.country[index].enName ?? "" )
+             Helper.saveCName(date: self.country[index].enName ?? "" )
             }
-            
         }
     }
     
@@ -114,10 +111,9 @@ class SearchViewController: UIViewController ,UICollectionViewDataSource, UIColl
             self.typeId = self.partyType[index].id ?? 0
             Helper.savePID(date:  self.partyType[index].id ?? 0)
             if "lang".localized == "ar" {
-            Helper.savePName(date: self.partyType[index].arName ?? "" )
+                Helper.savePName(date: self.partyType[index].arName ?? "" )
             }else{
                 Helper.savePName(date: self.partyType[index].enName ?? "" )
-
             }
         }
     }
@@ -134,19 +130,16 @@ class SearchViewController: UIViewController ,UICollectionViewDataSource, UIColl
         self.navigationController?.pushViewController(destinationVC!, animated: true)
     }
     
-    
     @IBAction func viewAllOffers(sender: UIButton) {
         let destinationVC = OffersViewController.instantiateFromNib()
         self.navigationController?.pushViewController(destinationVC!, animated: true)
     }
     
-    
     @IBAction func calenderTapped(sender: UIButton) {
         self.dateTapped = true
         let destinationVC = PartyDateVc.instantiateFromNib()
         self.navigationController?.pushViewController(destinationVC!, animated: true)
-      }
-    
+    }
     
     @IBAction func notificationButton(sender: UIButton) {
           let destinationVC = NotificationsViewController.instantiateFromNib()
@@ -154,12 +147,11 @@ class SearchViewController: UIViewController ,UICollectionViewDataSource, UIColl
       }
     
      @IBAction func searchButton(sender: UIButton) {
-        
         if typeId == nil || countryId == nil || selectedDate == "" {
         if "lang".localized == "ar" {
-            displayMessage(title: "", message: "اكمل البيانات", status: .error, forController: self)
+            displayMessage(title: "", message: "من فضلك ادخل بيانات البحث كاملة", status: .error, forController: self)
         }else{
-            displayMessage(title: "", message: "please complete all required data", status: .error, forController: self)
+            displayMessage(title: "", message: "please complete all search data", status: .error, forController: self)
         }
         }else{
         let destinationVC = SearchResultViewController.instantiateFromNib()
@@ -168,7 +160,6 @@ class SearchViewController: UIViewController ,UICollectionViewDataSource, UIColl
         destinationVC!.date = dateLbl.text ?? ""
         self.navigationController?.pushViewController(destinationVC!, animated: true)
         }
-        
      }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -190,7 +181,7 @@ class SearchViewController: UIViewController ,UICollectionViewDataSource, UIColl
             cell.locationImage.isHidden = false
             cell.titleLbl.isHidden = false
             cell.locationLbl.isHidden = false
-            cell.confic(imageUrl: self.best[indexPath.row].image ?? "", name: ((self.best[indexPath.row].firstName ?? "") + " " + (self.best[indexPath.row].lastName ?? "")), locaction: (self.best[indexPath.row].address ?? ""))
+            cell.confic(imageUrl: self.best[indexPath.row].image ?? "", name: ((self.best[indexPath.row].firstName ?? "") + " " + (self.best[indexPath.row].lastName ?? "")), locaction: (self.best[indexPath.row].country?.arName ?? ""))
 
         }
         cell.layer.cornerRadius = 7
@@ -217,13 +208,9 @@ class SearchViewController: UIViewController ,UICollectionViewDataSource, UIColl
         let height = (collectionView.bounds.size.height)
         return CGSize(width: width, height:  height)
     }
-    
-
-    
 }
 
 extension SearchViewController {
-
 func getHome() {
     homeVM.getHome().subscribe(onNext: { (data) in
         self.homeVM.dismissIndicator()
@@ -235,7 +222,7 @@ func getHome() {
         }
     }, onError: { (error) in
         self.homeVM.dismissIndicator()
-       // displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
+        displayMessage(title: "", message: "Something went wrong in getting data".localized, status: .error, forController: self)
     }).disposed(by: disposeBag)
  }
     func getPartyType() {
@@ -247,15 +234,14 @@ func getHome() {
                     if "lang".localized == "ar" {
                     self.filterPartyType.append(index.arName ?? "")
                     }else{
-                        self.filterPartyType.append(index.enName ?? "")
-
+                    self.filterPartyType.append(index.enName ?? "")
                     }
                 }
                 self.setupTypeDropDown()
             }
         }, onError: { (error) in
             self.homeVM.dismissIndicator()
-           // displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
+            displayMessage(title: "", message: "Something went wrong in getting data".localized, status: .error, forController: self)
         }).disposed(by: disposeBag)
      }
     
@@ -275,9 +261,7 @@ func getHome() {
             }
         }, onError: { (error) in
             self.homeVM.dismissIndicator()
-           // displayMessage(title: "", message: "Something went wrong in getting data", status: .error, forController: self)
+            displayMessage(title: "", message: "Something went wrong in getting data".localized, status: .error, forController: self)
         }).disposed(by: disposeBag)
     }
-    
-    
 }

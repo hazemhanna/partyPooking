@@ -129,7 +129,9 @@
 "unActive" = "غير مفعل";
 "version" = "الاصدار";
 /// Selint
-"Selint" = "الهدوء";
+"Selint" = "وضع عدم الازعاج";
+"SelintOn" = " تم تفعيل وضع عدم الازعاج";
+"SelintOff" = " تم ايقاف وضع عدم الازعاج";
 "whenActive" = "عند تفعيل خاصية عدم الازعاج فان التنبيهات التي تصلك خلال ساعات الهدود تكون صامتة";
 //// notification
 "notification"="الاشعارات";
@@ -166,6 +168,7 @@
 
 "read and agree terms and condition"="اوافق علي الشروط والاحكام";
 "terms and condition"="الشروط والاحكام";
+"about" = "من نحن";
 "DoneB"="تم";
 "cancelReservation" ="الحجوزات الملغاة";
 "SR" = "ريال";
@@ -181,9 +184,10 @@
 "NO" ="لآ" ;
 "Search for places" = "ابحث عن الموقع";
 "confirm" = "تاكيد";
-"noFav" = "لا يوجد مفضلة ";
+"noFav" = "لا يوجد نتائج ";
 "male" = "ذكر";
 "female" = "انثي";
 "investigation"="طلبك تحت الدراسة من قبل فريق التحقيق الخاص بنا";
 "artistName" = "اسم الفنان";
 "userName" = "اسم المستخدم";
+"Something went wrong in getting data" = "حدث خطا في ارجاع البيانات";

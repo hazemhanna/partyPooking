@@ -22,13 +22,6 @@ PODS:
     - FlagPhoneNumber/libPhoneNumberiOS (= 0.8.0)
   - FlagPhoneNumber/libPhoneNumberiOS (0.8.0)
   - FSCalendar (2.8.1)
-  - GoogleMaps (3.9.0):
-    - GoogleMaps/Maps (= 3.9.0)
-  - GoogleMaps/Base (3.9.0)
-  - GoogleMaps/Maps (3.9.0):
-    - GoogleMaps/Base
-  - GooglePlaces (3.9.0):
-    - GoogleMaps/Base (= 3.9.0)
   - GoogleSignIn (5.0.2):
     - AppAuth (~> 1.2)
     - GTMAppAuth (~> 1.0)
@@ -69,8 +62,6 @@ DEPENDENCIES:
   - FBSDKLoginKit
   - FlagPhoneNumber
   - FSCalendar
-  - GoogleMaps
-  - GooglePlaces
   - GoogleSignIn
   - IQKeyboardManagerSwift
   - JWTDecode
@@ -95,8 +86,6 @@ SPEC REPOS:
     - FBSDKLoginKit
     - FlagPhoneNumber
     - FSCalendar
-    - GoogleMaps
-    - GooglePlaces
     - GoogleSignIn
     - GTMAppAuth
     - GTMSessionFetcher
@@ -124,8 +113,6 @@ SPEC CHECKSUMS:
   FBSDKLoginKit: d5ffe6d808897019ccf16feb6f0a7ab260bc5cd6
   FlagPhoneNumber: 3712455b95f66cb0f2016fef7d9e34cddf8c7f9a
   FSCalendar: 5245140456fcbcac5824c203b98bd8068bdfee1a
-  GoogleMaps: 4b5346bddfe6911bb89155d43c903020170523ac
-  GooglePlaces: 1634d019549b969d40fe0ccb0b9513055adebe01
   GoogleSignIn: 7137d297ddc022a7e0aa4619c86d72c909fa7213
   GTMAppAuth: 197a8dabfea5d665224aa00d17f164fc2248dab9
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
@@ -143,6 +130,6 @@ SPEC CHECKSUMS:
   TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
   TwitterKit5: 64095dfefcf39be2355711ef27112d55e340d90e
 
-PODFILE CHECKSUM: 9cede964c92a1fc612215b2ae847a84143561456
+PODFILE CHECKSUM: 4633945c9b37a4f8da2e5ecdc315ca46f26500c1
 
-COCOAPODS: 1.10.2
+COCOAPODS: 1.11.2

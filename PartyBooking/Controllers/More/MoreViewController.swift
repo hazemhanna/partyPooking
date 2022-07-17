@@ -30,45 +30,41 @@ class MoreViewController: UIViewController {
         tableView.dataSource = self
         if token != "" {
             if "lang".localized == "ar" {
-                     self.Items = [
-                               SideMenuModel(Name: "العروض", Id: "Offers", image: #imageLiteral(resourceName: "1")),
+                     self.Items = [SideMenuModel(Name: "العروض", Id: "Offers", image: #imageLiteral(resourceName: "1")),
                                SideMenuModel(Name: "المفضلة", Id: "Favourite", image: #imageLiteral(resourceName: "heart (1)")),
                                SideMenuModel(Name: "الدعم الفني", Id: "callCenter", image: #imageLiteral(resourceName: "support")),
                                SideMenuModel(Name: "الاعدادات", Id: "setting", image: #imageLiteral(resourceName: "settings (1)")),
                                SideMenuModel(Name: "حسابي", Id: "account", image: #imageLiteral(resourceName: "5")),
                                SideMenuModel(Name: "من نحن", Id: "about", image: #imageLiteral(resourceName: "5-2")),
-                               SideMenuModel(Name: "تسجيل الخروج", Id: "logOut", image: #imageLiteral(resourceName: "5-3")),
-                           ]
+                               SideMenuModel(Name: "الشروط والاحكام", Id: "terms", image: #imageLiteral(resourceName: "5-2")),
+                               SideMenuModel(Name: "تسجيل الخروج", Id: "logOut", image: #imageLiteral(resourceName: "5-3"))]
                 }else {
-                       self.Items = [
-                               SideMenuModel(Name: "Offers", Id: "Offers", image: #imageLiteral(resourceName: "1")),
+                       self.Items = [SideMenuModel(Name: "Offers", Id: "Offers", image: #imageLiteral(resourceName: "1")),
                                SideMenuModel(Name: "Favourite", Id: "Favourite", image: #imageLiteral(resourceName: "heart (1)")),
                                SideMenuModel(Name: "Call Center", Id: "callCenter", image: #imageLiteral(resourceName: "support")),
                                SideMenuModel(Name: "Setting", Id: "setting", image: #imageLiteral(resourceName: "settings (1)")),
                                SideMenuModel(Name: "Account", Id: "account", image: #imageLiteral(resourceName: "5")),
                                SideMenuModel(Name: "About", Id: "about", image: #imageLiteral(resourceName: "5-2")),
-                               SideMenuModel(Name: "logOut", Id: "logOut", image: #imageLiteral(resourceName: "5-3")),
-                           ]
+                               SideMenuModel(Name: "Terms & conditions", Id: "terms", image: #imageLiteral(resourceName: "5-2")),
+                               SideMenuModel(Name: "logOut", Id: "logOut", image: #imageLiteral(resourceName: "5-3"))]
             }
         }else{
             if "lang".localized == "ar" {
-                     self.Items = [
-                               SideMenuModel(Name: "العروض", Id: "Offers", image: #imageLiteral(resourceName: "1")),
+                     self.Items = [SideMenuModel(Name: "العروض", Id: "Offers", image: #imageLiteral(resourceName: "1")),
                                SideMenuModel(Name: "الاعدادات", Id: "setting", image: #imageLiteral(resourceName: "settings (1)")),
                                SideMenuModel(Name: "من نحن", Id: "about", image: #imageLiteral(resourceName: "5-2")),
-                               SideMenuModel(Name: "تسجيل دخول", Id: "Login", image: #imageLiteral(resourceName: "5-3")),
-                           ]
+                               SideMenuModel(Name: "الشروط والاحكام", Id: "terms", image: #imageLiteral(resourceName: "5-2")),
+                               SideMenuModel(Name: "تسجيل دخول", Id: "Login", image: #imageLiteral(resourceName: "5-3"))]
                 }else {
-                       self.Items = [
-                               SideMenuModel(Name: "Offers", Id: "Offers", image: #imageLiteral(resourceName: "1")),
+                       self.Items = [SideMenuModel(Name: "Offers", Id: "Offers", image: #imageLiteral(resourceName: "1")),
                                SideMenuModel(Name: "Setting", Id: "setting", image: #imageLiteral(resourceName: "settings (1)")),
                                SideMenuModel(Name: "About", Id: "about", image: #imageLiteral(resourceName: "5-2")),
-                               SideMenuModel(Name: "Login", Id: "Login", image: #imageLiteral(resourceName: "5-3")),
-                           ]
+                               SideMenuModel(Name: "Terms & conditions", Id: "terms", image: #imageLiteral(resourceName: "5-2")),
+                               SideMenuModel(Name: "Login", Id: "Login", image: #imageLiteral(resourceName: "5-3"))]
             }
         }
    
-        
+      
         setUPLocalize()
     }
     
@@ -81,7 +77,6 @@ class MoreViewController: UIViewController {
             case "Favourite":
                 let destinationVC = FavouriteViewController.instantiateFromNib()
                 self.navigationController?.pushViewController(destinationVC!, animated: true)
-                
             case "account":
                 let destinationVC = AccountViewController.instantiateFromNib()
                 self.navigationController?.pushViewController(destinationVC!, animated: true)
@@ -95,7 +90,10 @@ class MoreViewController: UIViewController {
                 let main = TermsAndConditionVc.instantiateFromNib()
                  main?.type = "about"
                 self.navigationController?.pushViewController(main!, animated: true)
-
+            case "terms":
+                let main = TermsAndConditionVc.instantiateFromNib()
+                 main?.type = "terms"
+                self.navigationController?.pushViewController(main!, animated: true)
             case "Login"  :
                  let main = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Nav")
                 if let appDelegate = UIApplication.shared.delegate {

@@ -39,7 +39,7 @@ class SearchResultTableViewCell: UITableViewCell {
         artistNameValueLabel.text = name
         countryLabel.text = locaction
         rateCountLabel.text = "\(rate)"
-        amountValueLabel.text = "\(price)" + ("SR".localized)
+        amountValueLabel.text = "\(price) " + ("SR".localized)
         if isFavourite == 0 {
             self.isFavourite = false
             favourtieBtn.setImage( UIImage(named:"heart (1).png"), for: .normal)

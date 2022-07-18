@@ -11,18 +11,14 @@ import Foundation
 import UIKit
 
 class TabBarController: UITabBarController {
-
     var type = Helper.getType()
-    
     private struct Constants {
         static let actionButtonSize = CGSize(width: 35, height: 35)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-    
         createTabbarControllers()
         selectedIndex = 0
-        
         if #available(iOS 15.0, *) {
         let appearance = UITabBarAppearance()
         appearance.configureWithOpaqueBackground()
@@ -87,7 +83,6 @@ class TabBarController: UITabBarController {
             viewController = AllLiveVideoVC.instantiateFromNib()!
         case .userLive:
             viewController = AllLiveVideoVC.instantiateFromNib()!
-
         }
         viewController.title = customTabBarItem.title
         viewController.tabBarItem = customTabBarItem.tabBarItem

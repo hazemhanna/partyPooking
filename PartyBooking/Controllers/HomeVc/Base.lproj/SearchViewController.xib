@@ -20,19 +20,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="74"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zdvgsrr" translatesAutoresizingMaskIntoConstraints="NO" id="GXd-wN-dUs">
-                                <rect key="frame" x="125.5" y="40" width="163" height="31"/>
+                                <rect key="frame" x="125.5" y="35" width="163" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="eCB-we-fSs"/>
                                     <constraint firstAttribute="width" constant="163" id="mOO-3H-VQX"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAA-bF-466">
-                                <rect key="frame" x="8" y="31" width="40" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="D1e-dm-TQ5"/>
-                                    <constraint firstAttribute="height" constant="32" id="IKs-hl-6cU"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="22-2"/>
+                                <rect key="frame" x="366" y="34" width="40" height="32"/>
+                                <state key="normal" image="22-2">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="notificationButtonWithSender:" destination="8bJ-Rj-NcN" eventType="touchUpInside" id="G1P-I1-gbv"/>
                                 </connections>
@@ -40,12 +38,11 @@
                         </subviews>
                         <color key="backgroundColor" red="0.16862745098039217" green="0.70588235294117641" blue="0.69411764705882351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="GXd-wN-dUs" firstAttribute="centerX" secondItem="tH5-O1-mud" secondAttribute="centerX" id="3W3-YI-yR0"/>
-                            <constraint firstItem="wAA-bF-466" firstAttribute="leading" secondItem="tH5-O1-mud" secondAttribute="leading" constant="8" id="AFa-F5-VxW"/>
-                            <constraint firstItem="GXd-wN-dUs" firstAttribute="bottom" secondItem="wAA-bF-466" secondAttribute="bottom" constant="8" id="X3e-O4-1Ur"/>
-                            <constraint firstAttribute="bottom" secondItem="wAA-bF-466" secondAttribute="bottom" constant="11" id="XCw-VV-Qfp"/>
                             <constraint firstAttribute="height" constant="74" id="h7o-Q9-eUI"/>
+                            <constraint firstAttribute="bottom" secondItem="GXd-wN-dUs" secondAttribute="bottom" constant="8" id="lsn-yD-z9l"/>
                             <constraint firstItem="GXd-wN-dUs" firstAttribute="centerX" secondItem="tH5-O1-mud" secondAttribute="centerX" id="qcR-pU-VPM"/>
+                            <constraint firstAttribute="trailing" secondItem="wAA-bF-466" secondAttribute="trailing" constant="8" id="uiF-VC-y0X"/>
+                            <constraint firstAttribute="bottom" secondItem="wAA-bF-466" secondAttribute="bottom" constant="8" id="zKB-So-LoG"/>
                         </constraints>
                     </view>
                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5i3-Fe-cwn">

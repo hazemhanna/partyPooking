@@ -14,15 +14,16 @@ import RxCocoa
 class ArtistHomeVc: UIViewController  ,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var photoCollection: UICollectionView!
+    @IBOutlet weak var photoCollectionHeigh: NSLayoutConstraint!
     @IBOutlet weak var profileImage : UIImageView!
     @IBOutlet weak var profileView : UIView!
     @IBOutlet weak var nameLBl : UILabel!
     @IBOutlet weak var aboutMeLabel : UILabel!
-    @IBOutlet weak var aboutTextView : UITextView!
-
+    @IBOutlet weak var aboutTextView : UILabel!
     @IBOutlet weak var myWorkLabel : UILabel!
     @IBOutlet weak var liveLabel : UILabel!
-    @IBOutlet weak var titleLabel : UILabel!
+   // @IBOutlet weak var titleLabel : UILabel!
+    
     let aristId = Helper.getArtistId() ?? 0
     private let profileVM = ArtistProfileViewModel()
     var disposeBag = DisposeBag()
@@ -44,20 +45,15 @@ class ArtistHomeVc: UIViewController  ,UICollectionViewDataSource, UICollectionV
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-    self.navigationController?.navigationBar.isHidden = false
+    
+        self.navigationController?.navigationBar.isHidden = false
     }
     
     func setUPLocalize(){
         aboutMeLabel.text = "aboutMe".localized
         myWorkLabel.text = "myWork".localized
         liveLabel.text = "live".localized
-        if "lang".localized  == "en" {
-            let font = UIFont(name: "Georgia-Bold", size: 14)
-            titleLabel.font = font
-            aboutMeLabel.font = font
-            myWorkLabel.font = font
-            liveLabel.font = font
-        }
+       // titleLabel.text = "profile".localized
     }
     
     @IBAction func backButton(sender: UIButton) {
@@ -65,8 +61,9 @@ class ArtistHomeVc: UIViewController  ,UICollectionViewDataSource, UICollectionV
     }
     
     @IBAction func liveButton(sender: UIButton) {
-    let destinationVC = LiveVideoViewController.instantiateFromNib()
-    self.navigationController?.pushViewController(destinationVC!, animated: true)
+ 
+        let destinationVC = LiveVideoViewController.instantiateFromNib()
+         self.navigationController?.pushViewController(destinationVC!, animated: true)
     }
     
     @IBAction func notificationButton(sender: UIButton) {
@@ -118,6 +115,11 @@ extension ArtistHomeVc{
         self.profileVM.dismissIndicator()
         if data.status ?? false {
             self.work = data.result?.data ?? []
+            if self.work.count > 0 {
+                self.photoCollectionHeigh.constant = 150
+            }else{
+                self.photoCollectionHeigh.constant = 0
+            }
             self.photoCollection.reloadData()
         }
     }, onError: { (error) in

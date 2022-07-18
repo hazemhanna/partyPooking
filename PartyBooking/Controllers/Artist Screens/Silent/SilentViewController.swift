@@ -10,12 +10,12 @@ import UIKit
 
 class SilentViewController: UIViewController {
     
-    
     @IBOutlet weak var selintLabel : UILabel!
     @IBOutlet weak var titleLabel : UILabel!
 //    @IBOutlet weak var activeLabel : UILabel!
     @IBOutlet weak var whenActiveLabel : UILabel!
-    @IBOutlet weak var switcherSilent: UISwitch!
+    @IBOutlet weak var switcher : UISwitch!
+
     
     @IBOutlet weak var backButton: UIButton! {
            didSet {
@@ -28,6 +28,7 @@ class SilentViewController: UIViewController {
         super.viewDidLoad()
         selintView.layer.cornerRadius = 7
         setUPLocalize()
+        switcher.isOn = Helper.getSilent() ?? false
     }
     
     func setUPLocalize(){
@@ -44,7 +45,6 @@ class SilentViewController: UIViewController {
     }
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = false
-        
     }
     
     @IBAction func backButton(sender: UIButton) {
@@ -53,9 +53,12 @@ class SilentViewController: UIViewController {
     
     @IBAction func btnMaleClick(sender: UISwitch){
         if sender.isOn{
-            displayMessage(title: "", message: "SelintOff".localized, status: .success, forController: self)
-        }else{
             displayMessage(title: "", message: "SelintOn".localized, status: .success, forController: self)
+            Helper.saveSilent(isOn: true)
+        }else{
+            displayMessage(title: "", message: "SelintOff".localized, status: .success, forController: self)
+            Helper.saveSilent(isOn: false)
+
         }
     }
 }

@@ -34,7 +34,6 @@ class UpdatePricesVC: UIViewController {
         tableView.register(UINib(nibName: "PartyPriceCell", bundle: nil), forCellReuseIdentifier: "PartyPriceCell")
         tableView.delegate = self
         tableView.dataSource = self
-      
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,10 +54,9 @@ class UpdatePricesVC: UIViewController {
     }
 
     @IBAction func saveButton(sender: UIButton) {
-    authModel.showIndicator()
-        self.updatePrices(prices: updatedPrices)
-    self.navigationController?.popViewController(animated: true)
-    
+         authModel.showIndicator()
+         self.updatePrices(prices: updatedPrices)
+         self.navigationController?.popViewController(animated: true)
     }
 
 }

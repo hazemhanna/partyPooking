@@ -15,13 +15,13 @@ enum RoundedTabBarItem {
 
 extension RoundedTabBarItem {
     var title: String {
-        switch self {
-         case .search:
+    switch self {
+      case .search:
             return "home".localized
-        case .reservations:
+       case .reservations:
             return "reservation".localized
        case .account:
-        return "account".localized
+            return "account".localized
         case .more:
             return "more".localized
         case .artistMore:
@@ -37,7 +37,7 @@ extension RoundedTabBarItem {
         case .live:
             return "live".localized
         case .userLive:
-            return "live".localized
+            return "userLive".localized
 
         }
     }

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		040FFCAD26FA19E80097CC4C /* UpdatePricesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040FFCAB26FA19E80097CC4C /* UpdatePricesVC.swift */; };
-		040FFCAE26FA19E80097CC4C /* UpdatePricesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040FFCAC26FA19E80097CC4C /* UpdatePricesVC.xib */; };
 		0411EB8426764C700023FA5B /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411EB8326764C700023FA5B /* HomeModel.swift */; };
 		0411EB8926764E7D0023FA5B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411EB8826764E7D0023FA5B /* HomeViewModel.swift */; };
 		0411F08C24B0A11600F95A72 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411F08B24B0A11500F95A72 /* Color.swift */; };
@@ -76,6 +75,7 @@
 		044FEB7826DD44CE00F44413 /* ArtistProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044FEB7A26DD44CE00F44413 /* ArtistProfileViewController.xib */; };
 		044FEB8326DD456300F44413 /* SearchResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044FEB8526DD456300F44413 /* SearchResultTableViewCell.xib */; };
 		044FEB8B26DD458A00F44413 /* NotificationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044FEB8D26DD458A00F44413 /* NotificationsViewController.xib */; };
+		04616F572884EFFE009CC538 /* UpdatePricesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04616F592884EFFE009CC538 /* UpdatePricesVC.xib */; };
 		04643AD8267538EE00510426 /* HelperMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04643AD7267538EE00510426 /* HelperMethods.swift */; };
 		04643AF4267569AA00510426 /* GeneralModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04643AF3267569AA00510426 /* GeneralModel.swift */; };
 		046506E324B5D22600694741 /* OfferPriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046506E124B5D22600694741 /* OfferPriceViewController.swift */; };
@@ -212,7 +212,6 @@
 
 /* Begin PBXFileReference section */
 		040FFCAB26FA19E80097CC4C /* UpdatePricesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePricesVC.swift; sourceTree = "<group>"; };
-		040FFCAC26FA19E80097CC4C /* UpdatePricesVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdatePricesVC.xib; sourceTree = "<group>"; };
 		0411EB8326764C700023FA5B /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		0411EB8826764E7D0023FA5B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		0411F08B24B0A11500F95A72 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -308,6 +307,8 @@
 		044FEB8A26DD456A00F44413 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/SearchResultTableViewCell.strings; sourceTree = "<group>"; };
 		044FEB8C26DD458A00F44413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/NotificationsViewController.xib; sourceTree = "<group>"; };
 		044FEB8F26DD458D00F44413 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/NotificationsViewController.strings; sourceTree = "<group>"; };
+		04616F582884EFFE009CC538 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/UpdatePricesVC.xib; sourceTree = "<group>"; };
+		04616F5B2884F001009CC538 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/UpdatePricesVC.strings; sourceTree = "<group>"; };
 		04643AD7267538EE00510426 /* HelperMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperMethods.swift; sourceTree = "<group>"; };
 		04643AF3267569AA00510426 /* GeneralModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralModel.swift; sourceTree = "<group>"; };
 		046506E124B5D22600694741 /* OfferPriceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferPriceViewController.swift; sourceTree = "<group>"; };
@@ -481,7 +482,7 @@
 			isa = PBXGroup;
 			children = (
 				040FFCAB26FA19E80097CC4C /* UpdatePricesVC.swift */,
-				040FFCAC26FA19E80097CC4C /* UpdatePricesVC.xib */,
+				04616F592884EFFE009CC538 /* UpdatePricesVC.xib */,
 			);
 			path = UpdatePricesVC;
 			sourceTree = "<group>";
@@ -1517,7 +1518,7 @@
 				0484A4AB26F9738300927DC3 /* ArtistWorkCell.xib in Resources */,
 				044FEB2D26DD416200F44413 /* PassWordInstructions.xib in Resources */,
 				044FEB1A26DD40CF00F44413 /* NoArtistAvailableVc.xib in Resources */,
-				040FFCAE26FA19E80097CC4C /* UpdatePricesVC.xib in Resources */,
+				04616F572884EFFE009CC538 /* UpdatePricesVC.xib in Resources */,
 				0436D1F026DFEBBB00BD5276 /* FavouriteViewController.xib in Resources */,
 				0483814926F816B9008D7576 /* OfferPriceViewController.xib in Resources */,
 				0499EB0226F4ACD4000C2DAD /* ArtistRegisterViewController.xib in Resources */,
@@ -2146,6 +2147,15 @@
 				044FEB8F26DD458D00F44413 /* ar */,
 			);
 			name = NotificationsViewController.xib;
+			sourceTree = "<group>";
+		};
+		04616F592884EFFE009CC538 /* UpdatePricesVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04616F582884EFFE009CC538 /* Base */,
+				04616F5B2884F001009CC538 /* ar */,
+			);
+			name = UpdatePricesVC.xib;
 			sourceTree = "<group>";
 		};
 		046E3B6324ADD861006D1385 /* Main.storyboard */ = {

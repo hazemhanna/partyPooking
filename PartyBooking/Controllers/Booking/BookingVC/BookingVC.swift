@@ -41,7 +41,6 @@ class BookingVC: UIViewController {
         }
     }
     
-    
     override func viewWillAppear(_ animated: Bool) {
         let date = Date()
         let formatter = DateFormatter()
@@ -111,26 +110,22 @@ class BookingVC: UIViewController {
         let destinationVC = PartyDateVc.instantiateFromNib()
         self.navigationController?.pushViewController(destinationVC!, animated: true)
       }
-
-    
     
     @IBAction func backButton(sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func resevrButton(sender: UIButton) {
-
         if typeId == nil || countryId == nil || dateLbl.text == "" {
-         if "lang".localized == "ar" {
-             displayMessage(title: "", message: "اكمل البيانات", status: .error, forController: self)
-         }else{
-             displayMessage(title: "", message: "complete all required data", status: .error, forController: self)
-         }
+            if "lang".localized == "ar" {
+                displayMessage(title: "", message: "من فضلك ادخل البيانات كاملة", status: .error, forController: self)
+            }else{
+                displayMessage(title: "", message: "please complete all data", status: .error, forController: self)
+            }
          }else{
          let destinationVC = FinalBookingVC.instantiateFromNib()
-            destinationVC?.artistId = self.artistId
-         self.navigationController?.pushViewController(destinationVC!, animated: true)
+             destinationVC?.artistId = self.artistId
+             self.navigationController?.pushViewController(destinationVC!, animated: true)
          }
-      
-      }
+    }
 }

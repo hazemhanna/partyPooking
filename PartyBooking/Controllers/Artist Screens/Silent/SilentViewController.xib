@@ -8,17 +8,8 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="GE_SS_Two_Bold.otf">
-            <string>GESSTwoBold-Bold</string>
-        </array>
-    </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SilentViewController" customModule="PartyBooking" customModuleProvider="target">
-            <connections>
-                <outlet property="switcherSilent" destination="uYs-ic-Sln" id="f4I-sl-ITN"/>
-            </connections>
-        </placeholder>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SilentViewController" customModule="PartyBooking" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <viewController id="QjM-os-Xea" customClass="SilentViewController" customModule="PartyBooking" customModuleProvider="target">
             <view key="view" contentMode="scaleToFill" id="M6F-xy-e2Z">
@@ -59,15 +50,15 @@
                         <rect key="frame" x="8" y="106" width="398" height="50"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selint" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDw-Lt-PnQ">
-                                <rect key="frame" x="32" y="17.5" width="38.5" height="15"/>
-                                <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="14"/>
+                                <rect key="frame" x="32" y="15.5" width="41" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uYs-ic-Sln">
                                 <rect key="frame" x="329" y="9.5" width="51" height="31"/>
                                 <connections>
-                                    <action selector="btnMaleClickWithSender:" destination="QjM-os-Xea" eventType="touchUpInside" id="WCt-4B-mVY"/>
+                                    <action selector="btnMaleClickWithSender:" destination="QjM-os-Xea" eventType="touchUpInside" id="uA8-6r-PmA"/>
                                 </connections>
                             </switch>
                         </subviews>
@@ -81,9 +72,9 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="when active slient mode ,notifications that you recieve during selint hours will be selint " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sax-sc-trQ">
-                        <rect key="frame" x="32" y="172" width="318" height="28"/>
-                        <fontDescription key="fontDescription" name="GESSTwoBold-Bold" family="GE SS Two" pointSize="13"/>
-                        <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <rect key="frame" x="32" y="172" width="318" height="33.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -105,6 +96,7 @@
                 <outlet property="backButton" destination="ygF-gg-eLU" id="7gh-fr-K08"/>
                 <outlet property="selintLabel" destination="dDw-Lt-PnQ" id="iQr-3a-N0q"/>
                 <outlet property="selintView" destination="nc9-OZ-RL5" id="BH6-dv-Iiy"/>
+                <outlet property="switcher" destination="uYs-ic-Sln" id="1AI-ei-qXj"/>
                 <outlet property="titleLabel" destination="kT1-Bm-cea" id="19S-5y-27e"/>
                 <outlet property="whenActiveLabel" destination="sax-sc-trQ" id="QOU-zx-HoL"/>
             </connections>

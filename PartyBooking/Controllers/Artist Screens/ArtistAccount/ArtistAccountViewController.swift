@@ -13,6 +13,7 @@ import RxCocoa
 class ArtistAccountViewController: UIViewController  ,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var photoCollection: UICollectionView!
+    @IBOutlet weak var photoCollectionHeigh: NSLayoutConstraint!
     @IBOutlet weak var profileImage : UIImageView!
     @IBOutlet weak var profileView : UIView!
     @IBOutlet weak var nameLBl : UILabel!
@@ -21,7 +22,7 @@ class ArtistAccountViewController: UIViewController  ,UICollectionViewDataSource
     @IBOutlet weak var clientPriceLabel : UILabel!
     @IBOutlet weak var liveLabel : UILabel!
     @IBOutlet weak var titleLabel : UILabel!
-    @IBOutlet weak var aboutTextView : UITextView!
+    @IBOutlet weak var aboutTextView : UILabel!
 
     
     let aristId = Helper.getArtistId() ?? 0
@@ -38,19 +39,12 @@ class ArtistAccountViewController: UIViewController  ,UICollectionViewDataSource
     }
     
     func setUPLocalize(){
-        titleLabel.text = "information".localized
+        titleLabel.text = "profile".localized
         aboutMeLabel.text = "aboutMe".localized
         myWorkLabel.text = "myWork".localized
         clientPriceLabel.text = "clientPrice".localized
         liveLabel.text = "live".localized
-        if "lang".localized  == "en" {
-            let font = UIFont(name: "Georgia-Bold", size: 14)
-            titleLabel.font = font
-            aboutMeLabel.font = font
-            myWorkLabel.font = font
-            clientPriceLabel.font = font
-            liveLabel.font = font
-        }
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -135,6 +129,12 @@ extension ArtistAccountViewController{
         self.profileVM.dismissIndicator()
         if data.status ?? false {
             self.work = data.result?.data ?? []
+            if self.work.count > 0 {
+                self.photoCollectionHeigh.constant = 150
+            }else{
+                self.photoCollectionHeigh.constant = 0
+            }
+            
             self.photoCollection.reloadData()
         }
     }, onError: { (error) in

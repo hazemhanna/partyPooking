@@ -21,15 +21,6 @@ class EditDescriptionVc: UIViewController {
     @IBOutlet weak var descriptionTextField: UITextView!
     @IBOutlet weak var fNameTextField: UITextField!
     @IBOutlet weak var lNameTextField: UITextField!
-
-    
-    fileprivate var returnHandler : IQKeyboardReturnKeyHandler!
-
-    let aristId = Helper.getArtistId() ?? 0
-    private let profileVM = ArtistProfileViewModel()
-    var disposeBag = DisposeBag()
-    
-    
     @IBOutlet weak var backButton: UIButton! {
         didSet {
             backButton.setImage(backButton.currentImage?.flipIfNeeded(), for: .normal)
@@ -37,12 +28,26 @@ class EditDescriptionVc: UIViewController {
     }
     
     
+    private let profileVM = ArtistProfileViewModel()
+    fileprivate var returnHandler : IQKeyboardReturnKeyHandler!
+    let aristId = Helper.getArtistId() ?? 0
+    var disposeBag = DisposeBag()
+    
     let listController: FPNCountryListViewController = FPNCountryListViewController(style: .grouped)
     var dialCode = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        DataBinding()
+
+        if "lang".localized  == "en" {
+            descriptionTextField.textAlignment = .left
+            fNameTextField.textAlignment = .left
+            lNameTextField.textAlignment = .left
+            } else {
+            descriptionTextField.textAlignment = .right
+            fNameTextField.textAlignment = .right
+            lNameTextField.textAlignment = .right
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -112,6 +117,7 @@ extension EditDescriptionVc {
             self.fNameTextField.text = (data.result?.artist?.firstName ?? "")
             self.lNameTextField.text =  (data.result?.artist?.lastName ?? "")
             self.descriptionTextField.text = data.result?.artist?.artistDescription ?? ""
+            self.DataBinding()
           }
         
     }, onError: { (error) in

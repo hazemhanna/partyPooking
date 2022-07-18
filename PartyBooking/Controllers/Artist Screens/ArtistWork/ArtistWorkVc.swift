@@ -43,11 +43,10 @@ class ArtistWorkVc: UIViewController  ,UICollectionViewDataSource, UICollectionV
     self.navigationController?.navigationBar.isHidden = false
     }
     
-  
-    
     @IBAction func backButton(sender: UIButton) {
     self.navigationController?.popViewController(animated: true)
     }
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return work.count

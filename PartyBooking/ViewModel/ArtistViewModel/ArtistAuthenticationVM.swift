@@ -42,10 +42,10 @@ struct ArtistAuthenticationVM {
     //MARK:- Attempt to register
     func attemptToRegister(image : UIImage,countryId:Int,bindedEmail: String, bindedFirstName: String,bindedLastName: String,bindedPhone: String,bindedPassword: String,service_id: Int,areas: Int,bank_name: String,bank_account: String,retrieve_money: Int,prices: [[String : Any]],cancel_time: Int,gender: String) -> Observable<ArtistModelLoginJSON> {
         
-        var array = [[String: Any]]()
-        let dic = ["price": 100,"party_type_id" : 3 ,"party_time" : 15,"break_time" : 5]
-        array.removeAll()
-        array.append(dic)
+     //  var array = [[String: Any]]()
+//        let dic = ["price": 100,"party_type_id" : 3 ,"party_time" : 15,"break_time" : 5]
+//        array.removeAll()
+//        array.append(dic)
         
         let params: [String: Any] = [
             "first_name": bindedFirstName ,
@@ -58,14 +58,10 @@ struct ArtistAuthenticationVM {
             "areas": [areas],
             "bank_name": bank_name ,
             "bank_account": bank_account ,
-            "prices": array ,
+            "prices": Helper.getPartyPrice() ?? [[:]],
             "retrieve_money": retrieve_money ,
             "cancel_time": cancel_time ,
-            "gender": gender ,
-            ]
-        
-    
-   
+            "gender": gender]
         let observer = Authentication.shared.postRegisterArtist(params: params)
         return observer
     }
@@ -210,20 +206,12 @@ struct ArtistAuthenticationVM {
                 }else{
                     observer.onNext("")
                 }
-                
                 return Disposables.create()
             })
         }
     
-    
-
-    
     func updatePrice(prices: [[String : Any]]) -> Observable<MessageModel> {
-        var array = [[String: Any]]()
-        let dic = ["price": 100,"party_type_id" : 3 ,"party_time" : 15,"break_time" : 5]
-        array.removeAll()
-        array.append(dic)
-        let params = ["prices": array]
+        let params = ["prices": prices]
         let observer = AddServices.shared.updatePrices(params: params)
         return observer
     }
@@ -232,9 +220,18 @@ struct ArtistAuthenticationVM {
         let observer = GetServices.shared.getReview()
         return observer
     }
-    
-    
-    
-    
-    
+}
+
+extension NSDictionary {
+    func toJSonString() -> String {
+        let dict = self
+        var jsonString = ""
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
+            jsonString = NSString(data: jsonData, encoding: String.Encoding.utf8.rawValue)! as String
+        } catch {
+            print(error.localizedDescription)
+        }
+        return jsonString;
+    }
 }

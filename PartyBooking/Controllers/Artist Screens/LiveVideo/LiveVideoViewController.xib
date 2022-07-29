@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -62,7 +64,7 @@
                                     <constraint firstAttribute="width" constant="30" id="xOc-XC-mpM"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2HW-Br-DFt">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2HW-Br-DFt">
                                 <rect key="frame" x="8" y="16" width="30" height="30"/>
                                 <color key="backgroundColor" red="0.043137254899999998" green="0.4039215686" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -113,7 +115,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="B7O-Qu-Inu" firstAttribute="leading" secondItem="znI-XB-8ct" secondAttribute="trailing" id="7yk-zg-nqs"/>
                             <constraint firstItem="Qhs-n7-T4b" firstAttribute="leading" secondItem="b6l-G8-N7c" secondAttribute="leading" id="91H-vp-cyo"/>
@@ -130,7 +132,8 @@
                         </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                <viewLayoutGuide key="safeArea" id="Ezf-hV-O8f"/>
+                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 <constraints>
                     <constraint firstItem="b6l-G8-N7c" firstAttribute="top" secondItem="5Mh-wX-uEC" secondAttribute="top" id="2Ad-Yb-449"/>
                     <constraint firstItem="Ezf-hV-O8f" firstAttribute="bottom" secondItem="Qhs-n7-T4b" secondAttribute="bottom" id="NLU-0q-9CN"/>
@@ -138,7 +141,6 @@
                     <constraint firstItem="Ezf-hV-O8f" firstAttribute="trailing" secondItem="b6l-G8-N7c" secondAttribute="trailing" id="aXz-Zr-d5Q"/>
                     <constraint firstAttribute="bottom" secondItem="b6l-G8-N7c" secondAttribute="bottom" id="mLL-Oe-WHA"/>
                 </constraints>
-                <viewLayoutGuide key="safeArea" id="Ezf-hV-O8f"/>
             </view>
             <connections>
                 <outlet property="closeBtn" destination="2HW-Br-DFt" id="fqe-4f-fZf"/>
@@ -152,5 +154,8 @@
         <image name="arrows" width="31.5" height="42.5"/>
         <image name="more" width="25" height="7.5"/>
         <image name="عدد الاشخاص" width="22" height="26.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

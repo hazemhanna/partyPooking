@@ -76,7 +76,7 @@ class TabBarController: UITabBarController {
        case .artistaccount:
                 viewController = ArtistAccountViewController.instantiateFromNib()!
         case .artistAvailable:
-                viewController = AvailableReservationViewController.instantiateFromNib()!
+                viewController = ReservationViewController.instantiateFromNib()!
         case .home:
             viewController = ArtistHomeVc.instantiateFromNib()!
         case .live:

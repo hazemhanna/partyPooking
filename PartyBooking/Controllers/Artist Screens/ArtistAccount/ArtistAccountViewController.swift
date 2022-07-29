@@ -122,15 +122,13 @@ extension ArtistAccountViewController{
 
     }).disposed(by: disposeBag)
  }
-
-
     func getWork(artistId : Int) {
         profileVM.getArtistWork(artistId: artistId).subscribe(onNext: { (data) in
         self.profileVM.dismissIndicator()
         if data.status ?? false {
             self.work = data.result?.data ?? []
             if self.work.count > 0 {
-                self.photoCollectionHeigh.constant = 150
+                self.photoCollectionHeigh.constant = 120
             }else{
                 self.photoCollectionHeigh.constant = 0
             }

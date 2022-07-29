@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "User Exprience"; ObjectID = "TC4-vu-cCg"; */
+"TC4-vu-cCg.text" = "تجربة المستخدم";
+
+/* Class = "UITextField"; placeholder = "Add your comment "; ObjectID = "cZX-PH-hK1"; */
+"cZX-PH-hK1.placeholder" = "اضف تعليقك";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "j8O-f9-JnZ"; */
+"j8O-f9-JnZ.normalTitle" = "تاكيد";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "mgv-S1-7vG"; */
+"mgv-S1-7vG.normalTitle" = "الغاء";

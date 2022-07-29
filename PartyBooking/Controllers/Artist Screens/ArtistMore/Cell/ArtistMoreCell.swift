@@ -11,16 +11,12 @@ import UIKit
 class ArtistMoreCell: UITableViewCell {
     @IBOutlet weak var NameLabel: UILabel!
     @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var backButton: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        selectionStyle = .none
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-
     
     func config(Name: String, image : UIImage) {
         self.NameLabel.text = Name

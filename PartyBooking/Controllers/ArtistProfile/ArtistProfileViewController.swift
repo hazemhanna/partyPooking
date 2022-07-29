@@ -27,6 +27,8 @@ class ArtistProfileViewController: UIViewController{
     @IBOutlet weak var rateLabel : UILabel!
     @IBOutlet weak var addressLabel : UILabel!
     @IBOutlet weak var descreptionTV : UILabel!
+    @IBOutlet weak var depositLbl  : UILabel!
+
     
     var token = Helper.getAPIToken() ?? ""
     
@@ -68,7 +70,8 @@ class ArtistProfileViewController: UIViewController{
          commentLabel.text = "comments".localized
         reserveBtn.setTitle("reserve".localized, for: .normal)
         amountLabel.text = "amount".localized
-        taxesLabel.text = "\("taxes".localized) + SR 450"
+        taxesLabel.text = "\("taxes".localized) 450 " + "SR".localized
+        depositLbl.text = "\("deposite".localized) 450 " + "SR".localized
      }
   
     override func viewWillAppear(_ animated: Bool) {
@@ -102,8 +105,6 @@ class ArtistProfileViewController: UIViewController{
         self.present(activityViewController, animated: true, completion: nil)
     }
    
-   
-    
     
     @IBAction func likeButton(sender: UIButton) {
         if token != ""{

@@ -35,7 +35,7 @@
 "information" = "تسجيل حساب جديد";
 "first" = "الاسم الاول";
 "last" = "اسم العائلة";
-"email" = "عنوان البريد الالكتروني";
+"email" = "البريد الالكتروني";
 "phone" = "رقم هاتف المحمول";
 "country" = "الدولة";
 "password" = "الرقم السري";
@@ -141,7 +141,7 @@
 "congratulation"="تهانيا تم تاكيد الحجز";
 "reservationDone" = "تم الحجز";
 ////
-"rateArtist" = "قم بتقييم الفنان";
+"rateArtist" = "قييم الفنان";
 ////
 "offer" = "خصم";
 "team" = "فرقة العرض";
@@ -164,7 +164,6 @@
 "cancelRservation"="حجز ملغي";
 "clientNmae"="اسم العميل:";
 "city"="المدينة:";
-
 "read and agree terms and condition"="اوافق علي الشروط والاحكام";
 "terms and condition"="الشروط والاحكام";
 "about" = "من نحن";
@@ -174,7 +173,6 @@
 "reserve Now" = "احجز الان";
 "From" = "من ";
 "To" = "الي";
-
 "completed" = "مكتلة";
 "new" = "جديد";
 "cancelled" = "ملغاة";
@@ -191,3 +189,6 @@
 "userName" = "اسم المستخدم";
 "Something went wrong in getting data" = "حدث خطا في ارجاع البيانات";
 "userLive" = "البث المباشر";
+"artistType" = "جنس الفنان";
+"privacy" = "الخصوصية";
+"deposite" = "مقدم الحفل";

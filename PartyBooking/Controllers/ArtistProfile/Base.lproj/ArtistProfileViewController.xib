@@ -116,22 +116,22 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I61-nd-Byg">
-                        <rect key="frame" x="16" y="348.5" width="382" height="60"/>
+                        <rect key="frame" x="16" y="348.5" width="382" height="100"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="NGR-5w-A11">
-                                <rect key="frame" x="0.0" y="0.0" width="382" height="60"/>
+                                <rect key="frame" x="0.0" y="0.0" width="382" height="100"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="t18-HQ-6C5">
-                                        <rect key="frame" x="0.0" y="0.0" width="166" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="166" height="100"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="CPc-Yh-KPM">
-                                                <rect key="frame" x="0.0" y="0.0" width="166" height="60"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="166" height="100"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="pin" translatesAutoresizingMaskIntoConstraints="NO" id="ERg-A5-D9f">
-                                                        <rect key="frame" x="0.0" y="0.0" width="12" height="60"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="12" height="100"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="saudi arabd kingdom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XkE-7v-vhI">
-                                                        <rect key="frame" x="15" y="0.0" width="151" height="60"/>
+                                                        <rect key="frame" x="15" y="0.0" width="151" height="100"/>
                                                         <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="15"/>
                                                         <color key="textColor" red="0.043137254899999998" green="0.4039215686" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -140,38 +140,41 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="g1j-DL-BfD">
-                                        <rect key="frame" x="216" y="0.0" width="166" height="60"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="g1j-DL-BfD">
+                                        <rect key="frame" x="216" y="0.0" width="166" height="100"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3r0-Es-wtc">
-                                                <rect key="frame" x="66" y="0.0" width="34" height="25"/>
+                                                <rect key="frame" x="66" y="0.0" width="34" height="24"/>
                                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
                                                 <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SR 98.0000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eel-MO-7ih">
-                                                <rect key="frame" x="40.5" y="25" width="85" height="18"/>
+                                                <rect key="frame" x="40.5" y="32" width="85" height="18"/>
                                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
                                                 <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ SR 450 taxis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zm7-GM-qQL">
-                                                <rect key="frame" x="32.5" y="43" width="101.5" height="17"/>
+                                                <rect key="frame" x="32.5" y="58" width="101.5" height="17"/>
+                                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="15"/>
+                                                <color key="textColor" red="0.043137254899999998" green="0.4039215686" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="356 deposit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyR-lM-fpU">
+                                                <rect key="frame" x="41.5" y="83" width="83" height="17"/>
                                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="15"/>
                                                 <color key="textColor" red="0.043137254899999998" green="0.4039215686" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="b6R-VC-V9f"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="60" id="EF7-20-5Pb"/>
+                            <constraint firstAttribute="height" constant="100" id="EF7-20-5Pb"/>
                             <constraint firstItem="NGR-5w-A11" firstAttribute="leading" secondItem="I61-nd-Byg" secondAttribute="leading" id="XBI-gG-VWw"/>
                             <constraint firstAttribute="trailing" secondItem="NGR-5w-A11" secondAttribute="trailing" id="bA3-mS-Mqn"/>
                             <constraint firstAttribute="bottom" secondItem="NGR-5w-A11" secondAttribute="bottom" id="nx3-Oz-Ads"/>
@@ -179,13 +182,13 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="comments:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqf-wB-Muo">
-                        <rect key="frame" x="8" y="416.5" width="80.5" height="17"/>
+                        <rect key="frame" x="8" y="456.5" width="80.5" height="17"/>
                         <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fDe-5x-lMp">
-                        <rect key="frame" x="8" y="441.5" width="398" height="412.5"/>
+                        <rect key="frame" x="8" y="481.5" width="398" height="372.5"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <connections>
                             <outlet property="dataSource" destination="9yo-v9-u7e" id="0gs-PY-neg"/>
@@ -255,6 +258,7 @@
                 <outlet property="backButton" destination="JpU-pT-8Mk" id="T1R-F4-5GY"/>
                 <outlet property="commentLabel" destination="zqf-wB-Muo" id="Fi6-Bb-7ar"/>
                 <outlet property="commentTableView" destination="fDe-5x-lMp" id="R0l-Dv-LIc"/>
+                <outlet property="depositLbl" destination="oyR-lM-fpU" id="xiJ-7v-C7p"/>
                 <outlet property="descreptionTV" destination="Fy0-vb-4aw" id="Pew-yt-a6A"/>
                 <outlet property="likeBtn" destination="yCM-jc-cXs" id="Xe1-Lm-pvM"/>
                 <outlet property="photoCollection" destination="GCX-4g-ljH" id="m0j-OQ-dVP"/>

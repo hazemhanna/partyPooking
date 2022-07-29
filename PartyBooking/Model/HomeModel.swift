@@ -24,16 +24,9 @@ struct HomeModel: Codable {
 // MARK: - BestArtists
 struct BestArtistsModel: Codable {
     let data: [Artists]?
-    let total, count, perPage, currentPage: Int?
-    let totalPages: Int?
-    let prev, next: Int?
-
+    
     enum CodingKeys: String, CodingKey {
-        case data, total, count
-        case perPage = "per_page"
-        case currentPage = "current_page"
-        case totalPages = "total_pages"
-        case prev, next
+        case data
     }
 }
 

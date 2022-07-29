@@ -11,11 +11,9 @@ import Foundation
 import RxSwift
 import SVProgressHUD
 
-
 struct HomeViewModel {
-   
+    
     var country = BehaviorSubject<String>(value: "")
-
     
     func showIndicator() {
         SVProgressHUD.show()
@@ -23,12 +21,10 @@ struct HomeViewModel {
     func dismissIndicator() {
         SVProgressHUD.dismiss()
     }
-    
+
     func showProgress(progress: Float) {
         SVProgressHUD.showProgress(progress)
     }
-
-    
     func getHome() -> Observable<HomeModelJSON> {
         let observer = GetServices.shared.getHome()
         return observer
@@ -44,12 +40,10 @@ struct HomeViewModel {
         return observer
     }
     
-    
     func getArea() -> Observable<AreaModelJson> {
         let observer = GetServices.shared.getArea()
         return observer
     }
-    
     
     func getBestArtist() -> Observable<BestArtistModelJSON> {
         let observer = GetServices.shared.getBestArtist()
@@ -57,27 +51,20 @@ struct HomeViewModel {
     }
     
     func getArtistDetails(artistId  : Int) -> Observable<ArtistProfileModelJSON> {
-        let params: [String: Any] = [
-            "artist_id": artistId,
-            ]
+        let params: [String: Any] = ["artist_id": artistId]
         let observer = GetServices.shared.getArtistDetails(params: params)
         return observer
     }
     
     
     func getArtistWork(artistId  : Int) -> Observable<ArtistWorkModelJSON> {
-        let params: [String: Any] = [
-            "artist_id": artistId,
-            ]
+        let params: [String: Any] = ["artist_id": artistId]
         let observer = GetServices.shared.getArtistWork(params: params)
         return observer
     }
     
-    
     func addFavourite(artistId : Int ) -> Observable<AddFavouriteModel> {
-        let params: [String: Any] = [
-            "artist_id": artistId,
-            ]
+        let params: [String: Any] = ["artist_id": artistId]
         let observer = AddServices.shared.addFavourite(params: params)
         return observer
     }
@@ -97,20 +84,16 @@ struct HomeViewModel {
     }
    
     func getSrearchOffer(area_id:Int, party_type_id : Int,date :String) -> Observable<OffersModelJSON> {
-        
         let params: [String: Any] = [
             "date": date,
             "area_id": area_id,
-            "part_type_id": party_type_id,]
-        
+            "part_type_id": party_type_id]
         let observer = AddServices.shared.OffersSearch(params: params)
         return observer
     }
-    
     
     func getNotification() -> Observable<NotificationModelJSON> {
         let observer = GetServices.shared.getNotification()
         return observer
     }
-    
 }

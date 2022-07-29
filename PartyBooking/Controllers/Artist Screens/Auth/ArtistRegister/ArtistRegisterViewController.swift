@@ -38,7 +38,7 @@ class ArtistRegisterViewController: UIViewController {
     @IBOutlet weak var genderTextField: TextFieldDropDown!
     @IBOutlet weak var banckTextField: UITextField!
     @IBOutlet weak var banckAcountTextField: UITextField!
-
+    @IBOutlet weak var uploadedImage : UIImageView!
     
     fileprivate var returnHandler : IQKeyboardReturnKeyHandler!
     private let authModel = ArtistAuthenticationVM()
@@ -167,7 +167,6 @@ class ArtistRegisterViewController: UIViewController {
         banckAcountTextField.placeholder = "bank".localized
         //banckTextField.placeholder = banckLabel.text
         if "lang".localized  == "en" {
-
             emailTextField.textAlignment = .left
             passTextField.textAlignment = .left
             lNameTextField.textAlignment = .left
@@ -178,28 +177,7 @@ class ArtistRegisterViewController: UIViewController {
             serviceTextField.textAlignment = .left
             banckTextField.textAlignment = .left
             banckAcountTextField.textAlignment = .left
-
-            let font = UIFont(name: "Georgia-Bold", size: 14)
-            titleLabel.font = font
-            fNameLabel.font = font
-            fNameTextField.font = font
-            lNameLabel.font = font
-            lNameTextField.font = font
-            emailLabel.font = font
-            emailTextField.font = font
-            phoneLabel.font = font
-            phoneTextField.font =  font
-            passwordLabel.font = font
-            passTextField.font = font
-            countryLabel.font = font
-            countryTextField.font  = font
-            serviceLabel.font = font
-            serviceTextField.font = font
-            areaLabel.font = font
-            areaTextField.font =  font
-            banckLabel.font = font
-            banckTextField.font = font
-            nextBtn.titleLabel!.font =  UIFont(name: "Georgia-Bold", size: 17)
+            genderTextField.textAlignment = .left
         } else {
             emailTextField.textAlignment = .right
             emailTextField.textAlignment = .right
@@ -212,6 +190,8 @@ class ArtistRegisterViewController: UIViewController {
             serviceTextField.textAlignment = .right
             banckTextField.textAlignment = .right
             banckAcountTextField.textAlignment = .right
+            genderTextField.textAlignment = .right
+
         }
         
     }
@@ -311,8 +291,11 @@ extension ArtistRegisterViewController : UIImagePickerControllerDelegate, UINavi
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
             self.profliePic =  editedImage
+            self.uploadedImage.image = editedImage
+
         } else if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             self.profliePic =  originalImage
+            self.uploadedImage.image = originalImage
         }
         dismiss(animated: true, completion: nil)
     }

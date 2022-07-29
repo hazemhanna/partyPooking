@@ -20,13 +20,18 @@ target 'PartyBooking' do
   pod 'RxCocoa', '~> 5'
   pod 'SVProgressHUD', '~> 2.2.5'
   pod 'SwiftMessages', '~> 6.0.2'
-  pod 'FBSDKLoginKit'
   pod 'GoogleSignIn'
   pod 'MOLH'
   pod 'IQKeyboardManagerSwift'
   pod 'TwitterKit5'
   pod 'JWTDecode'
-  
+  pod 'FBSDKCoreKit', '~> 5.5'
+  pod 'FBSDKLoginKit', '~> 5.5'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Messaging'
+
+   
   target 'PartyBookingTests' do
     inherit! :search_paths
     # Pods for testing

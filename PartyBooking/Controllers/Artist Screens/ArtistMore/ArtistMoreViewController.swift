@@ -7,22 +7,26 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class ArtistMoreViewController: UIViewController {
     
     @IBOutlet weak var tableView : UITableView!
     @IBOutlet weak var titleLabel  : UILabel!
     var token = Helper.getAPIToken() ?? ""
-
+    var partPice = [PartPice]()
+    private let profileVM = ArtistProfileViewModel()
+    var disposeBag = DisposeBag()
     
     var Items = [SideMenuModel]() {
         didSet {
             DispatchQueue.main.async {
-                //self.ProfileVM.fetchItems(data: self.Items)
                 self.tableView.reloadData()
             }
         }
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,22 +37,28 @@ class ArtistMoreViewController: UIViewController {
         if token != "" {
             if "lang".localized == "ar" {
                      self.Items = [
-                               SideMenuModel(Name: "الفواتير", Id: "bills", image: #imageLiteral(resourceName: "1")),
+                               SideMenuModel(Name: "اعدادات تواريخ الحجوزات", Id: "bills", image: #imageLiteral(resourceName: "1")),
                                SideMenuModel(Name: "تجربة المستخدمين", Id: "exprience", image: #imageLiteral(resourceName: "3")),
-                               SideMenuModel(Name: "الدعم الفني", Id: "callCenter", image: #imageLiteral(resourceName: "support")),
                                SideMenuModel(Name: "وضع عدم الازعاج", Id: "silent", image: #imageLiteral(resourceName: "4")),
+                               SideMenuModel(Name: "اسعار الحفلات", Id: "partyPrice", image: #imageLiteral(resourceName: "1")),
                                SideMenuModel(Name: "الاعدادات", Id: "setting", image: #imageLiteral(resourceName: "settings (1)")),
+                               SideMenuModel(Name: "الدعم الفني", Id: "callCenter", image: #imageLiteral(resourceName: "support")),
                                SideMenuModel(Name: "من نحن", Id: "about", image: #imageLiteral(resourceName: "5-2")),
+                               SideMenuModel(Name: "الشروط والاحكام", Id: "terms", image: #imageLiteral(resourceName: "5-2")),
+                              SideMenuModel(Name: "الخصوصية", Id: "privacy", image: #imageLiteral(resourceName: "5-2")),
                                SideMenuModel(Name: "تسجيل الخروج", Id: "logOut", image: #imageLiteral(resourceName: "5-3")),
                            ]
                 }else {
                        self.Items = [
-                               SideMenuModel(Name: "Bills", Id: "bills", image: #imageLiteral(resourceName: "1")),
+                               SideMenuModel(Name: "setting reservation dates", Id: "bills", image: #imageLiteral(resourceName: "1")),
                                SideMenuModel(Name: "User Exprience", Id: "exprience", image: #imageLiteral(resourceName: "3")),
-                               SideMenuModel(Name: "Call Center", Id: "callCenter", image: #imageLiteral(resourceName: "support")),
                                SideMenuModel(Name: "Silent", Id: "silent", image: #imageLiteral(resourceName: "4")),
+                               SideMenuModel(Name: "party Prices", Id: "partyPrice", image: #imageLiteral(resourceName: "1")),
+                               SideMenuModel(Name: "Call Center", Id: "callCenter", image: #imageLiteral(resourceName: "support")),
                                SideMenuModel(Name: "Setting", Id: "setting", image: #imageLiteral(resourceName: "settings (1)")),
                                SideMenuModel(Name: "About", Id: "about", image: #imageLiteral(resourceName: "5-2")),
+                               SideMenuModel(Name: "Terms & conditions", Id: "terms", image: #imageLiteral(resourceName: "5-2")),
+                               SideMenuModel(Name: "privacy", Id: "privacy", image: #imageLiteral(resourceName: "5-2")),
                                SideMenuModel(Name: "logOut", Id: "logOut", image: #imageLiteral(resourceName: "5-3")),
                            ]
             }
@@ -58,6 +68,8 @@ class ArtistMoreViewController: UIViewController {
                                SideMenuModel(Name: "العروض", Id: "Offers", image: #imageLiteral(resourceName: "1")),
                                SideMenuModel(Name: "الاعدادات", Id: "setting", image: #imageLiteral(resourceName: "settings (1)")),
                                SideMenuModel(Name: "من نحن", Id: "about", image: #imageLiteral(resourceName: "5-2")),
+                               SideMenuModel(Name: "الشروط والاحكام", Id: "terms", image: #imageLiteral(resourceName: "5-2")),
+                              SideMenuModel(Name: "الخصوصية", Id: "privacy", image: #imageLiteral(resourceName: "5-2")),
                                SideMenuModel(Name: "تسجيل دخول", Id: "Login", image: #imageLiteral(resourceName: "5-3")),
                            ]
                 }else {
@@ -65,24 +77,32 @@ class ArtistMoreViewController: UIViewController {
                                SideMenuModel(Name: "Offers", Id: "Offers", image: #imageLiteral(resourceName: "1")),
                                SideMenuModel(Name: "Setting", Id: "setting", image: #imageLiteral(resourceName: "settings (1)")),
                                SideMenuModel(Name: "About", Id: "about", image: #imageLiteral(resourceName: "5-2")),
+                               SideMenuModel(Name: "Terms & conditions", Id: "terms", image: #imageLiteral(resourceName: "5-2")),
+                               SideMenuModel(Name: "privacy", Id: "privacy", image: #imageLiteral(resourceName: "5-2")),
                                SideMenuModel(Name: "Login", Id: "Login", image: #imageLiteral(resourceName: "5-3")),
                            ]
             }
         }
     }
     
+    
+    
        func selectionAction(index: Int) {
            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-               switch self.Items[index].Id ?? "" {
+               switch self.Items[index].Id {
                case "bills":
-                let destinationVC = ReservationViewController.instantiateFromNib()
+                let destinationVC = AvailableReservationViewController.instantiateFromNib()
                 self.navigationController?.pushViewController(destinationVC!, animated: true)
                case "exprience":
                 let destinationVC = RateViewController.instantiateFromNib()
                 self.navigationController?.pushViewController(destinationVC!, animated: true)
-                
                case "notification":
                    print("notification")
+               case "partyPrice":
+               let destinationVC = UpdatePricesVC.instantiateFromNib()
+                destinationVC?.partPice = self.partPice
+                self.navigationController?.pushViewController(destinationVC!, animated: true)
+                   
                case "callCenter":
                 let destinationVC = CallCenterViewController.instantiateFromNib()
                 self.navigationController?.pushViewController(destinationVC!, animated: true)
@@ -97,6 +117,19 @@ class ArtistMoreViewController: UIViewController {
                 let main = TermsAndConditionVc.instantiateFromNib()
                  main?.type = "about"
                 self.navigationController?.pushViewController(main!, animated: true)
+               case "terms":
+                   let main = TermsAndConditionVc.instantiateFromNib()
+                    main?.type = "terms"
+                   self.navigationController?.pushViewController(main!, animated: true)
+               case "privacy":
+               let main = TermsAndConditionVc.instantiateFromNib()
+               main?.type = "privacy"
+               self.navigationController?.pushViewController(main!, animated: true)
+               case "Login"  :
+                    let main = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Nav")
+                   if let appDelegate = UIApplication.shared.delegate {
+                       appDelegate.window??.rootViewController = main
+               }
                case "logOut":
                    let alert = UIAlertController(title: "LogOut".localized, message: "Are".localized, preferredStyle: .alert)
                    let yesAction = UIAlertAction(title: "YES".localized, style: .default) { (action) in
@@ -129,6 +162,9 @@ class ArtistMoreViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        if token != "" {
+            getProfile()
+        }
         self.navigationController?.navigationBar.isHidden = true
     }
     override func viewWillDisappear(_ animated: Bool) {
@@ -138,6 +174,18 @@ class ArtistMoreViewController: UIViewController {
     @IBAction func backButton(sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    func getProfile() {
+        profileVM.getProfile().subscribe(onNext: { (data) in
+        self.profileVM.dismissIndicator()
+        if data.status ?? false {
+            self.partPice = data.result?.artist?.partPices ?? []
+        }
+    }, onError: { (error) in
+        self.profileVM.dismissIndicator()
+
+    }).disposed(by: disposeBag)
+ }
     
 }
 
@@ -159,5 +207,4 @@ extension ArtistMoreViewController : UITableViewDelegate , UITableViewDataSource
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(50)
     }
-    
 }

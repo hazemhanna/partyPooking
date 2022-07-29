@@ -177,9 +177,11 @@ extension AccountViewController : UIImagePickerControllerDelegate, UINavigationC
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            self.profileVM.showIndicator()
             self.profilehImage.image =  editedImage
             self.chagePhoto(image: editedImage)
         } else if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            self.profileVM.showIndicator()
             self.profilehImage.image =  originalImage
             self.chagePhoto(image: originalImage)
 

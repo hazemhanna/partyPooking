@@ -22,7 +22,6 @@
 		0422501A265E715000723400 /* ForgetPasswordVC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04225018265E715000723400 /* ForgetPasswordVC3.swift */; };
 		0422501B265E715000723400 /* ForgetPasswordVC3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04225019265E715000723400 /* ForgetPasswordVC3.xib */; };
 		04225029265E835B00723400 /* RateArtistVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04225027265E835B00723400 /* RateArtistVc.swift */; };
-		0422502A265E835B00723400 /* RateArtistVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04225028265E835B00723400 /* RateArtistVc.xib */; };
 		04225031265E851800723400 /* CancelReservationVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422502F265E851800723400 /* CancelReservationVc.swift */; };
 		04225039265EC08100723400 /* ReservetionDetailsVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04225037265EC08000723400 /* ReservetionDetailsVc.swift */; };
 		0425067A26F52CBC00C39A2F /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0425067C26F52CBC00C39A2F /* LoginVC.xib */; };
@@ -178,6 +177,7 @@
 		04DFB9F526E3EEAC00C3A9B1 /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DFB9F426E3EEAC00C3A9B1 /* NotificationModel.swift */; };
 		04E02901265D6E7200F5E373 /* PartyPriceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E028FF265D6E7200F5E373 /* PartyPriceCell.swift */; };
 		04E0290F265D77D600F5E373 /* SettingVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0290D265D77D600F5E373 /* SettingVc.swift */; };
+		04ECA5692891FFD1006D4886 /* RateArtistVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04ECA56B2891FFD1006D4886 /* RateArtistVc.xib */; };
 		04F2BA39265AA462007F4E53 /* PartyPriceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2BA37265AA462007F4E53 /* PartyPriceVC.swift */; };
 		04F2BA4D265ACE39007F4E53 /* ArtistHomeVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2BA4B265ACE39007F4E53 /* ArtistHomeVc.swift */; };
 		04F2BA4E265ACE39007F4E53 /* ArtistHomeVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F2BA4C265ACE39007F4E53 /* ArtistHomeVc.xib */; };
@@ -226,7 +226,6 @@
 		04225018265E715000723400 /* ForgetPasswordVC3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordVC3.swift; sourceTree = "<group>"; };
 		04225019265E715000723400 /* ForgetPasswordVC3.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgetPasswordVC3.xib; sourceTree = "<group>"; };
 		04225027265E835B00723400 /* RateArtistVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateArtistVc.swift; sourceTree = "<group>"; };
-		04225028265E835B00723400 /* RateArtistVc.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RateArtistVc.xib; sourceTree = "<group>"; };
 		0422502F265E851800723400 /* CancelReservationVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelReservationVc.swift; sourceTree = "<group>"; };
 		04225037265EC08000723400 /* ReservetionDetailsVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservetionDetailsVc.swift; sourceTree = "<group>"; };
 		0425067B26F52CBC00C39A2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LoginVC.xib; sourceTree = "<group>"; };
@@ -429,6 +428,8 @@
 		04DFB9F426E3EEAC00C3A9B1 /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
 		04E028FF265D6E7200F5E373 /* PartyPriceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyPriceCell.swift; sourceTree = "<group>"; };
 		04E0290D265D77D600F5E373 /* SettingVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVc.swift; sourceTree = "<group>"; };
+		04ECA56A2891FFD1006D4886 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/RateArtistVc.xib; sourceTree = "<group>"; };
+		04ECA56D2891FFD6006D4886 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/RateArtistVc.strings; sourceTree = "<group>"; };
 		04F2BA37265AA462007F4E53 /* PartyPriceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyPriceVC.swift; sourceTree = "<group>"; };
 		04F2BA4B265ACE39007F4E53 /* ArtistHomeVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistHomeVc.swift; sourceTree = "<group>"; };
 		04F2BA4C265ACE39007F4E53 /* ArtistHomeVc.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistHomeVc.xib; sourceTree = "<group>"; };
@@ -568,7 +569,7 @@
 			isa = PBXGroup;
 			children = (
 				04225027265E835B00723400 /* RateArtistVc.swift */,
-				04225028265E835B00723400 /* RateArtistVc.xib */,
+				04ECA56B2891FFD1006D4886 /* RateArtistVc.xib */,
 			);
 			path = RateArtistVc;
 			sourceTree = "<group>";
@@ -877,8 +878,8 @@
 				04FAF37624DAA46700F73189 /* ConfigURLs.swift */,
 				048569C32665407800B2670D /* Authentication.swift */,
 				04FAF37824DAED2D00F73189 /* GetServices.swift */,
-				048569BE2665405700B2670D /* AddServices.swift */,
 				04F2BA6D265B1548007F4E53 /* Helper.swift */,
+				048569BE2665405700B2670D /* AddServices.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -1546,7 +1547,7 @@
 				04400C7126E1A2CA00CA57DA /* BookingVC.xib in Resources */,
 				046506EE24B60B8900694741 /* ArtistAccountViewController.xib in Resources */,
 				044FEB6026DD439500F44413 /* UserRegisterViewController.xib in Resources */,
-				0422502A265E835B00723400 /* RateArtistVc.xib in Resources */,
+				04ECA5692891FFD1006D4886 /* RateArtistVc.xib in Resources */,
 				044FEB2226DD412E00F44413 /* PartyDateVc.xib in Resources */,
 				0465070D24B7A31D00694741 /* SilentViewController.xib in Resources */,
 				0436D20026DFEC2500BD5276 /* OffersViewController.xib in Resources */,
@@ -2248,6 +2249,15 @@
 			name = FavouriteTableViewCell.xib;
 			sourceTree = "<group>";
 		};
+		04ECA56B2891FFD1006D4886 /* RateArtistVc.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04ECA56A2891FFD1006D4886 /* Base */,
+				04ECA56D2891FFD6006D4886 /* ar */,
+			);
+			name = RateArtistVc.xib;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -2374,7 +2384,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_TEAM = 5R2Z9F2376;
 				INFOPLIST_FILE = PartyBooking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2523,7 +2533,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_TEAM = 5R2Z9F2376;
 				INFOPLIST_FILE = PartyBooking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

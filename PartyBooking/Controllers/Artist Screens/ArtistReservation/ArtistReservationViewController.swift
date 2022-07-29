@@ -19,7 +19,6 @@ class ArtistReservationViewController: UIViewController ,FSCalendarDataSource, F
     @IBOutlet weak var searchTf: UITextField!
     @IBOutlet weak var searchImage: UIImage!
     fileprivate var returnHandler : IQKeyboardReturnKeyHandler!
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +26,6 @@ class ArtistReservationViewController: UIViewController ,FSCalendarDataSource, F
         setUPLocalize()
         updateReturnHandler()
     }
-    
     
     func updateReturnHandler(){
         if returnHandler == nil {
@@ -42,13 +40,7 @@ class ArtistReservationViewController: UIViewController ,FSCalendarDataSource, F
     func setUPLocalize(){
            titleLabel.text = "reservation".localized
            searchTf.placeholder = "searchIn".localized
-        if "lang".localized  == "en" {
-             let font = UIFont(name: "Georgia-Bold", size: 14)
-             titleLabel.font = font
-             searchTf.font =  font
-         }
     }
-    
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         if monthPosition == .previous || monthPosition == .next {
@@ -73,13 +65,10 @@ class ArtistReservationViewController: UIViewController ,FSCalendarDataSource, F
         
     }
     
-    
-    
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
-        
-        
     }
+    
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = false
         
@@ -88,8 +77,8 @@ class ArtistReservationViewController: UIViewController ,FSCalendarDataSource, F
     @IBAction func backButton(sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
+    
 }
-
 
 extension ArtistReservationViewController : UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

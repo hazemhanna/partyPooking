@@ -95,7 +95,6 @@ class AvailableReservationViewController: UIViewController{
     
     @IBAction func availableBtn(sender: UIButton) {
         self.artistProfile.showIndicator()
-
         availability(dates: self.dates, status: "active")
     }
     

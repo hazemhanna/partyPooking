@@ -101,7 +101,6 @@ extension ReservationViewController : UITableViewDelegate , UITableViewDataSourc
             cell.confirmNumberLabel.textColor = #colorLiteral(red: 0.4392156863, green: 0.4392156863, blue: 0.4392156863, alpha: 1)
             cell.NumberLabel.textColor = #colorLiteral(red: 0.4392156863, green: 0.4392156863, blue: 0.4392156863, alpha: 1)
             cell.NumberLabel.text = "\(self.currentReservation[indexPath.row].id ?? 0)"
-
             cell.cancel = {
                 let vc = CancelReservationVc.instantiateFromNib()
                vc!.onClickCancel = {
@@ -111,7 +110,6 @@ extension ReservationViewController : UITableViewDelegate , UITableViewDataSourc
                     vc?.firstView.isHidden = true
                     vc?.secondView.isHidden = false
                 }
-                
                 vc?.onClickDone = {
                     self.presentingViewController?.dismiss(animated: true)
                     self.canceReservation(booking_id: self.currentReservation[indexPath.row].id ?? 0, cancel_reason:  vc?.reasonTF.text ?? "")
@@ -119,7 +117,21 @@ extension ReservationViewController : UITableViewDelegate , UITableViewDataSourc
                self.present(vc!, animated: true, completion: nil)
            }
         }else if type == "ended"{
-            cell.cancelBtn.isHidden = true
+            if Helper.getType() == "user" {
+            cell.cancelBtn.setTitle("rateArtist".localized, for: .normal)
+            cell.cancel = {
+                let vc = RateArtistVc.instantiateFromNib()
+               vc!.onClickCancel = {
+                   self.presentingViewController?.dismiss(animated: true)
+               }
+              vc?.onClickDone = {
+                  self.rateReservation(booking_id:  self.currentReservation[indexPath.row].id ?? 0, comment: vc?.commentTF.text ?? "" , rate: Int(vc?.rate.rating ?? 0) )
+                }
+               self.present(vc!, animated: true, completion: nil)
+             }
+            }else{
+                cell.cancelBtn.isHidden = true
+            }
             cell.confirmNumberLabel.textColor = #colorLiteral(red: 0.4392156863, green: 0.4392156863, blue: 0.4392156863, alpha: 1)
             cell.NumberLabel.textColor = #colorLiteral(red: 0.4392156863, green: 0.4392156863, blue: 0.4392156863, alpha: 1)
             cell.NumberLabel.text = "\(self.endedReservation[indexPath.row].id ?? 0)"
@@ -128,9 +140,7 @@ extension ReservationViewController : UITableViewDelegate , UITableViewDataSourc
             cell.cancelBtn.isHidden = true
             cell.confirmNumberLabel.textColor = #colorLiteral(red: 0.9529411765, green: 0.3137254902, blue: 0.3137254902, alpha: 1)
             cell.NumberLabel.textColor = #colorLiteral(red: 0.9529411765, green: 0.3137254902, blue: 0.3137254902, alpha: 1)
-
         }
-        
         return cell
     }
     
@@ -176,7 +186,6 @@ func getReservation() {
          displayMessage(title: "", message: "Something went wrong in getting data".localized, status: .error, forController: self)
     }).disposed(by: disposeBag)
  }
-
     
     func canceReservation(booking_id:Int,cancel_reason : String) {
         reservationVM.cancelReservation(booking_id: booking_id, cancel_reason: cancel_reason).subscribe(onNext: { (data) in
@@ -190,5 +199,21 @@ func getReservation() {
     }).disposed(by: disposeBag)
     }
 
+    func rateReservation(booking_id:Int,comment : String, rate : Int) {
+        reservationVM.rateReservation(booking_id:booking_id,comment : comment, rate : rate).subscribe(onNext: { (data) in
+        self.reservationVM.dismissIndicator()
+        if data.status ?? false {
+            if "lang".localized == "ar" {
+                displayMessage(title: "", message: "تم بنجاح تقييم الفنان", status: .success, forController: self)
+            }else{
+                displayMessage(title: "", message: "done succesufuly rate artist", status: .success, forController: self)
+             }
+        }
+    }, onError: { (error) in
+        self.reservationVM.dismissIndicator()
+    }).disposed(by: disposeBag)
+    }
+
+    
     
 }

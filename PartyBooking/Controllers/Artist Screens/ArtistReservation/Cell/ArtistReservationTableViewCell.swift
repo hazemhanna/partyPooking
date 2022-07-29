@@ -16,15 +16,11 @@ class ArtistReservationTableViewCell: UITableViewCell {
     @IBOutlet weak var clientValueLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var cityValueLabel: UILabel!
-
-
     override func awakeFromNib() {
         super.awakeFromNib()
         setUPLocalize()
     }
-    
      func setUPLocalize(){
-        
         confirmBtn.text = "confirmeRservation".localized
         clientLabel.text = "clientNmae".localized
         cityLabel.text = "city".localized
@@ -39,10 +35,7 @@ class ArtistReservationTableViewCell: UITableViewCell {
             cityValueLabel.font =  font
          }
     }
-    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
     }
-    
 }

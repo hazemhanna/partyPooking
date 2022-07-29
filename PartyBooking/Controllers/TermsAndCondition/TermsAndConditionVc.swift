@@ -33,10 +33,12 @@ class TermsAndConditionVc: UIViewController {
         if type == "terms"{
             getTerms()
             titleLbl.text = "terms and condition".localized
-        }else{
+        }else if type ==  "about"{
             about()
             titleLbl.text = "about".localized
-
+        }else {
+            about()
+            titleLbl.text = "privacy".localized
         }
     }
     

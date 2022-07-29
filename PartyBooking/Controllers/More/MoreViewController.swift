@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class MoreViewController: UIViewController {
 
     @IBOutlet weak var tableView : UITableView!
     @IBOutlet weak var titleLabel : UILabel!
     @IBOutlet weak var version  : UILabel!
-    var token = Helper.getAPIToken() ?? ""
 
     var Items = [SideMenuModel]() {
         didSet {
@@ -22,6 +23,10 @@ class MoreViewController: UIViewController {
             }
         }
     }
+        
+    var token = Helper.getAPIToken() ?? ""
+    private let profileVM = ProfileViewModel()
+    var disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +42,7 @@ class MoreViewController: UIViewController {
                                SideMenuModel(Name: "حسابي", Id: "account", image: #imageLiteral(resourceName: "5")),
                                SideMenuModel(Name: "من نحن", Id: "about", image: #imageLiteral(resourceName: "5-2")),
                                SideMenuModel(Name: "الشروط والاحكام", Id: "terms", image: #imageLiteral(resourceName: "5-2")),
+                              SideMenuModel(Name: "الخصوصية", Id: "privacy", image: #imageLiteral(resourceName: "5-2")),
                                SideMenuModel(Name: "تسجيل الخروج", Id: "logOut", image: #imageLiteral(resourceName: "5-3"))]
                 }else {
                        self.Items = [SideMenuModel(Name: "Offers", Id: "Offers", image: #imageLiteral(resourceName: "1")),
@@ -46,6 +52,7 @@ class MoreViewController: UIViewController {
                                SideMenuModel(Name: "Account", Id: "account", image: #imageLiteral(resourceName: "5")),
                                SideMenuModel(Name: "About", Id: "about", image: #imageLiteral(resourceName: "5-2")),
                                SideMenuModel(Name: "Terms & conditions", Id: "terms", image: #imageLiteral(resourceName: "5-2")),
+                               SideMenuModel(Name: "privacy", Id: "privacy", image: #imageLiteral(resourceName: "5-2")),
                                SideMenuModel(Name: "logOut", Id: "logOut", image: #imageLiteral(resourceName: "5-3"))]
             }
         }else{
@@ -54,12 +61,14 @@ class MoreViewController: UIViewController {
                                SideMenuModel(Name: "الاعدادات", Id: "setting", image: #imageLiteral(resourceName: "settings (1)")),
                                SideMenuModel(Name: "من نحن", Id: "about", image: #imageLiteral(resourceName: "5-2")),
                                SideMenuModel(Name: "الشروط والاحكام", Id: "terms", image: #imageLiteral(resourceName: "5-2")),
+                              SideMenuModel(Name: "الخصوصية", Id: "privacy", image: #imageLiteral(resourceName: "5-2")),
                                SideMenuModel(Name: "تسجيل دخول", Id: "Login", image: #imageLiteral(resourceName: "5-3"))]
                 }else {
                        self.Items = [SideMenuModel(Name: "Offers", Id: "Offers", image: #imageLiteral(resourceName: "1")),
                                SideMenuModel(Name: "Setting", Id: "setting", image: #imageLiteral(resourceName: "settings (1)")),
                                SideMenuModel(Name: "About", Id: "about", image: #imageLiteral(resourceName: "5-2")),
                                SideMenuModel(Name: "Terms & conditions", Id: "terms", image: #imageLiteral(resourceName: "5-2")),
+                               SideMenuModel(Name: "privacy", Id: "privacy", image: #imageLiteral(resourceName: "5-2")),
                                SideMenuModel(Name: "Login", Id: "Login", image: #imageLiteral(resourceName: "5-3"))]
             }
         }
@@ -94,18 +103,22 @@ class MoreViewController: UIViewController {
                 let main = TermsAndConditionVc.instantiateFromNib()
                  main?.type = "terms"
                 self.navigationController?.pushViewController(main!, animated: true)
+            case "privacy":
+            let main = TermsAndConditionVc.instantiateFromNib()
+            main?.type = "privacy"
+            self.navigationController?.pushViewController(main!, animated: true)
             case "Login"  :
                  let main = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Nav")
                 if let appDelegate = UIApplication.shared.delegate {
                     appDelegate.window??.rootViewController = main
-                }
+            }
             case "logOut":
                 let alert = UIAlertController(title: "logOut".localized, message: "Are".localized, preferredStyle: .alert)
                 let yesAction = UIAlertAction(title: "YES".localized, style: .default) { (action) in
                     alert.dismiss(animated: true, completion: nil)
+                    self.logOut()
                     Helper.LogOut()
                     guard let main = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ChooseUSerTypeVC") as? ChooseUSerTypeVC else { return }
-
                     self.navigationController?.pushViewController(main, animated: true)
                     
                 }
@@ -142,6 +155,16 @@ class MoreViewController: UIViewController {
     @IBAction func backButton(sender: UIButton) {
           self.navigationController?.popViewController(animated: true)
       }
+    
+    func logOut() {
+        profileVM.logOut().subscribe(onNext: { _ in
+            self.profileVM.dismissIndicator()
+        }, onError: { (error) in
+            self.profileVM.dismissIndicator()
+        }).disposed(by: disposeBag)
+    }
+  
+    
 }
 
 extension MoreViewController : UITableViewDelegate , UITableViewDataSource {

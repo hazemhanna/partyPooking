@@ -12,6 +12,8 @@ import GoogleSignIn
 import TwitterKit
 import RxSwift
 import RxCocoa
+import Firebase
+import FBSDKCoreKit
 
 class UserRegisterTypeVc: UIViewController,GIDSignInDelegate {
 
@@ -22,6 +24,7 @@ class UserRegisterTypeVc: UIViewController,GIDSignInDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         GIDSignIn.sharedInstance().delegate = self
+                
     } 
 
     override func viewWillAppear(_ animated: Bool) {
@@ -67,8 +70,6 @@ class UserRegisterTypeVc: UIViewController,GIDSignInDelegate {
                     let id = session?.userID {
                     self.postRegister(email: email ?? "" , Name: name ,token: id , type: "twitter", phone: "")
                     }
-
-                print(session?.userID , session?.userName)
                 }
             }
         }
@@ -77,24 +78,43 @@ class UserRegisterTypeVc: UIViewController,GIDSignInDelegate {
     
     
     @IBAction func fblogin(_ sender: Any) {
-        self.AuthViewModel.showIndicator()
-        let loginManager = LoginManager()
-        loginManager.logIn(permissions: [ .publicProfile,.email ], viewController: self) { loginResult in
-            print(loginResult)
-            let tokent = AccessToken.current?.tokenString
-            let request = FBSDKLoginKit.GraphRequest(graphPath: "me", parameters: ["fields":"email, name,picture"], tokenString: tokent, version: nil, httpMethod: .get )
-            request.start(completionHandler: {connection ,result,error in
-                if error != nil{
-                    self.AuthViewModel.dismissIndicator()
-                    return
-                }
-            guard let json = result as? NSDictionary else { return }
-            if let email = json["email"] as? String , let name  = json["name"] as? String,let id = json["id"] as? String  {
-                self.postRegister(email: email  , Name: name  ,token: id , type: "facebook", phone: "")
-               }
-            })
-        }
+       loginWithfaceBook(viewController: self)
     }
+    
+    
+    func loginWithfaceBook(viewController: UIViewController) {
+                // TODO: - register with facebook
+                let fbLoginManager: LoginManager = LoginManager()
+               // fbLoginManager.loginBehavior = .browser
+                fbLoginManager.defaultAudience = .everyone
+                fbLoginManager.logIn(permissions: ["public_profile", "email"], from: viewController, handler:{ [weak self] (result, error) in
+
+                    guard let `self` = self else { return }
+                    var message: String = "User was sucessfully logged in."
+                    print(message)
+                    if let error = error {
+                        message = "Failed to login: \(error.localizedDescription)"
+                        return
+                    }
+                    guard let fbToken = AccessToken.current else {
+                        return
+                    }
+                     let accessToken = fbToken.tokenString
+                    let credential = FacebookAuthProvider.credential(withAccessToken: accessToken)
+
+                    Auth.auth().signIn(with: credential, completion: { (user, error) in
+                        if let error = error {
+                            print("Login error: \(error.localizedDescription)")
+                            return
+                        }
+                        if let currentUser = Auth.auth().currentUser {
+                            self.postRegister(email: currentUser.email ?? "" , Name: currentUser.displayName ?? "" ,token: currentUser.providerData[0].uid , type: "facebook", phone: "")
+                        }
+                    })
+                })
+
+            }
+
     
     @IBAction func googlelogin(_ sender: Any) {
         self.AuthViewModel.showIndicator()
@@ -124,14 +144,7 @@ class UserRegisterTypeVc: UIViewController,GIDSignInDelegate {
       let givenName = user.profile.givenName
       let familyName = user.profile.familyName
       let email = user.profile.email
-        
-        print(userId ?? "")
-        print(idToken ?? "")
-        print(fullName ?? "")
-        print(givenName ?? "")
-        print(familyName ?? "")
-        print(email ?? "")
-        
+
         self.postRegister(email: email ?? "" , Name: givenName ?? "" ,token: idToken ?? "" , type: "google", phone: "")
         NotificationCenter.default.post(
         name: NSNotification.Name(rawValue: "ToggleAuthUINotification"),object: nil,userInfo: ["statusText": "Signed in user:\n\(fullName!)"])

@@ -29,7 +29,7 @@ extension RoundedTabBarItem {
         case .artistaccount:
             return "account".localized
         case .artistAvailable:
-            return "availabel".localized
+            return "reservation".localized
         case .artistreservations:
             return "reservation".localized
         case .home:

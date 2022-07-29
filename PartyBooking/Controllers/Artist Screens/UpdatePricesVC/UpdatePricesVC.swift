@@ -23,6 +23,7 @@ class UpdatePricesVC: UIViewController {
     var updatedPrices : [[String:Any]] = [[:]]
     var prices : [String:Any] = [:]
     
+    var index = -1
 
     private let authModel = ArtistAuthenticationVM()
     var disposeBag = DisposeBag()
@@ -56,7 +57,6 @@ class UpdatePricesVC: UIViewController {
     @IBAction func saveButton(sender: UIButton) {
          authModel.showIndicator()
          self.updatePrices(prices: updatedPrices)
-         self.navigationController?.popViewController(animated: true)
     }
 
 }
@@ -68,23 +68,9 @@ extension UpdatePricesVC : UITableViewDelegate , UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PartyPriceCell", for: indexPath) as! PartyPriceCell
-            
-        if "lang".localized == "ar" {
-                cell.partyName.text = self.partPice[indexPath.row].arName ?? ""
-            }else{
-                cell.partyName.text = self.partPice[indexPath.row].enName ?? ""
-            }
-            cell.restTime.text = String(self.partPice[indexPath.row].pivot?.breakTime ?? 0)
-            cell.partyPRice.text = String(self.partPice[indexPath.row].pivot?.price ?? 0)
-            cell.partyTime.text = String(self.partPice[indexPath.row].pivot?.partyTime ?? 0)
-            
-        cell.updatePartyPrice = {
-            self.prices["price"] = cell.partyPRice.text ?? ""
-            self.prices["party_type_id"] = self.partPice[indexPath.row].id ?? 0
-            self.prices["party_time"] = cell.partyTime.text ?? "1"
-            self.prices["break_time"] = cell.restTime.text ?? "1"
-            self.updatedPrices.append(self.prices)
-        }
+        cell.price = partPice[indexPath.row]
+        cell.index = indexPath.row
+        cell.delegate = self
         return cell
     }
     
@@ -94,18 +80,30 @@ extension UpdatePricesVC : UITableViewDelegate , UITableViewDataSource {
 
 }
 
-extension UpdatePricesVC {
+extension UpdatePricesVC :PartyPriceCellDelegate{
   
+    func partyPriceCell(_ cell: PartyPriceCell, didChangeModel at: Int,prices :PartPice){
+        self.index = at
+        self.updatedPrices.removeAll()
+        self.prices["price"] = cell.partyPRice.text ?? ""
+        self.prices["party_type_id"] = prices.id ?? 0
+        self.prices["party_time"] = cell.partyTime.text ?? "1"
+        self.prices["break_time"] = cell.restTime.text ?? "1"
+        self.updatedPrices.insert(self.prices, at: index)
+   }
+    
     func updatePrices(prices: [[String : Any]]) {
         authModel.updatePrice(prices: prices).subscribe(onNext: { (data) in
+            self.authModel.dismissIndicator()
             if data.status ?? false {
                 self.authModel.dismissIndicator()
-                self.tableView.reloadData()
-           
+                self.navigationController?.popViewController(animated: true)
             }
         }, onError: { (error) in
             self.authModel.dismissIndicator()
         }).disposed(by: disposeBag)
      }
+    
+    
     
 }

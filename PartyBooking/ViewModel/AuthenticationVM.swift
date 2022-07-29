@@ -9,8 +9,12 @@
 import Foundation
 import RxSwift
 import SVProgressHUD
+import FBSDKCoreKit
+import FBSDKLoginKit
+import Firebase
 
-struct AuthenticationViewModel {
+
+public class  AuthenticationViewModel {
     var email = BehaviorSubject<String>(value: "")
     var password = BehaviorSubject<String>(value: "")
     var first_name = BehaviorSubject<String>(value: "")
@@ -63,8 +67,6 @@ struct AuthenticationViewModel {
         let observer = Authentication.shared.postLoginWithSocial(params: params)
         return observer
     }
-    
-    
     
     func validate(country : String) -> Observable<String> {
             return Observable.create({ (observer) -> Disposable in
@@ -181,8 +183,5 @@ struct AuthenticationViewModel {
         let observer = GetServices.shared.contactUs(params: params)
         return observer
     }
-    
-    
-    
     
 }

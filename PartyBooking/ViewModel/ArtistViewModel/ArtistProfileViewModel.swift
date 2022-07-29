@@ -17,8 +17,6 @@ struct ArtistProfileViewModel{
     var descritpionss = BehaviorSubject<String>(value: "")
     var first_name = BehaviorSubject<String>(value: "")
     var last_name = BehaviorSubject<String>(value: "")
- 
-
     
     func showIndicator() {
         SVProgressHUD.show()
@@ -118,5 +116,12 @@ struct ArtistProfileViewModel{
         let observer = AddServices.shared.getAvailability(params: params)
         return observer
     }
+    
+    func uploadWork(image_url : UIImage?,videoUrl: Data?) -> Observable<MessageModel> {
+        let observer = AddServices.shared.uploadWork(image_url : image_url,videoUrl: videoUrl)
+        return observer
+    }
+    
+
     
 }

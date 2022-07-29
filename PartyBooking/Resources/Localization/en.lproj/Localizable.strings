@@ -193,3 +193,7 @@
 "SelintOn" = "silent mode active";
 "SelintOff" = "silent mode inActive";
 "userLive" = "live";
+"artistType" = "Artist Type";
+"privacy" = "privacy";
+"rate" = "privacy";
+"deposite" = "deposite";

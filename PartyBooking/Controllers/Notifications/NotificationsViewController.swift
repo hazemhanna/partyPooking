@@ -28,11 +28,10 @@ class NotificationsViewController: UIViewController {
     var notification :[Notification] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-
         notificationsTableView.register(UINib(nibName: "NotificationsTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
         setUPLocalize()
     }
-    
+
     func setUPLocalize(){
         titleLabel.text = "notification".localized
         noNotificationLabel.text = "noNotification".localized

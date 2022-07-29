@@ -31,7 +31,6 @@ class UserRegisterViewController: UIViewController {
     @IBOutlet weak var amountLabel : UILabel!
     @IBOutlet weak var amountValueLabel : UILabel!
     @IBOutlet weak var taxesLabel : UILabel!
-    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passTextField: UITextField!
     @IBOutlet weak var lNameTextField: UITextField!
@@ -41,25 +40,21 @@ class UserRegisterViewController: UIViewController {
     @IBOutlet weak var doneBtn : UIButton!
     @IBOutlet weak var privcyLabel : UILabel!
     @IBOutlet weak var termsConditionsButton: CustomButtons!
-    fileprivate var returnHandler : IQKeyboardReturnKeyHandler!
-
-    
-    let listController: FPNCountryListViewController = FPNCountryListViewController(style: .grouped)
-    private let AuthViewModel = AuthenticationViewModel()
-    var disposeBag = DisposeBag()
-    
-    var dialCode = String()
-    var profliePic = UIImage()
-    
-    var country = [Country]()
-    var filterCountry = [String]()
-    var countryId = Int()
-    
+    @IBOutlet weak var ProfileImageView : UIImageView!
     @IBOutlet weak var backButton: UIButton! {
         didSet {
             backButton.setImage(backButton.currentImage?.flipIfNeeded(), for: .normal)
         }
     }
+    fileprivate var returnHandler : IQKeyboardReturnKeyHandler!
+    let listController: FPNCountryListViewController = FPNCountryListViewController(style: .grouped)
+    private let AuthViewModel = AuthenticationViewModel()
+    var disposeBag = DisposeBag()
+    var dialCode = String()
+    var profliePic = UIImage()
+    var country = [Country]()
+    var filterCountry = [String]()
+    var countryId = Int()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -113,22 +108,7 @@ class UserRegisterViewController: UIViewController {
                 countryTextField.textAlignment = .left
                 fNameTextField.textAlignment = .left
                 phoneTextField.textAlignment = .left
-                let font = UIFont(name: "Georgia-Bold", size: 14)
-                           titleLabel.font = font
-                           fNameLabel.font = font
-                           fNameTextField.font = font
-                           lNameLabel.font = font
-                           lNameTextField.font = font
-                           emailLabel.font = font
-                           emailTextField.font = font
-                           phoneLabel.font = font
-                           phoneTextField.font =  font
-                           passwordLabel.font = font
-                           passTextField.font = font
-                           countryLabel.font = font
-                           countryTextField.font  = font
-                           doneBtn.titleLabel!.font =  UIFont(name: "Georgia-Bold", size: 17)
-                
+     
             } else {
                 emailTextField.textAlignment = .right
                 emailTextField.textAlignment = .right
@@ -373,10 +353,10 @@ extension UserRegisterViewController : UIImagePickerControllerDelegate, UINaviga
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
             self.profliePic =  editedImage
-            //self.ProfileImageView.image = editedImage
+            self.ProfileImageView.image = editedImage
         } else if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             self.profliePic =  originalImage
-           // self.ProfileImageView.image = originalImage
+            self.ProfileImageView.image = originalImage
         }
         dismiss(animated: true, completion: nil)
     }

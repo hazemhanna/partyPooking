@@ -44,4 +44,14 @@ struct ReservationViewModel {
         return observer
     }
     
+    
+    func rateReservation(booking_id:Int,comment : String, rate : Int) -> Observable<ContactUSModelJson> {
+        let params: [String: Any] = [
+            "booking_id": booking_id,
+            "rate": rate,
+            "comment": comment]
+        let observer = AddServices.shared.rateReservation(params: params)
+        return observer
+    }
+    
 }

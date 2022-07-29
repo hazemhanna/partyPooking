@@ -21,6 +21,8 @@ class ArtistWorkVc: UIViewController  ,UICollectionViewDataSource, UICollectionV
     private let profileVM = ArtistProfileViewModel()
     var disposeBag = DisposeBag()
     var work = [ArtistWork]()
+    var videoUrl :Data?
+    var image :UIImage?
     
    private var idintier = "ArtistWorkCell"
 
@@ -36,17 +38,22 @@ class ArtistWorkVc: UIViewController  ,UICollectionViewDataSource, UICollectionV
     
     
     override func viewWillAppear(_ animated: Bool) {
-    self.navigationController?.navigationBar.isHidden = true
+   
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-    self.navigationController?.navigationBar.isHidden = false
+    
+        self.navigationController?.navigationBar.isHidden = false
     }
     
     @IBAction func backButton(sender: UIButton) {
-    self.navigationController?.popViewController(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func addWorkButton(sender: UIButton) {
+       showImageActionSheet()
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return work.count
@@ -81,4 +88,55 @@ extension ArtistWorkVc{
             displayMessage(title: "", message: "Something went wrong in getting data".localized, status: .error, forController: self)
         }).disposed(by: disposeBag)
      }
+    
+    func uploadWork(image_url : UIImage?,videoUrl: Data?) {
+            profileVM.uploadWork(image_url: image_url, videoUrl: videoUrl).subscribe(onNext: { (data) in
+            if data.status ?? false {
+                self.getWork(artistId : self.aristId)
+            }
+        }, onError: { (error) in
+            self.profileVM.dismissIndicator()
+            displayMessage(title: "", message: "Something went wrong in getting data".localized, status: .error, forController: self)
+        }).disposed(by: disposeBag)
+     }
+    
+}
+
+
+extension ArtistWorkVc: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func showImageActionSheet() {
+        self.showImagePicker(sourceType: .photoLibrary)
+    }
+    
+    func showImagePicker(sourceType: UIImagePickerController.SourceType) {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.allowsEditing = true
+        imagePickerController.sourceType = sourceType
+        imagePickerController.mediaTypes = ["public.movie","public.image"]
+        imagePickerController.view.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        self.present(imagePickerController, animated: true, completion: nil)
+    }
+    
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            self.image = editedImage
+            self.profileVM.showIndicator()
+            self.uploadWork(image_url: self.image, videoUrl: nil)
+        } else if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            self.image = originalImage
+            self.profileVM.showIndicator()
+            self.uploadWork(image_url: self.image, videoUrl: nil)
+        }else if let videoUrl = info[UIImagePickerController.InfoKey(rawValue: UIImagePickerController.InfoKey.mediaURL.rawValue)] as? URL  {
+            do{
+            let data = try Data(contentsOf: videoUrl, options: .mappedIfSafe)
+            self.videoUrl =  data
+            self.profileVM.showIndicator()
+            self.uploadWork(image_url: nil, videoUrl: self.videoUrl)
+          }catch {}
+        }
+      dismiss(animated: true, completion: nil)
+    }
 }

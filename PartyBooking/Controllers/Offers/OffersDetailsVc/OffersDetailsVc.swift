@@ -79,7 +79,6 @@ class OffersDetailsVc : UIViewController {
         destinationVC?.offer = true
         self.navigationController?.pushViewController(destinationVC!, animated: true)
       }
-    
 }
 
 extension OffersDetailsVc {
@@ -89,23 +88,21 @@ extension OffersDetailsVc {
             if data.status ?? false {
                 self.artitstName.text = data.result?.artistName ?? ""
                 if "lang".localized == "ar" {
-                self.partyType.text = data.result?.offerPartyType?.arName ?? ""
-                self.partyLocation.text = data.result?.offerArea?.arName ?? ""
+                    self.partyType.text = data.result?.arParty ?? ""
+                    self.partyLocation.text = data.result?.arArea ?? ""
                 }else{
-                    self.partyType.text = data.result?.offerPartyType?.enName ?? ""
-                    self.partyLocation.text = data.result?.offerArea?.enName ?? ""
+                    self.partyType.text = data.result?.enParty  ?? ""
+                    self.partyLocation.text = data.result?.enArea ?? ""
                 }
-
                 self.PartyTime.text = data.result?.to ?? ""
-                self.PartyPrice.text =  String(data.result?.offerPrice ?? 0)
+                self.PartyPrice.text =  String(data.result?.offerValue ?? 0)
                 self.from = data.result?.from ?? ""
                 self.to = data.result?.to ?? ""
                 
                 if let iamg = URL(string: "https://partybooking.dtagdev.com/" + (data.result?.url ?? "")){
                     self.offerImage.kf.setImage(with: iamg, placeholder: #imageLiteral(resourceName: "يريءؤر سيرلايسب"))
                 }
-                Helper.saveCID(date: data.result?.offerArea?.id ?? 0  )
-                Helper.savePrice(date: data.result?.offerPrice  ?? 0 )
+                Helper.savePrice(date: data.result?.offerValue  ?? 0 )
                 Helper.savePID(date:   data.result?.partyTypeID ?? 0 )
             }
         }, onError: { (error) in

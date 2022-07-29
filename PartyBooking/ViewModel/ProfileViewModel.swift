@@ -10,9 +10,8 @@ import Foundation
 import RxSwift
 import SVProgressHUD
 
-
-struct ProfileViewModel {
-   
+struct ProfileViewModel{
+    
     var email = BehaviorSubject<String>(value: "")
     var first_name = BehaviorSubject<String>(value: "")
     var last_name = BehaviorSubject<String>(value: "")
@@ -20,7 +19,6 @@ struct ProfileViewModel {
     var country = BehaviorSubject<String>(value: "")
     var password = BehaviorSubject<String>(value: "")
 
-    
     func showIndicator() {
         SVProgressHUD.show()
     }
@@ -36,7 +34,6 @@ struct ProfileViewModel {
         let observer = GetServices.shared.getProfile()
         return observer
     }
-    
     
     func validate(country : String) -> Observable<String> {
             return Observable.create({ (observer) -> Disposable in
@@ -152,6 +149,8 @@ struct ProfileViewModel {
         return observer
     }
     
-    
-    
+    func logOut() -> Observable<ContactUSModelJson> {
+        let observer = Authentication.shared.logOut()
+        return observer
+    }
 }

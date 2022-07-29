@@ -16,13 +16,13 @@ struct AuthMdelsJSON: Codable {
 // MARK: - Result
 struct Result: Codable {
     let accessToken, tokenType: String?
-    //let user: User?
+    let user: User?
     let expiresIn: Int?
 
     enum CodingKeys: String, CodingKey {
         case accessToken = "access_token"
         case tokenType = "token_type"
-      //  case user
+        case user
         case expiresIn = "expires_in"
     }
 }

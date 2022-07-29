@@ -30,11 +30,11 @@ struct NotificationModel: Codable {
         case prev, next
     }
 }
-
 // MARK: - Datum
 struct Notification : Codable {
     let id: Int?
     let title, body: String?
+    let aTitle, arBody: String?
     let itemID: Int?
     let itemType: String?
     let view: Int?
@@ -44,6 +44,8 @@ struct Notification : Codable {
     enum CodingKeys: String, CodingKey {
         case id, title, body
         case itemID = "item_id"
+        case aTitle = "ar_title"
+        case arBody = "ar_body"
         case itemType = "item_type"
         case view
         case createdAt = "created_at"

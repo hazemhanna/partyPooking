@@ -39,13 +39,15 @@ struct Offers: Codable {
     let title: String?
     let datumDescription: String?
     let partyTypeID: Int?
-    let offerPartyType: OfferPartyType?
-    let offerArea: OfferArea?
+    let arArea: String?
+    let enArea: String?
+    let arParty: String?
+    let enParty: String?
     let url: String?
     let attachmentType: String?
     let status: String?
     let from, to: String?
-    let offerPrice, offerValue: Int?
+    let offerValue: Int?
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -54,52 +56,14 @@ struct Offers: Codable {
         case title
         case datumDescription = "description"
         case partyTypeID = "party_type_id"
-        case offerPartyType = "offer_party_type"
-        case offerArea = "offer_area"
+        case arArea = "ar_party_area"
+        case enArea = "en_party_area"
+        case arParty = "ar_party_type"
+        case enParty = "en_party_type"
         case url
         case attachmentType = "attachment_type"
         case status, from, to
-        case offerPrice = "offer_price"
         case offerValue = "offer_value"
-    }
-}
-
-// MARK: - OfferArea
-struct OfferArea: Codable {
-    let id: Int?
-    let arName: String?
-    let enName: String?
-    let countryID, deleted: Int?
-    let createdAt: String?
-    let updatedAt: String?
-
-    enum CodingKeys: String, CodingKey {
-        case id
-        case arName = "ar_name"
-        case enName = "en_name"
-        case countryID = "country_id"
-        case deleted
-        case createdAt = "created_at"
-        case updatedAt = "updated_at"
-    }
-}
-
-// MARK: - OfferPartyType
-struct OfferPartyType: Codable {
-    let id: Int?
-    let arName, enName: String?
-    let commission: Int?
-    let deleted: String?
-    let createdAt: String?
-    let updatedAt: String?
-
-    enum CodingKeys: String, CodingKey {
-        case id
-        case arName = "ar_name"
-        case enName = "en_name"
-        case commission, deleted
-        case createdAt = "created_at"
-        case updatedAt = "updated_at"
     }
 }
 
